@@ -39,24 +39,11 @@ Every significant combat increases your character's level by one. All base stats
 ### Conflicting Rules
 All of the rules listed here are for basic reference. Often times you might have abilities or weapons that override these basic rules, like a weapon that deals damage based on your **Dexterity**. In all cases, the more specific rule changes the more general rule.
 
-# Chapter 2 - Character Creation
-In addition to these basic rules, your **Game Master** may have specific guidelines she would like you to follow, or she may have even overwritten parts of this book herself. As with all pen and paper RPGs, work with the people at your table to make sure that everyone is on the same page about the types of characters that your game will support.
->*You may wish to review the sections on classes, combat, combat skills, out of combat, and equipment when making your character. Doing so can help guide you toward the type of character you wish to create.*
-
-## Overview
-In order to create a character, you are going to be performing the following steps:
-1. Choose your **Creature Type**
-1. Assign your **Class Points**
-1. Assign your **Growth Points**
-1. **Level Up** to level 1.
-1. Choose your **Starting Equipment**
-1. Figure your **Calculated Stats**
-1. Choose your Character's final details
-
-Once everyone has finished making their character, you are ready to start playing.
+# Chapter 2 - Game Stats
+Before creating a character, it is important to understand each stat and their effect. This understanding will help to determine how you want your character’s personality reflected numerically. 
 
 ## Base Stats
-Before creating a character, it is important to understand each stat and their effect. This understanding will help to determine how you want your character’s personality reflected numerically. Your Base Stats will be combined with your Equipment Stats to determine your **Calculated Stats**. The Calculated Stats are what actually govern combat.
+Your Base Stats determine the basic characteristics that you will be interacting with. These are used for **Stat Tests** and **Aspect Tests**, and will be combined with your Equipment to determine your **Calculated Stats**. The Calculated Stats are what actually govern combat.
 
 ### Hit Points (HP)
 HP determines how much damage your character can take before falling unconscious on the battle field. Every time an opponent successfully lands a hit on you, any damage you take is tracked by reducing your HP. Upon hitting "0" current HP, you will be removed from the current combat, and may even be dead depending on the situation that caused you to drop to 0.
@@ -85,3 +72,54 @@ Wisdom determines how much of a Magical Damage you can shrug off. Wisdom contrib
 
 ### Movement (MOV)
 Movement determines how many spaces your character can move on the battlefield. Unlike the rest of your stats, movement doesn't increase by leveling up.
+
+## Calculated Stats
+**Calculated Stats** are the statistics used for combat. These represent how much damage you can deal, how accurate you are, and how well you avoid damage. These stats are combined with your weapon stats, so be sure to include your chosen weapon in their calculations.
+
+### Might (MGT)
+Might is the Damage your attacks will deal. The weapon you've equiped will tell you how to calculate this value. Might is opposed by your opponents **Defense** or **Resistance**, again based on the weapon's characteristics.
+
+### Accuracy (ACC)
+Accuracy dictates your chance to hit your opponent. It is calculated by adding twice your **Dexterity** and half your **Luck** to your weapon’s Accuracy. Accuracy is opposed by your opponent's **Dodge**. Remember in all cases to round down.
+
+### Critical (CRIT)
+Critical dictates the chance that you will strike a vital spot on your opponent, which inflicts Three times the **Damage** of a regular attack. It is calculated by adding half your **Dexterity** to your weapon’s Critical. Critical is opposed by your opponent's **Evade**. Remember in all cases to round down.
+
+### Dodge (DGE)
+Dodge represents your ability to evade enemy attacks. It is calculated by adding twice your **Speed** to your **Luck** and your weapon's Dodge.
+
+### Avoid (AVO)
+Avoid represents your ability to evade enemy critical strikes. It is calculated by adding your **Luck** to your weapon's Avoid.
+
+### Defense (DEF)
+Defense represents your ability to shrug off physical attacks. It is calculated by adding your **Constitution** to your weapon's Defense.
+
+### Resistance (RES)
+Resistance represents your ability to shrug off magical attacks. It is calculated by adding your **Wisdom** to your weapon's Resistance.
+
+### Summary
+| Stat       | Abbrev | Calculation                          | Opposes        |
+| ---        | ---    | ---                                  | ---            |
+| Might      | MGT    | (*STR* or *MAG*) + *W.MGT*           | *DEF* or *RES* |
+| Accuracy   | ACC    | (2 x *DEX*) + (½  x *LUK*) + *W.ACC* | *DGE*          |
+| Critical   | CRT    | (½  x *DEX*) + *W.CRT*               | *AVO*          |
+| Dodge      | DGE    | (2 x *SPD*) + *LUK* + *W.DGE*        | *ACC*          |
+| Avoid      | AVO    | *LUK* + *W.AVO*                      | *CRT*          |
+| Defense    | DEF    | *CON* + *W.DEF*                      | *MGT*          |
+| Resistance | RES    | *WIS* + *W.RES*                      | *MGT*          |
+
+# Chapter 3 - Character Creation
+In addition to these basic rules, your **Game Master** may have specific guidelines she would like you to follow, or she may have even overwritten parts of this book herself. As with all pen and paper RPGs, work with the people at your table to make sure that everyone is on the same page about the types of characters that your game will support.
+>*You may wish to review the sections on classes, combat, combat skills, out of combat, and equipment when making your character. Doing so can help guide you toward the type of character you wish to create.*
+
+## Overview
+In order to create a character, you are going to be performing the following steps:
+1. Choose your **Creature Type**
+1. Assign your **Class Points**
+1. Assign your **Growth Points**
+1. **Level Up** to level 1.
+1. Choose your **Starting Equipment**
+1. Figure your **Calculated Stats**
+1. Choose your Character's final details
+
+Once everyone has finished making their character, you are ready to start playing.

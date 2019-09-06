@@ -47,7 +47,7 @@ Your character's **Class** is what determines your character's stats right now. 
 >| MOV       | 5    | 0.5  | 2      | 1      | 6     |
 >| **Total** |      |      | **20** |        |       |
 
-However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry so much, as you'll get more Class points as you **level up**.
+However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
 
 ## Class Skills
 You can spend your **Class Points** on skills that might be relevant to your character, and truly set them apart from everyone else. Each skill costs a certain number of Class Points. Simply spend the points to activate the Class Skill, and you can have as many as you can afford.
@@ -76,12 +76,22 @@ You can spend your **Class Points** on skills that might be relevant to your cha
 *Cost: 3* - You have trained in a specialized form of combat, and you gain 1 **Combat Skill Point**. See the section on combat skills for what you can spend this on. You can purchase this background as many times as you'd like.
 
 ### Weapon Skill
-*Cost: 2* - You have trained in more than a single form of self defense. Every character has access to one weapon type for free. However, if you would like to wield additional weapons categories, you will need to purchase this skill.
-
-### Steal
-
+*Cost: 2* - You have trained in more than a single form of self defense. Every character has access to one weapon type for free. However, if you would like to wield additional weapons categories, you will need to purchase this skill. You can purchase this background as many times as you'd like
 
 ## Creature Type
+Creature Types add a little bit of fantasy flavor to your setting. Work with your GM to see if this list has been changed or customized for the setting you are using.
+
+### Human
+
+### Elf
+### Dwarf
+### Orc
+### Goblin
+### Cyborg
+### HalfWolf
+### HalfFox
+### HalfDragon
+### HalfRabbit
 
 ## Leveling Up
 

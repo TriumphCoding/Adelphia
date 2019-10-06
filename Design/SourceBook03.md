@@ -21,9 +21,10 @@ Once everyone has finished making their character, you are ready to start playin
 
 Your character's **Growth** determines how each of your character's stats will change over time. Every base stat (excluding **Movement**) starts at the minimum Growth rate of "5". Then, you can spend up to 35 points raising each of these growth rates (again, excluding **Movement**). As an Example:
 
-*Monico Aaronway*
+### Monico Aaronway Growth
+
 | Stat      | Base   | Growth | Total  |
-| ---       | ---:   | ---:   | ---:   |
+| :---      | ---:   | ---:   | ---:   |
 | HP        | 5      | 5      | 10     |
 | STR       | 5      | 6      | 11     |
 | INT       | 5      | 1      | 6      |
@@ -38,10 +39,12 @@ Your character's **Growth** determines how each of your character's stats will c
 ## Class Points
 
 Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. HP is purchased at a rate of 3HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
-*Monico Aaronway*
+
+### Monico Aaronway Stats
+
 | Stat      | Base | Rate | Spent  | Gained | Total |
-| ---       | ---: | ---: | ---:   | ---:   | ---:  |
-| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**    |
+| :---      | ---: | ---: | ---:   | ---:   | ---:  |
+| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**   |
 | STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
 | INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
 | DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
@@ -189,7 +192,9 @@ Once you've made all of your decisions, and have assigned all of your points, it
 For each stat with a growth, roll 2d10 and add them together. Do remember that the 10 sided dice goes from 0-9, not 1-10, to keep reading them consistent across both the d% and the 2d10 rolls. As long as you roll under that stat's growth, increase your stat by 1 point. Ties work out in your favor.
 
 For example:
-*Monico Aaronway*
+
+### Monico Aaronway Levelup
+
 | Stat      | Growth | Roll | Gain   | Stat | Final |
 | ---       | ---:   | ---: | ---:   | ---: | ---:  |
 | HP        | 10     | 9    | +1     | 16   | **17**|
@@ -230,7 +235,7 @@ As your level increases, you may gain more than just level up points. You also g
 | 19   | 35            | 20          |             |
 | 20   | 35            | **30** +10  |             |
 
-### Option Level Up Rules
+### Optional Level Up Rules
 
 Sometimes, the randomness of a level up system can feel oppressive. To help mitigate this, consider some of the following changes:
 

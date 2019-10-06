@@ -21,36 +21,36 @@ Once everyone has finished making their character, you are ready to start playin
 
 Your character's **Growth** determines how each of your character's stats will change over time. Every base stat (excluding **Movement**) starts at the minimum Growth rate of "5". Then, you can spend up to 35 points raising each of these growth rates (again, excluding **Movement**). As an Example:
 
->*Monico Aaronway*
->| Stat      | Base   | Growth | Total  |
->| ---       | ---:   | ---:   | ---:   |
->| HP        | 5      | 5      | 10     |
->| STR       | 5      | 6      | 11     |
->| INT       | 5      | 1      | 6      |
->| DEX       | 5      | 7      | 12     |
->| SPD       | 5      | 6      | 11     |
->| LUK       | 5      | 5      | 10     |
->| CON       | 5      | 3      | 8      |
->| WIS       | 5      | 2      | 7      |
->| MOV       | N/A    | N/A    | N/A    |
->| **Total** | **40** | **35** | **75** |
+*Monico Aaronway*
+| Stat      | Base   | Growth | Total  |
+| ---       | ---:   | ---:   | ---:   |
+| HP        | 5      | 5      | 10     |
+| STR       | 5      | 6      | 11     |
+| INT       | 5      | 1      | 6      |
+| DEX       | 5      | 7      | 12     |
+| SPD       | 5      | 6      | 11     |
+| LUK       | 5      | 5      | 10     |
+| CON       | 5      | 3      | 8      |
+| WIS       | 5      | 2      | 7      |
+| MOV       | N/A    | N/A    | N/A    |
+| **Total** | **40** | **35** | **75** |
 
 ## Class Points
 
 Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. HP is purchased at a rate of 3HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
->*Monico Aaronway*
->| Stat      | Base | Rate | Spent  | Gained | Total |
->| ---       | ---: | ---: | ---:   | ---:   | ---:  |
->| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**    |
->| STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
->| INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
->| DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
->| SPD       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
->| LUK       | 2    | x2   | 2      | +4     | 2 + 4 = **6**     |
->| CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
->| WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
->| MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
->| **Total** |      |      | **20** |        |       |
+*Monico Aaronway*
+| Stat      | Base | Rate | Spent  | Gained | Total |
+| ---       | ---: | ---: | ---:   | ---:   | ---:  |
+| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**    |
+| STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| SPD       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| LUK       | 2    | x2   | 2      | +4     | 2 + 4 = **6**     |
+| CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
+| WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
+| **Total** |      |      | **20** |        |       |
 
 However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
 
@@ -189,19 +189,19 @@ Once you've made all of your decisions, and have assigned all of your points, it
 For each stat with a growth, roll 2d10 and add them together. Do remember that the 10 sided dice goes from 0-9, not 1-10, to keep reading them consistent across both the d% and the 2d10 rolls. As long as you roll under that stat's growth, increase your stat by 1 point. Ties work out in your favor.
 
 For example:
->*Monico Aaronway*
->| Stat      | Growth | Roll | Gain   | Stat | Final |
->| ---       | ---:   | ---: | ---:   | ---: | ---:  |
->| HP        | 10     | 9    | +1     | 16   | **17**|
->| STR       | 11     | 8    | +1     | 6    | **7** |
->| INT       | 6      | 18   | +1     | 2    | **3** |
->| DEX       | 12     | 13   | +0     | 6    | 6     |
->| SPD       | 11     | 10   | +1     | 6    | **7** |
->| LUK       | 10     | 10   | +1     | 6    | **7** |
->| CON       | 8      |  9   | +0     | 4    | 4     |
->| WIS       | 7      |  0   | +1     | 2    | **3** |
->| MOV       | N/A    | N/A  | +0     | 6    | 6     |
->| **Total** |        |      | **+6** |      |       |
+*Monico Aaronway*
+| Stat      | Growth | Roll | Gain   | Stat | Final |
+| ---       | ---:   | ---: | ---:   | ---: | ---:  |
+| HP        | 10     | 9    | +1     | 16   | **17**|
+| STR       | 11     | 8    | +1     | 6    | **7** |
+| INT       | 6      | 18   | +1     | 2    | **3** |
+| DEX       | 12     | 13   | +0     | 6    | 6     |
+| SPD       | 11     | 10   | +1     | 6    | **7** |
+| LUK       | 10     | 10   | +1     | 6    | **7** |
+| CON       | 8      |  9   | +0     | 4    | 4     |
+| WIS       | 7      |  0   | +1     | 2    | **3** |
+| MOV       | N/A    | N/A  | +0     | 6    | 6     |
+| **Total** |        |      | **+6** |      |       |
 
 ### Changes by Level
 
@@ -245,16 +245,17 @@ Sometimes, the randomness of a level up system can feel oppressive. To help miti
 
 Monico Aaronway is a Human Swordmaster, traveling the land in search of adventure and fame.
 
->*Growth*
->| Stat      | Base   | Growth | Total  |
->| ---       | ---:   | ---:   | ---:   |
->| HP        | 5      | 5      | 10     |
->| STR       | 5      | 6      | 11     |
->| INT       | 5      | 1      | 6      |
->| DEX       | 5      | 7      | 12     |
->| SPD       | 5      | 6      | 11     |
->| LUK       | 5      | 5      | 10     |
->| CON       | 5      | 3      | 8      |
->| WIS       | 5      | 2      | 7      |
->| MOV       | N/A    | N/A    | N/A    |
->| **Total** | **40** | **35** | **75** |
+### Growth
+
+| Stat      | Base   | Growth | Total  |
+| ---       | ---:   | ---:   | ---:   |
+| HP        | 5      | 5      | 10     |
+| STR       | 5      | 6      | 11     |
+| INT       | 5      | 1      | 6      |
+| DEX       | 5      | 7      | 12     |
+| SPD       | 5      | 6      | 11     |
+| LUK       | 5      | 5      | 10     |
+| CON       | 5      | 3      | 8      |
+| WIS       | 5      | 2      | 7      |
+| MOV       | N/A    | N/A    | N/A    |
+| **Total** | **40** | **35** | **75** |

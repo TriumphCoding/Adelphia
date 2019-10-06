@@ -41,15 +41,15 @@ Your character's **Class** is what determines your character's stats right now. 
 >*Monico Aaronway*
 >| Stat      | Base | Rate | Spent  | Gained | Total |
 >| ---       | ---: | ---: | ---:   | ---:   | ---:  |
->| HP        | 10   | 3    | 2      | 6      | 16    |
->| STR       | 2    | 1    | 4      | 4      | 6     |
->| INT       | 2    | 1    | 0      | 0      | 2     |
->| DEX       | 2    | 1    | 4      | 4      | 6     |
->| SPD       | 2    | 1    | 4      | 4      | 6     |
->| LUK       | 2    | 2    | 2      | 4      | 6     |
->| CON       | 2    | 1    | 2      | 2      | 4     |
->| WIS       | 2    | 1    | 0      | 0      | 3     |
->| MOV       | 5    | 0.5  | 2      | 1      | 6     |
+>| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**    |
+>| STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+>| INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+>| DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+>| SPD       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+>| LUK       | 2    | x2   | 2      | +4     | 2 + 4 = **6**     |
+>| CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
+>| WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+>| MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
 >| **Total** |      |      | **20** |        |       |
 
 However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
@@ -94,28 +94,167 @@ You can spend your **Class Points** on skills that might be relevant to your cha
 
 ## Creature Type
 
-Creature Types add a little bit of fantasy flavor to your setting. Work with your GM to see if this list has been changed or customized for the setting you are using.
+Creature Types add a little bit of fantasy flavor to your setting. Work with your GM to see if this list has been changed or customized for the setting you are using. If you prefer a lower fantasy, there should be no problem making every character human, there will be plenty of room for differentiation elsewhere. These replace the "base" values in the above creation examples.
 
 ### Human
 
+Humans are the base to which all other creatures compare. They lean in into whatever interests them the most, and are highly adaptable.
+
+|Human   | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |  10|    2|    2|    2|    2|    2|    2|    2|    5|
+| Growth |   5|    5|    5|    5|    5|    5|    5|    5|  N/A|
+
 ### Elf
+
+Elves move quickly and gracefully, and tend to need to avoid danger instead of taking it head on.
+
+|Elf     | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |   7|    2|    2|    3|    4|    2|    0|    2|    5|
+| Growth |   4|    5|    5|    7|    6|    5|    3|    5|  N/A|
 
 ### Dwarf
 
+Dwarves are stout and hearty. They tend to be direct with their problem solving, for both their good and their ill.
+
+|Dwarf   | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |  13|    2|    0|    2|    1|    2|    3|    3|    5|
+| Growth |   6|    5|    3|    5|    4|    5|    6|    6|  N/A|
+
 ### Orc
+
+Orcs are more muscle than anything else. Even so, they tend to find themselves with the short end of the stick more than they rightly deserve.
+
+|Orc     | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |  10|    4|    2|    1|    2|    0|    2|    2|    5|
+| Growth |   5|    6|    5|    4|    5|    5|    5|    5|  N/A|
 
 ### Goblin
 
+Goblins are clever creatures, and when dedicated to a task can find themselves amongst its greatest masters. That is if they can live long enough to put in the time.
+
+|Goblin  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |   7|    2|    2|    3|    4|    2|    1|    1|    5|
+| Growth |   4|    5|    5|    6|    7|    5|    4|    4|  N/A|
+
 ### Cyborg
 
-### HalfWolf
+Some or all of your physical body has been replaced with machinery that runs on Magic, or something even more exotic like steam. How much of your old personality survived the process is up to you to decide.
 
-### HalfFox
+|Cyborg  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |  10|    4|    0|    2|    2|    2|    3|    1|    5|
+| Growth |   5|    6|    5|    4|    5|    5|    5|    5|  N/A|
 
-### HalfDragon
+### Carnivore
 
-### HalfRabbit
+One of your ancestors was a practitioner of magic, and made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+>Animal Characters can be as animalistic or as humanoid as you prefer. Work with your GM to determine what makes the most sense in the setting.
+
+|Carnivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base    |  10|    4|    3|    2|    3|    2|    2|    0|    5|
+| Growth  |   5|    7|    3|    5|    6|    5|    5|    4|  N/A|
+
+### Herbivore
+
+One of your ancestors was a practitioner of magic, and made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+
+|Herbivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base    |  10|    2|    2|    2|    3|    2|    0|    1|    6|
+| Growth  |   5|    5|    5|    5|    7|    5|    4|    4|  N/A|
+
+### Dragon
+
+You have dragon blood, and it manifests itself in you in interesting ways.
+
+|Dragon  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
+| Base   |  10|    2|    4|    2|    1|    2|    2|    3|    4|
+| Growth |   5|    5|    7|    5|    3|    4|    5|    6|  N/A|
+
+>### Custom
+>
+>If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral. Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
 
 ## Leveling Up
 
+Once you've made all of your decisions, and have assigned all of your points, it's time to roll to see your first level.
+
+For each stat with a growth, roll 2d10 and add them together. Do remember that the 10 sided dice goes from 0-9, not 1-10, to keep reading them consistent across both the d% and the 2d10 rolls. As long as you roll under that stat's growth, increase your stat by 1 point. Ties work out in your favor.
+
+For example:
+>*Monico Aaronway*
+>| Stat      | Growth | Roll | Gain   | Stat | Final |
+>| ---       | ---:   | ---: | ---:   | ---: | ---:  |
+>| HP        | 10     | 9    | +1     | 16   | **17**|
+>| STR       | 11     | 8    | +1     | 6    | **7** |
+>| INT       | 6      | 18   | +1     | 2    | **3** |
+>| DEX       | 12     | 13   | +0     | 6    | 6     |
+>| SPD       | 11     | 10   | +1     | 6    | **7** |
+>| LUK       | 10     | 10   | +1     | 6    | **7** |
+>| CON       | 8      |  9   | +0     | 4    | 4     |
+>| WIS       | 7      |  0   | +1     | 2    | **3** |
+>| MOV       | N/A    | N/A  | +0     | 6    | 6     |
+>| **Total** |        |      | **+6** |      |       |
+
+### Changes by Level
+
+As your level increases, you may gain more than just level up points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, but the below table may be a helpful reference.
+
+|Level | Growth Points | Stat Points | Skill Points |
+| :--- | :---          | :---        | ---:         |
+| 1    | **35**        | **20**      | **0**        |
+| 2    | 35            | 20          |             |
+| 3    | 35            | 20          |             |
+| 4    | 35            | 20          |             |
+| 5    | 35            | 20          |             |
+| 6    | 35            | 20          |             |
+| 7    | 35            | 20          |             |
+| 8    | 35            | 20          |             |
+| 9    | 35            | 20          |             |
+| 10   | 35            | 20          |             |
+| 11   | 35            | 20          |             |
+| 12   | 35            | 20          |             |
+| 13   | 35            | 20          |             |
+| 14   | 35            | 20          |             |
+| 15   | 35            | 20          |             |
+| 16   | 35            | 20          |             |
+| 17   | 35            | 20          |             |
+| 18   | 35            | 20          |             |
+| 19   | 35            | 20          |             |
+| 20   | 35            | **30** +10  |             |
+
+### Option Level Up Rules
+
+Sometimes, the randomness of a level up system can feel oppressive. To help mitigate this, consider some of the following changes:
+
+**No Bad Levels**: After rolling your stats, if you didn't gain at least 3 increases, start rerolling the stats you didn't get until you get at least 3 increases. Start rerolling from HP and work your way down the list of missed stats. Once you hit 3 total stat increases, don't continue.
+
+**No Bad Stats**: Every time you finish a level up, if you didn't gain a particular stat, increase your growth in that stat by 1. Once you do gain that stat, reset your growth back to your base growth rate.
+
+**Static Levels**: Instead of rolling your stats, you gain your growth as stat experience points. Once you get 18 points or more in a single stat, drop your exp by 18, and increase that stat by 1.
+>*Often times, this can be useful to create a character over level 1, without rolling thousands of dice. Use {Growth} x {Starting Level} / 18 to determine how many stat growths you received over those levels, and then continue using the level up system of your choice. Always round down, regardless of how high the decimal portion is.*
+
 ## Character Creation Example
+
+Monico Aaronway is a Human Swordmaster, traveling the land in search of adventure and fame.
+
+>*Growth*
+>| Stat      | Base   | Growth | Total  |
+>| ---       | ---:   | ---:   | ---:   |
+>| HP        | 5      | 5      | 10     |
+>| STR       | 5      | 6      | 11     |
+>| INT       | 5      | 1      | 6      |
+>| DEX       | 5      | 7      | 12     |
+>| SPD       | 5      | 6      | 11     |
+>| LUK       | 5      | 5      | 10     |
+>| CON       | 5      | 3      | 8      |
+>| WIS       | 5      | 2      | 7      |
+>| MOV       | N/A    | N/A    | N/A    |
+>| **Total** | **40** | **35** | **75** |

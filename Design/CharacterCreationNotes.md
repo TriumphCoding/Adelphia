@@ -8,3 +8,14 @@ This is a scratch notepad for ideas, logged for inclusion later.
 + A **Hobby**, representing an area of your life you keep up for relaxation and fun.
 + An **Interest**, representing an area of knowledge you find interesting, and keep yourself up-to-date in
 + A **Campaign** Aspect, potentially determined by the Game Master, that will tie your group members together.
+
+## Weapon Notes
+
+|Level | Metal      |
+|:---  | ---        |
+| D    | Iron       |
+| C    | Steel      |
+| B    | Special    |
+| A    | Silvered   |
+| S    | Reforged   |
+| S+   | Orichalcum |

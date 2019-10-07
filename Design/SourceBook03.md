@@ -248,7 +248,7 @@ Sometimes, the randomness of a level up system can feel oppressive. To help miti
 
 ## Character Creation Example
 
-Monico Aaronway is a Human Swordmaster, traveling the land in search of adventure and fame.
+Monico Aaronway is a Human Vagabond, traveling the land in search of adventure and fame.
 
 ### Growth
 

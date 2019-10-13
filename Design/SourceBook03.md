@@ -42,8 +42,8 @@ Your character's **Class** is what determines your character's stats right now. 
 
 ### Monico Aaronway Stats
 
-| Stat      | Base | Rate | Spent  | Gained | Total |
-| :---      | ---: | ---: | ---:   | ---:   | ---:  |
+| Stat      | Base | Rate | Spent  | Gained | Total             |
+| :---      | ---: | ---: | ---:   | ---:   | ---:              |
 | HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**   |
 | STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
 | INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
@@ -53,7 +53,7 @@ Your character's **Class** is what determines your character's stats right now. 
 | CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
 | WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
 | MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
-| **Total** |      |      | **20** |        |       |
+| **Total** |      |      | **20** |        |                   |
 
 However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
 
@@ -186,6 +186,14 @@ You have dragon blood, and it manifests itself in you in interesting ways.
 If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral.
 >Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
 
+## Choosing Equipment
+
+All characters start the game with the following:
+
+1. A Rank D Weapon
+1. A Rank E Weapon
+1. A Pouch of healing herbs
+
 ## Leveling Up
 
 Once you've made all of your decisions, and have assigned all of your points, it's time to roll to see your first level.
@@ -238,6 +246,56 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 | WIS       | 5      | 2      | 7      |
 | MOV       | N/A    | N/A    | N/A    |
 | **Total** | **40** | **35** | **75** |
+
+### Stats
+
+| Stat      | Base | Rate | Spent  | Gained | Total             |
+| :---      | ---: | ---: | ---:   | ---:   | ---:              |
+| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**   |
+| STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| SPD       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| LUK       | 2    | x2   | 2      | +4     | 2 + 4 = **6**     |
+| CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
+| WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
+| **Total** |      |      | **20** |        |                   |
+
+### Levelup
+
+| Stat      | Growth | Roll | Gain   | Stat | Final |
+| ---       | ---:   | ---: | ---:   | ---: | ---:  |
+| HP        | 10     | 9    | +1     | 16   | **17**|
+| STR       | 11     | 8    | +1     | 6    | **7** |
+| INT       | 6      | 18   | +1     | 2    | **3** |
+| DEX       | 12     | 13   | +0     | 6    | 6     |
+| SPD       | 11     | 10   | +1     | 6    | **7** |
+| LUK       | 10     | 10   | +1     | 6    | **7** |
+| CON       | 8      |  9   | +0     | 4    | 4     |
+| WIS       | 7      |  0   | +1     | 2    | **3** |
+| MOV       | N/A    | N/A  | +0     | 6    | 6     |
+| **Total** |        |      | **+6** |      |       |
+
+### Weapons
+
+1. Iron Sword
+1. Bronze Sword
+1. Pack of Herbs
+
+### Calculated Stats
+
+With Iron Sword Equipped:
+| Stat       | Calculation                          | Numbers                | Final |
+| ---        | ---                                  | ---                    | ---   |
+| HP         | HP                                   | 17                     | 17    |
+| Might      | (*STR* or *MAG*) + *W.MGT*           | 7 + 5                  | 12    |
+| Accuracy   | (2 x *DEX*) + (½  x *LUK*) + *W.ACC* | (2 x 6) + (½ * 7) + 90 | 108   |
+| Critical   | (½  x *DEX*) + *W.CRT*               | ½ * 6 + 0              | 3     |
+| Dodge      | (2 x *SPD*) + *LUK* + *W.DGE*        | (2 x 7) + 7 + 0        | 21    |
+| Avoid      | *LUK* + *W.AVO*                      | 7 + 0                  | 7     |
+| Defense    | *CON* + *W.DEF*                      | 4 + 0                  | 4     |
+| Resistance | *WIS* + *W.RES*                      | 3 + 0                  | 3     |
 
 ## Changes by Level
 

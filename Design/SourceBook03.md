@@ -286,6 +286,7 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 ### Calculated Stats
 
 With Iron Sword Equipped:
+
 | Stat       | Calculation                          | Numbers                | Final |
 | ---        | ---                                  | ---                    | ---   |
 | HP         | HP                                   | 17                     | 17    |

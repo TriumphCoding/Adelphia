@@ -244,7 +244,7 @@ As your level increases, you may gain more than just level up points. You also g
 
 |Level | Growth Points | Stat Points | Skill Points | Weapon Level |
 | :--- | :---          | :---        | ---:         | ---:         |
-| 1    | **35**        | **20**      | **0**        | **D** +1     |
+| 1    | **35** +35    | **20** +20  | **0**        | **D** +1     |
 | 2    | 35            | 20          | 0            | D            |
 | 3    | 35            | 20          | 0            | D            |
 | 4    | 35            | 20          | 0            | D            |
@@ -264,7 +264,7 @@ As your level increases, you may gain more than just level up points. You also g
 | 18   | 35            | 20          | 3            | C            |
 | 19   | 35            | 20          | 3            | C            |
 | 20   | 35            | 20          | **4** +1     | C            |
-| 21   | **35**        | **30** +10  | 4            | **B** +1     |
+| 21   | 35            | **30** +10  | 4            | **B** +1     |
 | 22   | 35            | 30          | 4            | B            |
 | 23   | 35            | 30          | 4            | B            |
 | 24   | 35            | 30          | 4            | B            |
@@ -284,7 +284,7 @@ As your level increases, you may gain more than just level up points. You also g
 | 38   | 35            | 30          | 7            | A            |
 | 39   | 35            | 30          | 7            | A            |
 | 40   | 35            | 30          | **8** +1     | A            |
-| 41   | **35**        | **40** +10  | 8            | **S** +1     |
+| 41   | 35            | **40** +10  | 8            | **S** +1     |
 | 42   | 35            | 40          | 8            | S            |
 | 43   | 35            | 40          | 8            | S            |
 | 44   | 35            | 40          | 8            | S            |

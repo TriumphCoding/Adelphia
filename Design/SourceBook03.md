@@ -208,33 +208,6 @@ For example:
 | MOV       | N/A    | N/A  | +0     | 6    | 6     |
 | **Total** |        |      | **+6** |      |       |
 
-### Changes by Level
-
-As your level increases, you may gain more than just level up points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, but the below table may be a helpful reference.
-
-|Level | Growth Points | Stat Points | Skill Points |
-| :--- | :---          | :---        | ---:         |
-| 1    | **35**        | **20**      | **0**        |
-| 2    | 35            | 20          |             |
-| 3    | 35            | 20          |             |
-| 4    | 35            | 20          |             |
-| 5    | 35            | 20          |             |
-| 6    | 35            | 20          |             |
-| 7    | 35            | 20          |             |
-| 8    | 35            | 20          |             |
-| 9    | 35            | 20          |             |
-| 10   | 35            | 20          |             |
-| 11   | 35            | 20          |             |
-| 12   | 35            | 20          |             |
-| 13   | 35            | 20          |             |
-| 14   | 35            | 20          |             |
-| 15   | 35            | 20          |             |
-| 16   | 35            | 20          |             |
-| 17   | 35            | 20          |             |
-| 18   | 35            | 20          |             |
-| 19   | 35            | 20          |             |
-| 20   | 35            | **30** +10  |             |
-
 ### Optional Level Up Rules
 
 Sometimes, the randomness of a level up system can feel oppressive. To help mitigate this, consider some of the following changes:
@@ -264,3 +237,70 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 | WIS       | 5      | 2      | 7      |
 | MOV       | N/A    | N/A    | N/A    |
 | **Total** | **40** | **35** | **75** |
+
+## Changes by Level
+
+As your level increases, you may gain more than just level up points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, but the below table may be a helpful reference.
+
+|Level | Growth Points | Stat Points | Skill Points | Weapon Level |
+| :--- | :---          | :---        | ---:         | ---:         |
+| 1    | **35**        | **20**      | **0**        | **D** +1     |
+| 2    | 35            | 20          | 0            | D            |
+| 3    | 35            | 20          | 0            | D            |
+| 4    | 35            | 20          | 0            | D            |
+| 5    | 35            | 20          | **1** +1     | D            |
+| 6    | 35            | 20          | 1            | D            |
+| 7    | 35            | 20          | 1            | D            |
+| 8    | 35            | 20          | 1            | D            |
+| 9    | 35            | 20          | 1            | D            |
+| 10   | 35            | 20          | **2** +1     | D            |
+| 11   | 35            | 20          | 2            | **C** +1     |
+| 12   | 35            | 20          | 2            | C            |
+| 13   | 35            | 20          | 2            | C            |
+| 14   | 35            | 20          | 2            | C            |
+| 15   | 35            | 20          | **3** +1     | C            |
+| 16   | 35            | 20          | 3            | C            |
+| 17   | 35            | 20          | 3            | C            |
+| 18   | 35            | 20          | 3            | C            |
+| 19   | 35            | 20          | 3            | C            |
+| 20   | 35            | 20          | **4** +1     | C            |
+| 21   | **35**        | **30** +10  | 4            | **B** +1     |
+| 22   | 35            | 30          | 4            | B            |
+| 23   | 35            | 30          | 4            | B            |
+| 24   | 35            | 30          | 4            | B            |
+| 25   | 35            | 30          | **5** +1     | B            |
+| 26   | 35            | 30          | 5            | B            |
+| 27   | 35            | 30          | 5            | B            |
+| 28   | 35            | 30          | 5            | B            |
+| 29   | 35            | 30          | 5            | B            |
+| 30   | 35            | 30          | **6** +1     | B            |
+| 31   | 35            | 30          | 6            | **A** +1     |
+| 32   | 35            | 30          | 6            | A            |
+| 33   | 35            | 30          | 6            | A            |
+| 34   | 35            | 30          | 6            | A            |
+| 35   | 35            | 20          | **7** +1     | A            |
+| 36   | 35            | 30          | 7            | A            |
+| 37   | 35            | 30          | 7            | A            |
+| 38   | 35            | 30          | 7            | A            |
+| 39   | 35            | 30          | 7            | A            |
+| 40   | 35            | 30          | **8** +1     | A            |
+| 41   | **35**        | **40** +10  | 8            | **S** +1     |
+| 42   | 35            | 40          | 8            | S            |
+| 43   | 35            | 40          | 8            | S            |
+| 44   | 35            | 40          | 8            | S            |
+| 45   | 35            | 40          | **9** +1     | S            |
+| 46   | 35            | 40          | 9            | S            |
+| 47   | 35            | 40          | 9            | S            |
+| 48   | 35            | 40          | 9            | S            |
+| 49   | 35            | 40          | 9            | S            |
+| 50   | 35            | 40          | **10** +1    | S            |
+| 51   | 35            | 40          | 10           | **S+** +1    |
+| 52   | 35            | 40          | 10           | S+           |
+| 53   | 35            | 40          | 10           | S+           |
+| 54   | 35            | 40          | 10           | S+           |
+| 55   | 35            | 40          | **11** +1    | S+           |
+| 56   | 35            | 40          | 11           | S+           |
+| 57   | 35            | 40          | 11           | S+           |
+| 58   | 35            | 40          | 11           | S+           |
+| 59   | 35            | 40          | 11           | S+           |
+| 60   | 35            | 40          | **12** +1    | S+           |

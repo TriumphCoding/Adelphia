@@ -155,7 +155,7 @@ Some or all of your physical body has been replaced with machinery that runs on 
 
 ### Carnivore
 
-One of your ancestors was a practitioner of magic, and made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+One of your ancestors made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 >Animal Characters can be as animalistic or as humanoid as you prefer. Work with your GM to determine what makes the most sense in the setting.
 
 |Carnivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
@@ -165,7 +165,7 @@ One of your ancestors was a practitioner of magic, and made a pact with the spir
 
 ### Herbivore
 
-One of your ancestors was a practitioner of magic, and made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+One of your ancestors made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 
 |Herbivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
@@ -181,9 +181,10 @@ You have dragon blood, and it manifests itself in you in interesting ways.
 | Base   |  10|    2|    4|    2|    1|    2|    2|    3|    4|
 | Growth |   5|    5|    7|    5|    3|    4|    5|    6|  N/A|
 
->### Custom
->
->If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral. Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
+### Custom
+
+If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral.
+>Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
 
 ## Leveling Up
 
@@ -240,67 +241,67 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 
 ## Changes by Level
 
-As your level increases, you may gain more than just level up points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, but the below table may be a helpful reference.
+As your level increases, you may gain more than just stat points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, see the below table for an explanation.
 
-|Level | Growth Points | Stat Points | Skill Points | Weapon Level |
-| :--- | :---          | :---        | ---:         | ---:         |
-| 1    | **35** +35    | **20** +20  | **0**        | **D** +1     |
-| 2    | 35            | 20          | 0            | D            |
-| 3    | 35            | 20          | 0            | D            |
-| 4    | 35            | 20          | 0            | D            |
-| 5    | 35            | 20          | **1** +1     | D            |
-| 6    | 35            | 20          | 1            | D            |
-| 7    | 35            | 20          | 1            | D            |
-| 8    | 35            | 20          | 1            | D            |
-| 9    | 35            | 20          | 1            | D            |
-| 10   | 35            | 20          | **2** +1     | D            |
-| 11   | 35            | 20          | 2            | **C** +1     |
-| 12   | 35            | 20          | 2            | C            |
-| 13   | 35            | 20          | 2            | C            |
-| 14   | 35            | 20          | 2            | C            |
-| 15   | 35            | 20          | **3** +1     | C            |
-| 16   | 35            | 20          | 3            | C            |
-| 17   | 35            | 20          | 3            | C            |
-| 18   | 35            | 20          | 3            | C            |
-| 19   | 35            | 20          | 3            | C            |
-| 20   | 35            | 20          | **4** +1     | C            |
-| 21   | 35            | **30** +10  | 4            | **B** +1     |
-| 22   | 35            | 30          | 4            | B            |
-| 23   | 35            | 30          | 4            | B            |
-| 24   | 35            | 30          | 4            | B            |
-| 25   | 35            | 30          | **5** +1     | B            |
-| 26   | 35            | 30          | 5            | B            |
-| 27   | 35            | 30          | 5            | B            |
-| 28   | 35            | 30          | 5            | B            |
-| 29   | 35            | 30          | 5            | B            |
-| 30   | 35            | 30          | **6** +1     | B            |
-| 31   | 35            | 30          | 6            | **A** +1     |
-| 32   | 35            | 30          | 6            | A            |
-| 33   | 35            | 30          | 6            | A            |
-| 34   | 35            | 30          | 6            | A            |
-| 35   | 35            | 20          | **7** +1     | A            |
-| 36   | 35            | 30          | 7            | A            |
-| 37   | 35            | 30          | 7            | A            |
-| 38   | 35            | 30          | 7            | A            |
-| 39   | 35            | 30          | 7            | A            |
-| 40   | 35            | 30          | **8** +1     | A            |
-| 41   | 35            | **40** +10  | 8            | **S** +1     |
-| 42   | 35            | 40          | 8            | S            |
-| 43   | 35            | 40          | 8            | S            |
-| 44   | 35            | 40          | 8            | S            |
-| 45   | 35            | 40          | **9** +1     | S            |
-| 46   | 35            | 40          | 9            | S            |
-| 47   | 35            | 40          | 9            | S            |
-| 48   | 35            | 40          | 9            | S            |
-| 49   | 35            | 40          | 9            | S            |
-| 50   | 35            | 40          | **10** +1    | S            |
-| 51   | 35            | 40          | 10           | **S+** +1    |
-| 52   | 35            | 40          | 10           | S+           |
-| 53   | 35            | 40          | 10           | S+           |
-| 54   | 35            | 40          | 10           | S+           |
-| 55   | 35            | 40          | **11** +1    | S+           |
-| 56   | 35            | 40          | 11           | S+           |
-| 57   | 35            | 40          | 11           | S+           |
-| 58   | 35            | 40          | 11           | S+           |
-| 59   | 35            | 40          | 11           | S+           |
-| 60   | 35            | 40          | **12** +1    | S+           |
+|Level | Tier       | Growth Points | Stat Points | Skill Points | Weapon Level | Rune Strength |
+| :--- | :---       | :---          | :---        | ---:         | ---:         | ---:          |
+| 1    | **Hero**   | **35** +35    | **20** +20  | **0**        | **D** +1     | **0**         |
+| 2    | Hero       | 35            | 20          | 0            | D            | 0             |
+| 3    | Hero       | 35            | 20          | 0            | D            | 0             |
+| 4    | Hero       | 35            | 20          | 0            | D            | **D1** +1     |
+| 5    | Hero       | 35            | 20          | **1** +1     | D            | D1            |
+| 6    | Hero       | 35            | 20          | 1            | D *(Unl E)*  | D1            |
+| 7    | Hero       | 35            | 20          | 1            | D            | D1            |
+| 8    | Hero       | 35            | 20          | 1            | D            | **D2** +1     |
+| 9    | Hero       | 35            | 20          | 1            | D            | D2            |
+| 10   | Hero       | 35            | 20          | **2** +1     | D            | D2            |
+| 11   | Hero       | 35            | 20          | 2            | **C** +1     | D2            |
+| 12   | Hero       | 35            | 20          | 2            | C            | **C1** +1     |
+| 13   | Hero       | 35            | 20          | 2            | C            | C1            |
+| 14   | Hero       | 35            | 20          | 2            | C            | C1            |
+| 15   | Hero       | 35            | 20          | **3** +1     | C            | C1            |
+| 16   | Hero       | 35            | 20          | 3            | C *(Unl D)*  | **C2** +1     |
+| 17   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 18   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 19   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 20   | Hero       | 35            | 20          | **4** +1     | C            | **C3** +1     |
+| 21   | **Epic**   | 35            | **30** +10  | 4            | **B** +1     | C3            |
+| 22   | Epic       | 35            | 30          | 4            | B            | C3            |
+| 23   | Epic       | 35            | 30          | 4            | B            | C3            |
+| 24   | Epic       | 35            | 30          | 4            | B            | **B1** +1     |
+| 25   | Epic       | 35            | 30          | **5** +1     | B            | B1            |
+| 26   | Epic       | 35            | 30          | 5            | B *(Unl C)*  | B1            |
+| 27   | Epic       | 35            | 30          | 5            | B            | B1            |
+| 28   | Epic       | 35            | 30          | 5            | B            | **B2** +1     |
+| 29   | Epic       | 35            | 30          | 5            | B            | B2            |
+| 30   | Epic       | 35            | 30          | **6** +1     | B            | B2            |
+| 31   | Epic       | 35            | 30          | 6            | **A** +1     | B2            |
+| 32   | Epic       | 35            | 30          | 6            | A            | **B3** +1     |
+| 33   | Epic       | 35            | 30          | 6            | A            | B3            |
+| 34   | Epic       | 35            | 30          | 6            | A            | B3            |
+| 35   | Epic       | 35            | 20          | **7** +1     | A            | B3            |
+| 36   | Epic       | 35            | 30          | 7            | A *(Unl B)*  | **A1** +1     |
+| 37   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 38   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 39   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 40   | Epic       | 35            | 30          | **8** +1     | A            | **A2** +1     |
+| 41   | **Legend** | 35            | **40** +10  | 8            | **S** +1     | A2            |
+| 42   | Legend     | 35            | 40          | 8            | S            | A2            |
+| 43   | Legend     | 35            | 40          | 8            | S            | A2            |
+| 44   | Legend     | 35            | 40          | 8            | S            | **A3** +1     |
+| 45   | Legend     | 35            | 40          | **9** +1     | S            | A3            |
+| 46   | Legend     | 35            | 40          | 9            | S *(Unl A)*  | A3            |
+| 47   | Legend     | 35            | 40          | 9            | S            | A3            |
+| 48   | Legend     | 35            | 40          | 9            | S            | **A4** +1     |
+| 49   | Legend     | 35            | 40          | 9            | S            | A4            |
+| 50   | Legend     | 35            | 40          | **10** +1    | S            | A4            |
+| 51   | Legend     | 35            | 40          | 10           | **S+** +1    | A4            |
+| 52   | Legend     | 35            | 40          | 10           | S+           | **A5** +1     |
+| 53   | Legend     | 35            | 40          | 10           | S+           | A5            |
+| 54   | Legend     | 35            | 40          | 10           | S+           | A5            |
+| 55   | Legend     | 35            | 40          | **11** +1    | S+           | A5            |
+| 56   | Legend     | 35            | 40          | 11           | S+ *(Unl S)* | **S1** +1     |
+| 57   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 58   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 59   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 60   | Legend     | 35            | 40          | **12** +1    | S+           | **S2** +1     |

@@ -42,8 +42,8 @@ Your character's **Class** is what determines your character's stats right now. 
 
 ### Monico Aaronway Stats
 
-| Stat      | Base | Rate | Spent  | Gained | Total |
-| :---      | ---: | ---: | ---:   | ---:   | ---:  |
+| Stat      | Base | Rate | Spent  | Gained | Total             |
+| :---      | ---: | ---: | ---:   | ---:   | ---:              |
 | HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**   |
 | STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
 | INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
@@ -53,7 +53,7 @@ Your character's **Class** is what determines your character's stats right now. 
 | CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
 | WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
 | MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
-| **Total** |      |      | **20** |        |       |
+| **Total** |      |      | **20** |        |                   |
 
 However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
 
@@ -155,7 +155,7 @@ Some or all of your physical body has been replaced with machinery that runs on 
 
 ### Carnivore
 
-One of your ancestors was a practitioner of magic, and made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+One of your ancestors made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 >Animal Characters can be as animalistic or as humanoid as you prefer. Work with your GM to determine what makes the most sense in the setting.
 
 |Carnivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
@@ -165,7 +165,7 @@ One of your ancestors was a practitioner of magic, and made a pact with the spir
 
 ### Herbivore
 
-One of your ancestors was a practitioner of magic, and made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
+One of your ancestors made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 
 |Herbivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
@@ -181,9 +181,18 @@ You have dragon blood, and it manifests itself in you in interesting ways.
 | Base   |  10|    2|    4|    2|    1|    2|    2|    3|    4|
 | Growth |   5|    5|    7|    5|    3|    4|    5|    6|  N/A|
 
->### Custom
->
->If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral. Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
+### Custom
+
+If there is an idea for a player creature type that isn't on this list, feel free to choose one of the base creature types and flavor it differently. If that doesn't get the point across, a safe bet for a custom creature type is to follow the point rules, and adjust the human base points up and down, keeping the net base point value neutral.
+>Be careful going more than 5 points of adjustment, though, or more than a +/- 3 to a particular stat base or growth. As always, work with your DM when performing custom plans not covered in this book.
+
+## Choosing Equipment
+
+All characters start the game with the following:
+
+1. A Rank D Weapon
+1. A Rank E Weapon
+1. A Pouch of healing herbs
 
 ## Leveling Up
 
@@ -207,33 +216,6 @@ For example:
 | WIS       | 7      |  0   | +1     | 2    | **3** |
 | MOV       | N/A    | N/A  | +0     | 6    | 6     |
 | **Total** |        |      | **+6** |      |       |
-
-### Changes by Level
-
-As your level increases, you may gain more than just level up points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, but the below table may be a helpful reference.
-
-|Level | Growth Points | Stat Points | Skill Points |
-| :--- | :---          | :---        | ---:         |
-| 1    | **35**        | **20**      | **0**        |
-| 2    | 35            | 20          |             |
-| 3    | 35            | 20          |             |
-| 4    | 35            | 20          |             |
-| 5    | 35            | 20          |             |
-| 6    | 35            | 20          |             |
-| 7    | 35            | 20          |             |
-| 8    | 35            | 20          |             |
-| 9    | 35            | 20          |             |
-| 10   | 35            | 20          |             |
-| 11   | 35            | 20          |             |
-| 12   | 35            | 20          |             |
-| 13   | 35            | 20          |             |
-| 14   | 35            | 20          |             |
-| 15   | 35            | 20          |             |
-| 16   | 35            | 20          |             |
-| 17   | 35            | 20          |             |
-| 18   | 35            | 20          |             |
-| 19   | 35            | 20          |             |
-| 20   | 35            | **30** +10  |             |
 
 ### Optional Level Up Rules
 
@@ -264,3 +246,121 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 | WIS       | 5      | 2      | 7      |
 | MOV       | N/A    | N/A    | N/A    |
 | **Total** | **40** | **35** | **75** |
+
+### Stats
+
+| Stat      | Base | Rate | Spent  | Gained | Total             |
+| :---      | ---: | ---: | ---:   | ---:   | ---:              |
+| HP        | 10   | x3   | 2      | +6     | 10 + 6 = **16**   |
+| STR       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| INT       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| DEX       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| SPD       | 2    | x1   | 4      | +4     | 2 + 4 = **6**     |
+| LUK       | 2    | x2   | 2      | +4     | 2 + 4 = **6**     |
+| CON       | 2    | x1   | 2      | +2     | 2 + 2 = **4**     |
+| WIS       | 2    | x1   | 0      | +0     | 2 + 0 = **2**     |
+| MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
+| **Total** |      |      | **20** |        |                   |
+
+### Levelup
+
+| Stat      | Growth | Roll | Gain   | Stat | Final |
+| ---       | ---:   | ---: | ---:   | ---: | ---:  |
+| HP        | 10     | 9    | +1     | 16   | **17**|
+| STR       | 11     | 8    | +1     | 6    | **7** |
+| INT       | 6      | 18   | +1     | 2    | **3** |
+| DEX       | 12     | 13   | +0     | 6    | 6     |
+| SPD       | 11     | 10   | +1     | 6    | **7** |
+| LUK       | 10     | 10   | +1     | 6    | **7** |
+| CON       | 8      |  9   | +0     | 4    | 4     |
+| WIS       | 7      |  0   | +1     | 2    | **3** |
+| MOV       | N/A    | N/A  | +0     | 6    | 6     |
+| **Total** |        |      | **+6** |      |       |
+
+### Weapons
+
+1. Iron Sword
+1. Bronze Sword
+1. Pack of Herbs
+
+### Calculated Stats
+
+With Iron Sword Equipped:
+
+| Stat       | Calculation                          | Numbers                | Final |
+| ---        | ---                                  | ---                    | ---   |
+| HP         | HP                                   | 17                     | 17    |
+| Might      | (*STR* or *MAG*) + *W.MGT*           | 7 + 5                  | 12    |
+| Accuracy   | (2 x *DEX*) + (½  x *LUK*) + *W.ACC* | (2 x 6) + (½ * 7) + 90 | 108   |
+| Critical   | (½  x *DEX*) + *W.CRT*               | ½ * 6 + 0              | 3     |
+| Dodge      | (2 x *SPD*) + *LUK* + *W.DGE*        | (2 x 7) + 7 + 0        | 21    |
+| Avoid      | *LUK* + *W.AVO*                      | 7 + 0                  | 7     |
+| Defense    | *CON* + *W.DEF*                      | 4 + 0                  | 4     |
+| Resistance | *WIS* + *W.RES*                      | 3 + 0                  | 3     |
+
+## Changes by Level
+
+As your level increases, you may gain more than just stat points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, see the below table for an explanation.
+
+|Level | Tier       | Growth Points | Stat Points | Skill Points | Weapon Level | Rune Strength |
+| :--- | :---       | :---          | :---        | ---:         | ---:         | ---:          |
+| 1    | **Hero**   | **35** +35    | **20** +20  | **0**        | **D** +1     | **0**         |
+| 2    | Hero       | 35            | 20          | 0            | D            | 0             |
+| 3    | Hero       | 35            | 20          | 0            | D            | 0             |
+| 4    | Hero       | 35            | 20          | 0            | D            | **D1** +1     |
+| 5    | Hero       | 35            | 20          | **1** +1     | D            | D1            |
+| 6    | Hero       | 35            | 20          | 1            | *(Unl E)* D  | D1            |
+| 7    | Hero       | 35            | 20          | 1            | D            | D1            |
+| 8    | Hero       | 35            | 20          | 1            | D            | **D2** +1     |
+| 9    | Hero       | 35            | 20          | 1            | D            | D2            |
+| 10   | Hero       | 35            | 20          | **2** +1     | D            | D2            |
+| 11   | Hero       | 35            | 20          | 2            | **C** +1     | D2            |
+| 12   | Hero       | 35            | 20          | 2            | C            | **C1** +1     |
+| 13   | Hero       | 35            | 20          | 2            | C            | C1            |
+| 14   | Hero       | 35            | 20          | 2            | C            | C1            |
+| 15   | Hero       | 35            | 20          | **3** +1     | C            | C1            |
+| 16   | Hero       | 35            | 20          | 3            | *(Unl D)* C  | **C2** +1     |
+| 17   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 18   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 19   | Hero       | 35            | 20          | 3            | C            | C2            |
+| 20   | Hero       | 35            | 20          | **4** +1     | C            | **C3** +1     |
+| 21   | **Epic**   | 35            | **30** +10  | 4            | **B** +1     | C3            |
+| 22   | Epic       | 35            | 30          | 4            | B            | C3            |
+| 23   | Epic       | 35            | 30          | 4            | B            | C3            |
+| 24   | Epic       | 35            | 30          | 4            | B            | **B1** +1     |
+| 25   | Epic       | 35            | 30          | **5** +1     | B            | B1            |
+| 26   | Epic       | 35            | 30          | 5            | *(Unl C)* B  | B1            |
+| 27   | Epic       | 35            | 30          | 5            | B            | B1            |
+| 28   | Epic       | 35            | 30          | 5            | B            | **B2** +1     |
+| 29   | Epic       | 35            | 30          | 5            | B            | B2            |
+| 30   | Epic       | 35            | 30          | **6** +1     | B            | B2            |
+| 31   | Epic       | 35            | 30          | 6            | **A** +1     | B2            |
+| 32   | Epic       | 35            | 30          | 6            | A            | **B3** +1     |
+| 33   | Epic       | 35            | 30          | 6            | A            | B3            |
+| 34   | Epic       | 35            | 30          | 6            | A            | B3            |
+| 35   | Epic       | 35            | 20          | **7** +1     | A            | B3            |
+| 36   | Epic       | 35            | 30          | 7            | *(Unl B)* A  | **A1** +1     |
+| 37   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 38   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 39   | Epic       | 35            | 30          | 7            | A            | A1            |
+| 40   | Epic       | 35            | 30          | **8** +1     | A            | **A2** +1     |
+| 41   | **Legend** | 35            | **40** +10  | 8            | **S** +1     | A2            |
+| 42   | Legend     | 35            | 40          | 8            | S            | A2            |
+| 43   | Legend     | 35            | 40          | 8            | S            | A2            |
+| 44   | Legend     | 35            | 40          | 8            | S            | **A3** +1     |
+| 45   | Legend     | 35            | 40          | **9** +1     | S            | A3            |
+| 46   | Legend     | 35            | 40          | 9            | *(Unl A)* S  | A3            |
+| 47   | Legend     | 35            | 40          | 9            | S            | A3            |
+| 48   | Legend     | 35            | 40          | 9            | S            | **A4** +1     |
+| 49   | Legend     | 35            | 40          | 9            | S            | A4            |
+| 50   | Legend     | 35            | 40          | **10** +1    | S            | A4            |
+| 51   | Legend     | 35            | 40          | 10           | **S+** +1    | A4            |
+| 52   | Legend     | 35            | 40          | 10           | S+           | **A5** +1     |
+| 53   | Legend     | 35            | 40          | 10           | S+           | A5            |
+| 54   | Legend     | 35            | 40          | 10           | S+           | A5            |
+| 55   | Legend     | 35            | 40          | **11** +1    | S+           | A5            |
+| 56   | Legend     | 35            | 40          | 11           | *(Unl S)* S+ | **S1** +1     |
+| 57   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 58   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 59   | Legend     | 35            | 40          | 11           | S+           | S1            |
+| 60   | Legend     | 35            | 40          | **12** +1    | S+           | **S2** +1     |

@@ -250,7 +250,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 3    | Hero       | 35            | 20          | 0            | D            | 0             |
 | 4    | Hero       | 35            | 20          | 0            | D            | **D1** +1     |
 | 5    | Hero       | 35            | 20          | **1** +1     | D            | D1            |
-| 6    | Hero       | 35            | 20          | 1            | D *(Unl E)*  | D1            |
+| 6    | Hero       | 35            | 20          | 1            | *(Unl E)* D  | D1            |
 | 7    | Hero       | 35            | 20          | 1            | D            | D1            |
 | 8    | Hero       | 35            | 20          | 1            | D            | **D2** +1     |
 | 9    | Hero       | 35            | 20          | 1            | D            | D2            |
@@ -260,7 +260,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 13   | Hero       | 35            | 20          | 2            | C            | C1            |
 | 14   | Hero       | 35            | 20          | 2            | C            | C1            |
 | 15   | Hero       | 35            | 20          | **3** +1     | C            | C1            |
-| 16   | Hero       | 35            | 20          | 3            | C *(Unl D)*  | **C2** +1     |
+| 16   | Hero       | 35            | 20          | 3            | *(Unl D)* C  | **C2** +1     |
 | 17   | Hero       | 35            | 20          | 3            | C            | C2            |
 | 18   | Hero       | 35            | 20          | 3            | C            | C2            |
 | 19   | Hero       | 35            | 20          | 3            | C            | C2            |
@@ -270,7 +270,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 23   | Epic       | 35            | 30          | 4            | B            | C3            |
 | 24   | Epic       | 35            | 30          | 4            | B            | **B1** +1     |
 | 25   | Epic       | 35            | 30          | **5** +1     | B            | B1            |
-| 26   | Epic       | 35            | 30          | 5            | B *(Unl C)*  | B1            |
+| 26   | Epic       | 35            | 30          | 5            | *(Unl C)* B  | B1            |
 | 27   | Epic       | 35            | 30          | 5            | B            | B1            |
 | 28   | Epic       | 35            | 30          | 5            | B            | **B2** +1     |
 | 29   | Epic       | 35            | 30          | 5            | B            | B2            |
@@ -280,7 +280,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 33   | Epic       | 35            | 30          | 6            | A            | B3            |
 | 34   | Epic       | 35            | 30          | 6            | A            | B3            |
 | 35   | Epic       | 35            | 20          | **7** +1     | A            | B3            |
-| 36   | Epic       | 35            | 30          | 7            | A *(Unl B)*  | **A1** +1     |
+| 36   | Epic       | 35            | 30          | 7            | *(Unl B)* A  | **A1** +1     |
 | 37   | Epic       | 35            | 30          | 7            | A            | A1            |
 | 38   | Epic       | 35            | 30          | 7            | A            | A1            |
 | 39   | Epic       | 35            | 30          | 7            | A            | A1            |
@@ -290,7 +290,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 43   | Legend     | 35            | 40          | 8            | S            | A2            |
 | 44   | Legend     | 35            | 40          | 8            | S            | **A3** +1     |
 | 45   | Legend     | 35            | 40          | **9** +1     | S            | A3            |
-| 46   | Legend     | 35            | 40          | 9            | S *(Unl A)*  | A3            |
+| 46   | Legend     | 35            | 40          | 9            | *(Unl A)* S  | A3            |
 | 47   | Legend     | 35            | 40          | 9            | S            | A3            |
 | 48   | Legend     | 35            | 40          | 9            | S            | **A4** +1     |
 | 49   | Legend     | 35            | 40          | 9            | S            | A4            |
@@ -300,7 +300,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 53   | Legend     | 35            | 40          | 10           | S+           | A5            |
 | 54   | Legend     | 35            | 40          | 10           | S+           | A5            |
 | 55   | Legend     | 35            | 40          | **11** +1    | S+           | A5            |
-| 56   | Legend     | 35            | 40          | 11           | S+ *(Unl S)* | **S1** +1     |
+| 56   | Legend     | 35            | 40          | 11           | *(Unl S)* S+ | **S1** +1     |
 | 57   | Legend     | 35            | 40          | 11           | S+           | S1            |
 | 58   | Legend     | 35            | 40          | 11           | S+           | S1            |
 | 59   | Legend     | 35            | 40          | 11           | S+           | S1            |

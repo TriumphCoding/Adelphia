@@ -21,6 +21,7 @@ This is a scratch notepad for ideas, logged for inclusion later.
 | S+   | Orichalcum |
 
 ## Skill Notes
+
 Hearty: Increase MaxHP by 10%/20%/30% of level
 
 Cornered Strength: Increase STR by 10%/20%/30% of your level if you are at less than 50% HP.
@@ -45,4 +46,4 @@ Deathblow: If you initiate an attack, grants you 10%/20%/30% of your level incre
 
 Quickblow: If you initiate an attack, grants you 10%/20%/30% of your level increased DEX and SPD.
 
-Armored Blow: 
+Armored Blow:

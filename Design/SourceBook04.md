@@ -75,11 +75,16 @@ Non Player Characters should have 2 quirks total, one to represent who they are 
 
 ### Example Quirk Selection
 
-#### Monico Aaronway
+**Monico Aaronway** is a sword-for-hire doing what she can to take care of her younger brother after their parents passed away. He inherited his father's knack for magic, and although she has no head for the stuff herself, she's been helping him study it as she bounces from place to place trying to get by. Her sword forms that she practices reminds her of the dancing lessons she was given, back in more stable times.
 
 1. *Campaign*: Traveling vagabond.
 1. *Hobby*: Dances, even when watched.
 1. *Interest*: Elemental Magic is fascinating.
 1. *Relationship*: Older sister and caretaker.
 
-***Monico Aaronway** is a sword-for-hire doing what she can to take care of her younger brother after their parents passed away. He inherited his father's knack for magic, and although she has no head for the stuff herself, she's been helping him study it as she bounces from place to place trying to get by. Her sword forms that she practices reminds her of the dancing lessons she was given, back in more stable times.*
+**Auric Aaronway** is Monico's younger brother and a budding magical prodigy. Raised by his sister, he moves around with her practicing his magic, and doing his best to help her out when he can. He dreams of becoming a famous and powerful wizard that can pay his sister back for all she's done for him.
+
+1. *Campaign*: Traveling vagabond.
+1. *Vocation*: Student of Magic.
+1. *Hobby*: Cooking is alchemy you eat.
+1. *Interest*: Famous witches and wizards.

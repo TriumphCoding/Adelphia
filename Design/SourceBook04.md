@@ -88,3 +88,5 @@ Non Player Characters should have 2 quirks total, one to represent who they are 
 1. *Vocation*: Student of Magic.
 1. *Hobby*: Cooking is alchemy you eat.
 1. *Interest*: Famous witches and wizards.
+
+**3rd Example** is a third example in this list

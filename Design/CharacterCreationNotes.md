@@ -22,24 +22,30 @@ This is a scratch notepad for ideas, logged for inclusion later.
 
 ## Skill Notes
 
-Hearty: Increase MaxHP by 10%/20%/30% of level
+**Hearty**: Increase HP by 10%/20%/30% of level
 
-Cornered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level if you are at less than 50% HP. Only increase one at a time. You may take this skill multiple times, but it applies to a different stat each time.
+**Cornered Strike**: Increase STR, INT, DEX, SKL, SPD, CON, or WIS by 10%/20%/30% of your level if you are at less than 50% HP. Chose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-Cornered Intelligence: Increase INT by 10%/20%/30% of your level if you are at less than 50% HP.
+**Controlled Strike**: Increase STR, INT, DEX, SKL, SPD, CON, or WIS by 10%/20%/30% of your level if you are at More than 70% HP. Chose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-Cornered Dexterity: Increase DEX by 10%/20%/30% of your level if you are at less than 50% HP.
+**Empowered Strike**: Increase STR, INT, DEX, SKL, SPD, CON, or WIS by 10%/20%/30% of your level when you **attack** and **follow through attack**. Chose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-Cornered Speed: Increase SPD by 10%/20%/30% of your level if you are at less than 50% HP.
+**Empowered Riposte**: Increase STR, INT, DEX, SKL, SPD, CON, or WIS by 10%/20%/30% of your level when you **Riposte** and **follow through Riposte**. Chose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-Cornered Constitution: Increase CON by 10%/20%/30% of your level if you are at less than 50% HP.
+**Janken Mastery**: Increases **Weapon Triangle** effects by 1/2/3 levels.
 
-Cornered Wisdom: Increase WIS by 10%/20%/30% of your level if you are at less than 50% HP.
+**Janken Defense**: Increases **Weapon Triangle** effects by 1/2/3 levels.
 
-Janken Mastery: Increases weapon triangle effects by 1/2/3 levels.
+**Colorblind Fighter**: Grants 1/2/3 **Weapon Triangle** effects when fighting colorless weapons.
 
-Reckless Offense: Increase STR, INT, SPD by 10%/20%/30% of your level, reduce SKL, WIS and CON by 10%/20%/30% of your level.
+**Reckless Offense**: Increase STR, INT, SPD by 10%/20%/30% of your level, reduce SKL, WIS and CON by 10%/20%/30% of your level.
 
-Fury: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30%, but you take 10%/20%/30% of your total HP in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
+**Fury**: Increase STR, INT, DEX, SKL, SPD, CON, and WIS by 10%/20%/30% of your level, but you take 10%/20%/30% of your total HP in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
-Empowered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level when you declare an attack on your turn. Only increase one at a time. You may take this skill multiple times, but it applies to a different stat each time.
+**Weapon Mastery**: You may take this skill multiple times, each time applying the skill to a new weapon.
+
+1. Increase the **Accuracy** of the mastered weapon by your level.
+1. Increase the **Might** of the master weapon by 10% of your level.
+1. Increase the **Critical** of the master weapon by 50% of your level.
+
+*ToDo: Add more skills, math out weapon mastery vs other skills, Add in %chance skills.*

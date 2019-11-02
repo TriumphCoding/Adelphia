@@ -24,7 +24,7 @@ This is a scratch notepad for ideas, logged for inclusion later.
 
 Hearty: Increase MaxHP by 10%/20%/30% of level
 
-Cornered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level if you are at less than 50% HP.
+Cornered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level if you are at less than 50% HP. Only increase one at a time. You may take this skill multiple times, but it applies to a different stat each time.
 
 Cornered Intelligence: Increase INT by 10%/20%/30% of your level if you are at less than 50% HP.
 
@@ -42,8 +42,4 @@ Reckless Offense: Increase STR, INT, SPD by 10%/20%/30% of your level, reduce SK
 
 Fury: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30%, but you take 10%/20%/30% of your total HP in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
-Deathblow: If you initiate an attack, grants you 10%/20%/30% of your level increased STR and INT.
-
-Quickblow: If you initiate an attack, grants you 10%/20%/30% of your level increased DEX and SPD.
-
-Empowered Strike:
+Empowered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level when you declare an attack on your turn. Only increase one at a time. You may take this skill multiple times, but it applies to a different stat each time.

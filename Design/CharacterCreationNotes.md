@@ -24,7 +24,7 @@ This is a scratch notepad for ideas, logged for inclusion later.
 
 Hearty: Increase MaxHP by 10%/20%/30% of level
 
-Cornered Strength: Increase STR by 10%/20%/30% of your level if you are at less than 50% HP.
+Cornered Strike: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30% of your level if you are at less than 50% HP.
 
 Cornered Intelligence: Increase INT by 10%/20%/30% of your level if you are at less than 50% HP.
 
@@ -40,10 +40,10 @@ Janken Mastery: Increases weapon triangle effects by 1/2/3 levels.
 
 Reckless Offense: Increase STR, INT, SPD by 10%/20%/30% of your level, reduce SKL, WIS and CON by 10%/20%/30% of your level.
 
-Fury: Increase STR, INT, SKL, SPD, CON, WIS by 10%/20%/30%, but you take 10%/20%/30% of your total HP in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
+Fury: Increase STR, INT, DEX, SKL, SPD, CON, WIS by 10%/20%/30%, but you take 10%/20%/30% of your total HP in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
 Deathblow: If you initiate an attack, grants you 10%/20%/30% of your level increased STR and INT.
 
 Quickblow: If you initiate an attack, grants you 10%/20%/30% of your level increased DEX and SPD.
 
-Armored Blow:
+Empowered Strike:

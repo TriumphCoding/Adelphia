@@ -130,7 +130,49 @@ A **Naginata** is a type of lance that encourages defense over offense. Wielding
 
 ### Gauntlet
 
-Gauntlets are a protected hand covering, used when fighting with your fists.
+Gauntlets are a protected hand covering, used when fighting with your fists. Gauntlets are a weapon for people who like to get up close.
+
+|Tier | Level | Metal      | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Grey  | 1     | 90       | 1
+| D   | 2     | Iron       | Grey  | 3     | 80       | 1
+| C   | 3     | Steel      | Grey  | 5     | 70       | 1
+| A   | 5     | Silvered   | Grey  | 9     | 60       | 1
+| S+  | 7     | Orichalcum | Grey  | 13    | 50       | 1
+
+### Crossbow
+
+Swords are the standard fantasy weapon. They are useful in most situations, and you'll never really go wrong with having one by your side.
+
+A **Arbalest** is a type of sword that encourages quickness and speed over defense. Wielding a Katana increases your **SPD** by 1 and decreases your **CON** and **WIS** by 1 per weapon level.
+
+|Tier | Level | Metal      | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---  |---:  | ---:     | :---
+| E   | 1     | Bronze     | Red   | 4     | 95       | 1
+| D   | 2     | Iron       | Red   | 6     | 90       | 1
+| C   | 3     | Steel      | Red   | 8     | 85       | 1
+| A   | 5     | Silvered   | Red   | 12    | 75       | 1
+| S+  | 7     | Orichalcum | Red   | 16    | 65       | 1
+
+### Knife
+
+Axes hurt people. The preferred weapon of brigands and mercenaries, Axes pack a wallop that nothing else can quite compare to. Their power is somewhat dwarfed by their difficulty to wield accurately.
+
+A **Shuriken** is wielded like a blunt Axe, bludgeoning instead of cutting your opponent. A club increases your **Critical** by 5 and decreases your **STR** by 1 per weapon level.
+
+|Tier | Level | Metal      | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Green | 4     | 95       | 1
+| D   | 2     | Iron       | Green | 8     | 80       | 1
+| C   | 3     | Steel      | Green | 12    | 65       | 1
+| A   | 5     | Silvered   | Green | 20    | 35       | 1
+| S+  | 7     | Orichalcum | Green | 28    | 5        | 1
+
+### Bow
+
+Lances are a soldier's weapon. They split the difference between the accuracy of the sword and the power of the axe.
+
+A **Yumi** is a type of lance that encourages defense over offense. Wielding a Naginata increases your **CON** and **WIS** and decreases your **STR** and **INT** by 1 per weapon level.
 
 |Tier | Level | Metal      | Color | Might | Accuracy | Range
 |:--- | :---  | :---       | :---  | ---:  | ---:     | :---
@@ -139,3 +181,15 @@ Gauntlets are a protected hand covering, used when fighting with your fists.
 | C   | 3     | Steel      | Blue  | 10    | 75       | 1
 | A   | 5     | Silvered   | Blue  | 16    | 55       | 1
 | S+  | 7     | Orichalcum | Blue  | 22    | 35       | 1
+
+### Flintlock
+
+Gauntlets are a protected hand covering, used when fighting with your fists. Gauntlets are a weapon for people who like to get up close.
+
+|Tier | Level | Metal      | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Grey  | 1     | 90       | 1
+| D   | 2     | Iron       | Grey  | 3     | 80       | 1
+| C   | 3     | Steel      | Grey  | 5     | 70       | 1
+| A   | 5     | Silvered   | Grey  | 9     | 60       | 1
+| S+  | 7     | Orichalcum | Grey  | 13    | 50       | 1

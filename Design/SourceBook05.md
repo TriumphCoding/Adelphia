@@ -142,31 +142,31 @@ Gauntlets are a protected hand covering, used when fighting with your fists. Gau
 
 ### Crossbow
 
-Swords are the standard fantasy weapon. They are useful in most situations, and you'll never really go wrong with having one by your side.
+Easy to Hold and aim, crossbows are utilitarian weapons that are as deadly as they are efficient. Thier range provides a safety that really can't be beat.
 
-A **Arbalest** is a type of sword that encourages quickness and speed over defense. Wielding a Katana increases your **SPD** by 1 and decreases your **CON** and **WIS** by 1 per weapon level.
+An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Increase **STR** and **INT** and decrease your **SPD** by 1 per weapon level.
 
 |Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  |---:  | ---:     | :---
-| E   | 1     | Bronze     | Red   | 4     | 95       | 1
-| D   | 2     | Iron       | Red   | 6     | 90       | 1
-| C   | 3     | Steel      | Red   | 8     | 85       | 1
-| A   | 5     | Silvered   | Red   | 12    | 75       | 1
-| S+  | 7     | Orichalcum | Red   | 16    | 65       | 1
+|:--- | :---  | :---       | :---  |---:   | ---:     | :---
+| E   | 1     | Bronze     | Red   | 3     | 90       | 2
+| D   | 2     | Iron       | Red   | 5     | 85       | 2
+| C   | 3     | Steel      | Red   | 7     | 80       | 2
+| A   | 5     | Silvered   | Red   | 11    | 70       | 2
+| S+  | 7     | Orichalcum | Red   | 15    | 60       | 2
 
-### Knife
+### Shuriken
 
-Axes hurt people. The preferred weapon of brigands and mercenaries, Axes pack a wallop that nothing else can quite compare to. Their power is somewhat dwarfed by their difficulty to wield accurately.
+Shuriken are deadly pointed stars of metal that are deadly, if difficult to work with. Their safety and power from range makes them the formidable weapon they are.
 
-A **Shuriken** is wielded like a blunt Axe, bludgeoning instead of cutting your opponent. A club increases your **Critical** by 5 and decreases your **STR** by 1 per weapon level.
+**Knives** trade the power of a shuriken for the versatility of range. Decrease **STR** and **INT** by 1 per level, but all knives are range 1-2, instead of simply range 2.
 
 |Tier | Level | Metal      | Color | Might | Accuracy | Range
 |:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Green | 4     | 95       | 1
-| D   | 2     | Iron       | Green | 8     | 80       | 1
-| C   | 3     | Steel      | Green | 12    | 65       | 1
-| A   | 5     | Silvered   | Green | 20    | 35       | 1
-| S+  | 7     | Orichalcum | Green | 28    | 5        | 1
+| E   | 1     | Bronze     | Green | 3     | 90       | 2
+| D   | 2     | Iron       | Green | 7     | 85       | 2
+| C   | 3     | Steel      | Green | 11    | 60       | 2
+| A   | 5     | Silvered   | Green | 19    | 30       | 2
+| S+  | 7     | Orichalcum | Green | 27    | 0        | 2
 
 ### Bow
 

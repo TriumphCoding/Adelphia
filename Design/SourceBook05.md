@@ -92,104 +92,172 @@ Swords are the standard fantasy weapon. They are useful in most situations, and 
 
 A **Katana** is a type of sword that encourages quickness and speed over defense. Wielding a Katana increases your **SPD** by 1 and decreases your **CON** and **WIS** by 1 per weapon level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  |---:  | ---:     | :---
-| E   | 1     | Bronze     | Red   | 4     | 95       | 1
-| D   | 2     | Iron       | Red   | 6     | 90       | 1
-| C   | 3     | Steel      | Red   | 8     | 85       | 1
-| A   | 5     | Silvered   | Red   | 12    | 75       | 1
-| S+  | 7     | Orichalcum | Red   | 16    | 65       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Red   | 4     | 95       | 1
+| D   | 2     | Iron       | Physical | Red   | 6     | 90       | 1
+| C   | 3     | Steel      | Physical | Red   | 8     | 85       | 1
+| A   | 5     | Silvered   | Physical | Red   | 12    | 75       | 1
+| S+  | 7     | Orichalcum | Physical | Red   | 16    | 65       | 1
 
 ### Axe
 
 Axes hurt people. The preferred weapon of brigands and mercenaries, Axes pack a wallop that nothing else can quite compare to. Their power is somewhat dwarfed by their difficulty to wield accurately.
 
-A **Club** is wielded like a blunt Axe, bludgeoning instead of cutting your opponent. A club increases your **Critical** by 5 and decreases your **STR** by 1 per weapon level.
+A **Club** is wielded like a blunt Axe, bludgeoning instead of cutting your opponent. A club increases your **Critical** by 5 and decreases your **Might** by 1 per weapon level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Green | 4     | 95       | 1
-| D   | 2     | Iron       | Green | 8     | 80       | 1
-| C   | 3     | Steel      | Green | 12    | 65       | 1
-| A   | 5     | Silvered   | Green | 20    | 35       | 1
-| S+  | 7     | Orichalcum | Green | 28    | 5        | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Green | 4     | 95       | 1
+| D   | 2     | Iron       | Physical | Green | 8     | 80       | 1
+| C   | 3     | Steel      | Physical | Green | 12    | 65       | 1
+| A   | 5     | Silvered   | Physical | Green | 20    | 35       | 1
+| S+  | 7     | Orichalcum | Physical | Green | 28    | 5        | 1
 
 ### Lance
 
 Lances are a soldier's weapon. They split the difference between the accuracy of the sword and the power of the axe.
 
-A **Naginata** is a type of lance that encourages defense over offense. Wielding a Naginata increases your **CON** and **WIS** and decreases your **STR** and **INT** by 1 per weapon level.
+A **Naginata** is a type of lance that encourages defense over offense. Wielding a Naginata increases your **CON** and **WIS** and decreases your **Might** by 1 per weapon level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Blue  | 4     | 95       | 1
-| D   | 2     | Iron       | Blue  | 7     | 85       | 1
-| C   | 3     | Steel      | Blue  | 10    | 75       | 1
-| A   | 5     | Silvered   | Blue  | 16    | 55       | 1
-| S+  | 7     | Orichalcum | Blue  | 22    | 35       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Blue  | 4     | 95       | 1
+| D   | 2     | Iron       | Physical | Blue  | 7     | 85       | 1
+| C   | 3     | Steel      | Physical | Blue  | 10    | 75       | 1
+| A   | 5     | Silvered   | Physical | Blue  | 16    | 55       | 1
+| S+  | 7     | Orichalcum | Physical | Blue  | 22    | 35       | 1
 
 ### Gauntlet
 
 Gauntlets are a protected hand covering, used when fighting with your fists. Gauntlets are a weapon for people who like to get up close.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Grey  | 1     | 90       | 1
-| D   | 2     | Iron       | Grey  | 3     | 80       | 1
-| C   | 3     | Steel      | Grey  | 5     | 70       | 1
-| A   | 5     | Silvered   | Grey  | 9     | 60       | 1
-| S+  | 7     | Orichalcum | Grey  | 13    | 50       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Grey  | 1     | 90       | 1
+| D   | 2     | Iron       | Physical | Grey  | 3     | 80       | 1
+| C   | 3     | Steel      | Physical | Grey  | 6     | 70       | 1
+| A   | 5     | Silvered   | Physical | Grey  | 11    | 60       | 1
+| S+  | 7     | Orichalcum | Physical | Grey  | 16    | 50       | 1
 
 ### Crossbow
 
-Easy to Hold and aim, crossbows are utilitarian weapons that are as deadly as they are efficient. Thier range provides a safety that really can't be beat.
+Easy to Hold and aim, crossbows are utilitarian weapons that are as deadly as they are efficient. Their range provides a safety that really can't be beat. All crossbows come with the **Slayer (Flight)** special.
 
-An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Increase **STR** and **INT** and decrease your **SPD** by 1 per weapon level.
+An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Increase **Might** and decrease your **SPD** by 1 per weapon level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  |---:   | ---:     | :---
-| E   | 1     | Bronze     | Red   | 3     | 90       | 2
-| D   | 2     | Iron       | Red   | 5     | 85       | 2
-| C   | 3     | Steel      | Red   | 7     | 80       | 2
-| A   | 5     | Silvered   | Red   | 11    | 70       | 2
-| S+  | 7     | Orichalcum | Red   | 15    | 60       | 2
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  |---:   | ---:     | :---  | :---
+| E   | 1     | Bronze     | Physical | Red   | 3     | 90       | 2     | Slayer (Flight)
+| D   | 2     | Iron       | Physical | Red   | 5     | 85       | 2     | Slayer (Flight)
+| C   | 3     | Steel      | Physical | Red   | 7     | 80       | 2     | Slayer (Flight)
+| A   | 5     | Silvered   | Physical | Red   | 11    | 70       | 2     | Slayer (Flight)
+| S+  | 7     | Orichalcum | Physical | Red   | 15    | 60       | 2     | Slayer (Flight)
 
-### Shuriken
+### Knives
 
-Shuriken are deadly pointed stars of metal that are deadly, if difficult to work with. Their safety and power from range makes them the formidable weapon they are.
+Knives are deadly weapons that can be easily wielded in close range, or thrown short distances. Their safety and power comes from the versatility of range.
 
-**Knives** trade the power of a shuriken for the versatility of range. Decrease **STR** and **INT** by 1 per level, but all knives are range 1-2, instead of simply range 2.
+**Shuriken** trade the power of a knife for accuracy. Increase **Accuracy** by 5 per level, but decrease **Might** by 1 per level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Green | 3     | 90       | 2
-| D   | 2     | Iron       | Green | 7     | 85       | 2
-| C   | 3     | Steel      | Green | 11    | 60       | 2
-| A   | 5     | Silvered   | Green | 19    | 30       | 2
-| S+  | 7     | Orichalcum | Green | 27    | 0        | 2
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Green | 3     | 90       | 1-2
+| D   | 2     | Iron       | Physical | Green | 7     | 85       | 1-2
+| C   | 3     | Steel      | Physical | Green | 11    | 60       | 1-2
+| A   | 5     | Silvered   | Physical | Green | 19    | 30       | 1-2
+| S+  | 7     | Orichalcum | Physical | Green | 27    | 0        | 1-2
 
 ### Bow
 
-Lances are a soldier's weapon. They split the difference between the accuracy of the sword and the power of the axe.
+Elements of Precision and damage come together in a Bow to deal precision ranged destruction. Dealing with a well trained archer is a difficult affair. All Bows come with the **Slayer (Flight)** Special
 
-A **Yumi** is a type of lance that encourages defense over offense. Wielding a Naginata increases your **CON** and **WIS** and decreases your **STR** and **INT** by 1 per weapon level.
+A **Yumi** is a type of bow that exchanges accuracy for power. Increase **Might** by 1 per level, but decrease **Accuracy** by 5 per level.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Blue  | 4     | 95       | 1
-| D   | 2     | Iron       | Blue  | 7     | 85       | 1
-| C   | 3     | Steel      | Blue  | 10    | 75       | 1
-| A   | 5     | Silvered   | Blue  | 16    | 55       | 1
-| S+  | 7     | Orichalcum | Blue  | 22    | 35       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  | :---
+| E   | 1     | Bronze     | Physical | Blue  | 3     | 95       | 2     | Slayer (Flight)
+| D   | 2     | Iron       | Physical | Blue  | 6     | 85       | 2     | Slayer (Flight)
+| C   | 3     | Steel      | Physical | Blue  | 9     | 75       | 2     | Slayer (Flight)
+| A   | 5     | Silvered   | Physical | Blue  | 15    | 55       | 2     | Slayer (Flight)
+| S+  | 7     | Orichalcum | Physical | Blue  | 21    | 35       | 2     | Slayer (Flight)
 
 ### Flintlock
 
-Gauntlets are a protected hand covering, used when fighting with your fists. Gauntlets are a weapon for people who like to get up close.
+Flintlocks are a type of weapon powered by gunpowder and grit. They tend to be dangerous, both to an inexperienced wielder and the target downrange.
 
-|Tier | Level | Metal      | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---  | ---:  | ---:     | :---
-| E   | 1     | Bronze     | Grey  | 1     | 90       | 1
-| D   | 2     | Iron       | Grey  | 3     | 80       | 1
-| C   | 3     | Steel      | Grey  | 5     | 70       | 1
-| A   | 5     | Silvered   | Grey  | 9     | 60       | 1
-| S+  | 7     | Orichalcum | Grey  | 13    | 50       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Bronze     | Physical | Grey  | 0     | 85       | 2
+| D   | 2     | Iron       | Physical | Grey  | 2     | 75       | 2
+| C   | 3     | Steel      | Physical | Grey  | 5     | 65       | 2
+| A   | 5     | Silvered   | Physical | Grey  | 10    | 55       | 2
+| S+  | 7     | Orichalcum | Physical | Grey  | 15    | 45       | 2
+
+### Wind
+
+Wind magic is incredibly accurate. Mages who wield wind tend to be efficient and calculating.
+
+**Dark** magic is divine magic that selfishly protects the user, if it is somewhat more difficult to wield. when equipping dark magic increase your **CON** and **WIS** by 1 per weapon level, but decrease your **Accuracy** by 5 per weapon level.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  |---:   | ---:     | :---  | :---
+| E   | 1     | Bronze     | Magical  | Green | 2     | 95       | 1-2   | Slayer (Flight)
+| D   | 2     | Iron       | Magical  | Green | 4     | 90       | 1-2   | Slayer (Flight)
+| C   | 3     | Steel      | Magical  | Green | 6     | 85       | 1-2   | Slayer (Flight)
+| A   | 5     | Silvered   | Magical  | Green | 10    | 75       | 1-2   | Slayer (Flight)
+| S+  | 7     | Orichalcum | Magical  | Green | 14    | 65       | 1-2   | Slayer (Flight)
+
+>Magic Tomes are actually crafted books, carried around by mages. The power of the mage usually confirms how much raw power a mage can bring to bear, but without time consuming rituals and the proper foci of power it is almost impossible to bring the power of magic to bear, especially in the heat of battle. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.
+
+### Light
+
+Light Magic is a divine powerful, but difficult to direct properly. Light requires a careful touch, but when directed well can be devastating to many an evil cause.
+
+**Lightning** is elemental magic that exchanges the power of light for the critical damage of several thousand volts and amps. Increases your **Critical** by 5 and decrease your **Might** by 1 per weapon level.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  | :---
+| E   | 1     | Bronze     | Magical  | Blue  | 2     | 95       | 1-2   | Slayer (Dragon)
+| D   | 2     | Iron       | Magical  | Blue  | 6     | 80       | 1-2   | Slayer (Dragon)
+| C   | 3     | Steel      | Magical  | Blue  | 10    | 65       | 1-2   | Slayer (Dragon)
+| A   | 5     | Silvered   | Magical  | Blue  | 18    | 35       | 1-2   | Slayer (Dragon)
+| S+  | 7     | Orichalcum | Magical  | Blue  | 26    | 5        | 1-2   | Slayer (Dragon)
+
+### Fire
+
+Fire is a form of magic that many mages find both reliable and devastating. A solution to many problems is to end it with fire.
+
+**Spirit** is a type of magic that encourages speed over direct accuracy. Increase your **SPD** by 1 per weapon level, but decrease your **Accuracy** by 5 per weapon level.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  | :---
+| E   | 1     | Bronze     | Magical  | Red   | 4     | 95       | 1-2   | Slayer (Beast)
+| D   | 2     | Iron       | Magical  | Red   | 7     | 85       | 1-2   | Slayer (Beast)
+| C   | 3     | Steel      | Magical  | Red   | 10    | 75       | 1-2   | Slayer (Beast)
+| A   | 5     | Silvered   | Magical  | Red   | 16    | 55       | 1-2   | Slayer (Beast)
+| S+  | 7     | Orichalcum | Magical  | Red   | 22    | 35       | 1-2   | Slayer (Beast)
+
+### Staff
+
+Staffs are special weapons that can technically be used to send raw magical force at your enemies, however they are most often used to provide healing to your allies, and keep them fighting for you.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  | :---
+| E   | 1     | Bronze     | Magical  | Grey  | 0     | 90       | 1-2   | Healing
+| D   | 2     | Iron       | Magical  | Grey  | 1     | 80       | 1-2   | Healing
+| C   | 3     | Steel      | Magical  | Grey  | 4     | 70       | 1-2   | Healing
+| A   | 5     | Silvered   | Magical  | Grey  | 9     | 60       | 1-2   | Healing
+| S+  | 7     | Orichalcum | Magical  | Grey  | 14    | 50       | 1-2   | Healing
+
+## Gaining Runes
+
+*ToDo*: Write Up the runes earned per level
+
+## Rune Types
+
+*ToDo*: Continue the List of Runes
+
+## Example Weapons
+
+*ToDo*: Show a couple of examples of creating a weapon.

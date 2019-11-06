@@ -232,11 +232,11 @@ Fire is a form of magic that many mages find both reliable and devastating. A so
 
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range | Special
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  | :---
-| E   | 1     | Bronze     | Magical  | Red   | 4     | 95       | 1-2   | Slayer (Beast)
-| D   | 2     | Iron       | Magical  | Red   | 7     | 85       | 1-2   | Slayer (Beast)
-| C   | 3     | Steel      | Magical  | Red   | 10    | 75       | 1-2   | Slayer (Beast)
-| A   | 5     | Silvered   | Magical  | Red   | 16    | 55       | 1-2   | Slayer (Beast)
-| S+  | 7     | Orichalcum | Magical  | Red   | 22    | 35       | 1-2   | Slayer (Beast)
+| E   | 1     | Bronze     | Magical  | Red   | 2     | 95       | 1-2   | Slayer (Beast)
+| D   | 2     | Iron       | Magical  | Red   | 5     | 85       | 1-2   | Slayer (Beast)
+| C   | 3     | Steel      | Magical  | Red   | 8     | 75       | 1-2   | Slayer (Beast)
+| A   | 5     | Silvered   | Magical  | Red   | 14    | 55       | 1-2   | Slayer (Beast)
+| S+  | 7     | Orichalcum | Magical  | Red   | 20    | 35       | 1-2   | Slayer (Beast)
 
 ### Staff
 

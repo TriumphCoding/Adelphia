@@ -60,7 +60,7 @@ You can have a total of 5 different skills equipped at a time. You may learn mor
 
 ## Gaining Weapons
 
-As your character's level increases, the power of the weapons they have access to also increase. Every 10 levels, a new tier of weapons will be unlocked. In addition, at the 5 between those levels unlimited access to the previous tier will also be granted.
+As your character's level increases, the power of the weapons they have access to also increase. Every 10 levels, a new tier of weapons will be unlocked. In addition, at the halfway point between those levels you will be granted unlimited access to the previous tier of weapons.
 
 >If this sections feels a little loose in the explanation as to when you receive your weapons, it's that weaponry are physical things, and unlike skills you can be a little bit looser at the exact moment of acquisition. The narrative might grant you access to the weapon a level or two early or late. Maybe as your reward for slaying a monster threatening a town a new weapon is given to the party. That might not be exactly at level 20, and that's OK. Remember, as with all narrative aspects of the game, to work with the DM to make sure everyone is having a good time.
 

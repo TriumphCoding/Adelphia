@@ -1,3 +1,3 @@
 # Chapter 6 - Combat
 
-lorem ipsum
+Combat is the place where your

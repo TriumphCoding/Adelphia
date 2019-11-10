@@ -57,7 +57,7 @@ Switching weapons that you are currently carrying is not an action. Neither are 
 
 ## Combat Phases
 
-Combat takes place in phases. Once combat has been decided upon, all participants divide into the combat sides. Under normal conditions, all players will be on one side of the combat, and all enemies will be on the other. During the **Hero Phase**, all players take turns in whatever order they feel is the most adventurous. Once everyone has spent their movement and taken their desired action, combat moves to the **Enemy Phase**.
+Combat takes place in phases. Once combat has been decided upon, all participants divide into the combat sides. Under normal conditions, all players will be on one side of the combat, and all enemies will be on the other. During the **Hero Phase**, all players take turns in whatever order they feel is the most advantageous. Once everyone has spent their movement and taken their desired action, combat moves to the **Enemy Phase**.
 
 The Game Master then takes all of the turns for the enemies, Moving and engaging as desired, until they feel that all actions have been made. The phase last returns to the **Ally Phase**
 

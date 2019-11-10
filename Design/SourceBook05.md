@@ -56,6 +56,10 @@ You can have a total of 5 different skills equipped at a time. You may learn mor
 1. Increase the **Might** of the master weapon by 10% of your **Level**.
 1. Increase the **Critical** of the master weapon by 50% of your **Level**.
 
+**Provoke**: Leaving Tiles within range 1/1/1-2 of your character cost enemies an additional 1/2/2 points of movement.
+
+**Pass**: You may move through locations occupied by enemies.
+
 *ToDo: Add more skills, math out weapon mastery vs other skills, Add in %chance skills.*
 
 ## Gaining Weapons
@@ -77,6 +81,20 @@ Roughly speaking, weapon levels follow the below schedule:
 | S+  | 7     |Orichalcum | 50                   | 65
 
 Taking Steel weapons as an example, at level 10 you will gain access to your first steal weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 25, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
+
+## Weapon Cycle
+
+Some weapons are naturally more effective when brought to bear against someone using the wrong weapon type. This is represented by the following relationship:
+
+- **Red** weapons beat **Green** Weapons
+- **Green** weapons beat **Blue** weapons
+- **Blue** weapons beat **Red** weapons
+
+If your weapon beats your opponent's, increase your **Accuracy** by 10 per weapon level, and increase your **Might** by 1 per weapon level. If your weapon loses to your opponent, instead decrease your **Might** and **Accuracy** by that same amount.
+
+For example, if your accuracy is 87 while wielding an iron sword, and you are going to be striking a mage wielding a Bronze Thunder Spell, you would instead attack with 117 accuracy. If the mage had 91 accuracy, their riposte would instead by at 71 accuracy.
+
+Outside of this cycle, weapons don't change. So Red weapons fighting Grey weapons don't change their **Accuracy** or **Might**. Same for a Blue weapon fighting a Blue weapon.
 
 ## Weapon Types
 

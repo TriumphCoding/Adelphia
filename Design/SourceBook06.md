@@ -61,7 +61,7 @@ Combat takes place in phases. Once combat has been decided upon, all participant
 
 The Game Master then takes all of the turns for the enemies, Moving and engaging as desired, until they feel that all actions have been made. The phase last returns to the **Ally Phase**
 
-Sometimes, stakes in a combat can't be cleanly sorted into Heroes and Enemies. roughly speaking, there are types of combatants:
+Sometimes, stakes in a combat can't be cleanly sorted into Heroes and Enemies. roughly speaking, there are 4 types of combatants:
 
 1. The Heroes, made up of all the players in the game
 1. The Enemies, those directly opposing the heroes.

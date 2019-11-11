@@ -96,6 +96,24 @@ This is a tool for the Game Master to choose to employ, because sometimes fights
 
 When engaging, it is assumed to be at the **Range** that gives the attacker the most advantage. In addition, players with the **provoke** skill must be engaged with before anyone else in the zone they are currently occupying.
 
+## Death
+
+Whenever any character, enemy or player, loses their last point of HP, that character is removed from the current combat. Death, however, is not necessarily inevitable.
+
+For enemies, the player landing the final blow gets to decide if that attack is lethal or not. This is mainly for roleplay purposes. Any enemy tha the GM deems significant may instead "retreat" from the combat upon losing their last point of HP, surviving to hound the players again.
+
+For players, losing their last point of HP is an interesting situation. There are roughly 3 ways to handle this, and I would leave it up to the gaming group to determine how death is handled.
+
+First, you could have a character losing all of their HP signify death. That character is dead, out of the game, and the player should either create a new character to be introduced, or potentially pick up the mantle of an NPC closely aligned with the players, placing that character under the player's control.
+
+Second, you could simply only count complete party wipes as death. Simply having one person survive to the end of a combat challenge implies that everyone got through. This makes combat more abstract, but it does make people more willing to be aggressive in combat, which might be desirable.
+
+Last, you could cut the difference, and resolve the situation kind of narrativly. If a player loses their HP, any other player can spend an "Engagement action" to stabilize the fallen character. If a character is stabilized, then they survive the encounter and can be revived later. If the players are forced to continue along without being able to perform this action, then the character is lost to the enemy, and it is up to the DM if the character is captured or dead. Regardless, the character has fallen out of the story for now, and the character's player should continue along as through the character had died.
+
+## Multiple Characters
+
+Each player should have their own character that they are controlling. However, the story may make it necessary to have multiple people join with the players to accomplish their goals. In that case, instead of adding an ally phase, consider allowing the players to collectively control the actions these extra characters take during combat. If there are enough of these characters, assign particular players to be responsible for them.
+
 ## Example Combat
 
 *ToDo: A simple combat example, with pictures. Also figure out how to put pictures in Markdown.*

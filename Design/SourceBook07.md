@@ -40,3 +40,125 @@ First, choose a map that represents the area that combat might be taking place i
 So, if making an encounter where "Color" and "Range" matter, Make sure to include "two red Enemies and one blue Enemy", and then "two range 1 enemies and one range 2 enemy". They can be of three different roles, or all the same role, and can even be all of the same damage type.
 
 So, For example a "Swordmaster (Red Melee), Fire Mage (Red Mixed), and Soldier (Blue Melee)" Makes an encounter that has many different approaches to solving. "Three Swordmasters" Tends to only have one solution: The highest defense blue player deals with the situation.
+
+>Remember, these are the rules for making balanced medium-difficulty encounters. Sometimes, a room filled with Red Swordmasters exists to give the Blue Lancer Player a powerful moment, and not a challenge. Be judicious in breaking this rule, but don't be afraid to break it.
+
+Roughly speaking, a Mini-Encounter covers anywhere from 12-15 squares on a map. If an area is about 24-30 squares big, Place two mini encounters in the area. They can be the same or different, they are completely independent for setup.
+
+Adding more enemies to a mini-encounter makes things harder, and expanding the area that a mini-encounter covers makes things easier. Use this to balance the game.
+
+## Designing Enemies
+
+All enemies follow the rules of player creation. Chose an enemies Growth and Class points, choose a weapon they would have access to, and level the enemy to match the player's level.
+
+That said, to tune the encounter difficulty, you don't invest all of your points for every enemy type. Define an enemy's quality, and leave the recommended number of points unspent:
+
+| Quality   | Growth   | Class   |
+| ---       | ---      | ---     |
+| Weak      | 25 (-10) | 15 (-5) |
+| Average   | 30 (-5)  | 17 (-3) |
+| Dangerous | 35 (0)   | 20 (0)  |
+
+At the lower levels of your adventure, say 1-10, the enemies should be made up of mostly weak combatants, with Average enemies carefully representing things like enemy commanders. After level 10, often average enemies can be used as common enemies, with "Dangerous" enemies representing enemy commanders. At Levels over 40, Dangerous enemies can be commonly interspersed into enemy ranks.
+
+## Special Bosses
+
+Sometimes, you want a big set-piece monster to deal with. This creature counts as an entire mini-encounter by itself. In order to make one, design a regular enemy like normal, and then do the following:
+
+1. Double it's Max HP.
+1. Give the creature two different attacks (of either two different colors, or two different damage types)
+1. When the creature takes it's turn, it may make two different attacks against two different targets. The "ride" skill would let the creature move between attacks, without it the creature would need to position itself correctly. The attack that the creature uses last is what it **Ripostes** and **Follow Through Ripostes** with.
+
+## Enemy equipment
+
+Enemies choose equipment, just like players. That said, some enemies don't make sense to be fighting with tools, like wild animals. In that case, consider the following "equipment" options instead.
+
+>These should be balanced for player use, should the situation arise. Consider giving a "Martial Artist" a "Claw" attack, or allowing a dragon creature type to get a Bite.
+
+### Claw / Hoof
+
+A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Copper     | Physical | Green | 4     | 95       | 1
+| D   | 2     | Bronze     | Physical | Green | 7     | 85       | 1
+| C   | 3     | Iron       | Physical | Green | 10    | 75       | 1
+| B   | 4     | Steel      | Physical | Green | 13    | 65       | 1
+| A   | 5     | Silvered   | Physical | Green | 16    | 55       | 1
+| S   | 6     | Gilded     | Physical | Green | 19    | 45       | 1
+| S+  | 7     | Orichalcum | Physical | Green | 22    | 35       | 1
+
+### Bite / Gore
+
+A Bite or Gore attack is done with the creature's head. It's a risky maneuver, but the creature can put it's full weight behind it.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Copper     | Physical | Red   | 4     | 95       | 1
+| D   | 2     | Bronze     | Physical | Red   | 8     | 80       | 1
+| C   | 3     | Iron       | Physical | Red   | 12    | 65       | 1
+| B   | 4     | Steel      | Physical | Red   | 16    | 50       | 1
+| A   | 5     | Silvered   | Physical | Red   | 20    | 35       | 1
+| S   | 6     | Gilded     | Physical | Red   | 24    | 20       | 1
+| S+  | 7     | Orichalcum | Physical | Red   | 28    | 5        | 1
+
+### Sting
+
+Stings are thin, piercing weapons used by creatures. They have a high amount of precision.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Copper     | Physical | Blue  | 4     | 95       | 1
+| D   | 2     | Bronze     | Physical | Blue  | 6     | 90       | 1
+| C   | 3     | Iron       | Physical | Blue  | 8     | 85       | 1
+| B   | 4     | Steel      | Physical | Blue  | 10    | 80       | 1
+| A   | 5     | Silvered   | Physical | Blue  | 12    | 75       | 1
+| S   | 6     | Gilded     | Physical | Blue  | 14    | 70       | 1
+| S+  | 7     | Orichalcum | Physical | Blue  | 16    | 65       | 1
+
+### Slam
+
+Slam attacks are performed with the creatue's body, or sometimes with a heavy appendage like a tail.
+
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
+| E   | 1     | Copper     | Physical | Grey  | 1     | 90       | 1
+| D   | 2     | Bronze     | Physical | Grey  | 3     | 80       | 1
+| C   | 3     | Iron       | Physical | Grey  | 6     | 70       | 1
+| B   | 4     | Steel      | Physical | Grey  | 8     | 60       | 1
+| A   | 5     | Silvered   | Physical | Grey  | 11    | 50       | 1
+| S   | 6     | Gilded     | Physical | Grey  | 13    | 40       | 1
+| S+  | 7     | Orichalcum | Physical | Grey  | 16    | 30       | 1
+
+### Magic Attacks
+
+Some magical creatures might have magical attacks, for example a dragon's breath. In these cases, the best way to represent this is to simply choose one of the player spells, and flavor the attack as coming from the creature's nature, instead of a specific book.
+
+## Designing Creatures
+
+This is where you let your creative muscle flex. Using the rules as given, consider the following outlines of creatures that can be made:
+
+- Minotaur
+  - Base Creature Type: Dwarf
+  - Weapons: Gore, Ax
+  - Stats: High **STR** and **DEF**, low **INT** and **SPD**
+- Centaur
+  - Base Creature Type: Human
+  - Weapons: Hoof, Bow
+  - Stats: High **SKL** and **SPD**, low **DEF** and **HP**
+  - Skills: Ride
+- Harpy
+  - Base Creature Type: Carnivore
+  - Weapons: Claw, Wind
+  - Stats: High **WIS**
+  - Skills: Fly, Sing
+- Ancient Dragon (Boss Monster Option)
+  - Base Creature Type: Dragon
+  - Weapons: Claw, Fire
+  - Stats: High **STR** and **INT**, low **SPD**
+  - Skills: Fly
+
+All you have to do is get close to the feeling of the creature. Once done, your description of the situation will carry everything the rest of the way.
+
+If any of your creatures need to exist for more than a brief moment on screen, one or two **Quirks** for them. If the creature isn't intelligent, then one quirk representing the creature type should suffice. If the creature is independent, a second quirk representing something about that particular creature can help add definition to the creature and help with roleplaying with and around it.

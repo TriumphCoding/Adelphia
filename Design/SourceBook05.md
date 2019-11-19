@@ -359,3 +359,37 @@ At level 40, you have access to 1 Gilded Weapon with 0 rune levels, 1 Silvered W
 | Gilded Sword        | 14    | 70       | *N/A*
 | Silvered Hero Sword | 7     | 75       | *-5 SPD, Attacks and Riposte triggers twice*
 | Steel Evasive Sword | 10    | 80       | *+15 Dodge*
+
+## Great Skills
+
+At levels 21 and 41, your tier of heroism increases. As part of this, you have an opportunity to learn a Great Skill. Great Skills are incredibly powerful attacks that can really turn the edge of battle. Your Legendary Great Skill Replaces your Epic Great Skill, so be judicious in your choice.
+
+>Or don't. A great skill is a kind of defining super attack for your character. However, if you aren't feeling it, talk with your GM and see if you can change it out. Try not to be strategic with this, the skill should feel like a part of who your character is.
+
+### Epic Great Skills
+
+**Moon Strike**: Your **Strikes** have a **SKL**% to reduce enemy defence by 1/2.
+
+**Sun Strike**: Your **Strikes** have a **SKL**% to recover **HP** equal to 1/2 damage dealt.
+
+**Hero Strike**: Your **Strikes** have a **SPD**% to trigger an additional time.
+
+**Pierce Strike**: Your **Strikes** have a **STR**% to deal **STR**/2 additional damage
+
+**Vengeful Strike**: Your **Strikes** have a **CON**% to deal your missing **HP**/2 undefendable damage
+
+**Charged Magic**: When you **Engage** with an opponent, you have an **INT**% chance to deal your **Might** - each enemy's **Defence** to all enemies adjacent to your target.
+
+**Waiting Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive by 1/2.
+
+*ToDo*: More great skills
+
+### Legendary Great Skills
+
+**Lunar Impact**: Your **Strikes** have a **SKL**% chance to ignore enemy defence.
+
+**Solar Impact**: Your **Strikes** have a **SKL**% chance to recover HP equal to the damage you deal.
+
+**Astral Impact**: Your **Strikes** have a **SKL**% chance to reduce enemy defence by 1/2, and recover HP equal to 1/2 damage dealt.
+
+*ToDo*: More great skills

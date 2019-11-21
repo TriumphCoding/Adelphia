@@ -330,6 +330,8 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Evasive** *Lv 1*: Increase **Dodge** by 5 per Rune Level.
 
+**Wicked** *Lv 1*: Increase **Critical** by 5 per Rune Level.
+
 **Blessed** *Lv 1*: At the start of each Player Turn, Recover **HP** equal to 3 per Rune Level.
 
 **Thrown** *Lv 2, Sword Ax Lance only*: Your weapon gains **Range 1-2**, but loses 2 **Might** and 10 **Accuracy**.

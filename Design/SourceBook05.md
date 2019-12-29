@@ -360,6 +360,8 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Evasive** *Lv 1*: Increase **Dodge** by 5 per Rune Level.
 
+**Wicked** *Lv 1*: Increase **Critical** by 5 per Rune Level.
+
 **Blessed** *Lv 1*: At the start of each Player Turn, Recover **HP** equal to 3 per Rune Level.
 
 **Healing** *Lv 1*: Instead of engaging an enemy for your turn, you may instead recover HP for an ally, equal to **Might** + **INT**.

@@ -45,7 +45,7 @@ So, For example a "Swordmaster (Red Melee), Fire Mage (Red Mixed), and Soldier (
 
 Roughly speaking, a Mini-Encounter covers anywhere from 12-15 squares on a map. If an area is about 24-30 squares big, Place two mini encounters in the area. They can be the same or different, they are completely independent for setup.
 
-Adding more enemies to a mini-encounter makes things harder, and expanding the area that a mini-encounter covers makes things easier. Use this to balance the game.
+Adding more enemies to a mini-encounter makes things harder, and expanding the area that a mini-encounter covers makes things easier. Use this to balance the game to yours and your players taste.
 
 ## Designing Enemies
 

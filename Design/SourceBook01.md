@@ -32,13 +32,13 @@ Your weapon will determine what type of damage you deal, but traditionally it wi
 
 ### Stat Tests
 
-Usually, Stat Tests are used to activate "Combat Skills". To check against a Stat, you attempt a **d%** roll against your own **Base Stats**. In this case, your **Hit Chance** is the actual value of your Base Stat. Rolling under your stat means a successful test, and your Combat skill is performed. Some Tests will apply a *2 or a *1/2 modifier. Multiply your stat by this value (and round down) to get your Hit Chance. For game speed, you can use the **d%** roll for your Attack Test to pass a Stat Test. As long as your **d%** beats both, your attack works and your combat skill goes off.
+Usually, Stat Tests are used to activate "Combat Skills". To check against a Stat, you attempt a **d%** roll against your own **Base Stats**. In this case, your **Hit Chance** is the actual value of your Base Stat. Rolling under your stat means a successful test, and your Combat skill is performed. Some Tests will apply a *2 or a *1/2 modifier. Multiply your stat by this value (and round down) to get your Hit Chance. For game speed, you can use the **d%** roll for your Attack Test to pass a Stat Test. As long as your **d%** beats both, your attack works and your combat skill goes off. These may be abbreviated as **STR**%, **SPD**x2%, or **CON**x1/2%
 
 ### Quirk Tests
 
 while the total number of **Quirks** may change depending on the type of campaign that is being run, traditionally your character will have four. Whenever you wish to perform an action outside of combat, you are going to choose one of these quirks to represent your familiarity with the task. Then, you will choose one of your **Base Stats** to represent how you are going about the task. Add your Stat, and the check's **Difficulty Bonus** to get your **Hit Chance** for that Skill Check. If your **d%** rolls under your Hit Chance, you successfully accomplish the task you set out to perform.
 
-If your **d%** roll would also pass a Luck **Stat Test**, your Quirk Test is critically successful. Storyline related, something unusually lucky happens during this task.
+If your **d%** roll would also pass a **LUK**%, your Quirk Test is critically successful. Storyline related, something unusually lucky happens during this task.
 
 ### Leveling Up
 

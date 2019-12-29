@@ -89,7 +89,7 @@ Non Player Characters should have 2 quirks total, one to represent who they are 
 1. *Hobby*: Cooking is alchemy you eat.
 1. *Interest*: Famous witches and wizards.
 
-**Kikuchiyo** is a cyborg rescued and reassembled by the Aaronway's. Discovered by monico, and repaired by Auric, Kikuchiyo has sworn to protect them. Kikuchiyo often refers to his programming as his "Code of Honor", and claims that he has taken an oath to not break from it. The only sign of his former humanity is his fire-red hair emanating from his helmet and headpiece.
+**Kikuchiyo** is a cyborg rescued and reassembled by the Aaronway's. Discovered by Monico, and repaired by Auric, Kikuchiyo has sworn to protect them. Kikuchiyo often refers to his programming as his "Code of Honor", and claims that he has taken an oath to not break from it. The only sign of his former humanity is his fire-red hair emanating from his helmet and headpiece.
 
 1. *Campaign*: Clockwork Traveler
 1. *Vocation*: Gingineer

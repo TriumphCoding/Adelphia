@@ -22,45 +22,75 @@ To execute the level up, follow the rules given in chapter 3.
 
 ## Gaining Skills
 
-Every 5 levels, you get a skill point. Unlike your stats, which are always applied, skill points grant conditional combat bonuses, and further encourage combat differentiation. Each skill costs one skill point, and skills that have multiple levels cost one skill point per level.
-
-You can have a total of 5 different skills equipped at a time. You may learn more than 5 skills, but if you do you can only bring 5 at a time into a given combat. Leveling a skill only takes one slot, but bringing two versions of a skill, like **Empowered Strike (STR)** and **Empowered Strike (SPD)** takes one slot each.
+Every 5 levels, you get a skill point. Unlike your stats, which are always applied, skill points grant conditional combat bonuses, and further encourage combat differentiation. Each skill costs one skill point, and skills can be taken multiple times.
 
 ## Skill List
 
-**Hearty**: Increase **Total HP** by 20%/40%/60% of your **Level**
+**Hearty**: Increase **Total HP** by 20% of your **Level**
 
-**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10%/20%/30% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10%/20%/30% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10%/20%/30% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Empowered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Riposte**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10%/20%/30% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Empowered Riposte**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Janken Mastery**: Increases **Weapon Triangle** effects by 1/2/3 levels if you are on the winning side of the weapon triangle.
+**Janken Mastery**: Increases **Weapon Triangle** effects by 1 level if you are on the winning side of the weapon triangle.
 
-**Janken Defense**: Decrease **Weapon Triangle** effects by 1/2/3 levels if you are on the loosing side of the weapon triangle.
+**Janken Defense**: Decrease **Weapon Triangle** effects by 1 level if you are on the loosing side of the weapon triangle.
 
-**Colorblind Fighter**: Grants 1/2/3 **Weapon Triangle** effect levels when fighting grey weapons.
+**Colorblind Fighter**: Grants 1 **Weapon Triangle** effect level when fighting grey weapons.
 
 **Reckless Offense**: Increase **STR**, **INT**, **SPD** by 10%/20%/30% of your level, reduce **SKL**, **WIS** and **CON** by 10%/20%/30% of your **Level**.
 
 **Fortress Defense**: Increase **WIS** and **CON** by 10%/20%/30% of your **Level**, reduce **STR** and **INT** by 10%/20%/30% of your **Level**.
 
-**Fury**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, and **WIS** by 10%/20%/30% of your **Level**, but you take 10%/20%/30% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
+**Fury**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, and **WIS** by 10% of your **Level**, but you take 10% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
-**Weapon Mastery**: You may take this skill multiple times, each time applying the skill to a new weapon type.
+**Weapon Mastery**: You may take this skill multiple times, each time applying the skill to a new weapon type. Up to 3 total points can be invested into a single weapon type.
 
 1. Increase the **Accuracy** of the mastered weapon by your **Level**.
 1. Increase the **Might** of the master weapon by 10% of your **Level**.
 1. Increase the **Critical** of the master weapon by 50% of your **Level**.
 
-**Provoke**: Leaving Tiles within range 1/1/1-2 of your character cost enemies an additional 1/2/2 points of movement.
+**Provoke**: Leaving Tiles within range 1/1/1-2 of your character cost enemies an additional 1/2/2 points of movement. Up to 3 total points can be invested into this skill.
 
 **Pass**: You may move through locations occupied by enemies.
 
-*ToDo: Add more skills, math out weapon mastery vs other skills, Add in %chance skills.*
+**Lunge**: After Combat, you may retreat one space directly away from your opponent, if there is room for you to move there. This skill can only be purchased once.
+
+**Drag**: *Requires Lunge*. When you retreat with the lunge skill, you may additionally pull your target into the space you left. This skill can only be purchased once.
+
+**Push**: After Combat, you may push your opponent directly away 1 square, if there is a place for them to land. This skill can only be purchased once.
+
+**Smite**: *Requires Push*. After Combat, you may push your opponent directly away 2 spaces. This skill can only be purchased once. In general, you can't smite through solid walls, but you can smite across small gaps, or past people.
+
+**Advance**: *Requires Push*. When you push your opponent with either the push or smite skills, you may move into the square they left empty. This skill can only be purchased once.
+
+**Swap**: *Requires either Push or Lunge*: After Combat, you and your opponent may swap the spaces the two of you occupy, at your discretion. this skill can only be purchased once.
+
+**Practiced**: Whenever a Skill has a chance of activation, increase that chance by 5%
+
+**Desperation**: You have a **SPD**% chance of having your **Follow Through Attack** happen immediately after your **Attack**. This skill can only be purchased once.
+
+**Vantage**: You have a **SKL**% chance to have your **Riposte** happen before your opponent's **Attack**. This skill can only be purchased once.
+
+**Bold**: You have a **SKL**% chance to activate an additional **Follow Through Attack**, regardless of speed. This skill can only be purchased once.
+
+**Buckler**: You have a **SKL**% chance to reduce incoming physical damage by 50%. This skill can only be purchased once.
+
+**Escutcheon**: You have a **SKL**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
+
+**Physical Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+
+**Magical Superiority**: You have an **INT**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+
+**Cautious**: As long as you are over 50% health, you and your opponent cannot **Follow Through**
+
+**Grit**: Whenever you are attacked more than once in a row without being able to counterattack, reduce all damage from the second attack onward by 70%.
+
+**Patience**: You have a **SKL**% chance to have your **Riposte** activate after your opponent's **Follow Through Attack**.
 
 ## Gaining Weapons
 
@@ -326,11 +356,13 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Resistant** *Lv 1*: Increase **WIS** By 2 per Rune Level.
 
-**Fortress** *Lv 1*: Increase **CON** and **WIS** By 1 per Rune Level.
+**Fortress** *Lv 1*: Increase **Defense** By 1 per Rune Level.
 
 **Evasive** *Lv 1*: Increase **Dodge** by 5 per Rune Level.
 
 **Blessed** *Lv 1*: At the start of each Player Turn, Recover **HP** equal to 3 per Rune Level.
+
+**Healing** *Lv 1*: Instead of engaging an enemy for your turn, you may instead recover HP for an ally, equal to **Might** + **INT**.
 
 **Thrown** *Lv 2, Sword Ax Lance only*: Your weapon gains **Range 1-2**, but loses 2 **Might** and 10 **Accuracy**.
 
@@ -340,15 +372,27 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Sweep** *Lv 2*: Both you and your opponent cannot **Riposte** or **Follow Through Riposte**.
 
+**Reaver** *Lv 2*: Reverses the direction of the Weapon triangle for combats involving this weapon.
+
+**Class Slayer** *Lv 2*: Choose a Class Skill. If your opponent has that class skill, triple the might of this weapon.
+
+**Creature Slayer** *Lv 2*: Choose a Creature Type. If your opponent is that creature type, triple the might of this weapon.
+
+**Masterwork** *Lv 2*: Skills that have a percent chance of activation increase their activation chance by 5% per skill level.
+
+**Weapon Slayer** *Lv 3*: Choose a weapon type. If your opponent is wielding that weapon, triple the might of this weapon.
+
 **Wind Sword** *Lv 3, Sword only*: Your sword targets **WIS** instead of **CON**, Gains **Range 1-2**, and the special ability **Slayer (Flight)**.
 
 **Bolt Axe** *Lv 3, Axe only*: Your axe targets **WIS** instead of **CON**, Gains **Range 1-2**, and the special ability **Slayer (Dragon)**.
 
 **Fire Spear** *Lv 3, Lance only*: Your Lance targets **WIS** instead of **CON**, Gains **Range 1-2**, and the special ability **Slayer (Beasts)**.
 
-**Hero** *Lv 4*: Your **Attack**, **Follow Through Attack**, **Riposte**, and **Follow Through Riposte** trigger twice in a row. Lose 5 **SPD** and **Might**
+**Conquerer** *Lv 3*: Whenever you are attacked with no chance of counter attacking, reduce the damage you would receive by 10% per Rune level.
 
-*ToDo*: Continue the List of Runes
+**Hero** *Lv 4*: Your **Attack**, **Follow Through Attack**, **Riposte**, and **Follow Through Riposte** trigger twice in a row. Lose 5 **SPD** and **Might**.
+
+**Mighty** *Lv 5*: Your **Great Skills* have an additional 5% chance per rune level to activate, and if they deal damage you deal an additional 2 damage per rune level when they do.
 
 ## Example Weapons
 
@@ -359,3 +403,59 @@ At level 40, you have access to 1 Gilded Weapon with 0 rune levels, 1 Silvered W
 | Gilded Sword        | 14    | 70       | *N/A*
 | Silvered Hero Sword | 7     | 75       | *-5 SPD, Attacks and Riposte triggers twice*
 | Steel Evasive Sword | 10    | 80       | *+15 Dodge*
+
+## Great Skills
+
+At levels 21 and 41, your tier of heroism increases. As part of this, you have an opportunity to learn a Great Skill. Great Skills are incredibly powerful attacks that can really turn the edge of battle. Your Legendary Great Skill Replaces your Epic Great Skill, so be judicious in your choice.
+
+>Or don't. A great skill is a kind of defining super attack for your character. However, if you aren't feeling it, talk with your GM and see if you can change it out. Try not to be strategic with this, the skill should feel like a part of who your character is.
+
+### Epic Great Skills
+
+**Moon Strike**: Your **Strikes** have a **SKL**% to reduce enemy **defence** by 1/2.
+
+**Sun Strike**: Your **Strikes** have a **SKL**% to recover **HP** equal to 1/2 damage dealt.
+
+**Brave Strike**: Your **Strikes** have a **SPD**% to trigger an additional time.
+
+**Pierce Strike**: Your **Strikes** have a **STR**% to deal **STR**/2 additional damage
+
+**Vengeful Strike**: Your **Strikes** have a **CON**% to deal your missing **HP**/2 undefensible damage
+
+**Charged Magic**: When you **Engage** with an opponent, you have an **INT**% chance to deal your **Might** - each enemy's **Defence** to all enemies adjacent to your target.
+
+**Waiting Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive by 1/2.
+
+### Legendary Great Skills
+
+**Lunar Impact**: Your **Strikes** have a **SKL**% chance to ignore enemy defence.
+
+**Lunar Strike**: Your **Strikes** have a **SKL**x2% chance to reduce enemy **Defense** by 1/2.
+
+**Solar Impact**: Your **Strikes** have a **SKL**% chance to recover HP equal to the damage you deal.
+
+**Solar Strike**: Your **Strikes** have a **SKL**x2% chance to recover HP equal to 1/2 the damage you deal.
+
+**Astral Impact**: Your **Strikes** have a **SKL**/2% ignore enemy **defense** and recover **HP** equal to damage dealt.
+
+**Astral Strike**: Your **Strikes** have a **SKL**% chance to reduce enemy **defence** by 1/2, and recover HP equal to 1/2 damage dealt.
+
+**Hero Impact**: Your **Strikes** have a **SPD**% to trigger 3 additional times.
+
+**Hero Strike**: Your **Strikes** have a **SPD**x2% to trigger an additional time.
+
+**Colossal Impact**: Your **Strikes** have a **STR**% to deal **STR** additional damage.
+
+**Colossal Strike**: Your **Strikes** have a **STR**x2% to deal **STR**/2 additional damage.
+
+**Retributive Impact**:Your **Strikes** have a **CON**% to deal your missing **HP** in undefensible damage.
+
+**Retributive Strike**: Your **Strikes** have a **CON**x2% to deal your missing **HP**/2 in undefensible damage.
+
+**Explosive Magic**: When you **Engage** with an opponent, you have an **INT**% chance to deal your **Might** x 1.5 - each enemy's **Defence** to all enemies adjacent to your target.
+
+**Empowered Magic**: When you **Engage** with an opponent, you have an **INT**x2% chance to deal your **Might** - each enemy's **Defence** to all enemies adjacent to your target.
+
+**Shielded Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive to 0.
+
+**Resistant Block**: When an enemy **Engages** with you, you have a **WIS**x2% chance to reduce the damage you actually receive by 1/2.

@@ -39,7 +39,7 @@ First, choose a map that represents the area that combat might be taking place i
 
 So, if making an encounter where "Color" and "Range" matter, Make sure to include "two red Enemies and one blue Enemy", and then "two range 1 enemies and one range 2 enemy". They can be of three different roles, or all the same role, and can even be all of the same damage type.
 
-So, For example a "Swordmaster (Red Melee), Fire Mage (Red Mixed), and Soldier (Blue Melee)" Makes an encounter that has many different approaches to solving. "Three Swordmasters" Tends to only have one solution: The highest defense blue player deals with the situation.
+So, For example a "Swordmaster (Red Melee), Fire Mage (Red Mixed), and Soldier (Blue Melee)" Makes an encounter that has many different approaches to solving. "Three Swordmasters" ends to only have one solution: The highest defense blue player deals with the situation.
 
 >Remember, these are the rules for making balanced medium-difficulty encounters. Sometimes, a room filled with Red Swordmasters exists to give the Blue Lancer Player a powerful moment, and not a challenge. Be judicious in breaking this rule, but don't be afraid to break it.
 
@@ -119,7 +119,7 @@ Stings are thin, piercing weapons used by creatures. They have a high amount of 
 
 ### Slam
 
-Slam attacks are performed with the creatue's body, or sometimes with a heavy appendage like a tail.
+Slam attacks are performed with the creature's body, or sometimes with a heavy appendage like a tail.
 
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
@@ -161,4 +161,10 @@ This is where you let your creative muscle flex. Using the rules as given, consi
 
 All you have to do is get close to the feeling of the creature. Once done, your description of the situation will carry everything the rest of the way.
 
-If any of your creatures need to exist for more than a brief moment on screen, one or two **Quirks** for them. If the creature isn't intelligent, then one quirk representing the creature type should suffice. If the creature is independent, a second quirk representing something about that particular creature can help add definition to the creature and help with roleplaying with and around it.
+If any of your creatures need to exist for more than a brief moment on screen, create one or two **Quirks** for them. If the creature isn't intelligent, then one quirk representing the creature type should suffice. If the creature is intelligent, a second quirk representing something about that particular creature can help add definition to the creature and help with roleplaying with and around it.
+
+## Designing Traps
+
+There are two types of traps to consider, and when including a trap in a map you need to decide which one you want to use. Quirk traps are often used more as barriers that prevent progress, and they tend to have HP and are defeated through quirk tests. These would be things like Gas traps, or rooms filling with water, or large hallways covered in pit traps.
+
+Combat traps are a little different. Combat traps are a type of terrain, And they engage against anyone who passes over the map square it occupies. Traps have a base **Accuracy** of the traps **level**, and have a base **Might** of half the traps level. Then, the trap equips any weapon to finish off it's setup. Anyone stepping on a trapped square gets **struck** by the trap, and the trap takes no **Ripostes** or **Follow Through Ripostes** in response. For example, a Level 16 pit trap would be equipped with an Iron Slam, Have 86% **Accuracy**,  14 **Might**. The trap could be runed with a Heavy Lv2 rune, in which case it would have 16 Damage. Alternatively, the pit trap could be spiked, in which case it would be based on an Iron Lance, with 91% **Accuracy** and 20 **Might** with that heavy Rune. This would be Blue colored, though, so the triangle still applies.

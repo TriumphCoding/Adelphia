@@ -7,3 +7,4 @@
 # Meta
 
 + Should there be a "Monster Manual" and a "Basic Setting" book?
++ Currently going with "yes".

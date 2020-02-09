@@ -1,4 +1,4 @@
-.sheet-MasterGrid {
+  .sheet-MasterGrid {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -6,29 +6,65 @@
     outline: auto;
   }
 
-.sheet-CharacterPictureItem {
+  .sheet-CharacterPictureItem {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     outline: auto;
   }
 
-.sheet-RegularItem {
-    grid-area: auto;
+  .sheet-HeaderRow {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
     outline: auto;
   }
-
-.sheet-TallItem {
-    grid-row: span 2;
-    grid-column: span 2;
-    outline: auto;
-}
 
   .sheet-FarRightDesign {
     grid-column-start: 4;
     grid-column-end: 5;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 10;
     outline: auto;
+  }
+
+  .sheet-RegularItem {
+    grid-area: auto;
+    outline: auto;
+  }
+
+  .sheet-TallItem {
+    grid-row: span 2;
+    grid-column: span 1;
+    outline: auto;
+  }
+
+  .sheet-WideItem {
+    grid-row: span 1;
+    grid-column: span 2;
+    outline: auto;
+  }
+
+  .sheet-BigItem {
+    grid-row: span 2;
+    grid-column: span 2;
+    outline: auto;
+  }
+
+  .sheet-PrimaryTitle {
+    font: auto;
+  }
+
+  .sheet-PrimaryLabel {
+    font: auto;
+  }
+
+  .sheet-PrimaryEntry {
+    font: auto;
+  }
+
+  .sheet-QuirkEntry {
+    font: auto;
   }

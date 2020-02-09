@@ -1,8 +1,52 @@
 <link href="CharactersheetV2.css" rel="stylesheet" type="text/css">
 <div  class = "sheet-MasterGrid">
-    <div class="sheet-CharacterPictureItem">Anchored Top Left Box.</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 1</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 2</div>
+
+    <!-- Character Picture -->
+    <div class="sheet-CharacterPictureItem">
+        <img url="attr_character_avatar" />
+        <textarea name="attr_character_description"></textarea>
+    </div>
+
+    <!-- Header Tabs -->
+    <div class="sheet-HeaderRow">
+        <span>Header Tabs Go Here</span>
+    </div>
+
+    <!-- Character Name -->
+    <div class="sheet-WideItem">
+        <label class="sheet-PrimaryLabel">
+            <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
+        </label>
+    </div>
+
+    <!-- Quirks -->
+    <div class="sheet-WideItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="quirks-title-u">Quirks</span>
+        </h1>
+        <fieldset class="repeating_skills">
+            <span>
+                <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
+                <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" />
+            </span>
+        </fieldset>
+    </div>
+
+    <!-- Equipped Weapon -->
+    <div class="sheet-TallItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="weapon-title-u">Weapons</span>
+        </h1>
+        <label class="sheet-PrimaryLabel">
+            <span data-i18n="equipped-weapon-u">Wield</span>: 
+            <input type="radio" name="attr_equipped_weapon" value="1" checked="true" />
+            <input type="radio" name="attr_equipped_weapon" value="2" />
+            <input type="radio" name="attr_equipped_weapon" value="3" />
+            <input type="radio" name="attr_equipped_weapon" value="4" />
+        </label>
+    </div>
+
+
     <div class="sheet-RegularItem">Dynamically Placed Item 3</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 4</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 5</div>

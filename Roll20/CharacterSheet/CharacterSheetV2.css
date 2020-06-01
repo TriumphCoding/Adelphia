@@ -3,15 +3,17 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-auto-flow: row;
-    outline: auto;
+    outline: none;
   }
 
-  .sheet-CharacterPictureItem {
+  .sheet-CharacterInfo {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-HeaderRow {
@@ -20,51 +22,94 @@
     grid-row-start: 1;
     grid-row-end: 2;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-FarRightDesign {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 2;
-    grid-row-end: 10;
+    grid-row-end: 11;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-RegularItem {
     grid-area: auto;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-TallItem {
     grid-row: span 2;
     grid-column: span 1;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-WideItem {
     grid-row: span 1;
     grid-column: span 2;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-BigItem {
     grid-row: span 2;
     grid-column: span 2;
     outline: auto;
+    outline-width: thin;
+    outline-style: solid;
   }
 
   .sheet-PrimaryTitle {
     font: auto;
+    margin-left: 5px;
+    margin-top: 5px;
   }
 
   .sheet-PrimaryLabel {
     font: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: fit-content;
   }
 
   .sheet-PrimaryEntry {
     font: auto;
+    outline: none;
+    width: fit-content;
+  }
+
+  .sheet-NotesEntry {
+    outline: none;
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  .sheet-RepeatedEntry {
+    font: auto;
+    outline: none;
+    width: auto;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+
+  .repeating_QuirkList{
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .sheet-QuirkEntry {
     font: auto;
+    outline: none;
+    width: auto;
   }

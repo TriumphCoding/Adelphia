@@ -1,10 +1,16 @@
 <link href="CharactersheetV2.css" rel="stylesheet" type="text/css">
 <div  class = "sheet-MasterGrid">
 
-    <!-- Character Picture -->
-    <div class="sheet-CharacterPictureItem">
-        <img url="attr_character_avatar" />
-        <textarea name="attr_character_description"></textarea>
+    <!-- Character Picture and Info-->
+    <div class="sheet-CharacterInfo">
+        <div>
+            <label class="sheet-PrimaryLabel">
+                <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
+            </label>
+        </div>
+        <div>
+            <textarea name="attr_character_notes" class = "sheet-NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
+        </div>
     </div>
 
     <!-- Header Tabs -->
@@ -12,24 +18,32 @@
         <span>Header Tabs Go Here</span>
     </div>
 
-    <!-- Character Name -->
-    <div class="sheet-WideItem">
-        <label class="sheet-PrimaryLabel">
-            <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
-        </label>
-    </div>
-
     <!-- Quirks -->
     <div class="sheet-WideItem">
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="quirks-title-u">Quirks</span>
         </h1>
-        <fieldset class="repeating_skills">
-            <span>
+        <fieldset class="repeating_QuirkList">
+            <span class = "sheet-RepeatedEntry">
                 <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
                 <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" />
             </span>
         </fieldset>
+        <div></div>
+    </div>
+
+    <!-- Attacking Stats -->
+    <div class="sheet-TallItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="Attack-title-u">Attack</span>
+        </h1>
+    </div>
+
+    <!-- Riposte Stats -->
+    <div class="sheet-TallItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="Attack-Riposte-u">Riposte</span>
+        </h1>
     </div>
 
     <!-- Equipped Weapon -->

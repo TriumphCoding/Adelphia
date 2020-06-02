@@ -29,7 +29,6 @@
                 <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" />
             </span>
         </fieldset>
-        <div></div>
     </div>
 
     <!-- Attacking Stats -->
@@ -58,10 +57,37 @@
             <input type="radio" name="attr_equipped_weapon" value="3" />
             <input type="radio" name="attr_equipped_weapon" value="4" />
         </label>
+        <label class="sheet-PrimaryLabel">
+            <span data-i18n="equipped-weapon-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span>
+        </label>
+        <input type="hidden" value="" name="attr_Equipped_Weapon_Name"/>
     </div>
 
+    <!-- Temporary Stat Adjustment -->
+    <div class="sheet-WideItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="temp-stat-adj-title-u">Temporary Stat Adjustment</span>
+        </h1>
+        <span class = "sheet-RepeatedEntry">adjustment</span><span>Stat</span><span>Turns</span>
+        <fieldset class="repeating_TempStatList">
+            <span class = "sheet-RepeatedEntry">
+                <input type="number" name="attr_adjustment-value" value="0"/>
+                <select name="attr_adjustment-stat">
+                    <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
+                    <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
+                    <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
+                    <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
+                    <option value="SPD" selected="selected" data-i18n="SPD-Full-Name">Speed</option>
+                    <option value="LUK" selected="selected" data-i18n="LUK-Full-Name">Luck</option>
+                    <option value="CON" selected="selected" data-i18n="CON-Full-Name">Constitution</option>
+                    <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
+                    <option value="MOV" selected="selected" data-i18n="MOV-Full-Name">Movement</option>
+                </select>
+                <input type="number" name="attr_adjustment-turns" value="0"/>
+            </span>
+        </fieldset>
+    </div>
 
-    <div class="sheet-RegularItem">Dynamically Placed Item 3</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 4</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 5</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 6</div>
@@ -76,5 +102,5 @@
     <div class="sheet-TallItem">Dynamically Placed Big Item 15</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 16</div>
     <div class="sheet-RegularItem">Dynamically Placed Item 17</div>
-    <div class="sheet-FarRightDesign">Anchored Far Right Column</div>
+    <div class="sheet-FarRightDesign">AFRC</div>
 </div>

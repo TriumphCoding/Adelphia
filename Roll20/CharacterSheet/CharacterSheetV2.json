@@ -7,5 +7,16 @@
     "Attack-title-u": "Attack",
     "Attack-Riposte-u": "Riposte",
     "weapon-title-u": "Weapons",
-    "equipped-weapon-u": "Wield"
+    "equipped-weapon-u": "Wield",
+    "equipped-weapon-n": "Name",
+    "temp-stat-adj-title-u": "Temporary Stat Adjustment",
+    "HP-Full-Name": "Hit Points",
+    "STR-Full-Name": "Strength",
+    "INT-Full-Name": "Intelligence",
+    "DEX-Full-Name": "Dexterity",
+    "SPD-Full-Name": "Speed",
+    "LUK-Full-Name": "Luck",
+    "CON-Full-Name": "Constitution",
+    "WIS-Full-Name": "Wisdom",
+    "MOV-Full-Name": "Movement"
 }

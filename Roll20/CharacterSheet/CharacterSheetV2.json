@@ -18,5 +18,13 @@
     "LUK-Full-Name": "Luck",
     "CON-Full-Name": "Constitution",
     "WIS-Full-Name": "Wisdom",
-    "MOV-Full-Name": "Movement"
+    "MOV-Full-Name": "Movement",
+    "MGT-Full-Name": "Might",
+    "ACC-Full-Name": "Accuracy",
+    "CRT-Full-Name": "Critical",
+    "DGE-Full-Name": "Dodge",
+    "AVD-Full-Name": "Avoid",
+    "DEF-Full-Name": "Defense",
+    "RES-Full-Name": "Resistance",
+    "trigger-button": "Trigger"
 }

@@ -36,6 +36,13 @@
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="Attack-title-u">Attack</span>
         </h1>
+        <label class="sheet-PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_AttackDodge"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_AttackAvoid"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_AttackDefense"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_AttackResistance"></span></label>
     </div>
 
     <!-- Riposte Stats -->
@@ -43,6 +50,13 @@
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="Attack-Riposte-u">Riposte</span>
         </h1>
+        <label class="sheet-PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_RiposteDodge"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_RiposteAvoid"></span><span>%</span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_RiposteDefense"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_RiposteResistance"></span></label>
     </div>
 
     <!-- Equipped Weapon -->
@@ -64,17 +78,18 @@
     </div>
 
     <!-- Temporary Stat Adjustment -->
-    <div class="sheet-WideItem">
+    <div class="sheet-RegularItem">
         <h1 class="sheet-PrimaryTitle">
-            <span data-i18n="temp-stat-adj-title-u">Temporary Stat Adjustment</span>
+            <span data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</span>
         </h1>
-        <div class="sheet-TempStatsMainColumn1">
-            <span class="sheet-RepeatedEntry">Adjustment</span><span>Stat</span><span>Turns</span>
+        <div>
+            <span class="sheet-TempStatsMainColumn1">Adjustment</span>
+            <span class="sheet-TempStatsMainColumn2">Stat</span>
+            <span class="sheet-TempStatsMainColumn3">Turns</span>
             <fieldset class="repeating_TempStatList">
-                <span class="sheet-RepeatedEntry">
-                    <input type="number" name="attr_adjustment-value" value="0"/>
-                    <select name="attr_adjustment-stat">
-                        <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
+                <input type="number" name="attr_adjustment-value" value="0" class="sheet-TempStatsMainColumn1"/>
+                <select name="attr_adjustment-stat" class="sheet-TempStatsMainColumn2">
+                    <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
                         <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                         <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                         <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
@@ -91,8 +106,7 @@
                         <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                         <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                     </select>
-                    <input type="number" name="attr_adjustment-turns" value="0"/>
-                </span>
+                    <input type="number" name="attr_adjustment-turns" value="0" class="sheet-TempStatsMainColumn3"/>
             </fieldset>
         </div>
         <div class="sheet-TempStatsMainColumn2">

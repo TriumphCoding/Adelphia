@@ -1,6 +1,7 @@
 {
     "__Note1": "The below are not captured by the auto-config, and are manually created. Copy-paste the entries from https://jsfiddle.net/c9w3673g/3/ to the second section.",
     "sheet-CharacterNotesPlaceholder": "Character Notes",
+    "sheet-CharacterQuirkPlaceholder": "Quirk Name Goes Here",
     "__Note2": "The below are auto-copied from https://jsfiddle.net/c9w3673g/3/",
     "name-u": "Name",
     "quirks-title-u": "Quirks",

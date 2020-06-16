@@ -26,7 +26,24 @@
         <fieldset class="repeating_QuirkList">
             <span class = "sheet-RepeatedEntry">
                 <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
-                <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" />
+                <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
+                <select name="attr_quirk-stat" class="sheet-TempStatsMainColumn2">
+                    <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
+                    <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
+                    <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
+                    <option value="SPD" selected="selected" data-i18n="SPD-Full-Name">Speed</option>
+                    <option value="LUK" selected="selected" data-i18n="LUK-Full-Name">Luck</option>
+                    <option value="CON" selected="selected" data-i18n="CON-Full-Name">Constitution</option>
+                    <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
+                    <option value="MOV" selected="selected" data-i18n="MOV-Full-Name">Movement</option>
+                    <option value="MGT" selected="selected" data-i18n="MGT-Full-Name">Might</option>
+                    <option value="ACC" selected="selected" data-i18n="ACC-Full-Name">Accuracy</option>
+                    <option value="CRT" selected="selected" data-i18n="CRT-Full-Name">Critical</option>
+                    <option value="DGE" selected="selected" data-i18n="DGE-Full-Name">Dodge</option>
+                    <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
+                    <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
+                    <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
+                </select>
             </span>
         </fieldset>
     </div>
@@ -82,14 +99,17 @@
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</span>
         </h1>
+        <div class="sheet-SubGridThreeColumn">
+            <div class="sheet-SubGridThirds"><span>Adjustment</span></div>
+            <div class="sheet-SubGridThirds"><span>Stat</span></div>
+            <div class="sheet-SubGridThirds"><span>Turns</span></div>
+        </div>
         <div>
-            <span class="sheet-TempStatsMainColumn1">Adjustment</span>
-            <span class="sheet-TempStatsMainColumn2">Stat</span>
-            <span class="sheet-TempStatsMainColumn3">Turns</span>
             <fieldset class="repeating_TempStatList">
-                <input type="number" name="attr_adjustment-value" value="0" class="sheet-TempStatsMainColumn1"/>
-                <select name="attr_adjustment-stat" class="sheet-TempStatsMainColumn2">
-                    <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
+                <div class="sheet-SubGridThreeColumn">
+                    <input type="number" name="attr_adjustment-value" value="0" class="sheet-SubGridThirds"/>
+                    <select name="attr_adjustment-stat" class="sheet-SubGridThirds">
+                        <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
                         <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                         <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                         <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
@@ -106,10 +126,11 @@
                         <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                         <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                     </select>
-                    <input type="number" name="attr_adjustment-turns" value="0" class="sheet-TempStatsMainColumn3"/>
+                    <input type="number" name="attr_adjustment-turns" value="0" class="sheet-SubGridThirds"/>
+                </div>
             </fieldset>
         </div>
-        <div class="sheet-TempStatsMainColumn2">
+        <div class="sheet-SubGridThirds">
             <button type="action" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
         </div>
     </div>

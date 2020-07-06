@@ -88,25 +88,31 @@
             <input type="radio" name="attr_equipped_weapon" value="3" />
             <input type="radio" name="attr_equipped_weapon" value="4" />
         </label>
-        <label class="sheet-PrimaryLabel">
-            <span data-i18n="equipped-weapon-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span>
-        </label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-name-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-rune-n">Rune</span>: <span name="attr_Equipped_Weapon_Rune"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-color-n">Color</span>: <span name="attr_Equipped_Weapon_Color"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-might-n">Might</span>: <span name="attr_Equipped_Weapon_Might"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-accuracy-n">Accuracy</span>: <span name="attr_Equipped_Weapon_Accuracy"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-range-n">Range</span>: <span name="attr_Equipped_Weapon_Range"></span></label>
+        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-notes-n">Notes</span>: <span name="attr_Equipped_Weapon_Notes"></span></label>
+        
         <input type="hidden" value="" name="attr_Equipped_Weapon_Name"/>
     </div>
 
     <!-- Temporary Stat Adjustment -->
-    <div class="sheet-RegularItem">
+    <div class="sheet-WideItem">
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</span>
         </h1>
-        <div class="sheet-SubGridThreeColumn">
-            <div class="sheet-SubGridThirds"><span>Adjustment</span></div>
-            <div class="sheet-SubGridThirds"><span>Stat</span></div>
-            <div class="sheet-SubGridThirds"><span>Turns</span></div>
+        <div class="sheet-SubGridFourColumn">
+            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-change">Change</span></div>
+            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-stat">Stat</span></div>
+            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-turns">Turns</span></div>
+            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-notes">Notes</span></div>
         </div>
         <div>
             <fieldset class="repeating_TempStatList">
-                <div class="sheet-SubGridThreeColumn">
+                <div class="sheet-SubGridFourColumn">
                     <input type="number" name="attr_adjustment-value" value="0" class="sheet-SubGridThirds"/>
                     <select name="attr_adjustment-stat" class="sheet-SubGridThirds">
                         <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
@@ -127,6 +133,7 @@
                         <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                     </select>
                     <input type="number" name="attr_adjustment-turns" value="0" class="sheet-SubGridThirds"/>
+                    <input type="text" name="attr_adjustment-notes" value="" class="sheet-SubGridThirds"/>
                 </div>
             </fieldset>
         </div>

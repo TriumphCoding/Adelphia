@@ -32,7 +32,7 @@ Your weapon will determine what type of damage you deal, but traditionally it wi
 
 ### Stat Tests
 
-Usually, Stat Tests are used to activate "Combat Skills". To check against a Stat, you attempt a **d%** roll against your own **Base Stats**. In this case, your **Hit Chance** is the actual value of your Base Stat. Rolling under your stat means a successful test, and your Combat skill is performed. Some Tests will apply a *2 or a *1/2 modifier. Multiply your stat by this value (and round down) to get your Hit Chance. For game speed, you can use the **d%** roll for your Attack Test to pass a Stat Test. As long as your **d%** beats both, your attack works and your combat skill goes off. These may be abbreviated as **STR**%, **SPD**x2%, or **CON**x1/2%
+Usually, Stat Tests are used to activate "Combat Skills". To check against a Stat, you attempt a **d%** roll against your own **Base Stats**. In this case, your **Hit Chance** is the actual value of your Base Stat. Rolling under your stat means a successful test, and your Combat skill is performed. Some Tests will apply a x2 or a x1/2 modifier. Multiply your stat by this value (and round down) to get your Hit Chance. For game speed, you can use the **d%** roll for your Attack Test to pass a Stat Test. As long as your **d%** beats both, your attack works and your combat skill goes off. These may be abbreviated as **STR**%, **SPD**x2%, or **CON**x1/2%
 
 ### Quirk Tests
 

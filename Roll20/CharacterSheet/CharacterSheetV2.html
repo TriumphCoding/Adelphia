@@ -1,0 +1,67 @@
+<link href="CharacterSheetV2.css" rel="stylesheet" type="text/css">
+<div  class = "sheet-MasterGrid">
+
+    <!-- Character Picture -->
+    <div class="sheet-CharacterPictureItem">
+        <img name="attr_character_avatar" class="sheet-CharacterPictureSubItemWide">
+        <img name="attr_character_token" class="sheet-CharacterPictureSubItem">
+        <textarea name="attr_character_description" class="sheet-CharacterPictureSubItem"></textarea>
+    </div>
+
+    <!-- Header Tabs -->
+    <div class="sheet-HeaderRow">
+        <span>Header Tabs Go Here</span>
+    </div>
+
+    <!-- Character Name -->
+    <div class="sheet-WideItem">
+        <label class="sheet-PrimaryLabel">
+            <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
+        </label>
+    </div>
+
+    <!-- Quirks -->
+    <div class="sheet-WideItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="quirks-title-u">Quirks</span>
+        </h1>
+        <fieldset class="repeating_skills">
+            <span>
+                <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
+                <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" />
+            </span>
+        </fieldset>
+    </div>
+
+    <!-- Equipped Weapon -->
+    <div class="sheet-TallItem">
+        <h1 class="sheet-PrimaryTitle">
+            <span data-i18n="weapon-title-u">Weapons</span>
+        </h1>
+        <label class="sheet-PrimaryLabel">
+            <span data-i18n="equipped-weapon-u">Wield</span>: 
+            <input type="radio" name="attr_equipped_weapon" value="1" checked="true" />
+            <input type="radio" name="attr_equipped_weapon" value="2" />
+            <input type="radio" name="attr_equipped_weapon" value="3" />
+            <input type="radio" name="attr_equipped_weapon" value="4" />
+        </label>
+    </div>
+
+
+    <div class="sheet-RegularItem">Dynamically Placed Item 3</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 4</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 5</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 6</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 7</div>
+    <div class="sheet-TallItem">Dynamically Placed Big Item 8</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 9</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 10</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 11</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 12</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 13</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 14</div>
+    <div class="sheet-TallItem">Dynamically Placed Big Item 15</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 16</div>
+    <div class="sheet-RegularItem">Dynamically Placed Item 17</div>
+    <div class="sheet-FarRightDesign">Anchored Far Right Column</div>
+</div>

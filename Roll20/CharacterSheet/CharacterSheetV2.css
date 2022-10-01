@@ -20,6 +20,65 @@
     padding: 5px;
   }
 
+  .sheet-CharacterInfoSubGrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    column-gap: 5px;
+    row-gap: 5px;
+    outline: none;
+    justify-content: left;
+  }
+
+  .sheet-CharacterInfoSubGridName {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    outline: auto;
+    outline-width: thin;
+    outline-style: solid;
+    padding: 5px;
+    max-width: 271px;
+  }
+
+  .sheet-CharacterInfoSubGridPicture {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    outline: auto;
+    outline-width: thin;
+    outline-style: solid;
+    padding: 5px;
+    max-width: 271px;
+  }
+
+  .sheet-CharacterInfoSubGridToken {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+    outline: auto;
+    outline-width: thin;
+    outline-style: solid;
+    padding: 5px;
+    max-width: 128px;
+  }
+
+  .sheet-CharacterInfoSubGridNotes {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 4;
+    grid-row-end: span 1;
+    outline: auto;
+    outline-width: thin;
+    outline-style: solid;
+    padding: 5px;
+    max-width: 128px;
+  }
+
   .sheet-HeaderRow {
     grid-column-start: 2;
     grid-column-end: 5;
@@ -112,8 +171,14 @@
 
   .sheet-NotesEntry {
     outline: none;
-    width: auto;
-    height: auto;
+    width: 96%;
+    max-width: 96%;
+    min-width: 96%;
+    height: 98%;
+    max-height: 98%;
+    min-height: 98%;
+    background: none;
+    resize: none;
   }
 
   .sheet-RepeatedEntry {

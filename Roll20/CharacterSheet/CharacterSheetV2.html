@@ -3,13 +3,21 @@
 
     <!-- Character Picture and Info-->
     <div class="sheet-CharacterInfo">
-        <div>
-            <label class="sheet-PrimaryLabel">
-                <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
-            </label>
-        </div>
-        <div>
-            <textarea name="attr_character_notes" class = "sheet-NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
+        <div class="sheet-CharacterInfoSubGrid">
+            <div class="sheet-CharacterInfoSubGridName">
+                <label class="sheet-PrimaryLabel">
+                    <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
+                </label>
+            </div>
+            <div class="sheet-CharacterInfoSubGridPicture">
+                <img name="attr_character_avatar"/>
+            </div>
+            <div class="sheet-CharacterInfoSubGridToken">
+                <img name="attr_character_token"/>
+            </div>
+            <div class="sheet-CharacterInfoSubGridNotes">
+                <textarea name="attr_character_notes" class = "sheet-NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
+            </div>
         </div>
     </div>
 

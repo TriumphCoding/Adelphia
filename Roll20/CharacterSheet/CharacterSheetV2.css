@@ -104,12 +104,30 @@
 
 /*Character Tab Section*/
 .sheet-CharacterQuirkBox {
-  grid-area: auto;
+  grid-row: span 1;
+  grid-column: span 2;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
-  display: none;
+}
+
+.sheet-CharacterTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.sheet-CharacterWideItem {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
 }
 
 .sheet-RegularItem {
@@ -121,12 +139,12 @@
 }
 
 .sheet-TallItem {
-grid-row: span 2;
-grid-column: span 1;
-outline: auto;
-outline-width: thin;
-outline-style: solid;
-padding: 5px;
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
 }
 
 .sheet-WideItem {
@@ -226,9 +244,22 @@ padding: 5px;
   justify-self: right;
 }
 
+/*mark your sections invisible here*/
+.charsheet .sheet-CharacterQuirkBox,
+.charsheet .sheet-CharacterTallItem,
+.charsheet .sheet-CharacterWideItem,
+.charsheet .sheet-config,
+.charsheet .sheet-journal {
+    display: none;
+}
+
 /*Add your tabs for their given section here*/
 .charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterQuirkBox,
-.charsheet .sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
-.charsheet .sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
-    display: block;
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterTallItem,
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterWideItem,
+.charsheet .sheet-tabstoggle[value="weapons"] ~ div.sheet-config,
+.charsheet .sheet-tabstoggle[value="items"] ~ div.sheet-journal,
+.charsheet .sheet-tabstoggle[value="levels"] ~ div.sheet-config,
+.charsheet .sheet-tabstoggle[value="configuration"] ~ div.sheet-journal {
+    display: grid;
 }

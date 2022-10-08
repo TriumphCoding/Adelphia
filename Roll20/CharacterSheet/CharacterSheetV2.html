@@ -1,4 +1,8 @@
 <link href="CharactersheetV2.css" rel="stylesheet" type="text/css">
+
+<!-- Store the Global Tab State-->
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
+
 <div  class = "sheet-MasterGrid">
 
     <!-- Character Picture and Info-->
@@ -23,11 +27,28 @@
 
     <!-- Header Tabs -->
     <div class="sheet-HeaderRow">
-        <span>Header Tabs Go Here</span>
+        <span>
+            <button type="action" name="act_character" >Character</button>
+            <button type="action" name="act_weapons" >Weapons</button>
+            <button type="action" name="act_items" >Items</button>
+            <button type="action" name="act_levels" >Levels</button>
+            <button type="action" name="act_config" >Config</button>
+        </span>
+
+        <script type="text/worker">
+            const buttonlist = ["character","journal","configuration"];
+            buttonlist.forEach(button => {
+                on(`clicked:${button}`, function() {
+                    setAttrs({
+                        sheetTab: button
+                    });
+                });
+            });
+        </script>
     </div>
 
     <!-- Quirks -->
-    <div class="sheet-WideItem">
+    <div class="sheet-CharacterQuirkBox">
         <h1 class="sheet-PrimaryTitle">
             <span data-i18n="quirks-title-u">Quirks</span>
         </h1>
@@ -206,3 +227,4 @@
     <div class="sheet-RegularItem">Dynamically Placed Item 16</div>
     <div class="sheet-FarRightDesign">AFRC</div>
 </div>
+

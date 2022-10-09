@@ -130,6 +130,16 @@
   padding: 5px;
 }
 
+/*Weapon Tab Section*/
+.sheet-WeaponTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
 .sheet-RegularItem {
   grid-area: auto;
   outline: auto;
@@ -248,7 +258,7 @@
 .charsheet .sheet-CharacterQuirkBox,
 .charsheet .sheet-CharacterTallItem,
 .charsheet .sheet-CharacterWideItem,
-.charsheet .sheet-config,
+.charsheet .sheet-WeaponTallItem,
 .charsheet .sheet-journal {
     display: none;
 }
@@ -257,7 +267,7 @@
 .charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterQuirkBox,
 .charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterTallItem,
 .charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-CharacterWideItem,
-.charsheet .sheet-tabstoggle[value="weapons"] ~ div.sheet-config,
+.charsheet .sheet-tabstoggle[value="weapons"] ~ div.sheet-WeaponTallItem,
 .charsheet .sheet-tabstoggle[value="items"] ~ div.sheet-journal,
 .charsheet .sheet-tabstoggle[value="levels"] ~ div.sheet-config,
 .charsheet .sheet-tabstoggle[value="configuration"] ~ div.sheet-journal {

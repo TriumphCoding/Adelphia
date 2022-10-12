@@ -1,30 +1,30 @@
 <link href="CharactersheetV2.css" rel="stylesheet" type="text/css">
 
-<div  class = "sheet-MasterGrid">
+<div class="MasterGrid">
 
     <!-- Character Picture and Info-->
-    <div class="sheet-CharacterInfo">
-        <div class="sheet-CharacterInfoSubGrid">
-            <div class="sheet-CharacterInfoSubGridName">
-                <label class="sheet-PrimaryLabel">
-                    <span data-i18n="name-u">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_character_name" />
+    <div class="CharacterInfo">
+        <div class="CharacterInfoSubGrid">
+            <div class="CharacterInfoSubGridName">
+                <label class="PrimaryLabel">
+                    <span data-i18n="name-u">Name</span>: <input type="text" class="PrimaryEntry" name="attr_character_name" />
                 </label>
             </div>
-            <div class="sheet-CharacterInfoSubGridPicture">
+            <div class="CharacterInfoSubGridPicture">
                 <img name="attr_character_avatar"/>
             </div>
-            <div class="sheet-CharacterInfoSubGridToken">
+            <div class="CharacterInfoSubGridToken">
                 <img name="attr_character_token"/>
             </div>
-            <div class="sheet-CharacterInfoSubGridNotes">
-                <textarea name="attr_character_notes" class = "sheet-NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
+            <div class="CharacterInfoSubGridNotes">
+                <textarea name="attr_character_notes" class="NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
             </div>
         </div>
     </div>
 
     <!-- Header Tabs -->
-    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
-    <div class="sheet-HeaderRow">
+    <input type="hidden" class="tabstoggle" name="attr_sheetTab"  value="character"  />
+    <div class="HeaderRow">
         <div>
             <button type="action" name="act_character" >Character</button>
             <button type="action" name="act_weapons" >Weapons</button>
@@ -47,15 +47,15 @@
     </div>
 
     <!-- Quirks -->
-    <div class="sheet-CharacterQuirkBox">
-        <h1 class="sheet-PrimaryTitle">
+    <div class="CharacterQuirkBox">
+        <h1 class="PrimaryTitle">
             <span data-i18n="quirks-title-u">Quirks</span>
         </h1>
         <fieldset class="repeating_QuirkList">
-            <span class = "sheet-RepeatedEntry">
+            <span class="RepeatedEntry">
                 <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
-                <input type="text" class="sheet-QuirkEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
-                <select name="attr_quirk-stat" class="sheet-TempStatsMainColumn2">
+                <input type="text" class="QuirkEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
+                <select name="attr_quirk-stat" class="TempStatsMainColumn2">
                     <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                     <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                     <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
@@ -77,39 +77,39 @@
     </div>
 
     <!-- Attacking Stats -->
-    <div class="sheet-CharacterTallItem">
-        <h1 class="sheet-PrimaryTitle">
+    <div class="CharacterTallItem">
+        <h1 class="PrimaryTitle">
             <span data-i18n="Attack-title-u">Attack</span>
         </h1>
-        <label class="sheet-PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_AttackDodge"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_AttackAvoid"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_AttackDefense"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_AttackResistance"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_AttackDodge"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_AttackAvoid"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_AttackDefense"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_AttackResistance"></span></label>
     </div>
 
     <!-- Riposte Stats -->
-    <div class="sheet-CharacterTallItem">
-        <h1 class="sheet-PrimaryTitle">
+    <div class="CharacterTallItem">
+        <h1 class="PrimaryTitle">
             <span data-i18n="Attack-Riposte-u">Riposte</span>
         </h1>
-        <label class="sheet-PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_RiposteDodge"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_RiposteAvoid"></span><span>%</span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_RiposteDefense"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_RiposteResistance"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_RiposteDodge"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_RiposteAvoid"></span><span>%</span></label>
+        <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_RiposteDefense"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_RiposteResistance"></span></label>
     </div>
 
     <!-- Equipped Weapon -->
-    <div class="sheet-CharacterTallItem">
-        <h1 class="sheet-PrimaryTitle">
+    <div class="CharacterTallItem">
+        <h1 class="PrimaryTitle">
             <span data-i18n="weapon-title-u">Weapons</span>
         </h1>
-        <label class="sheet-PrimaryLabel">
+        <label class="PrimaryLabel">
             <span data-i18n="equipped-weapon-u">Wield</span>: 
             <input type="radio" name="attr_equipped_weapon" value="1" checked="true" />
             <input type="radio" name="attr_equipped_weapon" value="2" />
@@ -117,33 +117,33 @@
             <input type="radio" name="attr_equipped_weapon" value="4" />
             <input type="radio" name="attr_equipped_weapon" value="5" />
         </label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-name-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-rune-n">Rune</span>: <span name="attr_Equipped_Weapon_Rune"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-color-n">Color</span>: <span name="attr_Equipped_Weapon_Color"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-might-n">Might</span>: <span name="attr_Equipped_Weapon_Might"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-accuracy-n">Accuracy</span>: <span name="attr_Equipped_Weapon_Accuracy"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-range-n">Range</span>: <span name="attr_Equipped_Weapon_Range"></span></label>
-        <label class="sheet-PrimaryLabel"><span data-i18n="equipped-weapon-notes-n">Notes</span>: <span name="attr_Equipped_Weapon_Notes"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-name-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-rune-n">Rune</span>: <span name="attr_Equipped_Weapon_Rune"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-color-n">Color</span>: <span name="attr_Equipped_Weapon_Color"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-might-n">Might</span>: <span name="attr_Equipped_Weapon_Might"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-accuracy-n">Accuracy</span>: <span name="attr_Equipped_Weapon_Accuracy"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-range-n">Range</span>: <span name="attr_Equipped_Weapon_Range"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-weapon-notes-n">Notes</span>: <span name="attr_Equipped_Weapon_Notes"></span></label>
         
         <input type="hidden" value="" name="attr_Equipped_Weapon_Name"/>
     </div>
 
     <!-- Temporary Stat Adjustment -->
-    <div class="sheet-CharacterWideItem">
-        <h1 class="sheet-PrimaryTitle">
+    <div class="CharacterWideItem">
+        <h1 class="PrimaryTitle">
             <span data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</span>
         </h1>
-        <div class="sheet-SubGridFourColumn">
-            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-change">Change</span></div>
-            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-stat">Stat</span></div>
-            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-turns">Turns</span></div>
-            <div class="sheet-SubGridThirds"><span data-i18n="stat-change-column-notes">Notes</span></div>
+        <div class="SubGridFourColumn">
+            <div class="SubGridThirds"><span data-i18n="stat-change-column-change">Change</span></div>
+            <div class="SubGridThirds"><span data-i18n="stat-change-column-stat">Stat</span></div>
+            <div class="SubGridThirds"><span data-i18n="stat-change-column-turns">Turns</span></div>
+            <div class="SubGridThirds"><span data-i18n="stat-change-column-notes">Notes</span></div>
         </div>
         <div>
             <fieldset class="repeating_TempStatList">
-                <div class="sheet-SubGridFourColumn">
-                    <input type="number" name="attr_adjustment-value" value="0" class="sheet-SubGridThirds"/>
-                    <select name="attr_adjustment-stat" class="sheet-SubGridThirds">
+                <div class="SubGridFourColumn">
+                    <input type="number" name="attr_adjustment-value" value="0" class="SubGridThirds"/>
+                    <select name="attr_adjustment-stat" class="SubGridThirds">
                         <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
                         <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                         <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
@@ -161,71 +161,73 @@
                         <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                         <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                     </select>
-                    <input type="number" name="attr_adjustment-turns" value="0" class="sheet-SubGridThirds"/>
-                    <input type="text" name="attr_adjustment-notes" value="" class="sheet-SubGridThirds"/>
+                    <input type="number" name="attr_adjustment-turns" value="0" class="SubGridThirds"/>
+                    <input type="text" name="attr_adjustment-notes" value="" class="SubGridThirds"/>
                 </div>
             </fieldset>
         </div>
-        <div class="sheet-SubGridThirds">
+        <div class="SubGridThirds">
             <button type="action" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
         </div>
     </div>
 
     <!-- Weapon Creation Section -->
     <!-- Weapon 1 -->
-    <div class="sheet-WeaponTallItem">
-        <h1 class="sheet-PrimaryTitle">
-            <span data-i18n="Weapon-Creation-title-u">Weapon Creation</span>
-        </h1>
+    <fieldset class="repeating_weapons">
+        <!--div class="WeaponTallItem"-->
         <div>
-            <h2 data-i18n="Weapon-1-Title">Weapon 1</h2>
-            <label class="sheet-PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="sheet-PrimaryEntry" name="attr_Weapon-1-Name"/></label>
-            <label class="sheet-PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
-                    <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
-                    <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
-                    <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
-                    <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
-                    <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
-                    <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
-                    <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
-                    <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
-                    <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
-                    <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
-                    <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
-                    <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
-                    <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
-                    <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
-                    <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
-                    <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
-                    <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
-                    <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
-                    <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
-                    <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
-                    <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
-                    <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
-                    <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
-                    <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
-                    <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
-                    <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
-                    <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
-                </select>
-            </label>
+            <h1 class="PrimaryTitle">
+                <span data-i18n="Weapon-Creation-title-u">Weapon Creation</span>
+            </h1>
+            <div>
+                <h2 data-i18n="Weapon-1-Title">Weapon 1</h2>
+                <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-1-Name"/></label>
+                <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
+                        <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
+                        <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
+                        <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
+                        <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
+                        <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
+                        <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
+                        <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
+                        <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
+                        <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
+                        <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
+                        <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
+                        <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
+                        <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
+                        <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
+                        <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
+                        <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
+                        <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
+                        <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
+                        <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
+                        <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
+                        <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
+                        <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
+                        <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
+                        <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
+                        <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
+                        <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
+                        <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
+                    </select>
+                </label>
+            </div>
         </div>
-    </div>
+    </fieldset>
 
-
-    <div class="sheet-RegularItem">Dynamically Placed Item 5</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 6</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 7</div>
-    <div class="sheet-TallItem">Dynamically Placed Big Item 8</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 9</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 10</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 11</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 12</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 13</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 14</div>
-    <div class="sheet-TallItem">Dynamically Placed Big Item 15</div>
-    <div class="sheet-RegularItem">Dynamically Placed Item 16</div>
-    <div class="sheet-FarRightDesign">AFRC</div>
+    <div class="RegularItem">Dynamically Placed Item 5</div>
+    <div class="RegularItem">Dynamically Placed Item 6</div>
+    <div class="RegularItem">Dynamically Placed Item 7</div>
+    <div class="TallItem">Dynamically Placed Big Item 8</div>
+    <div class="RegularItem">Dynamically Placed Item 9</div>
+    <div class="RegularItem">Dynamically Placed Item 10</div>
+    <div class="RegularItem">Dynamically Placed Item 11</div>
+    <div class="RegularItem">Dynamically Placed Item 12</div>
+    <div class="RegularItem">Dynamically Placed Item 13</div>
+    <div class="RegularItem">Dynamically Placed Item 14</div>
+    <div class="TallItem">Dynamically Placed Big Item 15</div>
+    <div class="RegularItem">Dynamically Placed Item 16</div>
+    <div class="FarRightDesign">AFRC</div>
 </div>
 

@@ -122,12 +122,52 @@
 }
 
 .CharacterWideItem {
-  grid-row: span 1;
+  grid-row: span 2;
   grid-column: span 2;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+}
+
+.CharacterItem {
+  grid-area: auto;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] {
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontrol[data-groupname="repeating_weapons"] {
+  display: none;
+}
+
+.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] {
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.charsheet .CharacterItemSelection~.repcontrol[data-groupname="repeating_items"] {
+  display: none;
 }
 
 /*Weapon Tab Section*/
@@ -140,8 +180,17 @@
   padding: 5px;
 }
 
-.repcontainer[data-groupname="repeating_weapons"] {
+.WeaponWideItem {
   grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] {
+  grid-row: span 3;
   grid-column: span 2;
   outline: auto;
   outline-width: thin;
@@ -152,7 +201,7 @@
   grid-template-rows: auto;
 }
 
-.repcontainer[data-groupname="repeating_weapons"] > .repitem {
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] > .repitem {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -160,9 +209,58 @@
   outline-style: solid;
   padding: 5px;
 }
-.repcontrol[data-groupname="repeating_weapons"] {
+.charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"] {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+/*Item Tab Section*/
+
+.ItemTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.ItemWideItem {
   grid-row: span 1;
   grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] {
+  grid-row: span 3;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+.charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"] {
+  grid-row: span 1;
+  grid-column: span 1;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
@@ -287,9 +385,15 @@
 .charsheet .CharacterQuirkBox,
 .charsheet .CharacterTallItem,
 .charsheet .CharacterWideItem,
-.charsheet .repcontainer[data-groupname="repeating_weapons"],
-.charsheet .repcontrol[data-groupname="repeating_weapons"],
+.charsheet .CharacterItem,
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"],
+.charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"],
+.charsheet .WeaponWideItem,
 .charsheet .WeaponTallItem,
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"],
+.charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
+.charsheet .ItemWideItem,
+.charsheet .ItemTallItem,
 .charsheet .journal {
     display: none;
 }
@@ -298,9 +402,15 @@
 .charsheet .tabstoggle[value="character"] ~ div.CharacterQuirkBox,
 .charsheet .tabstoggle[value="character"] ~ div.CharacterTallItem,
 .charsheet .tabstoggle[value="character"] ~ div.CharacterWideItem,
-.charsheet .tabstoggle[value="weapons"] ~ div.repcontainer[data-groupname="repeating_weapons"],
-.charsheet .tabstoggle[value="weapons"] ~ div.repcontrol[data-groupname="repeating_weapons"],
-.charsheet .tabstoggle[value="items"] ~ div.journal,
+.charsheet .tabstoggle[value="character"] ~ div.CharacterItem,
+.charsheet .tabstoggle[value="weapons"] ~ .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"],
+.charsheet .tabstoggle[value="weapons"] ~ .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"],
+.charsheet .tabstoggle[value="weapons"] ~ div.WeaponWideItem,
+.charsheet .tabstoggle[value="weapons"] ~ div.WeaponTallItem,
+.charsheet .tabstoggle[value="items"] ~ .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"],
+.charsheet .tabstoggle[value="items"] ~ .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
+.charsheet .tabstoggle[value="items"] ~ div.ItemWideItem,
+.charsheet .tabstoggle[value="items"] ~ div.ItemTallItem,
 .charsheet .tabstoggle[value="levels"] ~ div.config,
 .charsheet .tabstoggle[value="configuration"] ~ div.journal {
     display: grid;

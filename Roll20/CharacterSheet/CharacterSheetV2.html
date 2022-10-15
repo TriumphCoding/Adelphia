@@ -109,14 +109,10 @@
         <h1 class="PrimaryTitle">
             <span data-i18n="weapon-title-u">Weapons</span>
         </h1>
-        <label class="PrimaryLabel">
-            <span data-i18n="equipped-weapon-u">Wield</span>: 
-            <input type="radio" name="attr_equipped_weapon" value="1" checked="true" />
-            <input type="radio" name="attr_equipped_weapon" value="2" />
-            <input type="radio" name="attr_equipped_weapon" value="3" />
-            <input type="radio" name="attr_equipped_weapon" value="4" />
-            <input type="radio" name="attr_equipped_weapon" value="5" />
-        </label>
+        <fieldset class="repeating_weapons CharacterWeaponSelection">
+            <button type="action" name="act_SetWeapon"><span name="attr_Weapon-Name"></span></button>
+            <input type="text" class="PrimaryEntry" name="attr_Weapon-Name" style="display: none;"/>
+        </fieldset>
         <label class="PrimaryLabel"><span data-i18n="equipped-weapon-name-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span></label>
         <label class="PrimaryLabel"><span data-i18n="equipped-weapon-rune-n">Rune</span>: <span name="attr_Equipped_Weapon_Rune"></span></label>
         <label class="PrimaryLabel"><span data-i18n="equipped-weapon-color-n">Color</span>: <span name="attr_Equipped_Weapon_Color"></span></label>
@@ -171,17 +167,32 @@
         </div>
     </div>
 
+    <!-- Equipped Item -->
+    <div class="CharacterItem">
+        <h1 class="PrimaryTitle">
+            <span data-i18n="item-title-u">Items</span>
+        </h1>
+        <fieldset class="repeating_items CharacterItemSelection">
+            <button type="action" name="act_SetItem"><span name="attr_Item-Name"></span></button>
+            <input type="text" class="PrimaryEntry" name="attr_Item-Name" style="display: none;"/>
+        </fieldset>
+        <label class="PrimaryLabel"><span data-i18n="equipped-item-name-n">Name</span>: <span name="attr_Equipped_Item_Name"></span></label>
+        <label class="PrimaryLabel"><span data-i18n="equipped-item-notes-n">Notes</span>: <span name="attr_Equipped_Item_Notes"></span></label>
+        
+        <input type="hidden" value="" name="attr_Equipped_Item_Name"/>
+    </div>
+
     <!-- Weapon Creation Section -->
-    <!-- Weapon 1 -->
-    <fieldset class="repeating_weapons">
-        <!--div class="WeaponTallItem"-->
+    <div class="WeaponWideItem">
+        <h1 class="PrimaryTitle">
+            <span data-i18n="Weapon-Creation-title-u">Weapon Creation</span>
+        </h1>
+    </div>
+    <fieldset class="repeating_weapons RepeatingWeaponSection">
         <div>
-            <h1 class="PrimaryTitle">
-                <span data-i18n="Weapon-Creation-title-u">Weapon Creation</span>
-            </h1>
             <div>
-                <h2 data-i18n="Weapon-1-Title">Weapon 1</h2>
-                <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-1-Name"/></label>
+                <h2 data-i18n="Weapon-Title">Weapon</h2>
+                <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Name"/></label>
                 <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
                         <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
                         <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
@@ -215,19 +226,24 @@
             </div>
         </div>
     </fieldset>
+    <!-- ToDo: Finish Weapon Section -->
 
-    <div class="RegularItem">Dynamically Placed Item 5</div>
-    <div class="RegularItem">Dynamically Placed Item 6</div>
-    <div class="RegularItem">Dynamically Placed Item 7</div>
-    <div class="TallItem">Dynamically Placed Big Item 8</div>
-    <div class="RegularItem">Dynamically Placed Item 9</div>
-    <div class="RegularItem">Dynamically Placed Item 10</div>
-    <div class="RegularItem">Dynamically Placed Item 11</div>
-    <div class="RegularItem">Dynamically Placed Item 12</div>
-    <div class="RegularItem">Dynamically Placed Item 13</div>
-    <div class="RegularItem">Dynamically Placed Item 14</div>
-    <div class="TallItem">Dynamically Placed Big Item 15</div>
-    <div class="RegularItem">Dynamically Placed Item 16</div>
-    <div class="FarRightDesign">AFRC</div>
+    <!-- Item Creation Section -->
+    <div class="ItemWideItem">
+        <h1 class="PrimaryTitle">
+            <span data-i18n="Item-Creation-title-u">Item Creation</span>
+        </h1>
+    </div>
+    <fieldset class="repeating_items RepeatingItemSection">
+        <div>
+            <div>
+                <h2 data-i18n="Item-Title">Item</h2>
+                <label class="PrimaryLabel"><span data-i18n="Item-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Name"/></label>
+            </div>
+        </div>
+    </fieldset>
+    <!-- ToDo: Finish Item Section -->
+
+    <div class="FarRightDesign"></div>
 </div>
 

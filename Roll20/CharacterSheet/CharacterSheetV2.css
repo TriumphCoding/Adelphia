@@ -1,7 +1,7 @@
 .MasterGrid {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-columns: fit-content(276px) 1fr 1fr;
+  grid-template-rows: fit-content(34px) 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: row;
   column-gap: 5px;
   row-gap: 5px;
@@ -9,7 +9,8 @@
   justify-content: justify;
 }
 
-.CharacterInfo {
+/*Static Layout Pieces*/
+.StaticCharacterInfo {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -21,7 +22,7 @@
   justify-content: center;
 }
 
-.CharacterInfoSubGrid {
+.StaticCharacterInfoSubGrid {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -32,70 +33,57 @@
   justify-content: left;
 }
 
-.CharacterInfoSubGridName {
+.StaticCharacterInfoSubGridName {
   grid-column-start: 1;
   grid-column-end: span 2;
   grid-row-start: 1;
   grid-row-end: span 1;
   outline: auto;
-  outline-width: thin;
-  outline-style: solid;
+  outline: none;
   padding: 5px;
   max-width: 271px;
 }
 
-.CharacterInfoSubGridPicture {
+.StaticCharacterInfoSubGridPicture {
   grid-column-start: 1;
   grid-column-end: span 2;
   grid-row-start: 2;
   grid-row-end: span 2;
   outline: auto;
-  outline-width: thin;
-  outline-style: solid;
+  outline: none;
   padding: 5px;
   max-width: 271px;
 }
 
-.CharacterInfoSubGridToken {
+.StaticCharacterInfoSubGridToken {
   grid-column-start: 1;
   grid-column-end: span 1;
   grid-row-start: 4;
   grid-row-end: span 1;
   outline: auto;
-  outline-width: thin;
-  outline-style: solid;
+  outline: none;
   padding: 5px;
-  max-width: 128px;
+  max-width: 116px;
+  max-height: 116px;
 }
 
-.CharacterInfoSubGridNotes {
+.StaticCharacterInfoSubGridNotes {
   grid-column-start: 2;
   grid-column-end: span 1;
   grid-row-start: 4;
   grid-row-end: span 1;
   outline: auto;
-  outline-width: thin;
-  outline-style: solid;
+  outline: none;
   padding: 5px;
-  max-width: 128px;
+  max-width: 116px;
+  max-height: 116px;
 }
 
-.HeaderRow {
+.StaticHeaderRow {
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: span 2;
   grid-row-start: 1;
-  grid-row-end: 2;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.FarRightDesign {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 11;
+  grid-row-end: span 1;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
@@ -139,7 +127,7 @@
 }
 
 .charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] {
-  outline: auto;
+  outline: none;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
@@ -148,6 +136,7 @@
 .charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] .repitem {
   display: inline-block;
   margin-right: 2px;
+  margin-bottom: 2px;
 }
 
 .charsheet .CharacterWeaponSelection~.repcontrol[data-groupname="repeating_weapons"] {
@@ -155,7 +144,7 @@
 }
 
 .charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] {
-  outline: auto;
+  outline: none;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
@@ -164,10 +153,38 @@
 .charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] .repitem {
   display: inline-block;
   margin-right: 2px;
+  margin-bottom: 2px;
 }
 
 .charsheet .CharacterItemSelection~.repcontrol[data-groupname="repeating_items"] {
   display: none;
+}
+
+.CharacterQuirkSubgrid {
+  display: grid;
+  grid-template-columns: fit-content 1fr fit-content;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  column-gap: 2%;
+  outline: none;
+}
+
+.CharacterTempStatAdjustmentSubgrid {
+  display: grid;
+  grid-template-columns: 11% 26% 11% 46%;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  column-gap: 2%;
+  outline: none;
+}
+
+.CharacterTempStatAdjustmentFill {
+  grid-area: auto;
+  outline: auto;
+  outline-width: thin;
+  outline-style: none;
+  width: fit-content;
+  align-items: left;
 }
 
 /*Weapon Tab Section*/
@@ -187,6 +204,7 @@
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  max-height: fit-content;
 }
 
 .charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] {
@@ -208,6 +226,8 @@
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 }
 .charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"] {
   grid-row: span 1;
@@ -219,7 +239,6 @@
 }
 
 /*Item Tab Section*/
-
 .ItemTallItem {
   grid-row: span 2;
   grid-column: span 1;
@@ -236,6 +255,7 @@
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  max-height: fit-content;
 }
 
 .charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] {
@@ -257,6 +277,8 @@
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 }
 .charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"] {
   grid-row: span 1;
@@ -267,59 +289,7 @@
   padding: 5px;
 }
 
-.RegularItem {
-  grid-area: auto;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.TallItem {
-  grid-row: span 2;
-  grid-column: span 1;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.WideItem {
-  grid-row: span 1;
-  grid-column: span 2;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.BigItem {
-  grid-row: span 2;
-  grid-column: span 2;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.SubGridFourColumn {
-  display: grid;
-  grid-template-columns: 11% 26% 11% 46%;
-  grid-template-rows: auto;
-  grid-auto-flow: column;
-  column-gap: 2%;
-  outline: none;
-}
-
-.SubGridThirds {
-  grid-area: auto;
-  outline: auto;
-  outline-width: thin;
-  outline-style: none;
-  width: 100%;
-  align-items: left;
-}
-
+/*Titles, Labels, and Input*/
 .PrimaryTitle {
   font: auto;
 }
@@ -332,10 +302,10 @@
 .PrimaryEntry {
   font: auto;
   outline: none;
-  width: fit-content;
+  width: 96%;
 }
 
-.NotesEntry {
+.PrimaryNotesEntry {
   outline: none;
   width: 96%;
   max-width: 96%;
@@ -347,38 +317,15 @@
   resize: none;
 }
 
-.RepeatedEntry {
+.PrimaryDropdown {
   font: auto;
-  outline: none;
-  width: auto;
-  height: auto;
+  width: fit-content;
 }
 
-.QuirkEntry {
+.PrimaryButton {
   font: auto;
-  outline: none;
-  width: auto;
-}
-
-.TempStatsMainColumn1 {
-  column-count: 3;
-  grid-column: 1;
-  column-width: 30%;
-  justify-self: left;
-}
-
-.TempStatsMainColumn2 {
-  column-count: 3;
-  grid-column: 2;
-  column-width: 30%;
-  justify-self: center;
-}
-
-.TempStatsMainColumn3 {
-  column-count: 3;
-  grid-column: 3;
-  column-width: 30%;
-  justify-self: right;
+  height: fit-content;
+  width: fit-content;
 }
 
 /*mark your sections invisible here*/

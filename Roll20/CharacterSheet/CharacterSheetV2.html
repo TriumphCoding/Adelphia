@@ -3,44 +3,34 @@
 <div class="MasterGrid">
 
     <!-- Character Picture and Info-->
-    <div class="CharacterInfo">
-        <div class="CharacterInfoSubGrid">
-            <div class="CharacterInfoSubGridName">
-                <label class="PrimaryLabel">
-                    <span data-i18n="name-u">Name</span>: <input type="text" class="PrimaryEntry" name="attr_character_name" />
-                </label>
-            </div>
-            <div class="CharacterInfoSubGridPicture">
-                <img name="attr_character_avatar"/>
-            </div>
-            <div class="CharacterInfoSubGridToken">
-                <img name="attr_character_token"/>
-            </div>
-            <div class="CharacterInfoSubGridNotes">
-                <textarea name="attr_character_notes" class="NotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea>
-            </div>
+    <div class="StaticCharacterInfo">
+        <div class="StaticCharacterInfoSubGrid">
+            <div class="StaticCharacterInfoSubGridName"><label class="PrimaryLabel"><span data-i18n="name-u">Name</span>: <input type="text" class="PrimaryEntry" name="attr_character_name" /></label></div>
+            <div class="StaticCharacterInfoSubGridPicture"><img name="attr_character_avatar"/></div>
+            <div class="StaticCharacterInfoSubGridToken"><img name="attr_character_token"/></div>
+            <div class="StaticCharacterInfoSubGridNotes"><textarea name="attr_character_notes" class="PrimaryNotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea></div>
         </div>
     </div>
 
     <!-- Header Tabs -->
     <input type="hidden" class="tabstoggle" name="attr_sheetTab"  value="character"  />
-    <div class="HeaderRow">
+    <div class="StaticHeaderRow">
         <div>
-            <button type="action" name="act_character" >Character</button>
-            <button type="action" name="act_weapons" >Weapons</button>
-            <button type="action" name="act_items" >Items</button>
-            <button type="action" name="act_levels" >Levels</button>
-            <button type="action" name="act_configuration" >configuration</button>
+            <button type="action" class="PrimaryButton" name="act_character" data-i18n="Character-tabbutton-name">Character</button>
+            <button type="action" class="PrimaryButton" name="act_weapons" data-i18n="Weapons-tabbutton-name" >Weapons</button>
+            <button type="action" class="PrimaryButton" name="act_items" data-i18n="Items-tabbutton-name" >Items</button>
+            <button type="action" class="PrimaryButton" name="act_levels" data-i18n="Levels-tabbutton-name" >Levels</button>
+            <button type="action" class="PrimaryButton" name="act_notes" data-i18n="Notes-tabbutton-name" >Notes</button>
+            <button type="action" class="PrimaryButton" name="act_configuration" data-i18n="Configuration-tabbutton-name" >Configuration</button>
         </div>
 
         <script type="text/worker">
-            const buttonlist = ["character","weapons","items","levels","configuration"];
+            const buttonlist = ["character","weapons","items","levels","notes","configuration"];
             buttonlist.forEach(button => {
                 on(`clicked:${button}`, function() {
                     setAttrs({
                         sheetTab: button
                     });
-                    console.log("Activate button clicked");
                 });
             });
         </script>
@@ -48,14 +38,12 @@
 
     <!-- Quirks -->
     <div class="CharacterQuirkBox">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="quirks-title-u">Quirks</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="quirks-title-u">Quirks</h1>
         <fieldset class="repeating_QuirkList">
-            <span class="RepeatedEntry">
-                <button type="roll" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
-                <input type="text" class="QuirkEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
-                <select name="attr_quirk-stat" class="TempStatsMainColumn2">
+            <div class="CharacterQuirkSubgrid">
+                <button type="roll" class="PrimaryButton" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
+                <input type="text" class="PrimaryEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
+                <select name="attr_quirk-stat" class="PrimaryDropdown">
                     <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                     <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                     <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
@@ -72,15 +60,13 @@
                     <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                     <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                 </select>
-            </span>
+            </div>
         </fieldset>
     </div>
 
     <!-- Attacking Stats -->
     <div class="CharacterTallItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="Attack-title-u">Attack</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="Attack-title-u">Attack</h1>
         <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
         <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
         <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
@@ -92,9 +78,7 @@
 
     <!-- Riposte Stats -->
     <div class="CharacterTallItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="Attack-Riposte-u">Riposte</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="Attack-Riposte-u">Riposte</h1>
         <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
         <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
         <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
@@ -106,11 +90,9 @@
 
     <!-- Equipped Weapon -->
     <div class="CharacterTallItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="weapon-title-u">Weapons</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="weapon-title-u">Weapons</h1>
         <fieldset class="repeating_weapons CharacterWeaponSelection">
-            <button type="action" name="act_SetWeapon"><span name="attr_Weapon-Name"></span></button>
+            <button type="action" class="PrimaryButton" name="act_SetWeapon"><span name="attr_Weapon-Name"></span></button>
             <input type="text" class="PrimaryEntry" name="attr_Weapon-Name" style="display: none;"/>
         </fieldset>
         <label class="PrimaryLabel"><span data-i18n="equipped-weapon-name-n">Name</span>: <span name="attr_Equipped_Weapon_Name"></span></label>
@@ -126,67 +108,56 @@
 
     <!-- Temporary Stat Adjustment -->
     <div class="CharacterWideItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</span>
-        </h1>
-        <div class="SubGridFourColumn">
-            <div class="SubGridThirds"><span data-i18n="stat-change-column-change">Change</span></div>
-            <div class="SubGridThirds"><span data-i18n="stat-change-column-stat">Stat</span></div>
-            <div class="SubGridThirds"><span data-i18n="stat-change-column-turns">Turns</span></div>
-            <div class="SubGridThirds"><span data-i18n="stat-change-column-notes">Notes</span></div>
+        <h1 class="PrimaryTitle" data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</h1>
+        <button type="action" class="PrimaryButton" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
+        <div class="CharacterTempStatAdjustmentSubgrid">
+            <div class="PrimaryLabel"><label data-i18n="stat-change-column-change">Change</label></div>
+            <div class="PrimaryLabel"><label data-i18n="stat-change-column-stat">Stat</label></div>
+            <div class="PrimaryLabel"><label data-i18n="stat-change-column-turns">Turns</label></div>
+            <div class="PrimaryLabel"><label data-i18n="stat-change-column-notes">Notes</label></div>
         </div>
-        <div>
-            <fieldset class="repeating_TempStatList">
-                <div class="SubGridFourColumn">
-                    <input type="number" name="attr_adjustment-value" value="0" class="SubGridThirds"/>
-                    <select name="attr_adjustment-stat" class="SubGridThirds">
-                        <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
-                        <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
-                        <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
-                        <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
-                        <option value="SPD" selected="selected" data-i18n="SPD-Full-Name">Speed</option>
-                        <option value="LUK" selected="selected" data-i18n="LUK-Full-Name">Luck</option>
-                        <option value="CON" selected="selected" data-i18n="CON-Full-Name">Constitution</option>
-                        <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
-                        <option value="MOV" selected="selected" data-i18n="MOV-Full-Name">Movement</option>
-                        <option value="MGT" selected="selected" data-i18n="MGT-Full-Name">Might</option>
-                        <option value="ACC" selected="selected" data-i18n="ACC-Full-Name">Accuracy</option>
-                        <option value="CRT" selected="selected" data-i18n="CRT-Full-Name">Critical</option>
-                        <option value="DGE" selected="selected" data-i18n="DGE-Full-Name">Dodge</option>
-                        <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
-                        <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
-                        <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
-                    </select>
-                    <input type="number" name="attr_adjustment-turns" value="0" class="SubGridThirds"/>
-                    <input type="text" name="attr_adjustment-notes" value="" class="SubGridThirds"/>
-                </div>
-            </fieldset>
-        </div>
-        <div class="SubGridThirds">
-            <button type="action" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
-        </div>
+        <fieldset class="repeating_TempStatList">
+            <div class="CharacterTempStatAdjustmentSubgrid">
+                <input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/>
+                <select name="attr_adjustment-stat" class="PrimaryDropdown">
+                    <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
+                    <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
+                    <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
+                    <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
+                    <option value="SPD" selected="selected" data-i18n="SPD-Full-Name">Speed</option>
+                    <option value="LUK" selected="selected" data-i18n="LUK-Full-Name">Luck</option>
+                    <option value="CON" selected="selected" data-i18n="CON-Full-Name">Constitution</option>
+                    <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
+                    <option value="MOV" selected="selected" data-i18n="MOV-Full-Name">Movement</option>
+                    <option value="MGT" selected="selected" data-i18n="MGT-Full-Name">Might</option>
+                    <option value="ACC" selected="selected" data-i18n="ACC-Full-Name">Accuracy</option>
+                    <option value="CRT" selected="selected" data-i18n="CRT-Full-Name">Critical</option>
+                    <option value="DGE" selected="selected" data-i18n="DGE-Full-Name">Dodge</option>
+                    <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
+                    <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
+                    <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
+                </select>
+                <input type="number" name="attr_adjustment-turns" value="0" class="PrimaryEntry"/>
+                <input type="text" name="attr_adjustment-notes" value="" class="PrimaryEntry"/>
+            </div>
+        </fieldset>
     </div>
 
     <!-- Equipped Item -->
     <div class="CharacterItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="item-title-u">Items</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="item-title-u">Items</h1>
         <fieldset class="repeating_items CharacterItemSelection">
-            <button type="action" name="act_SetItem"><span name="attr_Item-Name"></span></button>
+            <button type="action" class="PrimaryButton" name="act_SetItem"><span name="attr_Item-Name"></span></button>
             <input type="text" class="PrimaryEntry" name="attr_Item-Name" style="display: none;"/>
         </fieldset>
         <label class="PrimaryLabel"><span data-i18n="equipped-item-name-n">Name</span>: <span name="attr_Equipped_Item_Name"></span></label>
         <label class="PrimaryLabel"><span data-i18n="equipped-item-notes-n">Notes</span>: <span name="attr_Equipped_Item_Notes"></span></label>
-        
         <input type="hidden" value="" name="attr_Equipped_Item_Name"/>
     </div>
 
     <!-- Weapon Creation Section -->
     <div class="WeaponWideItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="Weapon-Creation-title-u">Weapon Creation</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="Weapon-Creation-title-u">Weapon Creation</h1>
     </div>
     <fieldset class="repeating_weapons RepeatingWeaponSection">
         <div>
@@ -230,9 +201,7 @@
 
     <!-- Item Creation Section -->
     <div class="ItemWideItem">
-        <h1 class="PrimaryTitle">
-            <span data-i18n="Item-Creation-title-u">Item Creation</span>
-        </h1>
+        <h1 class="PrimaryTitle" data-i18n="Item-Creation-title-u">Item Creation</h1>
     </div>
     <fieldset class="repeating_items RepeatingItemSection">
         <div>
@@ -244,6 +213,5 @@
     </fieldset>
     <!-- ToDo: Finish Item Section -->
 
-    <div class="FarRightDesign"></div>
 </div>
 

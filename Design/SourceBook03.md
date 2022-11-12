@@ -38,7 +38,7 @@ Your character's **Growth** determines how each of your character's stats will c
 
 ## Class Points
 
-Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. HP is purchased at a rate of 3HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
+Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. **HP** is purchased at a rate of 3 HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
 
 ### Monico Aaronway Stats
 

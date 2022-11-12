@@ -110,7 +110,7 @@ Roughly speaking, weapon levels follow the below schedule:
 | S   | 6     |Gilded     | 40                   | 55
 | S+  | 7     |Orichalcum | 50                   | 65
 
-Taking Steel weapons as an example, at level 10 you will gain access to your first steal weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 25, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
+Taking Steel weapons as an example, at level 10 you will gain access to your first steel weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 25, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
 
 ## Weapon Cycle
 

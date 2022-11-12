@@ -289,6 +289,58 @@
   padding: 5px;
 }
 
+/*Level Up*/
+.LevelupItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.LevelupTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.LevelupWideItem {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+/*Notes*/
+.NotesItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+/*Configuration*/
+.ConfigurationBigItem {
+  grid-row: span 2;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
 /*Titles, Labels, and Input*/
 .PrimaryTitle {
   font: auto;
@@ -341,7 +393,11 @@
 .charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
 .charsheet .ItemWideItem,
 .charsheet .ItemTallItem,
-.charsheet .journal {
+.charsheet .LevelupWideItem,
+.charsheet .LevelupTallItem,
+.charsheet .LevelupItem,
+.charsheet .NotesItem,
+.charsheet .ConfigurationBigItem {
     display: none;
 }
 
@@ -358,7 +414,11 @@
 .charsheet .tabstoggle[value="items"] ~ .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
 .charsheet .tabstoggle[value="items"] ~ div.ItemWideItem,
 .charsheet .tabstoggle[value="items"] ~ div.ItemTallItem,
-.charsheet .tabstoggle[value="levels"] ~ div.config,
-.charsheet .tabstoggle[value="configuration"] ~ div.journal {
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupWideItem,
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupTallItem,
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupItem,
+.charsheet .tabstoggle[value="notes"] ~ div.NotesItem,
+.charsheet .tabstoggle[value="notes"] ~ div.journal,
+.charsheet .tabstoggle[value="configuration"] ~ div.ConfigurationBigItem {
     display: grid;
 }

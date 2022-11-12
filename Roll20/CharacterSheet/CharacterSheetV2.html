@@ -211,5 +211,56 @@
     </fieldset>
     <!-- ToDo: Finish Item Section -->
 
-</div>
+    <!-- Character Creation and Level Up-->
+    <div class="LevelupTallItem">
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Stats-title-u">Class Stats</h1>
+        <span>Lorem Ipsum</span>
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Skills</h1>
+        <span>Lorem Ipsum</span>
+    </div>
+    <div class="LevelupTallItem">
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
+        <span>Lorem Ipsum</span>
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Great-Skills-title-u">Great Skills</h1>
+        <span>Lorem Ipsum</span>
+    </div>
+    <div class="LevelupItem">
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rate-title-u">Growth Rate</h1>
+        <span>Lorem Ipsum</span>
+    </div>
+    <div class="LevelupWideItem">
+        <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rolls-title-u">Growth Rolls</h1>
+        <span>Lorem Ipsum</span>
+    </div>
+    <!-- ToDo: Finish Class skills Section-->
 
+    <!-- Notes -->
+    <div class="NotesItem">
+        <h1 class="PrimaryTitle" data-i18n="Character-Description-title-u">Description</h1>
+        <textarea name="attr_character_full_description" class="PrimaryNotesEntry" placeholder="Here is a place to keep a fuller description of your character" data-i18n-place="sheet-CharacterDescriptionPlaceholder" ></textarea>
+    </div>
+    <div class="NotesItem">
+        <h1 class="PrimaryTitle" data-i18n="Character-Allies-title-u">Allies</h1>
+        <textarea name="attr_character_allies" class="PrimaryNotesEntry" placeholder="Here is a place to keep a description of the people and organizations you have a relationship with" data-i18n-place="sheet-CharacterAlliesPlaceholder" ></textarea>
+    </div>
+    <div class="NotesItem">
+        <h1 class="PrimaryTitle" data-i18n="Character-History-title-u">History</h1>
+        <textarea name="attr_character_history" class="PrimaryNotesEntry" placeholder="Here is a place to keep a character history" data-i18n-place="sheet-CharacterHistoryPlaceholder" ></textarea>
+    </div>
+    <div class="NotesItem">
+        <h1 class="PrimaryTitle" data-i18n="Character-Misc-Notes-title-u">Notes</h1>
+        <textarea name="attr_character_misc" class="PrimaryNotesEntry" placeholder="Any additional notes you wish to keep can go here" data-i18n-place="sheet-CharacterMiscPlaceholder" ></textarea>
+    </div>
+
+    <!-- Configuration -->
+    <div class="ConfigurationBigItem">
+        <h1 class="PrimaryTitle" data-i18n="Character-Config-title-u">Sheet Config</h1>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_StaticLevels" value="1" checked ><span data-i18n="Settings-StaticLevels-name-n"> Static Levels</span></label>
+        <span data-i18n="Settings-StaticLevels-description">Instead of rolling your stats, you gain stat growths at a regular pace.</span>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadLevels" value="1" checked ><span data-i18n="Settings-NoBadLevels-name-n"> No Bad Levels</span></label>
+        <span data-i18n="Settings-NoBadLevels-Description">Guarentees 3 stat growths per level, but not what they are</span>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" checked ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
+        <span data-i18n="Settings-NoBadStats-Description">Not growing a stat increases it's chance of growing the next level.</span>
+    </div>
+
+</div>

@@ -230,7 +230,38 @@
     </div>
     <div class="LevelupWideItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rolls-title-u">Growth Rolls</h1>
-        <span>Lorem Ipsum</span>
+        <button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level Up</button>
+        <div class="LevelupCharacterLevelGrid">
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="HP-Abbrev-Name">HP</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="STR-Abbrev-Name">STR</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="INT-Abbrev-Name">INT</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="DEX-Abbrev-Name">DEX</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="SPD-Abbrev-Name">SPD</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="LUK-Abbrev-Name">LUK</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="CON-Abbrev-Name">CON</label></div>
+            <div class="LevelupCharacterLevelGridItem"><label data-i18n="WIS-Abbrev-Name">WIS</label></div>
+            <fieldset class="repeating_CharacterLevel">
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_str_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_int_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_dex_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_spd_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_luk_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_con_growth" step="1" min="2" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_wis_growth" step="1" min="2" max="18" /></div>
+            </fieldset>
+        </div>
+
+        <script type="text/worker">
+            const buttonlist = ["character","weapons","items","levels","notes","configuration"];
+            buttonlist.forEach(button => {
+                on(`clicked:${button}`, function() {
+                    setAttrs({
+                        sheetTab: button
+                    });
+                });
+            });
+        </script>
     </div>
     <!-- ToDo: Finish Class skills Section-->
 

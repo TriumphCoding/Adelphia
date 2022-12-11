@@ -280,6 +280,7 @@
   margin-right: 2px;
   margin-bottom: 2px;
 }
+
 .charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"] {
   grid-row: span 1;
   grid-column: span 1;
@@ -320,15 +321,36 @@
   max-height: fit-content;
 }
 
-.LevelupCharacterLevelGrid {
+.LevelupCharacterGrowthGrid {
   display: grid;
-  grid-template-columns: 8;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterGrowthGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.LevelupCharacterLevelGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
   max-height: fit-content;
 }
 
@@ -340,6 +362,7 @@
   outline-style: solid;
   padding: 5px;
   max-height: fit-content;
+  text-align: center;
 }
 
 /*Notes*/

@@ -227,22 +227,47 @@
     <div class="LevelupItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rate-title-u">Growth Rate</h1>
         <div class="LevelupCharacterGrowthGrid">
+            <div class="LevelupCharacterGrowthGridItem"></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Creature-Type-Stat-Column-Abbrev">CT</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_base_points" value="35-(@{hp_growth_base}+@{str_growth_base}+@{int_growth_base}+@{dex_growth_base}+@{spd_growth_base}+@{luk_growth_base}+@{con_growth_base}+@{wis_growth_base})" disabled="true"></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_creature_type_points" value="40-(@{hp_growth_CT}+@{str_growth_CT}+@{int_growth_CT}+@{dex_growth_CT}+@{spd_growth_CT}+@{luk_growth_CT}+@{con_growth_CT}+@{wis_growth_CT})" disabled="true"></div>
+            <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="2" max="18" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="2" max="18" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_CT}" disabled="true"/></div>
+            
         </div>
     </div>
     <div class="LevelupWideItem">

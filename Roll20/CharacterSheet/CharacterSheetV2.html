@@ -299,13 +299,9 @@
         </fieldset>
 
         <script type="text/worker">
-            const buttonlist = ["Level Up"];
-            buttonlist.forEach(button => {
-                on(`clicked:${button}`, function() {
-                    setAttrs({
-                        sheetTab: button
-                    });
-                });
+            on("clicked:repeating_CharacterLevel:Delete", function(eventInfo) {
+                const rowid = eventInfo.sourceAttribute.split('_')[2];
+                removeRepeatingRow(`repeating_CharacterLevel_${rowid}`));
             });
         </script>
     </div>

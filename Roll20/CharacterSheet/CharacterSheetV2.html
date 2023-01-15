@@ -23,17 +23,7 @@
             <button type="action" class="PrimaryButton" name="act_notes" data-i18n="Notes-tabbutton-name" >Notes</button>
             <button type="action" class="PrimaryButton" name="act_configuration" data-i18n="Configuration-tabbutton-name" >Configuration</button>
         </div>
-
-        <script type="text/worker">
-            const buttonlist = ["character","weapons","items","levels","notes","configuration"];
-            buttonlist.forEach(button => {
-                on(`clicked:${button}`, function() {
-                    setAttrs({
-                        sheetTab: button
-                    });
-                });
-            });
-        </script>
+        <!-- Sheetworker "Tab Controller" -->
     </div>
 
     <!-- Quirks -->
@@ -298,12 +288,6 @@
             </div>
         </fieldset>
 
-        <script type="text/worker">
-            on("clicked:repeating_CharacterLevel:Delete", function(eventInfo) {
-                const rowid = eventInfo.sourceAttribute.split('_')[2];
-                removeRepeatingRow(`repeating_CharacterLevel_${rowid}`));
-            });
-        </script>
     </div>
     <!-- ToDo: Finish Class skills Section-->
 
@@ -337,3 +321,32 @@
     </div>
 
 </div>
+
+<script type="text/worker">
+    console.log(`test123`);
+
+    on(`clicked:CharacterLevel:LevelupCharacterLevelGrid:DeleteLevel`, function(eventInfo) {
+        console.log(`DELETE CLICKED`);
+        const rowid = eventInfo.sourceAttribute.split('_')[2];
+        removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
+    });
+
+    on(`clicked:LevelUp`, function(eventInfo) {
+        console.log(`LEVELUP CLICKED`);
+        const rowid = eventInfo.sourceAttribute.split('_')[2];
+        removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
+    });
+</script>
+
+<script type="text/worker">
+
+    const buttonlist = ["character","weapons","items","levels","notes","configuration"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+
+</script>

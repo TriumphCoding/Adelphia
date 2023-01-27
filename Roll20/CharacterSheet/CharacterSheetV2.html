@@ -23,7 +23,16 @@
             <button type="action" class="PrimaryButton" name="act_notes" data-i18n="Notes-tabbutton-name" >Notes</button>
             <button type="action" class="PrimaryButton" name="act_configuration" data-i18n="Configuration-tabbutton-name" >Configuration</button>
         </div>
-        <!-- Sheetworker "Tab Controller" -->
+        <script type="text/worker">
+            const buttonlist = ["character","weapons","items","levels","notes","configuration"];
+            buttonlist.forEach(button => {
+                on(`clicked:${button}`, function() {
+                    setAttrs({
+                        sheetTab: button
+                    });
+                });
+            });
+        </script>        
     </div>
 
     <!-- Quirks -->
@@ -226,36 +235,36 @@
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_creature_type_points" value="40-(@{hp_growth_CT}+@{str_growth_CT}+@{int_growth_CT}+@{dex_growth_CT}+@{spd_growth_CT}+@{luk_growth_CT}+@{con_growth_CT}+@{wis_growth_CT})" disabled="true"></div>
             <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="2" max="18" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="0" max="18" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_CT" step="1" min="-5" max="15" value="0" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_CT}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="2" max="18" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_CT" step="1" min="-5" max="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_CT" step="1" min="-5" max="15" value="5" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_CT}" disabled="true"/></div>
             
         </div>
@@ -263,30 +272,101 @@
     <div class="LevelupWideItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rolls-title-u">Growth Rolls</h1>
         <div><label class="PrimaryLabel"><span data-i18n="Level-u">Level</span>: <input type="text" class="PrimaryEntry" name="attr_character_level" /></label></div>
-        <div class="LevelupCharacterLevelGrid">
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
-            <div class="LevelupCharacterLevelGridItem"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level Up</button></div>
-        </div>
         <fieldset class="repeating_CharacterLevel">
-            <div class="LevelupCharacterLevelGrid">
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_str_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_int_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_dex_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_spd_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_luk_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_con_growth" step="1" min="2" max="18" /></div>
-                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_wis_growth" step="1" min="2" max="18" /></div>
+            <div class="RepeatingCharacterLevelSectionHeader">
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
+                <div class="LevelupCharacterLevelGridItemHeader"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level<br>Up</button></div>
+            </div>
+            <div class="RepeatingCharacterLevelSection">
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_str_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_int_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_dex_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_spd_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_luk_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_con_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_wis_growth" step="1" min="0" max="18" /></div>
+                <div class="LevelupCharacterLevelGridItem"><button type="action" class="PrimaryButton" name="act_RerollLevel" data-i18n="LevelUp-Reroll-button" >Reroll</button></div>
                 <div class="LevelupCharacterLevelGridItem"><button type="action" class="PrimaryButton" name="act_DeleteLevel" data-i18n="LevelUp-Delete-button" >Delete</button></div>
             </div>
         </fieldset>
+        <script type="text/worker">
+
+            on("change:repeating_CharacterLevel", function() {
+                SetLevel();
+            });
+        
+            on("sheet:opened", function() {
+                SetLevel();
+            });
+        
+            on(`clicked:repeating_CharacterLevel`, function(eventInfo) {
+                const rowid = eventInfo.sourceAttribute.split('_')[2];
+                switch(eventInfo.htmlAttributes.name) {
+                    case `act_DeleteLevel`:                
+                        removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
+                        break;
+                    case `act_RerollLevel`:
+                        RollLevel(rowid);
+                        break;
+                    case `act_LevelUp`:
+                        const newrowid = generateRowID();
+                        RollLevel(newrowid);
+                        break;
+                    default:
+                        console.log(`Button not recognized`);
+                }
+                SetLevel();
+            });
+        
+            function getRandomInt(max) {
+                return (Math.floor(Math.random() * (max + 1)));
+            };
+        
+            function d10() {
+                return getRandomInt(9);
+            };
+        
+            function d10d10() {
+                return getRandomInt(9) + getRandomInt(9);
+            };
+        
+            function d100() {
+                return getRandomInt(99);
+            };
+        
+            function RollLevel(rowid) {
+                const statlist = ["hp","str","dex","int","spd","luk","con","wis"];
+                statlist.forEach(vstat => {
+                    setAttrs({
+                        [`repeating_CharacterLevel_${rowid}_${vstat}_growth`]: d10d10()
+                    });
+                });
+            };
+        
+            function SetLevel() {
+                getSectionIDs("repeating_CharacterLevel", function(idarray) {
+                    setAttrs({
+                        character_level: idarray.length
+                    });
+                    if (idarray.length === 0) {
+                        const newrowid = generateRowID();
+                        RollLevel(newrowid);
+                        setAttrs({
+                            character_level: 1
+                        });
+                    }
+                });
+            };
+        
+        </script>
 
     </div>
     <!-- ToDo: Finish Class skills Section-->
@@ -321,32 +401,3 @@
     </div>
 
 </div>
-
-<script type="text/worker">
-    console.log(`test123`);
-
-    on(`clicked:CharacterLevel:LevelupCharacterLevelGrid:DeleteLevel`, function(eventInfo) {
-        console.log(`DELETE CLICKED`);
-        const rowid = eventInfo.sourceAttribute.split('_')[2];
-        removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
-    });
-
-    on(`clicked:LevelUp`, function(eventInfo) {
-        console.log(`LEVELUP CLICKED`);
-        const rowid = eventInfo.sourceAttribute.split('_')[2];
-        removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
-    });
-</script>
-
-<script type="text/worker">
-
-    const buttonlist = ["character","weapons","items","levels","notes","configuration"];
-    buttonlist.forEach(button => {
-        on(`clicked:${button}`, function() {
-            setAttrs({
-                sheetTab: button
-            });
-        });
-    });
-
-</script>

@@ -343,26 +343,61 @@
   text-align: center;
 }
 
-.LevelupCharacterLevelGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-auto-flow: column;
+.repcontainer[data-groupname=repeating_CharacterLevel] {
+  display: table;
   outline: none;
   outline-width: 0;
   outline-style: none;
   max-height: fit-content;
 }
 
-.LevelupCharacterLevelGridItem {
-  grid-row: span 1;
-  grid-column: span 1;
+.RepeatingCharacterLevelSection {
+  display: table-row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.RepeatingCharacterLevelSectionHeader {
+  display: none;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterLevelGridItemHeader {
+  display: none;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
   max-height: fit-content;
   text-align: center;
+}
+
+.LevelupCharacterLevelGridItem {
+  display: table-cell;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader {
+  display: table-row;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader > .LevelupCharacterLevelGridItemHeader {
+  display: table-cell;
+}
+
+.repcontrol[data-groupname=repeating_characterlevel]  {
+  display: none;
+  visibility: hidden;
 }
 
 /*Notes*/

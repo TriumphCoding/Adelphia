@@ -213,7 +213,75 @@
     <!-- Character Creation and Level Up-->
     <div class="LevelupTallItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Stats-title-u">Class Stats</h1>
-        <span>Lorem Ipsum</span>
+        <label class="PrimaryLabel"><span data-i18n="Creature-Type-Label">Creature Type</span>: <select name="attr_creature_type">
+            <option value="Human" selected="selected" data-i18n="Creature-Type-Human">Human</option>
+            <option value="Elf" data-i18n="Creature-Type-Elf">Elf</option>
+            <option value="Dwarf" data-i18n="Creature-Type-Dwarf">Dwarf</option>
+            <option value="Orc" data-i18n="Creature-Type-Orc">Orc</option>
+            <option value="Goblin" data-i18n="Creature-Type-Goblin">Goblin</option>
+            <option value="Cyborg" data-i18n="Creature-Type-Cyborg">Cyborg</option>
+            <option value="Carnivore" data-i18n="Creature-Type-Carnivore">Carnivore</option>
+            <option value="Herbivore" data-i18n="Creature-Type-Herbivore">Herbivore</option>
+            <option value="Dragon" data-i18n="Creature-Type-Dragon">Dragon</option>
+        </select>
+        <div class="LevelupCharacterStatGrid">
+            <div class="LevelupCharacterStatGridItem"></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Creature-Type-Stat-Column-Abbrev">CT</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Growth-Stat-Column-Abbrev">Growth</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_base_points" value="20-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2))" disabled="true"></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_creature_type_points" value="23-(floor((@{hp_stat_CT}-8)/3)+@{str_stat_CT}+@{int_stat_CT}+@{dex_stat_CT}+@{spd_stat_CT}+floor(@{luk_stat_CT}/2)+@{con_stat_CT}+@{wis_stat_CT}+floor(@{mov_stat_CT}*2))" disabled="true"></div>
+            <div class="LevelupCharacterStatGridItem"><button type="action" class="PrimaryButton" name="act_RecalculateStats" data-i18n="LevelUp-RecalculateStats-button" >Recalculate</button></div>
+            <div class="LevelupCharacterStatGridItem"></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_base" step="1" min="0" max="18" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_CT" step="1" min="-5" max="15" value="10" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_total" value="@{hp_stat_base}+@{hp_stat_CT}+@{hp_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_total" value="@{str_stat_base}+@{str_stat_CT}+@{str_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_total" value="@{int_stat_base}+@{int_stat_CT}+@{int_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_total" value="@{dex_stat_base}+@{dex_stat_CT}+@{dex_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_total" value="@{spd_stat_base}+@{spd_stat_CT}+@{spd_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_total" value="@{luk_stat_base}+@{luk_stat_CT}+@{luk_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_total" value="@{con_stat_base}+@{con_stat_CT}+@{con_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_growth" step="1" value="0" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_total" value="@{wis_stat_base}+@{wis_stat_CT}+@{wis_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="MOV-Abbrev-Name">MOV</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_base" step="1" min="0" max="18" value="0" ></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_CT" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterStatGridItem"></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_total" value="@{mov_stat_base}+@{mov_stat_CT}" disabled="true"/></div>
+
+        </div>
         <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Skills</h1>
         <span>Lorem Ipsum</span>
     </div>
@@ -225,48 +293,58 @@
     </div>
     <div class="LevelupItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rate-title-u">Growth Rate</h1>
+        <label class="PrimaryLabel"><span data-i18n="Background-Label">Background</span>: <select name="attr_background">
+            <option value="Human" selected="selected" data-i18n="Creature-Type-Human">Human</option>
+            <option value="Elf" data-i18n="Creature-Type-Elf">Elf</option>
+            <option value="Dwarf" data-i18n="Creature-Type-Dwarf">Dwarf</option>
+            <option value="Orc" data-i18n="Creature-Type-Orc">Orc</option>
+            <option value="Goblin" data-i18n="Creature-Type-Goblin">Goblin</option>
+            <option value="Cyborg" data-i18n="Creature-Type-Cyborg">Cyborg</option>
+            <option value="Carnivore" data-i18n="Creature-Type-Carnivore">Carnivore</option>
+            <option value="Herbivore" data-i18n="Creature-Type-Herbivore">Herbivore</option>
+            <option value="Dragon" data-i18n="Creature-Type-Dragon">Dragon</option>
+        </select>
         <div class="LevelupCharacterGrowthGrid">
             <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
-            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Creature-Type-Stat-Column-Abbrev">CT</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Background-Stat-Column-Abbrev">BG</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_base_points" value="35-(@{hp_growth_base}+@{str_growth_base}+@{int_growth_base}+@{dex_growth_base}+@{spd_growth_base}+@{luk_growth_base}+@{con_growth_base}+@{wis_growth_base})" disabled="true"></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_creature_type_points" value="40-(@{hp_growth_CT}+@{str_growth_CT}+@{int_growth_CT}+@{dex_growth_CT}+@{spd_growth_CT}+@{luk_growth_CT}+@{con_growth_CT}+@{wis_growth_CT})" disabled="true"></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_background_points" value="40-(@{hp_growth_bg}+@{str_growth_bg}+@{int_growth_bg}+@{dex_growth_bg}+@{spd_growth_bg}+@{luk_growth_bg}+@{con_growth_bg}+@{wis_growth_bg})" disabled="true"></div>
             <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="0" max="18" value="0" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_CT" step="1" min="-5" max="15" value="0" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_CT}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_bg}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="0" max="18" value="0" ></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_CT" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_CT}" disabled="true"/></div>
-            
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_bg" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_bg}" disabled="true"/></div>
         </div>
     </div>
     <div class="LevelupWideItem">
@@ -344,9 +422,69 @@
         
             function RollLevel(rowid) {
                 const statlist = ["hp","str","dex","int","spd","luk","con","wis"];
-                statlist.forEach(vstat => {
+                var vGrowthQty = 0;
+                getAttrs([
+                    "hp_growth_base","hp_growth_bg",
+                    "str_growth_base","str_growth_bg",
+                    "dex_growth_base","dex_growth_bg",
+                    "int_growth_base","int_growth_bg",
+                    "spd_growth_base","spd_growth_bg",
+                    "luk_growth_base","luk_growth_bg",
+                    "con_growth_base","con_growth_bg",
+                    "wis_growth_base","wis_growth_bg",
+                    "NoBadLevels"
+                ], function(growthrate) {
+                    var vGrowth = {
+                        "hp": parseInt(growthrate.hp_growth_base) + parseInt(growthrate.hp_growth_bg),
+                        "str": parseInt(growthrate.str_growth_base) + parseInt(growthrate.str_growth_bg),
+                        "dex": parseInt(growthrate.dex_growth_base) + parseInt(growthrate.dex_growth_bg),
+                        "int": parseInt(growthrate.int_growth_base) + parseInt(growthrate.int_growth_bg),
+                        "spd": parseInt(growthrate.spd_growth_base) + parseInt(growthrate.spd_growth_bg),
+                        "luk": parseInt(growthrate.luk_growth_base) + parseInt(growthrate.luk_growth_bg),
+                        "con": parseInt(growthrate.con_growth_base) + parseInt(growthrate.con_growth_bg),
+                        "wis": parseInt(growthrate.wis_growth_base) + parseInt(growthrate.wis_growth_bg)
+                    };
+                    var vGrowthRoll = {
+                        "hp": 0,
+                        "str": 0,
+                        "dex": 0,
+                        "int": 0,
+                        "spd": 0,
+                        "luk": 0,
+                        "con": 0,
+                        "wis": 0
+                    };
+                    for (let i = 0; i < 1000; i++) {
+                        vGrowthRoll.hp = d10d10();
+                        vGrowthRoll.str = d10d10();
+                        vGrowthRoll.dex = d10d10();
+                        vGrowthRoll.int = d10d10();
+                        vGrowthRoll.spd = d10d10();
+                        vGrowthRoll.luk = d10d10();
+                        vGrowthRoll.con = d10d10();
+                        vGrowthRoll.wis = d10d10();
+                        vGrowthQty = 0;
+                        if (vGrowthRoll.hp <= vGrowth.hp ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.str <= vGrowth.str ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.dex <= vGrowth.dex ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.int <= vGrowth.int ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.spd <= vGrowth.spd ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.luk <= vGrowth.luk ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.con <= vGrowth.con ) { vGrowthQty = vGrowthQty + 1; }
+                        if (vGrowthRoll.wis <= vGrowth.wis ) { vGrowthQty = vGrowthQty + 1; }
+                        if ( (!growthrate.NoBadLevels) || (vGrowthQty >= 3) ) {
+                            break;
+                        }
+                    }
                     setAttrs({
-                        [`repeating_CharacterLevel_${rowid}_${vstat}_growth`]: d10d10()
+                        [`repeating_CharacterLevel_${rowid}_hp_growth`]: vGrowthRoll.hp,
+                        [`repeating_CharacterLevel_${rowid}_str_growth`]: vGrowthRoll.str,
+                        [`repeating_CharacterLevel_${rowid}_dex_growth`]: vGrowthRoll.dex,
+                        [`repeating_CharacterLevel_${rowid}_int_growth`]: vGrowthRoll.int,
+                        [`repeating_CharacterLevel_${rowid}_spd_growth`]: vGrowthRoll.spd,
+                        [`repeating_CharacterLevel_${rowid}_luk_growth`]: vGrowthRoll.luk,
+                        [`repeating_CharacterLevel_${rowid}_con_growth`]: vGrowthRoll.con,
+                        [`repeating_CharacterLevel_${rowid}_wis_growth`]: vGrowthRoll.wis
                     });
                 });
             };
@@ -363,6 +501,313 @@
                             character_level: 1
                         });
                     }
+                });
+            };
+
+            var BackgroundGrowth = {
+                "Orc": {
+                  "Background": "Orc",
+                  "HP": "5",
+                  "STR": "6",
+                  "INT": "5",
+                  "DEX": "4",
+                  "SPD": "5",
+                  "LUK": "5",
+                  "CON": "5",
+                  "WIS": "5"
+                },
+                "Human": {
+                  "Background": "Human",
+                  "HP": "5",
+                  "STR": "5",
+                  "INT": "5",
+                  "DEX": "5",
+                  "SPD": "5",
+                  "LUK": "5",
+                  "CON": "5",
+                  "WIS": "5"
+                },
+                "Carnivore": {
+                  "Background": "Carnivore",
+                  "HP": "5",
+                  "STR": "7",
+                  "INT": "3",
+                  "DEX": "5",
+                  "SPD": "6",
+                  "LUK": "5",
+                  "CON": "5",
+                  "WIS": "4"
+                },
+                "Elf": {
+                  "Background": "Elf",
+                  "HP": "4",
+                  "STR": "5",
+                  "INT": "5",
+                  "DEX": "7",
+                  "SPD": "6",
+                  "LUK": "5",
+                  "CON": "3",
+                  "WIS": "5"
+                },
+                "Cyborg": {
+                  "Background": "Cyborg",
+                  "HP": "5",
+                  "STR": "6",
+                  "INT": "5",
+                  "DEX": "4",
+                  "SPD": "5",
+                  "LUK": "5",
+                  "CON": "5",
+                  "WIS": "5"
+                },
+                "Goblin": {
+                  "Background": "Goblin",
+                  "HP": "4",
+                  "STR": "5",
+                  "INT": "5",
+                  "DEX": "6",
+                  "SPD": "7",
+                  "LUK": "5",
+                  "CON": "4",
+                  "WIS": "4"
+                },
+                "Dwarf": {
+                  "Background": "Dwarf",
+                  "HP": "6",
+                  "STR": "5",
+                  "INT": "3",
+                  "DEX": "5",
+                  "SPD": "4",
+                  "LUK": "5",
+                  "CON": "6",
+                  "WIS": "6"
+                },
+                "Herbivore": {
+                  "Background": "Herbivore",
+                  "HP": "5",
+                  "STR": "5",
+                  "INT": "5",
+                  "DEX": "5",
+                  "SPD": "7",
+                  "LUK": "5",
+                  "CON": "4",
+                  "WIS": "4"
+                },
+                "Dragon": {
+                  "Background": "Dragon",
+                  "HP": "5",
+                  "STR": "5",
+                  "INT": "7",
+                  "DEX": "5",
+                  "SPD": "3",
+                  "LUK": "4",
+                  "CON": "5",
+                  "WIS": "6"
+                }
+              };
+
+            var CreatureTypeStat = {
+                "Orc": {
+                  "CreatureType": "Orc",
+                  "HP": "10",
+                  "STR": "4",
+                  "INT": "2",
+                  "DEX": "1",
+                  "SPD": "2",
+                  "LUK": "0",
+                  "CON": "2",
+                  "WIS": "2",
+                  "MOV": "5"
+                },
+                "Human": {
+                  "CreatureType": "Human",
+                  "HP": "10",
+                  "STR": "2",
+                  "INT": "2",
+                  "DEX": "2",
+                  "SPD": "2",
+                  "LUK": "2",
+                  "CON": "2",
+                  "WIS": "2",
+                  "MOV": "5"
+                },
+                "Carnivore": {
+                  "CreatureType": "Carnivore",
+                  "HP": "10",
+                  "STR": "4",
+                  "INT": "3",
+                  "DEX": "2",
+                  "SPD": "3",
+                  "LUK": "2",
+                  "CON": "2",
+                  "WIS": "0",
+                  "MOV": "5"
+                },
+                "Elf": {
+                  "CreatureType": "Elf",
+                  "HP": "7",
+                  "STR": "2",
+                  "INT": "2",
+                  "DEX": "3",
+                  "SPD": "4",
+                  "LUK": "2",
+                  "CON": "0",
+                  "WIS": "2",
+                  "MOV": "5"
+                },
+                "Cyborg": {
+                  "CreatureType": "Cyborg",
+                  "HP": "10",
+                  "STR": "4",
+                  "INT": "0",
+                  "DEX": "2",
+                  "SPD": "2",
+                  "LUK": "2",
+                  "CON": "3",
+                  "WIS": "1",
+                  "MOV": "5"
+                },
+                "Goblin": {
+                  "CreatureType": "Goblin",
+                  "HP": "7",
+                  "STR": "2",
+                  "INT": "2",
+                  "DEX": "3",
+                  "SPD": "4",
+                  "LUK": "2",
+                  "CON": "1",
+                  "WIS": "1",
+                  "MOV": "5"
+                },
+                "Dwarf": {
+                  "CreatureType": "Dwarf",
+                  "HP": "13",
+                  "STR": "2",
+                  "INT": "0",
+                  "DEX": "2",
+                  "SPD": "1",
+                  "LUK": "2",
+                  "CON": "3",
+                  "WIS": "3",
+                  "MOV": "5"
+                },
+                "Herbivore": {
+                  "CreatureType": "Herbivore",
+                  "HP": "10",
+                  "STR": "2",
+                  "INT": "2",
+                  "DEX": "2",
+                  "SPD": "3",
+                  "LUK": "2",
+                  "CON": "0",
+                  "WIS": "1",
+                  "MOV": "6"
+                },
+                "Dragon": {
+                  "CreatureType": "Dragon",
+                  "HP": "10",
+                  "STR": "2",
+                  "INT": "4",
+                  "DEX": "2",
+                  "SPD": "1",
+                  "LUK": "2",
+                  "CON": "2",
+                  "WIS": "3",
+                  "MOV": "4"
+                }
+              }
+
+            on("change:background", function() {
+                getAttrs(["background"], function(values) {
+                    let bg = values.background;
+                    setAttrs({
+                        "hp_growth_bg": BackgroundGrowth[bg].HP,
+                        "str_growth_bg": BackgroundGrowth[bg].STR,
+                        "int_growth_bg": BackgroundGrowth[bg].INT,
+                        "dex_growth_bg": BackgroundGrowth[bg].DEX,
+                        "spd_growth_bg": BackgroundGrowth[bg].SPD,
+                        "luk_growth_bg": BackgroundGrowth[bg].LUK,
+                        "con_growth_bg": BackgroundGrowth[bg].CON,
+                        "wis_growth_bg": BackgroundGrowth[bg].WIS
+                    });
+                });
+            });
+
+            on("change:creature_type", function() {
+                getAttrs(["creature_type"], function(values) {
+                    let ct = values.creature_type;
+                    setAttrs({
+                        "hp_stat_ct": CreatureTypeStat[ct].HP,
+                        "str_stat_ct": CreatureTypeStat[ct].STR,
+                        "int_stat_ct": CreatureTypeStat[ct].INT,
+                        "dex_stat_ct": CreatureTypeStat[ct].DEX,
+                        "spd_stat_ct": CreatureTypeStat[ct].SPD,
+                        "luk_stat_ct": CreatureTypeStat[ct].LUK,
+                        "con_stat_ct": CreatureTypeStat[ct].CON,
+                        "wis_stat_ct": CreatureTypeStat[ct].WIS,
+                        "mov_stat_ct": CreatureTypeStat[ct].MOV
+                    });
+                });
+            });
+
+            on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeating_CharacterLevel", function() {
+                CalculateStats();
+            });
+
+            const StatList = ["hp","str","int","dex","spd","luk","con","wis"];
+            StatList.forEach(stat => {
+                on(`change:${stat}_growth_base change:${stat}_growth_bg`, function() {
+                    CalculateStats();
+                });
+            });
+
+            function CalculateStats() {
+                var EarnedGrowths = {
+                    "hp":0,
+                    "str":0,
+                    "int":0,
+                    "dex":0,
+                    "spd":0,
+                    "luk":0,
+                    "con":0,
+                    "wis":0
+                };
+                var GrowthWiff = {
+                    "hp":0,
+                    "str":0,
+                    "int":0,
+                    "dex":0,
+                    "spd":0,
+                    "luk":0,
+                    "con":0,
+                    "wis":0
+                };
+                getSectionIDs("repeating_CharacterLevel", function(idarray) {
+                    StatList.forEach(stat => {
+                        idarray.forEach(rowid => {
+                            var LevelRoll = `repeating_CharacterLevel_${rowid}_${stat}_growth`;
+                            var GrowthEntryBase = `${stat}_growth_base`;
+                            var GrowthEntryBackground = `${stat}_growth_bg`;
+                            getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
+                                var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]);
+                                var Roll = parseInt(values[LevelRoll]);
+                                if (Roll <= Growth + GrowthWiff[stat]) {
+                                    EarnedGrowths[stat] = EarnedGrowths[stat] + 1;
+                                }
+                                if (Roll > Growth + GrowthWiff[stat] && parseInt(values.NoBadStats) == 1) {
+                                    GrowthWiff[stat] = GrowthWiff[stat] + 1;
+                                } else {
+                                    GrowthWiff[stat] = 0;
+                                }
+                                if (parseInt(values.StaticLevels) == 1) {
+                                    EarnedGrowths[stat] = Math.floor(parseInt(values.character_level) * Growth / 18.0);
+                                }
+                                setAttrs({
+                                    [`${stat}_stat_growth`]: EarnedGrowths[stat]
+                                });
+                            });
+                        });
+                    });
                 });
             };
         
@@ -392,11 +837,11 @@
     <!-- Configuration -->
     <div class="ConfigurationBigItem">
         <h1 class="PrimaryTitle" data-i18n="Character-Config-title-u">Sheet Config</h1>
-        <label class="PrimaryLabel"><input type="checkbox" name="attr_StaticLevels" value="1" checked ><span data-i18n="Settings-StaticLevels-name-n"> Static Levels</span></label>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_StaticLevels" value="1" ><span data-i18n="Settings-StaticLevels-name-n"> Static Levels</span></label>
         <span data-i18n="Settings-StaticLevels-description">Instead of rolling your stats, you gain stat growths at a regular pace.</span>
-        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadLevels" value="1" checked ><span data-i18n="Settings-NoBadLevels-name-n"> No Bad Levels</span></label>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadLevels" value="1" ><span data-i18n="Settings-NoBadLevels-name-n"> No Bad Levels</span></label>
         <span data-i18n="Settings-NoBadLevels-Description">Guarentees 3 stat growths per level, but not what they are</span>
-        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" checked ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
+        <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
         <span data-i18n="Settings-NoBadStats-Description">Not growing a stat increases it's chance of growing the next level.</span>
     </div>
 

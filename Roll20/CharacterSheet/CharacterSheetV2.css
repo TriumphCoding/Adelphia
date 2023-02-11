@@ -321,9 +321,31 @@
   max-height: fit-content;
 }
 
+.LevelupCharacterStatGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterStatGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
 .LevelupCharacterGrowthGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-auto-flow: row;
   outline: none;

@@ -228,62 +228,87 @@
             <div class="LevelupCharacterStatGridItem"></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Creature-Type-Stat-Column-Abbrev">CT</span></label></div>
+            <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Skill-Stat-Column-Abbrev">Skill</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Growth-Stat-Column-Abbrev">Growth</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_base_points" value="20-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2))" disabled="true"></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_creature_type_points" value="23-(floor((@{hp_stat_CT}-8)/3)+@{str_stat_CT}+@{int_stat_CT}+@{dex_stat_CT}+@{spd_stat_CT}+floor(@{luk_stat_CT}/2)+@{con_stat_CT}+@{wis_stat_CT}+floor(@{mov_stat_CT}*2))" disabled="true"></div>
+            <div class="LevelupCharacterStatGridItem"></div>
             <div class="LevelupCharacterStatGridItem"><button type="action" class="PrimaryButton" name="act_RecalculateStats" data-i18n="LevelUp-RecalculateStats-button" >Recalculate</button></div>
             <div class="LevelupCharacterStatGridItem"></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_base" step="1" min="0" max="18" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_CT" step="1" min="-5" max="15" value="10" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_skill" step="1" min="-5" max="15" value="10" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_total" value="@{hp_stat_base}+@{hp_stat_CT}+@{hp_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_hp_stat_total" value="@{hp_stat_base}+@{hp_stat_CT}+@{hp_stat_growth}+@{hp_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_total" value="@{str_stat_base}+@{str_stat_CT}+@{str_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_str_stat_total" value="@{str_stat_base}+@{str_stat_CT}+@{str_stat_growth}+@{str_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_total" value="@{int_stat_base}+@{int_stat_CT}+@{int_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_int_stat_total" value="@{int_stat_base}+@{int_stat_CT}+@{int_stat_growth}+@{int_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_total" value="@{dex_stat_base}+@{dex_stat_CT}+@{dex_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_dex_stat_total" value="@{dex_stat_base}+@{dex_stat_CT}+@{dex_stat_growth}+@{dex_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_total" value="@{spd_stat_base}+@{spd_stat_CT}+@{spd_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_spd_stat_total" value="@{spd_stat_base}+@{spd_stat_CT}+@{spd_stat_growth}+@{spd_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_total" value="@{luk_stat_base}+@{luk_stat_CT}+@{luk_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_luk_stat_total" value="@{luk_stat_base}+@{luk_stat_CT}+@{luk_stat_growth}+@{luk_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_total" value="@{con_stat_base}+@{con_stat_CT}+@{con_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_con_stat_total" value="@{con_stat_base}+@{con_stat_CT}+@{con_stat_growth}+@{con_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_CT" step="1" min="-5" max="15" value="2" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_growth" step="1" value="0" /></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_total" value="@{wis_stat_base}+@{wis_stat_CT}+@{wis_stat_growth}" disabled="true"/></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_wis_stat_total" value="@{wis_stat_base}+@{wis_stat_CT}+@{wis_stat_growth}+@{wis_stat_skill}" disabled="true"/></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="MOV-Abbrev-Name">MOV</span></label></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_CT" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_skill" step="1" value="0" /></div>
             <div class="LevelupCharacterStatGridItem"></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_total" value="@{mov_stat_base}+@{mov_stat_CT}" disabled="true"/></div>
-
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_total" value="@{mov_stat_base}+@{mov_stat_CT}+@{mov_stat_skill}" disabled="true"/></div>
         </div>
         <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Skills</h1>
-        <span>Lorem Ipsum</span>
+        <fieldset class="repeating_ClassSkillsList">
+            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
+                <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
+                <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
+                <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
+                <option value="Armored" data-i18n="Class-Skill-Armored">Armored</option>
+                <option value="Runed" data-i18n="Class-Skill-Runed">Runed</option>
+                <option value="Sing" data-i18n="Class-Skill-Sing">Sing</option>
+                <option value="Combat Skill" data-i18n="Class-Skill-Combat Skill">Combat Skill</option>
+                <option value="Weapon Skill" data-i18n="Class-Skill-Weapon Skill">Weapon Skill</option>
+                </select>
+            </label>
+            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Cost">Cost</span>: <input type="number" name="attr_ClassSkillCost" /></label>
+            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillDescription"></textarea></label>
+            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillEffect"></textarea></label>
+        </fieldset>
     </div>
     <div class="LevelupTallItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
@@ -308,43 +333,53 @@
             <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Background-Stat-Column-Abbrev">BG</span></label></div>
+            <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Skill-Stat-Column-Abbrev">Skill</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_base_points" value="35-(@{hp_growth_base}+@{str_growth_base}+@{int_growth_base}+@{dex_growth_base}+@{spd_growth_base}+@{luk_growth_base}+@{con_growth_base}+@{wis_growth_base})" disabled="true"></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_growth_background_points" value="40-(@{hp_growth_bg}+@{str_growth_bg}+@{int_growth_bg}+@{dex_growth_bg}+@{spd_growth_bg}+@{luk_growth_bg}+@{con_growth_bg}+@{wis_growth_bg})" disabled="true"></div>
             <div class="LevelupCharacterGrowthGridItem"></div>
+            <div class="LevelupCharacterGrowthGridItem"></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="0" max="18" value="0" /></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_skill" step="1" min="-5" max="15" value="5" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_bg}+@{hp_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_bg}+@{str_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_bg}+@{int_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_bg}+@{dex_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_bg}+@{spd_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_bg}+@{luk_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_bg}+@{con_growth_skill}" disabled="true"/></div>
             <div class="LevelupCharacterGrowthGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="0" max="18" value="0" ></div>
             <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_bg" step="1" min="-5" max="15" value="5" /></div>
-            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_bg}" disabled="true"/></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_skill" step="1" min="-5" max="15" value="0" /></div>
+            <div class="LevelupCharacterGrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_bg}+@{wis_growth_skill}" disabled="true"/></div>
         </div>
     </div>
     <div class="LevelupWideItem">
@@ -424,25 +459,25 @@
                 const statlist = ["hp","str","dex","int","spd","luk","con","wis"];
                 var vGrowthQty = 0;
                 getAttrs([
-                    "hp_growth_base","hp_growth_bg",
-                    "str_growth_base","str_growth_bg",
-                    "dex_growth_base","dex_growth_bg",
-                    "int_growth_base","int_growth_bg",
-                    "spd_growth_base","spd_growth_bg",
-                    "luk_growth_base","luk_growth_bg",
-                    "con_growth_base","con_growth_bg",
-                    "wis_growth_base","wis_growth_bg",
+                    "hp_growth_base","hp_growth_bg","hp_growth_skill",
+                    "str_growth_base","str_growth_bg","str_growth_skill",
+                    "dex_growth_base","dex_growth_bg","dex_growth_skill",
+                    "int_growth_base","int_growth_bg","int_growth_skill",
+                    "spd_growth_base","spd_growth_bg","spd_growth_skill",
+                    "luk_growth_base","luk_growth_bg","luk_growth_skill",
+                    "con_growth_base","con_growth_bg","con_growth_skill",
+                    "wis_growth_base","wis_growth_bg","wis_growth_skill",
                     "NoBadLevels"
                 ], function(growthrate) {
                     var vGrowth = {
-                        "hp": parseInt(growthrate.hp_growth_base) + parseInt(growthrate.hp_growth_bg),
-                        "str": parseInt(growthrate.str_growth_base) + parseInt(growthrate.str_growth_bg),
-                        "dex": parseInt(growthrate.dex_growth_base) + parseInt(growthrate.dex_growth_bg),
-                        "int": parseInt(growthrate.int_growth_base) + parseInt(growthrate.int_growth_bg),
-                        "spd": parseInt(growthrate.spd_growth_base) + parseInt(growthrate.spd_growth_bg),
-                        "luk": parseInt(growthrate.luk_growth_base) + parseInt(growthrate.luk_growth_bg),
-                        "con": parseInt(growthrate.con_growth_base) + parseInt(growthrate.con_growth_bg),
-                        "wis": parseInt(growthrate.wis_growth_base) + parseInt(growthrate.wis_growth_bg)
+                        "hp": parseInt(growthrate.hp_growth_base) + parseInt(growthrate.hp_growth_bg) + parseInt(growthrate.hp_growth_skill),
+                        "str": parseInt(growthrate.str_growth_base) + parseInt(growthrate.str_growth_bg) + parseInt(growthrate.str_growth_skill),
+                        "dex": parseInt(growthrate.dex_growth_base) + parseInt(growthrate.dex_growth_bg) + parseInt(growthrate.dex_growth_skill),
+                        "int": parseInt(growthrate.int_growth_base) + parseInt(growthrate.int_growth_bg) + parseInt(growthrate.int_growth_skill),
+                        "spd": parseInt(growthrate.spd_growth_base) + parseInt(growthrate.spd_growth_bg) + parseInt(growthrate.spd_growth_skill),
+                        "luk": parseInt(growthrate.luk_growth_base) + parseInt(growthrate.luk_growth_bg) + parseInt(growthrate.luk_growth_skill),
+                        "con": parseInt(growthrate.con_growth_base) + parseInt(growthrate.con_growth_bg) + parseInt(growthrate.con_growth_skill),
+                        "wis": parseInt(growthrate.wis_growth_base) + parseInt(growthrate.wis_growth_bg) + parseInt(growthrate.wis_growth_skill)
                     };
                     var vGrowthRoll = {
                         "hp": 0,
@@ -788,8 +823,9 @@
                             var LevelRoll = `repeating_CharacterLevel_${rowid}_${stat}_growth`;
                             var GrowthEntryBase = `${stat}_growth_base`;
                             var GrowthEntryBackground = `${stat}_growth_bg`;
-                            getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
-                                var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]);
+                            var GrowthEntrySkill = `${stat}_growth_skill`;
+                            getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, `${GrowthEntrySkill}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
+                                var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]) + parseInt(values[GrowthEntrySkill]);
                                 var Roll = parseInt(values[LevelRoll]);
                                 if (Roll <= Growth + GrowthWiff[stat]) {
                                     EarnedGrowths[stat] = EarnedGrowths[stat] + 1;
@@ -860,7 +896,257 @@
                     "Description": "You have trained in a specialized form of combat",
                     "Effect": "Gain 1 Combat Skill Point. See the section on combat skills for what you can spend this on. You can purchase this background as many times as you would like."
                 }
-            }
+            };
+
+            function CalculateSkillStats() {
+                var ClassSkillsCost = {
+                    "Weapon Skill": {
+                      "Name": "Weapon Skill",
+                      "Cost": "2",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "0",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "0"
+                    },
+                    "Nobility": {
+                      "Name": "Nobility",
+                      "Cost": "4",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "1",
+                      "strg": "1",
+                      "intg": "1",
+                      "dexg": "1",
+                      "sklg": "1",
+                      "spdg": "1",
+                      "lukg": "1",
+                      "cong": "1",
+                      "wisg": "1"
+                    },
+                    "Armored": {
+                      "Name": "Armored",
+                      "Cost": "2",
+                      "hp": "3",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "4",
+                      "wis": "0",
+                      "mov": "-1",
+                      "hpg": "1",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "2",
+                      "wisg": "0"
+                    },
+                    "Sing": {
+                      "Name": "Sing",
+                      "Cost": "3",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "0",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "0"
+                    },
+                    "Ride": {
+                      "Name": "Ride",
+                      "Cost": "4",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "0",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "0"
+                    },
+                    "Runed": {
+                      "Name": "Runed",
+                      "Cost": "2",
+                      "hp": "3",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "4",
+                      "mov": "-1",
+                      "hpg": "1",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "2"
+                    },
+                    "Fly": {
+                      "Name": "Fly",
+                      "Cost": "4",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "0",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "0"
+                    },
+                    "Combat Skill": {
+                      "Name": "Combat Skill",
+                      "Cost": "3",
+                      "hp": "0",
+                      "str": "0",
+                      "int": "0",
+                      "dex": "0",
+                      "skl": "0",
+                      "spd": "0",
+                      "luk": "0",
+                      "con": "0",
+                      "wis": "0",
+                      "mov": "0",
+                      "hpg": "0",
+                      "strg": "0",
+                      "intg": "0",
+                      "dexg": "0",
+                      "sklg": "0",
+                      "spdg": "0",
+                      "lukg": "0",
+                      "cong": "0",
+                      "wisg": "0"
+                    }
+                  };
+                var StatChanges = {
+                    "hp":0,
+                    "str":0,
+                    "int":0,
+                    "dex":0,
+                    "spd":0,
+                    "luk":0,
+                    "con":0,
+                    "wis":0,
+                    "mov":0
+                };
+                var GrowthChanges = {
+                    "hp":0,
+                    "str":0,
+                    "int":0,
+                    "dex":0,
+                    "spd":0,
+                    "luk":0,
+                    "con":0,
+                    "wis":0
+                };
+                getSectionIDs("repeating_ClassSkillsList", function(idarray) {
+                    StatList.forEach(stat => {
+                        idarray.forEach(rowid => {
+                            let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
+                            getAttrs([SkillName], function(values) {
+                                let SkillNameValue = values[SkillName];
+                                console.log(`${SkillNameValue} - ${stat} - ${stat}g`);
+                                StatChanges[stat] = parseInt(StatChanges[stat]) + parseInt(ClassSkillsCost[SkillNameValue][stat]);
+                                GrowthChanges[stat] = parseInt(GrowthChanges[stat]) + parseInt(ClassSkillsCost[SkillNameValue][`${stat}g`]);
+                                setAttrs({
+                                    [`${stat}_stat_skill`]: StatChanges[stat],
+                                    [`${stat}_growth_skill`]: GrowthChanges[stat]
+                                });
+                            });
+                        });
+                    });
+                    idarray.forEach(rowid => {
+                        let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
+                        getAttrs([SkillName], function(values) {
+                            let SkillNameValue = values[SkillName];
+                            console.log(`${SkillNameValue} - mov`);
+                            StatChanges["mov"] = parseInt(StatChanges["mov"]) + parseInt(ClassSkillsCost[SkillNameValue]["mov"]);
+                            setAttrs({
+                                [`mov_stat_skill`]: StatChanges["mov"]
+                            });
+                        });
+                    });
+                });
+            };
+
+            on("change:repeating_ClassSkillsList:ClassSkill", function(eventInfo) {
+                getAttrs(["repeating_ClassSkillsList_ClassSkill"], function(values) {
+                    let SkillName = values.repeating_ClassSkillsList_ClassSkill;
+                    setAttrs({
+                        repeating_ClassSkillsList_ClassSkillCost: ClassSkills[SkillName]["Cost"],
+                        repeating_ClassSkillsList_ClassSkillDescription: ClassSkills[SkillName]["Description"],
+                        repeating_ClassSkillsList_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
+                    });
+                });
+                CalculateSkillStats();
+            });
         
         </script>
 

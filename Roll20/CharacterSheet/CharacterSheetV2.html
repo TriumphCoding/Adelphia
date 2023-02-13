@@ -232,7 +232,7 @@
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Growth-Stat-Column-Abbrev">Growth</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
-            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_base_points" value="20-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2))" disabled="true"></div>
+            <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_base_points" value="20-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2 + @{growth_skill_points}))" disabled="true"><input type="hidden" name="attr_growth_skill_points" value="0"></div>
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_growth_creature_type_points" value="23-(floor((@{hp_stat_CT}-8)/3)+@{str_stat_CT}+@{int_stat_CT}+@{dex_stat_CT}+@{spd_stat_CT}+floor(@{luk_stat_CT}/2)+@{con_stat_CT}+@{wis_stat_CT}+floor(@{mov_stat_CT}*2))" disabled="true"></div>
             <div class="LevelupCharacterStatGridItem"></div>
             <div class="LevelupCharacterStatGridItem"><button type="action" class="PrimaryButton" name="act_RecalculateStats" data-i18n="LevelUp-RecalculateStats-button" >Recalculate</button></div>
@@ -293,22 +293,42 @@
             <div class="LevelupCharacterStatGridItem"><input type="number" name="attr_mov_stat_total" value="@{mov_stat_base}+@{mov_stat_CT}+@{mov_stat_skill}" disabled="true"/></div>
         </div>
         <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Skills</h1>
-        <fieldset class="repeating_ClassSkillsList">
-            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
-                <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
-                <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
-                <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
-                <option value="Armored" data-i18n="Class-Skill-Armored">Armored</option>
-                <option value="Runed" data-i18n="Class-Skill-Runed">Runed</option>
-                <option value="Sing" data-i18n="Class-Skill-Sing">Sing</option>
-                <option value="Combat Skill" data-i18n="Class-Skill-Combat Skill">Combat Skill</option>
-                <option value="Weapon Skill" data-i18n="Class-Skill-Weapon Skill">Weapon Skill</option>
-                </select>
-            </label>
-            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Cost">Cost</span>: <input type="number" name="attr_ClassSkillCost" /></label>
-            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillDescription"></textarea></label>
-            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillEffect"></textarea></label>
-        </fieldset>
+        <div>
+            <input type="checkbox" class="sheet-ClassSkillsList-Check" name="attr_ClassSkillsList-Check" value="0"><label class="PrimaryLabel" data-i18n="Show-Details">Show Details</label>
+            <div class="sheet-ClassSkillsList-Short">
+                <fieldset class="repeating_ClassSkillsList">
+                    <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
+                        <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
+                        <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
+                        <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
+                        <option value="Armored" data-i18n="Class-Skill-Armored">Armored</option>
+                        <option value="Runed" data-i18n="Class-Skill-Runed">Runed</option>
+                        <option value="Sing" data-i18n="Class-Skill-Sing">Sing</option>
+                        <option value="Combat Skill" data-i18n="Class-Skill-Combat Skill">Combat Skill</option>
+                        <option value="Weapon Skill" data-i18n="Class-Skill-Weapon Skill">Weapon Skill</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="sheet-ClassSkillsList-Long">
+                <fieldset class="repeating_ClassSkillsList">
+                    <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
+                        <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
+                        <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
+                        <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
+                        <option value="Armored" data-i18n="Class-Skill-Armored">Armored</option>
+                        <option value="Runed" data-i18n="Class-Skill-Runed">Runed</option>
+                        <option value="Sing" data-i18n="Class-Skill-Sing">Sing</option>
+                        <option value="Combat Skill" data-i18n="Class-Skill-Combat Skill">Combat Skill</option>
+                        <option value="Weapon Skill" data-i18n="Class-Skill-Weapon Skill">Weapon Skill</option>
+                        </select>
+                    </label>
+                    <label class="PrimaryLabel"><span data-i18n="Class-Skill-Cost">Cost</span>: <input type="number" name="attr_ClassSkillCost" /></label>
+                    <label class="PrimaryLabel"><span data-i18n="Class-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillDescription"></textarea></label>
+                    <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillEffect"></textarea></label>
+                </fieldset>
+            </div>
+          </div>
     </div>
     <div class="LevelupTallItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
@@ -1094,7 +1114,8 @@
                     "luk":0,
                     "con":0,
                     "wis":0,
-                    "mov":0
+                    "mov":0,
+                    "cost":0
                 };
                 var GrowthChanges = {
                     "hp":0,
@@ -1112,7 +1133,6 @@
                             let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
                             getAttrs([SkillName], function(values) {
                                 let SkillNameValue = values[SkillName];
-                                console.log(`${SkillNameValue} - ${stat} - ${stat}g`);
                                 StatChanges[stat] = parseInt(StatChanges[stat]) + parseInt(ClassSkillsCost[SkillNameValue][stat]);
                                 GrowthChanges[stat] = parseInt(GrowthChanges[stat]) + parseInt(ClassSkillsCost[SkillNameValue][`${stat}g`]);
                                 setAttrs({
@@ -1124,12 +1144,14 @@
                     });
                     idarray.forEach(rowid => {
                         let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
+                        let SkillCost = `repeating_ClassSkillsList_${rowid}_ClassSkillCost`;
                         getAttrs([SkillName], function(values) {
                             let SkillNameValue = values[SkillName];
-                            console.log(`${SkillNameValue} - mov`);
                             StatChanges["mov"] = parseInt(StatChanges["mov"]) + parseInt(ClassSkillsCost[SkillNameValue]["mov"]);
+                            StatChanges["cost"] = parseInt(StatChanges["cost"]) + parseInt(ClassSkillsCost[SkillNameValue]["Cost"]);
                             setAttrs({
-                                [`mov_stat_skill`]: StatChanges["mov"]
+                                [`mov_stat_skill`]: StatChanges["mov"],
+                                [`growth_skill_points`]: StatChanges["cost"]
                             });
                         });
                     });

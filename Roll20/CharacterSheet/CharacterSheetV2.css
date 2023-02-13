@@ -365,6 +365,16 @@
   text-align: center;
 }
 
+.sheet-ClassSkillsList-Short,
+.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Long {
+  display: block;
+}
+
+.charsheet .sheet-ClassSkillsList-Long,
+.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Short {
+  display: none;
+}
+
 .repcontainer[data-groupname=repeating_CharacterLevel] {
   display: table;
   outline: none;

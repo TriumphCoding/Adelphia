@@ -365,6 +365,18 @@
   text-align: center;
 }
 
+.charsheet .sheet-ClassSkillsList-Check {
+  appearance: none;
+}
+
+.charsheet .sheet-ClassSkillsList-Check:checked::before {
+  content: '→';
+}
+
+.charsheet .sheet-ClassSkillsList-Check:not(:checked)::before {
+  content: '↓';
+}
+
 .sheet-ClassSkillsList-Short,
 .charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Long {
   display: block;

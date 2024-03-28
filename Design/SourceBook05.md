@@ -110,7 +110,7 @@ Roughly speaking, weapon levels follow the below schedule:
 | S   | 6     |Gilded     | 40                   | 55
 | S+  | 7     |Orichalcum | 50                   | 65
 
-Taking Steel weapons as an example, at level 10 you will gain access to your first steel weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 25, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
+Taking Steel weapons as an example, at level 10 you will gain access to your first steel weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 35, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
 
 ## Weapon Cycle
 
@@ -324,23 +324,23 @@ Staffs are special weapons that can technically be used to send raw magical forc
 
 In a world of fantasy and magic, Weapons can be more than simple metal tools. Placing a rune into a weapon fills it with magical properties. Like weapons, the runes that your character has access to are roughly determined by level.
 
-|Tier | Level | Metal     | Acquired Level |
-|:--- | :---  |:---       | :---           |
-| D   | 1     |Bronze     | 4              |
-| C   | 1     |Iron       | 8              |
-| C   | 2     |Iron       | 12             |
-| B   | 1     |Steel      | 16             |
-| B   | 2     |Steel      | 20             |
-| B   | 3     |Steel      | 24             |
-| A   | 1     |Silvered   | 28             |
-| A   | 2     |Silvered   | 32             |
-| A   | 3     |Silvered   | 36             |
-| A   | 4     |Silvered   | 40             |
-| S   | 1     |Gilded     | 44             |
-| S   | 2     |Gilded     | 48             |
-| S   | 3     |Gilded     | 52             |
-| S   | 4     |Gilded     | 56             |
-| S   | 5     |Gilded     | 60             |
+|Tier | Level | Metal     | Acquired Level
+|:--- | :---  |:---       | :---
+| D   | 1     |Bronze     | 4
+| C   | 1     |Iron       | 8
+| C   | 2     |Iron       | 12
+| B   | 1     |Steel      | 16
+| B   | 2     |Steel      | 20
+| B   | 3     |Steel      | 24
+| A   | 1     |Silvered   | 28
+| A   | 2     |Silvered   | 32
+| A   | 3     |Silvered   | 36
+| A   | 4     |Silvered   | 40
+| S   | 1     |Gilded     | 44
+| S   | 2     |Gilded     | 48
+| S   | 3     |Gilded     | 52
+| S   | 4     |Gilded     | 56
+| S   | 5     |Gilded     | 60
 
 When choosing a weapon, you will traditionally choose a weapon metal and a rune for that metal that you meet the requirements for. Some runes get more powerful depending on the rune's level, and some runes have a minimum level requirement in order to place them. For example, if a rune requires "Level 2", you can't place one on an Iron weapon until level 12, and you can't place them on a steel weapon until level 20. You can never place that rune on a Bronze weapon. The Minimum Level requirement of the rune is listed after the rune name.
 

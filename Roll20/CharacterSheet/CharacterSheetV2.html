@@ -223,7 +223,7 @@
             <option value="Carnivore" data-i18n="Creature-Type-Carnivore">Carnivore</option>
             <option value="Herbivore" data-i18n="Creature-Type-Herbivore">Herbivore</option>
             <option value="Dragon" data-i18n="Creature-Type-Dragon">Dragon</option>
-        </select>
+        </select></label>
         <div class="LevelupCharacterStatGrid">
             <div class="LevelupCharacterStatGridItem"></div>
             <div class="LevelupCharacterStatGridItem"><label class="PrimaryLabel"><span data-i18n="Base-Stat-Column">Base</span></label></div>
@@ -328,11 +328,32 @@
                     <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span>: <textarea class="PrimaryNotesEntry" name="attr_ClassSkillEffect"></textarea></label>
                 </fieldset>
             </div>
-          </div>
+        </div>
     </div>
     <div class="LevelupTallItem">
         <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
-        <span>Lorem Ipsum</span>
+        <div>
+            <input type="checkbox" class="sheet-CombatSkillsList-Check" name="attr_CombatSkillsList-Check" value="0" />
+            <div class="sheet-CombatSkillsList-Short">
+                <fieldset class="repeating_CombatSkillsList">
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
+                        <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="sheet-CombatSkillsList-Long">
+                <fieldset class="repeating_CombatSkillsList">
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
+                        <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
+                        </select>
+                    </label>
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Level">Level</span>: <input type="number" name="attr_CombatSkillCost" /></label>
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_CombatSkillDescription"></textarea></label>
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Effect">Effect</span>: <textarea class="PrimaryNotesEntry" name="attr_CombatSkillEffect"></textarea></label>
+                </fieldset>
+            </div>
+        </div>
         <h1 class="PrimaryTitle" data-i18n="Levelup-Great-Skills-title-u">Great Skills</h1>
         <span>Lorem Ipsum</span>
     </div>

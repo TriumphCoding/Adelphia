@@ -1,0 +1,2 @@
+Name,Cost,Description,Effect,hp,str,int,dex,skl,spd,luk,con,wis,mov,hpg,strg,intg,dexg,sklg,spdg,lukg,cong,wisg
+Nobility,4,Your family line has a history and you have the potential to grow into that history,Get +1 to all your Growth Rates.,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1

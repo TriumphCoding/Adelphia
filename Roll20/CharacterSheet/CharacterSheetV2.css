@@ -370,11 +370,11 @@
 }
 
 .charsheet .sheet-ClassSkillsList-Check:checked::before {
-  content: '→';
+  content: ' → ';
 }
 
 .charsheet .sheet-ClassSkillsList-Check:not(:checked)::before {
-  content: '↓';
+  content: ' ↓ ';
 }
 
 .sheet-ClassSkillsList-Short,
@@ -384,6 +384,28 @@
 
 .charsheet .sheet-ClassSkillsList-Long,
 .charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Short {
+  display: none;
+}
+
+.charsheet .sheet-CombatSkillsList-Check {
+  appearance: none;
+}
+
+.charsheet .sheet-CombatSkillsList-Check:checked::before {
+  content: ' → ';
+}
+
+.charsheet .sheet-CombatSkillsList-Check:not(:checked)::before {
+  content: ' ↓ ';
+}
+
+.sheet-CombatSkillsList-Short,
+.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Long {
+  display: block;
+}
+
+.charsheet .sheet-CombatSkillsList-Long,
+.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Short {
   display: none;
 }
 

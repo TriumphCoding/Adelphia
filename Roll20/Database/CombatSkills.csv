@@ -1,2 +1,18 @@
-Name,Cost,Description,Effect,hp,str,int,dex,skl,spd,luk,con,wis,mov,hpg,strg,intg,dexg,sklg,spdg,lukg,cong,wisg
-Nobility,4,Your family line has a history and you have the potential to grow into that history,Get +1 to all your Growth Rates.,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1
+Name,MaxLevel,Description,Effect,hp-min,hp-max,attack,riposte,hp,str,int,dex,skl,spd,luk,con,wis
+Hearty,10,"You take pain and punishment well, and can resist even the mightiest of blows",Increase Total HP by 20% of your Level,0,1,1,1,.2,0,0,0,0,0,0,0,0
+Cornered Strike (STR),10,"When backed into a corner, you bring out your best",Increase Total STR by 10% of your level if you are at less than half health,0,.5,1,1,0,.1,0,0,0,0,0,0,0
+Cornered Strike (INT),10,"When backed into a corner, you bring out your best",Increase Total INT by 10% of your level if you are at less than half health,0,.5,1,1,0,0,.1,0,0,0,0,0,0
+Cornered Strike (DEX),10,"When backed into a corner, you bring out your best",Increase Total DEX by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,.1,0,0,0,0,0
+Cornered Strike (SKL),10,"When backed into a corner, you bring out your best",Increase Total SKL by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,0,.1,0,0,0,0
+Cornered Strike (SPD),10,"When backed into a corner, you bring out your best",Increase Total SPD by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,0,0,.1,0,0,0
+Cornered Strike (LUK),10,"When backed into a corner, you bring out your best",Increase Total LUK by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,0,0,0,.1,0,0
+Cornered Strike (CON),10,"When backed into a corner, you bring out your best",Increase Total CON by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,0,0,0,0,.1,0
+Cornered Strike (WIS),10,"When backed into a corner, you bring out your best",Increase Total WIS by 10% of your level if you are at less than half health,0,.5,1,1,0,0,0,0,0,0,0,0,.1
+Cornered Strike (STR),10,"When you are in control of the situation, no one can stop you",Increase Total STR by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,.1,0,0,0,0,0,0,0
+Cornered Strike (INT),10,"When you are in control of the situation, no one can stop you",Increase Total INT by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,.1,0,0,0,0,0,0
+Cornered Strike (DEX),10,"When you are in control of the situation, no one can stop you",Increase Total DEX by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,.1,0,0,0,0,0
+Cornered Strike (SKL),10,"When you are in control of the situation, no one can stop you",Increase Total SKL by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,0,.1,0,0,0,0
+Cornered Strike (SPD),10,"When you are in control of the situation, no one can stop you",Increase Total SPD by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,0,0,.1,0,0,0
+Cornered Strike (LUK),10,"When you are in control of the situation, no one can stop you",Increase Total LUK by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,0,0,0,.1,0,0
+Cornered Strike (CON),10,"When you are in control of the situation, no one can stop you",Increase Total CON by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,0,0,0,0,.1,0
+Cornered Strike (WIS),10,"When you are in control of the situation, no one can stop you",Increase Total WIS by 10% of your level if you are at more than 70% HP,.7,1,1,1,0,0,0,0,0,0,0,0,.1

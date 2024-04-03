@@ -28,13 +28,13 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Hearty**: Increase **Total HP** by 20% of your **Level**
 
-**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Elegant Riposte**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Riposte**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Practiced Aggression**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
 **Janken Mastery**: Increases **Weapon Triangle** effects by 1 level if you are on the winning side of the weapon triangle.
 
@@ -42,11 +42,11 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Colorblind Fighter**: Grants 1 **Weapon Triangle** effect level when fighting grey weapons.
 
-**Reckless Offense**: Increase **STR**, **INT**, **SPD** by 10%/20%/30% of your level, reduce **SKL**, **WIS** and **CON** by 10%/20%/30% of your **Level**.
+**Rapturous Brutality**: Increase **STR**, **INT**, **SPD** by 10%/20%/30% of your level, reduce **DEX**, **WIS** and **CON** by 10%/20%/30% of your **Level**.
 
-**Fortress Defense**: Increase **WIS** and **CON** by 10%/20%/30% of your **Level**, reduce **STR** and **INT** by 10%/20%/30% of your **Level**.
+**Resolute Bastion**: Increase **WIS** and **CON** by 10%/20%/30% of your **Level**, reduce **STR** and **INT** by 10%/20%/30% of your **Level**.
 
-**Fury**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, and **WIS** by 10% of your **Level**, but you take 10% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
+**Fury**: Increase **STR**, **INT**, **DEX**, **DEX**, **SPD**, **CON**, and **WIS** by 10% of your **Level**, but you take 10% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
 **Weapon Mastery**: You may take this skill multiple times, each time applying the skill to a new weapon type. Up to 3 total points can be invested into a single weapon type.
 
@@ -74,13 +74,13 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Desperation**: You have a **SPD**% chance of having your **Follow Through Attack** happen immediately after your **Attack**. This skill can only be purchased once.
 
-**Vantage**: You have a **SKL**% chance to have your **Riposte** happen before your opponent's **Attack**. This skill can only be purchased once.
+**Vantage**: You have a **DEX**% chance to have your **Riposte** happen before your opponent's **Attack**. This skill can only be purchased once.
 
-**Bold**: You have a **SKL**% chance to activate an additional **Follow Through Attack**, regardless of speed. This skill can only be purchased once.
+**Bold**: You have a **DEX**% chance to activate an additional **Follow Through Attack**, regardless of speed. This skill can only be purchased once.
 
-**Buckler**: You have a **SKL**% chance to reduce incoming physical damage by 50%. This skill can only be purchased once.
+**Buckler**: You have a **DEX**% chance to reduce incoming physical damage by 50%. This skill can only be purchased once.
 
-**Escutcheon**: You have a **SKL**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
+**Escutcheon**: You have a **DEX**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
 
 **Physical Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
 
@@ -90,7 +90,7 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Grit**: Whenever you are attacked more than once in a row without being able to counterattack, reduce all damage from the second attack onward by 70%.
 
-**Patience**: You have a **SKL**% chance to have your **Riposte** activate after your opponent's **Follow Through Attack**.
+**Patience**: You have a **DEX**% chance to have your **Riposte** activate after your opponent's **Follow Through Attack**.
 
 ## Gaining Weapons
 
@@ -414,9 +414,9 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 
 ### Epic Great Skills
 
-**Moon Strike**: Your **Strikes** have a **SKL**% to reduce enemy **defence** by 1/2.
+**Moon Strike**: Your **Strikes** have a **DEX**% to reduce enemy **defence** by 1/2.
 
-**Sun Strike**: Your **Strikes** have a **SKL**% to recover **HP** equal to 1/2 damage dealt.
+**Sun Strike**: Your **Strikes** have a **DEX**% to recover **HP** equal to 1/2 damage dealt.
 
 **Brave Strike**: Your **Strikes** have a **SPD**% to trigger an additional time.
 
@@ -430,17 +430,17 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 
 ### Legendary Great Skills
 
-**Lunar Impact**: Your **Strikes** have a **SKL**% chance to ignore enemy defence.
+**Lunar Impact**: Your **Strikes** have a **DEX**% chance to ignore enemy defence.
 
-**Lunar Strike**: Your **Strikes** have a **SKL**x2% chance to reduce enemy **Defense** by 1/2.
+**Lunar Strike**: Your **Strikes** have a **DEX**x2% chance to reduce enemy **Defense** by 1/2.
 
-**Solar Impact**: Your **Strikes** have a **SKL**% chance to recover HP equal to the damage you deal.
+**Solar Impact**: Your **Strikes** have a **DEX**% chance to recover HP equal to the damage you deal.
 
-**Solar Strike**: Your **Strikes** have a **SKL**x2% chance to recover HP equal to 1/2 the damage you deal.
+**Solar Strike**: Your **Strikes** have a **DEX**x2% chance to recover HP equal to 1/2 the damage you deal.
 
-**Astral Impact**: Your **Strikes** have a **SKL**/2% ignore enemy **defense** and recover **HP** equal to damage dealt.
+**Astral Impact**: Your **Strikes** have a **DEX**/2% ignore enemy **defense** and recover **HP** equal to damage dealt.
 
-**Astral Strike**: Your **Strikes** have a **SKL**% chance to reduce enemy **defence** by 1/2, and recover HP equal to 1/2 damage dealt.
+**Astral Strike**: Your **Strikes** have a **DEX**% chance to reduce enemy **defence** by 1/2, and recover HP equal to 1/2 damage dealt.
 
 **Hero Impact**: Your **Strikes** have a **SPD**% to trigger 3 additional times.
 

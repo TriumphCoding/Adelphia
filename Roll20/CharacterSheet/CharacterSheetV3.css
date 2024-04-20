@@ -34,8 +34,6 @@
   justify-content: left;
 }
 
-
-/*Basic Character info on left hand side of sheet*/
 .CharacterSheetGridcell {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -48,6 +46,7 @@
   justify-content: left;
 }
 
+/*Basic Character info on left hand side of sheet*/
 .CharacterFlexContainer {
   display: flex;
   flex-flow: row wrap;
@@ -103,7 +102,7 @@
 /*Character Sheet Page Options*/
 .SheetPageFlexContainer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: left;
   padding: 0;
   margin: 0;
@@ -139,37 +138,37 @@
   padding: 5px;
 }
 
-.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons_character"] {
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_weapons"] {
   outline: none;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
 }
 
-.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons_character"] .repitem {
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_weapons"] .repitem {
   display: inline-block;
   margin-right: 2px;
   margin-bottom: 2px;
 }
 
-.charsheet .CharacterWeaponSelection~.repcontrol[data-groupname="repeating_weapons_character"] {
+.CharacterEquippedFlexItem > .repcontrol[data-groupname="repeating_weapons"] {
   display: none;
 }
 
-.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items_character"] {
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_items"] {
   outline: none;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
 }
 
-.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items_character"] .repitem {
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_items"] .repitem {
   display: inline-block;
   margin-right: 2px;
   margin-bottom: 2px;
 }
 
-.charsheet .CharacterItemSelection~.repcontrol[data-groupname="repeating_items_character"] {
+.CharacterEquippedFlexItem > .repcontrol[data-groupname="repeating_items"] {
   display: none;
 }
 
@@ -216,33 +215,30 @@
   max-height: fit-content;
 }
 
-.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] {
+.SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] {
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  max-height: fit-content;
+  display: block;
 }
 
-.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] > .repitem {
-  grid-row: span 1;
-  grid-column: span 1;
+.SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] > .repitem {
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
   margin-right: 2px;
   margin-bottom: 2px;
+  display: block;
 }
-.charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"] {
-  grid-row: span 1;
-  grid-column: span 1;
+.SheetPageWeapon > .repcontrol[data-groupname="repeating_weapons"] {
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+  display: block;
 }
 
 /*Item Tab Section*/
@@ -530,16 +526,12 @@
 .charsheet .SheetPageItem,
 .charsheet .SheetPageLevelUp,
 .charsheet .SheetPageNotes,
-.charsheet .SheetPageConfiguration {
-    display: none;
-}
+.charsheet .SheetPageConfiguration { display: none; }
 
 /*Add your tabs for their given section here*/
-.charsheet .tabstoggle[value="character"] ~ div.SheetPageCharacter,
-.charsheet .tabstoggle[value="weapons"] ~ .div.SheetPageWeapon,
-.charsheet .tabstoggle[value="items"] ~ .div.SheetPageItem,
-.charsheet .tabstoggle[value="levels"] ~ div.SheetPageLevelUp,
-.charsheet .tabstoggle[value="notes"] ~ div.SheetPageNotes,
-.charsheet .tabstoggle[value="configuration"] ~ div.SheetPageConfiguration {
-    display: block;
-}
+.charsheet .tabstoggle[value="Character"] ~ div.SheetPageCharacter,
+.charsheet .tabstoggle[value="Weapons"] ~ div.SheetPageWeapon,
+.charsheet .tabstoggle[value="Items"] ~ div.SheetPageItem,
+.charsheet .tabstoggle[value="Levels"] ~ div.SheetPageLevelUp,
+.charsheet .tabstoggle[value="Notes"] ~ div.SheetPageNotes,
+.charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; }

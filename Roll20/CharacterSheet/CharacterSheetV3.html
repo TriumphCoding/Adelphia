@@ -14,7 +14,7 @@
             <div class="CharacterEquippedFlexItem">
                 <!-- Change your character's Currently Equipped Weapon -->
                 <h1 class="PrimaryTitle" data-i18n="weapon-title-u">Weapons</h1>
-                <fieldset class="repeating_weapons_character CharacterWeaponSelection">
+                <fieldset class="repeating_weapons">
                     <button type="action" class="PrimaryButton" name="act_SetWeapon"><span name="attr_Weapon-Name"></span></button>
                     <input type="text" class="PrimaryEntry" name="attr_Weapon-Name" style="display: none;"/>
                 </fieldset>
@@ -31,7 +31,7 @@
             <div class="CharacterEquippedFlexItem">
                 <!-- Change your character's Currently Equipped Item -->
                 <h1 class="PrimaryTitle" data-i18n="item-title-u">Items</h1>
-                <fieldset class="repeating_items_character CharacterItemSelection">
+                <fieldset class="repeating_items">
                     <button type="action" class="PrimaryButton" name="act_SetItem"><span name="attr_Item-Name"></span></button>
                     <input type="text" class="PrimaryEntry" name="attr_Item-Name" style="display: none;"/>
                 </fieldset>
@@ -53,7 +53,7 @@
             <div class="PageSelectorFlexContainer"><button type="action" class="PrimaryButton" name="act_configuration" data-i18n="Configuration-tabbutton-name" >Configuration</button></div>
         </div>
         <script type="text/worker">
-            const buttonlist = ["character","weapons","items","levels","notes","configuration"];
+            const buttonlist = ["Character","Weapons","Items","Levels","Notes","Configuration"];
             buttonlist.forEach(button => {
                 on(`clicked:${button}`, function() {
                     setAttrs({
@@ -65,11 +65,13 @@
     </div>
 
     <div class="CharacterSheetGridcell">
+        
         <div class="SheetPageFlexContainer">
-            <input type="hidden" class="tabstoggle" name="attr_sheetTab"  value="character"  />
 
+            <input type="hidden" class="tabstoggle" name="attr_sheetTab"  value="character">
             <div class="SheetPageCharacter">
                 <!-- Character Sheet Front Page-->
+                
                 <div class="CharacterQuirkBox">
                     <!-- Quirks -->
                     <h1 class="PrimaryTitle" data-i18n="quirks-title-u">Quirks</h1>
@@ -165,43 +167,39 @@
                 <div class="WeaponWideItem">
                     <h1 class="PrimaryTitle" data-i18n="Weapon-Creation-title-u">Weapon Creation</h1>
                 </div>
-                <fieldset class="repeating_weapons RepeatingWeaponSection">
-                    <div>
-                        <div>
-                            <h2 data-i18n="Weapon-Title">Weapon</h2>
-                            <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Name"/></label>
-                            <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
-                                    <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
-                                    <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
-                                    <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
-                                    <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
-                                    <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
-                                    <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
-                                    <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
-                                    <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
-                                    <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
-                                    <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
-                                    <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
-                                    <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
-                                    <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
-                                    <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
-                                    <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
-                                    <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
-                                    <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
-                                    <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
-                                    <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
-                                    <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
-                                    <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
-                                    <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
-                                    <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
-                                    <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
-                                    <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
-                                    <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
-                                    <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
+                <fieldset class="repeating_weapons">
+                    <h2 data-i18n="Weapon-Title">Weapon</h2>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Name"/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
+                            <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
+                            <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
+                            <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
+                            <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
+                            <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
+                            <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
+                            <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
+                            <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
+                            <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
+                            <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
+                            <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
+                            <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
+                            <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
+                            <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
+                            <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
+                            <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
+                            <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
+                            <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
+                            <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
+                            <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
+                            <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
+                            <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
+                            <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
+                            <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
+                            <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
+                            <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
+                            <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
+                        </select>
+                    </label>
                 </fieldset>
                 <!-- ToDo: Finish Weapon Section -->
             </div>

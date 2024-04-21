@@ -1,18 +1,16 @@
-/*Static Layout Pieces*/
+/*Static Grid Layout Pieces*/
 .MasterGrid {
   display: grid;
   grid-template-columns: fit-content(276px) 1fr;
   grid-template-rows: fit-content(34px) 1fr;
   grid-auto-flow: row;
-  column-gap: 5px;
-  row-gap: 5px;
+  grid-gap: 3px;
   outline: none;
   justify-content: justify;
 }
 
 .CharacterGridcell {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 1 ;
   grid-row-start: 1;
   grid-row-end: 3;
   outline: auto;
@@ -24,9 +22,7 @@
 
 .PageSelectorGridcell {
   grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 2;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
@@ -36,9 +32,7 @@
 
 .CharacterSheetGridcell {
   grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 3;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
@@ -46,10 +40,10 @@
   justify-content: left;
 }
 
-/*Basic Character info on left hand side of sheet*/
+/*Character Info*/
 .CharacterFlexContainer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   justify-content: space-around;
   padding: 0;
   margin: 0;
@@ -79,59 +73,6 @@
 }
 
 .CharacterEquippedFlexItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-/*Character Sheet Page Selector at top right of sheet*/
-.PageSelectorFlexContainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.PageSelectorFlexItem {
-  justify-content: center;
-}
-
-/*Character Sheet Page Options*/
-.SheetPageFlexContainer {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: left;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.CharacterQuirkBox {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.CharacterTallItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.CharacterWideItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.CharacterItem {
-  grid-area: auto;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
@@ -172,6 +113,35 @@
   display: none;
 }
 
+/*Page Selector*/
+.PageSelectorFlexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.PageSelectorFlexItem {
+  justify-content: center;
+}
+
+/*Character Sheet*/
+.SheetPageFlexContainer {
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.CharacterSheetFlexObject {
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
 .CharacterQuirkSubgrid {
   display: grid;
   grid-template-columns: fit-content 1fr fit-content;
@@ -190,73 +160,41 @@
   outline: none;
 }
 
-.CharacterTempStatAdjustmentFill {
-  grid-area: auto;
-  outline: auto;
-  outline-width: thin;
-  outline-style: none;
-  width: fit-content;
-  align-items: left;
-}
-
-/*Weapon Tab Section*/
-.WeaponTallItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-}
-
-.WeaponWideItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
-
+/*Weapons*/
 .SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] {
+  grid-row: span 3;
+  grid-column: span 2;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
-  max-height: fit-content;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
   margin-right: 2px;
   margin-bottom: 2px;
-  display: block;
 }
+
 .SheetPageWeapon > .repcontrol[data-groupname="repeating_weapons"] {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  display: block;
-}
-
-/*Item Tab Section*/
-.ItemTallItem {
+  grid-row: span 1;
+  grid-column: span 1;
   outline: auto;
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
 }
 
-.ItemWideItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
 
+/*Items*/
 .charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] {
   grid-row: span 3;
   grid-column: span 2;
@@ -289,32 +227,8 @@
   padding: 5px;
 }
 
-/*Level Up*/
-.LevelupItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
-
-.LevelupTallItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
-
-.LevelupWideItem {
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
-
-.LevelupCharacterStatGrid {
+/*Class*/
+.ClassStatGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -325,29 +239,7 @@
   max-height: fit-content;
 }
 
-.LevelupCharacterStatGridItem {
-  grid-row: span 1;
-  grid-column: span 1;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-  text-align: center;
-}
-
-.LevelupCharacterGrowthGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-auto-flow: row;
-  outline: none;
-  outline-width: 0;
-  outline-style: none;
-  max-height: fit-content;
-}
-
-.LevelupCharacterGrowthGridItem {
+.ClassStatGridItem {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -380,6 +272,7 @@
   display: none;
 }
 
+/*Skills*/
 .charsheet .sheet-CombatSkillsList-Check {
   appearance: none;
 }
@@ -400,6 +293,29 @@
 .charsheet .sheet-CombatSkillsList-Long,
 .charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Short {
   display: none;
+}
+
+/*Growth*/
+.GrowthGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.GrowthGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
 }
 
 .repcontainer[data-groupname=repeating_CharacterLevel] {
@@ -460,26 +376,8 @@
 }
 
 /*Notes*/
-.NotesItem {
-  grid-row: span 1;
-  grid-column: span 1;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
 
 /*Configuration*/
-.ConfigurationBigItem {
-  grid-row: span 2;
-  grid-column: span 2;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-}
 
 /*Titles, Labels, and Input*/
 .PrimaryTitle {
@@ -494,7 +392,7 @@
 .PrimaryEntry {
   font: auto;
   outline: none;
-  width: 96%;
+  width: auto;
 }
 
 .PrimaryNotesEntry {
@@ -520,11 +418,14 @@
   width: fit-content;
 }
 
+/*Page Selector Logic*/
 /*mark your sections invisible here*/
 .charsheet .SheetPageCharacter,
 .charsheet .SheetPageWeapon,
 .charsheet .SheetPageItem,
-.charsheet .SheetPageLevelUp,
+.charsheet .SheetPageClass,
+.charsheet .SheetPageSkills,
+.charsheet .SheetPageGrowth,
 .charsheet .SheetPageNotes,
 .charsheet .SheetPageConfiguration { display: none; }
 
@@ -532,6 +433,8 @@
 .charsheet .tabstoggle[value="Character"] ~ div.SheetPageCharacter,
 .charsheet .tabstoggle[value="Weapons"] ~ div.SheetPageWeapon,
 .charsheet .tabstoggle[value="Items"] ~ div.SheetPageItem,
-.charsheet .tabstoggle[value="Levels"] ~ div.SheetPageLevelUp,
+.charsheet .tabstoggle[value="Class"] ~ div.SheetPageClass,
+.charsheet .tabstoggle[value="Skills"] ~ div.SheetPageSkills,
+.charsheet .tabstoggle[value="Growth"] ~ div.SheetPageGrowth,
 .charsheet .tabstoggle[value="Notes"] ~ div.SheetPageNotes,
 .charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; }

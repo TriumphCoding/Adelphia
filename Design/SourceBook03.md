@@ -55,13 +55,13 @@ Your character's **Class** is what determines your character's stats right now. 
 | MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
 | **Total** |      |      | **20** |        |                   |
 
-However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
+However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Abilities**. But don't worry too much, as you'll get more Class points as you **level up**.
 
-## Class Skills
+## Class Abilities
 
-You can spend your **Class Points** on skills that might be relevant to your character, and truly set them apart from everyone else. Each skill costs a certain number of Class Points. Simply spend the points to activate the Class Skill, and you can have as many as you can afford.
+You can spend your **Class Points** on abilities that might be relevant to your character, and truly set them apart from everyone else. Each ability costs a certain number of Class Points. Simply spend the points to activate the Class Ability, and you can have as many as you can afford.
 
->While all of these class skills are named and themed, don't feel beholden to their exact flavor. Taking **Ride** might mean your character moves uncannily quickly, or **Fly** might mean your character has access to some magic and not necessarily wings. Use what makes sense for you, and the setting you are in.
+>While all of these class abilities are named and themed, don't feel beholden to their exact flavor. Taking **Ride** might mean your character moves uncannily quickly, or **Fly** might mean your character has access to some form of flight magic and not necessarily wings. Use what makes sense for you, and the setting you are in.
 
 ### Nobility
 

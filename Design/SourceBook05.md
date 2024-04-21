@@ -376,7 +376,7 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Reaver** *Lv 2*: Reverses the direction of the Weapon triangle for combats involving this weapon.
 
-**Class Slayer** *Lv 2*: Choose a Class Skill. If your opponent has that class skill, triple the might of this weapon.
+**Class Slayer** *Lv 2*: Choose a Class Ability. If your opponent has that class ability, triple the might of this weapon.
 
 **Creature Slayer** *Lv 2*: Choose a Creature Type. If your opponent is that creature type, triple the might of this weapon.
 

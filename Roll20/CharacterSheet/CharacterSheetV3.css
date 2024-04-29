@@ -295,6 +295,14 @@
   display: none;
 }
 
+.charsheet .StatCombatSkillSelectorDisplay[value="0"] + .PrimaryLabel {
+  display: none;
+}
+
+.charsheet .WeaponCombatSkillSelectorDisplay[value="0"] + .PrimaryLabel {
+  display: none;
+}
+
 /*Growth*/
 .GrowthGrid {
   display: grid;

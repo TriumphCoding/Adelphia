@@ -229,7 +229,7 @@
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Growth-Stat-Column-Abbrev">Growth</span></label></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_growth_base_points" value="20-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2 + @{growth_skill_points}))" disabled="true"><input type="hidden" name="attr_growth_skill_points" value="0"></div>
+                        <div class="ClassStatGridItem"><input type="number" name="attr_growth_base_points" value="20+floor(@{character_level}/20)*10-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2 + @{growth_skill_points}))" disabled="true"><input type="hidden" name="attr_growth_skill_points" value="0"></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_growth_creature_type_points" value="23-(floor((@{hp_stat_CT}-8)/3)+@{str_stat_CT}+@{int_stat_CT}+@{dex_stat_CT}+@{spd_stat_CT}+floor(@{luk_stat_CT}/2)+@{con_stat_CT}+@{wis_stat_CT}+floor(@{mov_stat_CT}*2))" disabled="true"></div>
                         <div class="ClassStatGridItem"></div>
                         <div class="ClassStatGridItem"><button type="action" class="PrimaryButton" name="act_RecalculateStats" data-i18n="LevelUp-RecalculateStats-button" >Recalculate</button></div>
@@ -538,7 +538,7 @@
                                 <option value="Weapon Mastery 3" selected="selected" data-i18n="Combat-Skill-Weapon Mastery 3">Weapon Mastery 3</option>
                                 </select>
                             </label>
-                            <input type="checkbox" name="attr_StatCombatSkillSelectorDisplay" value="1" />
+                            <input type="hidden" class="StatCombatSkillSelectorDisplay" name="attr_StatCombatSkillSelectorDisplay" value="0" />
                             <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span>: <select name="attr_StatCombatSkillSelector">
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                                 <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
@@ -549,7 +549,7 @@
                                 <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
                                 </select>
                             </label>
-                            <input type="checkbox" name="attr_WeaponCombatSkillSelectorDisplay" value="1"/>
+                            <input type="hidden" class="WeaponCombatSkillSelectorDisplay" name="attr_WeaponCombatSkillSelectorDisplay" value="0"/>
                             <label class="PrimaryLabel"><span data-i18n="Weapon-Title">Weapon</span>: <select name="attr_WeaponCombatSkillSelector">
                                 <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
                                 <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
@@ -954,7 +954,7 @@
     </div>
 </div>
 
-<!-- use text/worker to submit. Use text/javascript to get highlighting. -->
+<!-- use text/worker to submit. Use text/javascript to get syntax highlighting. -->
 <script type="text/worker">
 
 function getRandomInt(max) { return (Math.floor(Math.random() * (max + 1))); };
@@ -2241,6 +2241,7 @@ function CalculateSkillStats() {
                 });
             });
         });
+        CalculateStats();
     });
 };
 
@@ -2268,9 +2269,9 @@ on("change:repeating_CombatSkillsList:CombatSkill change:repeating_CombatSkillsL
         var WeaponChoice = 0;
         let SelectorChoice = CombatSkills[SkillName]["Choice"];
         switch (SelectorChoice) {
-            case "STAT": console.log("Set STAT"); StatChoice = 1; break;
-            case "WEAPON": console.log("Set WEAPON");WeaponChoice = 1; break;
-            default: console.log("All Empty"); break;
+            case "STAT": StatChoice = 1; break;
+            case "WEAPON": WeaponChoice = 1; break;
+            default: break;
         }
         setAttrs({
             repeating_CombatSkillsList_CombatSkillLevel: Math.min(CurrentSkillLevel, CombatSkills[SkillName]["MaxLevel"]), 

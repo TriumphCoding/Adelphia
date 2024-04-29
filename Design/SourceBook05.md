@@ -82,9 +82,9 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Escutcheon**: You have a **DEX**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
 
-**Physical Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+**Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
 
-**Magical Superiority**: You have an **INT**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+**Forsight**: You have an **INT**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
 
 **Cautious**: As long as you are over 50% health, you and your opponent cannot **Follow Through**
 

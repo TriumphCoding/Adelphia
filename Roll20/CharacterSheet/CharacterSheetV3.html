@@ -229,8 +229,8 @@
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Growth-Stat-Column-Abbrev">Growth</span></label></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_growth_base_points" value="20+floor(@{character_level}/20)*10-(floor(@{hp_stat_base}/3)+@{str_stat_base}+@{int_stat_base}+@{dex_stat_base}+@{spd_stat_base}+floor(@{luk_stat_base}/2)+@{con_stat_base}+@{wis_stat_base}+floor(@{mov_stat_base}*2 + @{growth_skill_points}))" disabled="true"><input type="hidden" name="attr_growth_skill_points" value="0"></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_growth_creature_type_points" value="23-(floor((@{hp_stat_CT}-8)/3)+@{str_stat_CT}+@{int_stat_CT}+@{dex_stat_CT}+@{spd_stat_CT}+floor(@{luk_stat_CT}/2)+@{con_stat_CT}+@{wis_stat_CT}+floor(@{mov_stat_CT}*2))" disabled="true"></div>
+                        <div class="ClassStatGridItem"><span name="attr_stat_base_points"></span><input type="hidden" name="attr_growth_skill_points" value="0"></div>
+                        <div class="ClassStatGridItem"><span name="attr_stat_creature_type_points"></span></div>
                         <div class="ClassStatGridItem"></div>
                         <div class="ClassStatGridItem"><button type="action" class="PrimaryButton" name="act_RecalculateStats" data-i18n="LevelUp-RecalculateStats-button" >Recalculate</button></div>
                         <div class="ClassStatGridItem"></div>
@@ -238,56 +238,56 @@
                         <div class="ClassStatGridItem"><input type="number" name="attr_hp_stat_base" step="1" min="0" max="18" value="0" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_hp_stat_CT" step="1" min="-5" max="15" value="10" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_hp_stat_skill" step="1" min="-5" max="15" value="10" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_hp_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_hp_stat_total" value="@{hp_stat_base}+@{hp_stat_CT}+@{hp_stat_growth}+@{hp_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_hp_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_hp_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_str_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_str_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_str_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_str_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_str_stat_total" value="@{str_stat_base}+@{str_stat_CT}+@{str_stat_growth}+@{str_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_str_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_str_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_int_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_int_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_int_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_int_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_int_stat_total" value="@{int_stat_base}+@{int_stat_CT}+@{int_stat_growth}+@{int_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_int_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_int_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_dex_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_dex_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_dex_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_dex_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_dex_stat_total" value="@{dex_stat_base}+@{dex_stat_CT}+@{dex_stat_growth}+@{dex_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_dex_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_dex_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_spd_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_spd_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_spd_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_spd_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_spd_stat_total" value="@{spd_stat_base}+@{spd_stat_CT}+@{spd_stat_growth}+@{spd_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_spd_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_spd_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_luk_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_luk_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_luk_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_luk_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_luk_stat_total" value="@{luk_stat_base}+@{luk_stat_CT}+@{luk_stat_growth}+@{luk_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_luk_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_luk_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_con_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_con_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_con_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_con_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_con_stat_total" value="@{con_stat_base}+@{con_stat_CT}+@{con_stat_growth}+@{con_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_con_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_con_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_wis_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_wis_stat_CT" step="1" min="-5" max="15" value="2" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_wis_stat_skill" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_wis_stat_growth" step="1" value="0" /></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_wis_stat_total" value="@{wis_stat_base}+@{wis_stat_CT}+@{wis_stat_growth}+@{wis_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_wis_stat_growth"></span></div>
+                        <div class="ClassStatGridItem"><span name="attr_wis_stat_total"></span></div>
                         <div class="ClassStatGridItem"><label class="PrimaryLabel"><span data-i18n="MOV-Abbrev-Name">MOV</span></label></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_mov_stat_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_mov_stat_CT" step="1" min="-5" max="15" value="5" /></div>
                         <div class="ClassStatGridItem"><input type="number" name="attr_mov_stat_skill" step="1" value="0" /></div>
                         <div class="ClassStatGridItem"></div>
-                        <div class="ClassStatGridItem"><input type="number" name="attr_mov_stat_total" value="@{mov_stat_base}+@{mov_stat_CT}+@{mov_stat_skill}" disabled="true"/></div>
+                        <div class="ClassStatGridItem"><span name="attr_mov_stat_total"></span></div>
                     </div>
                     <script type="text/worker">
                         const CreatureTypeStat = {
@@ -417,6 +417,40 @@
                                 });
                             });
                         });
+
+                        on("change:hp_stat_base change:hp_stat_CT change:hp_stat_skill change:hp_stat_growth change:str_stat_base change:str_stat_CT change:str_stat_skill change:str_stat_growth change:dex_stat_base change:dex_stat_CT change:dex_stat_skill change:dex_stat_growth change:int_stat_base change:int_stat_CT change:int_stat_skill change:int_stat_growth change:spd_stat_base change:spd_stat_CT change:spd_stat_skill change:spd_stat_growth change:luk_stat_base change:luk_stat_CT change:luk_stat_skill change:luk_stat_growth change:con_stat_base change:con_stat_CT change:con_stat_skill change:con_stat_growth change:wis_stat_base change:wis_stat_CT change:wis_stat_skill change:wis_stat_growth change:BaseClassPoints change:CtClassPoints change:LevelClassPoints change:LevelClassPointsRate change:character_level change:growth_skill_points change:BaseDefaultHP change:mov_stat_base change:mov_stat_CT change:mov_stat_skill", function() {
+                            CalculateStatPointGrid();
+                        });
+
+                        function CalculateStatPointGrid() {
+                            getAttrs([
+                                "hp_stat_base" ,"hp_stat_CT" ,"hp_stat_skill" ,"hp_stat_growth" ,
+                                "str_stat_base","str_stat_CT","str_stat_skill","str_stat_growth",
+                                "dex_stat_base","dex_stat_CT","dex_stat_skill","dex_stat_growth",
+                                "int_stat_base","int_stat_CT","int_stat_skill","int_stat_growth",
+                                "spd_stat_base","spd_stat_CT","spd_stat_skill","spd_stat_growth",
+                                "luk_stat_base","luk_stat_CT","luk_stat_skill","luk_stat_growth",
+                                "con_stat_base","con_stat_CT","con_stat_skill","con_stat_growth",
+                                "wis_stat_base","wis_stat_CT","wis_stat_skill","wis_stat_growth",
+                                "mov_stat_base","mov_stat_CT","mov_stat_skill",
+                                "BaseClassPoints","CtClassPoints","LevelClassPoints","LevelClassPointsRate",
+                                "character_level","growth_skill_points","BaseDefaultHP"
+                            ], function(v) {
+                                setAttrs({ 
+                                    stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
+                                    stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
+                                    hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth)) ,
+                                    str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth)),
+                                    dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth)),
+                                    int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth)),
+                                    spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth)),
+                                    luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth)),
+                                    con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth)),
+                                    wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth)),
+                                    mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill))
+                                });
+                            });
+                        }
                     </script>
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Class Abilities-->
@@ -614,50 +648,50 @@
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Skill-Stat-Column-Abbrev">Skill</span></label></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Total-Stat-Column">Total</span></label></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="Points-Abbrev-Name">Points</span></label></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_growth_base_points" value="35-(@{hp_growth_base}+@{str_growth_base}+@{int_growth_base}+@{dex_growth_base}+@{spd_growth_base}+@{luk_growth_base}+@{con_growth_base}+@{wis_growth_base})" disabled="true"></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_growth_background_points" value="40-(@{hp_growth_bg}+@{str_growth_bg}+@{int_growth_bg}+@{dex_growth_bg}+@{spd_growth_bg}+@{luk_growth_bg}+@{con_growth_bg}+@{wis_growth_bg})" disabled="true"></div>
+                        <div class="GrowthGridItem"><span name="attr_growth_base_points"></span></div>
+                        <div class="GrowthGridItem"><span name="attr_growth_background_points"></span></div>
                         <div class="GrowthGridItem"></div>
                         <div class="GrowthGridItem"></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_hp_growth_base" step="1" min="0" max="18" value="0" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_hp_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_hp_growth_skill" step="1" min="-5" max="15" value="5" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_hp_growth_total" value="@{hp_growth_base}+@{hp_growth_bg}+@{hp_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_hp_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_str_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_str_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_str_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_str_growth_total" value="@{str_growth_base}+@{str_growth_bg}+@{str_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_str_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_int_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_int_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_int_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_int_growth_total" value="@{int_growth_base}+@{int_growth_bg}+@{int_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_int_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_dex_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_dex_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_dex_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_dex_growth_total" value="@{dex_growth_base}+@{dex_growth_bg}+@{dex_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_dex_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_spd_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_spd_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_spd_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_spd_growth_total" value="@{spd_growth_base}+@{spd_growth_bg}+@{spd_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_spd_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_luk_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_luk_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_luk_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_luk_growth_total" value="@{luk_growth_base}+@{luk_growth_bg}+@{luk_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_luk_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_con_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_con_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_con_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_con_growth_total" value="@{con_growth_base}+@{con_growth_bg}+@{con_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_con_growth_total"></span></div>
                         <div class="GrowthGridItem"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_wis_growth_base" step="1" min="0" max="18" value="0" ></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_wis_growth_bg" step="1" min="-5" max="15" value="5" /></div>
                         <div class="GrowthGridItem"><input type="number" name="attr_wis_growth_skill" step="1" min="-5" max="15" value="0" /></div>
-                        <div class="GrowthGridItem"><input type="number" name="attr_wis_growth_total" value="@{wis_growth_base}+@{wis_growth_bg}+@{wis_growth_skill}" disabled="true"/></div>
+                        <div class="GrowthGridItem"><span name="attr_wis_growth_total"></span></div>
                     </div>
                     <!-- Growth Grid Manager -->
                     <script type="text/worker">
@@ -779,6 +813,37 @@
                                 });
                             });
                         });
+                    
+                        on("change:hp_growth_base change:hp_growth_bg change:hp_growth_skill change:str_growth_base change:str_growth_bg change:str_growth_skill change:dex_growth_base change:dex_growth_bg change:dex_growth_skill change:int_growth_base change:int_growth_bg change:int_growth_skill change:spd_growth_base change:spd_growth_bg change:spd_growth_skill change:luk_growth_base change:luk_growth_bg change:luk_growth_skill change:con_growth_base change:con_growth_bg change:con_growth_skill change:wis_growth_base change:wis_growth_bg change:wis_growth_skill change:BaseGrowthPoints change:BackgroundGrowthPoints", function() {
+                            CalculateGrowthPointGrid();
+                        });
+
+                        function CalculateGrowthPointGrid() {
+                            getAttrs([
+                                "hp_growth_base" ,"hp_growth_bg" ,"hp_growth_skill" ,
+                                "str_growth_base","str_growth_bg","str_growth_skill",
+                                "dex_growth_base","dex_growth_bg","dex_growth_skill",
+                                "int_growth_base","int_growth_bg","int_growth_skill",
+                                "spd_growth_base","spd_growth_bg","spd_growth_skill",
+                                "luk_growth_base","luk_growth_bg","luk_growth_skill",
+                                "con_growth_base","con_growth_bg","con_growth_skill",
+                                "wis_growth_base","wis_growth_bg","wis_growth_skill",
+                                "BaseGrowthPoints","BackgroundGrowthPoints"
+                            ], function(v) {
+                                setAttrs({
+                                    growth_base_points: (v.BaseGrowthPoints - v.hp_growth_base - v.str_growth_base - v.dex_growth_base - v.int_growth_base - v.spd_growth_base - v.luk_growth_base - v.con_growth_base - v.wis_growth_base),
+                                    growth_background_points: (v.BackgroundGrowthPoints - v.hp_growth_bg - v.str_growth_bg - v.dex_growth_bg - v.int_growth_bg - v.spd_growth_bg - v.luk_growth_bg - v.con_growth_bg - v.wis_growth_bg),
+                                    hp_growth_total:  (Number(v.hp_growth_base)  + Number(v.hp_growth_bg)  + Number(v.hp_growth_skill)) ,
+                                    str_growth_total: (Number(v.str_growth_base) + Number(v.str_growth_bg) + Number(v.str_growth_skill)),
+                                    dex_growth_total: (Number(v.dex_growth_base) + Number(v.dex_growth_bg) + Number(v.dex_growth_skill)),
+                                    int_growth_total: (Number(v.int_growth_base) + Number(v.int_growth_bg) + Number(v.int_growth_skill)),
+                                    spd_growth_total: (Number(v.spd_growth_base) + Number(v.spd_growth_bg) + Number(v.spd_growth_skill)),
+                                    luk_growth_total: (Number(v.luk_growth_base) + Number(v.luk_growth_bg) + Number(v.luk_growth_skill)),
+                                    con_growth_total: (Number(v.con_growth_base) + Number(v.con_growth_bg) + Number(v.con_growth_skill)),
+                                    wis_growth_total: (Number(v.wis_growth_base) + Number(v.wis_growth_bg) + Number(v.wis_growth_skill))
+                                });
+                            });
+                        }
                     </script>
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Growth Rolls-->
@@ -918,6 +983,7 @@
                             }
                         });
                     };
+
                 </script>
             </div>
             <div class="SheetPageNotes"> <!-- Character Notes -->
@@ -948,6 +1014,20 @@
                     <span data-i18n="Settings-NoBadLevels-Description">Guarentees 3 stat growths per level, but not what they are</span>
                     <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
                     <span data-i18n="Settings-NoBadStats-Description">Not growing a stat increases it's chance of growing the next level.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_BaseGrowthPoints" step="1" min="0" value="35" ><span data-i18n="Settings-StartingGrowth-name-n"> Base Growth Points</span></label>
+                    <span data-i18n="Settings-BaseGrowthPoints-Description">The systems Base Growth Points.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_BackgroundGrowthPoints" step="1" min="0" value="40" ><span data-i18n="Settings-BackgroundGrowth-name-n"> Background Growth Points</span></label>
+                    <span data-i18n="Settings-BackgroundGrowthPoints-Description">The additional Growth Points allocated to your background.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_BaseClassPoints" step="1" min="0" value="20" ><span data-i18n="Settings-StartingClass-name-n"> Base Class Points</span></label>
+                    <span data-i18n="Settings-BaseClassPoints-Description">The systems Base Class Points.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_BaseDefaultHP" step="1" min="0" value="10" ><span data-i18n="Settings-BaseDefaultHP-name-n"> Base HP Points</span></label>
+                    <span data-i18n="Settings-BaseDefaultHP-Description">The base Creature Type HP. Used to set the minimum HP value for 0 HP Class Points investment.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_CtClassPoints" step="1" min="0" value="23" ><span data-i18n="Settings-CtClass-name-n"> Creature Type Class Points</span></label>
+                    <span data-i18n="Settings-CtClassPoints-Description">The systems Class Points allocated to Creature Type. Used for Creating or Editing Custom Creatures.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPoints" step="1" min="0" value="10" ><span data-i18n="Settings-BonusClass-name-n"> Class Points Growth</span></label>
+                    <span data-i18n="Settings-attr_LevelClassPoints-Description">Gain this many additional Class Points.</span>
+                    <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPointsRate" step="1" min="1" value="20" ><span data-i18n="Settings-BonusClassRate-name-n"> Class Points Growth Rate</span></label>
+                    <span data-i18n="Settings-attr_LevelClassPointsRate-Description">Gain Additional Class Points at these level milestones.</span>
                 </div>
             </div>
         </div>

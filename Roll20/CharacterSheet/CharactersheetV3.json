@@ -182,5 +182,19 @@
     "Settings-NoBadLevels-name-n": "No Bad Levels",
     "Settings-NoBadLevels-Description": "Guarentees 3 stat growths per level, but not what they are",
     "Settings-NoBadStats-name-n": "No Bad Stats",
-    "Settings-NoBadStats-Description": "Not growing a stat increases it's chance of growing the next level."
+    "Settings-NoBadStats-Description": "Not growing a stat increases it's chance of growing the next level.",
+    "Settings-StartingGrowth-name-n": "Base Growth Points",
+    "Settings-BaseGrowthPoints-Description": "The systems Base Growth Points.",
+    "Settings-BackgroundGrowth-name-n": "Background Growth Points",
+    "Settings-BackgroundGrowthPoints-Description": "The additional Growth Points allocated to your background.",
+    "Settings-StartingClass-name-n": "Base Class Points",
+    "Settings-BaseClassPoints-Description": "The systems Base Class Points.",
+    "Settings-BaseDefaultHP-name-n": "Base HP Points",
+    "Settings-BaseDefaultHP-Description": "The base Creature Type HP. Used to set the minimum HP value for 0 HP Class Points investment.",
+    "Settings-CtClass-name-n": "Creature Type Class Points",
+    "Settings-CtClassPoints-Description": "The systems Class Points allocated to Creature Type. Used for Creating or Editing Custom Creatures.",
+    "Settings-BonusClass-name-n": "Class Points Growth",
+    "Settings-attr_LevelClassPoints-Description": "Gain this many additional Class Points.",
+    "Settings-BonusClassRate-name-n": "Class Points Growth Rate",
+    "Settings-attr_LevelClassPointsRate-Description": "Gain Additional Class Points at these level milestones."
 }

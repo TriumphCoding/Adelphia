@@ -195,7 +195,7 @@
 
 
 /*Items*/
-.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] {
+.SheetPageItem > .repcontrol[data-groupname="repeating_items"] {
   grid-row: span 3;
   grid-column: span 2;
   outline: auto;
@@ -207,7 +207,7 @@
   grid-template-rows: auto;
 }
 
-.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] > .repitem {
+.SheetPageItem > .repcontrol[data-groupname="repeating_items"] > .repitem {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -218,7 +218,7 @@
   margin-bottom: 2px;
 }
 
-.charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"] {
+.SheetPageItem > .repcontrol[data-groupname="repeating_items"] {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -250,48 +250,48 @@
   text-align: center;
 }
 
-.charsheet .sheet-ClassSkillsList-Check {
+.charsheet .sheet-classskillslist-Check {
   appearance: none;
 }
 
-.charsheet .sheet-ClassSkillsList-Check:checked::before {
+.charsheet .sheet-classskillslist-Check:checked::before {
   content: ' ↴ ';
 }
 
-.charsheet .sheet-ClassSkillsList-Check:not(:checked)::before {
+.charsheet .sheet-classskillslist-Check:not(:checked)::before {
   content: ' → ';
 }
 
-.sheet-ClassSkillsList-Short,
-.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Long {
+.sheet-classskillslist-Short,
+.charsheet .sheet-classskillslist-Check:checked ~ .sheet-classskillslist-Long {
   display: block;
 }
 
-.charsheet .sheet-ClassSkillsList-Long,
-.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Short {
+.charsheet .sheet-classskillslist-Long,
+.charsheet .sheet-classskillslist-Check:checked ~ .sheet-classskillslist-Short {
   display: none;
 }
 
 /*Skills*/
-.charsheet .sheet-CombatSkillsList-Check {
+.charsheet .sheet-combatskillslist-Check {
   appearance: none;
 }
 
-.charsheet .sheet-CombatSkillsList-Check:checked::before {
+.charsheet .sheet-combatskillslist-Check:checked::before {
   content: ' ↴ ';
 }
 
-.charsheet .sheet-CombatSkillsList-Check:not(:checked)::before {
+.charsheet .sheet-combatskillslist-Check:not(:checked)::before {
   content: ' → ';
 }
 
-.sheet-CombatSkillsList-Short,
-.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Long {
+.sheet-combatskillslist-Short,
+.charsheet .sheet-combatskillslist-Check:checked ~ .sheet-combatskillslist-Long {
   display: block;
 }
 
-.charsheet .sheet-CombatSkillsList-Long,
-.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Short {
+.charsheet .sheet-combatskillslist-Long,
+.charsheet .sheet-combatskillslist-Check:checked ~ .sheet-combatskillslist-Short {
   display: none;
 }
 
@@ -412,7 +412,7 @@ label.GreatSkillLegendary { display: none; }
   text-align: center;
 }
 
-.repcontainer[data-groupname=repeating_CharacterLevel] {
+.repcontainer[data-groupname=repeating_combatskillslist] {
   display: table;
   outline: none;
   outline-width: 0;
@@ -420,7 +420,7 @@ label.GreatSkillLegendary { display: none; }
   max-height: fit-content;
 }
 
-.RepeatingCharacterLevelSection {
+.RepeatingcombatskillslistSection {
   display: table-row;
   outline: none;
   outline-width: 0;
@@ -428,7 +428,7 @@ label.GreatSkillLegendary { display: none; }
   max-height: fit-content;
 }
 
-.RepeatingCharacterLevelSectionHeader {
+.RepeatingcombatskillslistSectionHeader {
   display: none;
   outline: none;
   outline-width: 0;
@@ -436,7 +436,7 @@ label.GreatSkillLegendary { display: none; }
   max-height: fit-content;
 }
 
-.LevelupCharacterLevelGridItemHeader {
+.LevelupcombatskillslistGridItemHeader {
   display: none;
   outline: auto;
   outline-width: thin;
@@ -446,7 +446,7 @@ label.GreatSkillLegendary { display: none; }
   text-align: center;
 }
 
-.LevelupCharacterLevelGridItem {
+.LevelupcombatskillslistGridItem {
   display: table-cell;
   outline: auto;
   outline-width: thin;
@@ -456,15 +456,15 @@ label.GreatSkillLegendary { display: none; }
   text-align: center;
 }
 
-.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader {
+.repcontainer[data-groupname=repeating_combatskillslist] > .repitem:first-child > .RepeatingcombatskillslistSectionHeader {
   display: table-row;
 }
 
-.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader > .LevelupCharacterLevelGridItemHeader {
+.repcontainer[data-groupname=repeating_combatskillslist] > .repitem:first-child > .RepeatingcombatskillslistSectionHeader > .LevelupcombatskillslistGridItemHeader {
   display: table-cell;
 }
 
-.repcontrol[data-groupname=repeating_characterlevel]  {
+.repcontrol[data-groupname=repeating_combatskillslist]  {
   display: none;
   visibility: hidden;
 }

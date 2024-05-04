@@ -68,7 +68,7 @@
             <div class="SheetPageCharacter"> <!-- Character Sheet Front Page-->
                 <div class="CharacterSheetFlexObject"> <!-- Quirks -->
                     <h1 class="PrimaryTitle" data-i18n="quirks-title-u">Quirks</h1>
-                    <fieldset class="repeating_QuirkList">
+                    <fieldset class="repeating_quirklist">
                         <div class="CharacterQuirkSubgrid">
                             <button type="roll" class="PrimaryButton" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
                             <input type="text" class="PrimaryEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
@@ -123,7 +123,7 @@
                         <div class="PrimaryLabel"><label data-i18n="stat-change-column-turns">Turns</label></div>
                         <div class="PrimaryLabel"><label data-i18n="stat-change-column-notes">Notes</label></div>
                     </div>
-                    <fieldset class="repeating_TempStatList">
+                    <fieldset class="repeating_tempstatlist">
                         <div class="CharacterTempStatAdjustmentSubgrid">
                             <input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/>
                             <select name="attr_adjustment-stat" class="PrimaryDropdown">
@@ -197,7 +197,7 @@
                     <h1 class="PrimaryTitle" data-i18n="Item-Creation-title-u">Item Creation</h1>
                 </div>
                 <br>
-                <fieldset class="repeating_items RepeatingItemSection">
+                <fieldset class="repeating_items">
                     <div>
                         <div>
                             <h2 data-i18n="Item-Title">Item</h2>
@@ -455,9 +455,9 @@
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Class Abilities-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Abilities</h1>
-                    <input type="checkbox" class="sheet-ClassSkillsList-Check" name="attr_ClassSkillsList-Check" value="0" />
-                    <div class="sheet-ClassSkillsList-Short">
-                        <fieldset class="repeating_ClassSkillsList">
+                    <input type="checkbox" class="sheet-classskillslist-Check" name="attr_classskillslist-Check" value="0" />
+                    <div class="sheet-classskillslist-Short">
+                        <fieldset class="repeating_classskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
                                 <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
                                 <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
@@ -471,8 +471,8 @@
                             </label>
                         </fieldset>
                     </div>
-                    <div class="sheet-ClassSkillsList-Long">
-                        <fieldset class="repeating_ClassSkillsList">
+                    <div class="sheet-classskillslist-Long">
+                        <fieldset class="repeating_classskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
                                 <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
                                 <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
@@ -494,9 +494,10 @@
             <div class="SheetPageSkills"> <!-- Character Skills Creation-->
                 <div class="CharacterSheetFlexObject"> <!-- Combat Skills-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
-                    <input type="checkbox" class="sheet-CombatSkillsList-Check" name="attr_CombatSkillsList-Check" value="0" />
-                    <div class="sheet-CombatSkillsList-Short">
-                        <fieldset class="repeating_CombatSkillsList">
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span>: <span name="attr_CombatSkillPointsAvailable"></span></label>
+                    <input type="checkbox" class="sheet-combatskillslist-Check" name="attr_combatskillslist-Check" value="0" />
+                    <div class="sheet-combatskillslist-Short">
+                        <fieldset class="repeating_combatskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
@@ -534,8 +535,8 @@
                                 </select>
                         </fieldset>
                     </div>
-                    <div class="sheet-CombatSkillsList-Long">
-                        <fieldset class="repeating_CombatSkillsList">
+                    <div class="sheet-combatskillslist-Long">
+                        <fieldset class="repeating_combatskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
@@ -622,7 +623,6 @@
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Great Skills-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Great-Skills-title-u">Great Skills</h1>
-                    <input type="checkbox" class="sheet-CombatGreatSkillsList-Check" name="attr_CombatGreatSkillsList-Check" value="0" />
                     <input type="hidden" class="GreatSkillSelector" name="attr_character_level">
                     <label class="PrimaryLabel GreatSkillHeroic"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
                         <option value="None" selected="selected" data-i18n="Great-Skill-None">None</option>
@@ -657,7 +657,8 @@
                         <option value="Resistant Block" selected="selected" data-i18n="Great-Skill-Resistant Block">Resistant Block</option>
                         </select>
                     </label>
-                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Level">Level</span>: <select name="attr_GreatSkill"></select>
+                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Level">Level</span>: <span name="attr_GreatSkillLevel"></span></label>
+                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_GreatSkillDescription"></textarea></label>
                 </div>
             </div>
             <div class="SheetPageGrowth"> <!-- Character Growth Potential-->
@@ -882,43 +883,43 @@
                 <div class="CharacterSheetFlexObject"> <!-- Growth Rolls-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Growth-Rolls-title-u">Growth Rolls</h1>
                     <div><label class="PrimaryLabel"><span data-i18n="Level-u">Level</span>: <input type="text" class="PrimaryEntry" name="attr_character_level" /></label></div>
-                    <fieldset class="repeating_CharacterLevel">
-                        <div class="RepeatingCharacterLevelSectionHeader">
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
-                            <div class="LevelupCharacterLevelGridItemHeader"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level<br>Up</button></div>
+                    <fieldset class="repeating_characterlevel">
+                        <div class="RepeatingcharacterlevelSectionHeader">
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="STR-Abbrev-Name">STR</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="INT-Abbrev-Name">INT</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="DEX-Abbrev-Name">DEX</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="SPD-Abbrev-Name">SPD</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
+                            <div class="LevelupcharacterlevelGridItemHeader"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level<br>Up</button></div>
                         </div>
-                        <div class="RepeatingCharacterLevelSection">
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_str_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_int_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_dex_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_spd_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_luk_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_con_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_wis_growth" step="1" min="0" max="18" /></div>
-                            <div class="LevelupCharacterLevelGridItem"><button type="action" class="PrimaryButton" name="act_RerollLevel" data-i18n="LevelUp-Reroll-button" >Reroll</button></div>
-                            <div class="LevelupCharacterLevelGridItem"><button type="action" class="PrimaryButton" name="act_DeleteLevel" data-i18n="LevelUp-Delete-button" >Delete</button></div>
+                        <div class="RepeatingcharacterlevelSection">
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_str_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_int_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_dex_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_spd_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_luk_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_con_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><input type="number" name="attr_wis_growth" step="1" min="0" max="18" /></div>
+                            <div class="LevelupcharacterlevelGridItem"><button type="action" class="PrimaryButton" name="act_RerollLevel" data-i18n="LevelUp-Reroll-button" >Reroll</button></div>
+                            <div class="LevelupcharacterlevelGridItem"><button type="action" class="PrimaryButton" name="act_DeleteLevel" data-i18n="LevelUp-Delete-button" >Delete</button></div>
                         </div>
                     </fieldset>
                 </div>
                 <!-- Level Up Grid Manager -->
                 <script type="text/worker">
-                    on("change:repeating_CharacterLevel sheet:opened", function() { 
+                    on("change:repeating_characterlevel sheet:opened", function() { 
                         SetLevel();
                     });
 
-                    on("clicked:repeating_CharacterLevel", function(eventInfo) {
+                    on("clicked:repeating_characterlevel", function(eventInfo) {
                         const rowid = eventInfo.sourceAttribute.split('_')[2];
                         switch(eventInfo.htmlAttributes.name) {
                             case "act_DeleteLevel":                
-                                removeRepeatingRow(`repeating_CharacterLevel_${rowid}`);
+                                removeRepeatingRow(`repeating_characterlevel_${rowid}`);
                                 break;
                             case "act_RerollLevel":
                                 RollLevel(rowid);
@@ -990,20 +991,20 @@
                                 }
                             }
                             setAttrs({
-                                [`repeating_CharacterLevel_${rowid}_hp_growth`]: vGrowthRoll.hp,
-                                [`repeating_CharacterLevel_${rowid}_str_growth`]: vGrowthRoll.str,
-                                [`repeating_CharacterLevel_${rowid}_dex_growth`]: vGrowthRoll.dex,
-                                [`repeating_CharacterLevel_${rowid}_int_growth`]: vGrowthRoll.int,
-                                [`repeating_CharacterLevel_${rowid}_spd_growth`]: vGrowthRoll.spd,
-                                [`repeating_CharacterLevel_${rowid}_luk_growth`]: vGrowthRoll.luk,
-                                [`repeating_CharacterLevel_${rowid}_con_growth`]: vGrowthRoll.con,
-                                [`repeating_CharacterLevel_${rowid}_wis_growth`]: vGrowthRoll.wis
+                                [`repeating_characterlevel_${rowid}_hp_growth`]: vGrowthRoll.hp,
+                                [`repeating_characterlevel_${rowid}_str_growth`]: vGrowthRoll.str,
+                                [`repeating_characterlevel_${rowid}_dex_growth`]: vGrowthRoll.dex,
+                                [`repeating_characterlevel_${rowid}_int_growth`]: vGrowthRoll.int,
+                                [`repeating_characterlevel_${rowid}_spd_growth`]: vGrowthRoll.spd,
+                                [`repeating_characterlevel_${rowid}_luk_growth`]: vGrowthRoll.luk,
+                                [`repeating_characterlevel_${rowid}_con_growth`]: vGrowthRoll.con,
+                                [`repeating_characterlevel_${rowid}_wis_growth`]: vGrowthRoll.wis
                             });
                         });
                     };
 
                     function SetLevel() {
-                        getSectionIDs("repeating_CharacterLevel", function(idarray) {
+                        getSectionIDs("repeating_characterlevel", function(idarray) {
                             setAttrs({
                                 character_level: idarray.length
                             });
@@ -1040,27 +1041,42 @@
             </div>
             <div class="SheetPageConfiguration"> <!-- Sheet Configuration -->
                 <div class="CharacterSheetFlexObject">
-                    <h1 class="PrimaryTitle" data-i18n="Character-Config-title-u">Sheet Config</h1>
-                    <label class="PrimaryLabel"><input type="checkbox" name="attr_StaticLevels" value="1" ><span data-i18n="Settings-StaticLevels-name-n"> Static Levels</span></label>
-                    <span data-i18n="Settings-StaticLevels-description">Instead of rolling your stats, you gain stat growths at a regular pace.</span>
-                    <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadLevels" value="1" ><span data-i18n="Settings-NoBadLevels-name-n"> No Bad Levels</span></label>
-                    <span data-i18n="Settings-NoBadLevels-Description">Guarentees 3 stat growths per level, but not what they are</span>
-                    <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
-                    <span data-i18n="Settings-NoBadStats-Description">Not growing a stat increases it's chance of growing the next level.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_BaseGrowthPoints" step="1" min="0" value="35" ><span data-i18n="Settings-StartingGrowth-name-n"> Base Growth Points</span></label>
-                    <span data-i18n="Settings-BaseGrowthPoints-Description">The systems Base Growth Points.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_BackgroundGrowthPoints" step="1" min="0" value="40" ><span data-i18n="Settings-BackgroundGrowth-name-n"> Background Growth Points</span></label>
-                    <span data-i18n="Settings-BackgroundGrowthPoints-Description">The additional Growth Points allocated to your background.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_BaseClassPoints" step="1" min="0" value="20" ><span data-i18n="Settings-StartingClass-name-n"> Base Class Points</span></label>
-                    <span data-i18n="Settings-BaseClassPoints-Description">The systems Base Class Points.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_BaseDefaultHP" step="1" min="0" value="10" ><span data-i18n="Settings-BaseDefaultHP-name-n"> Base HP Points</span></label>
-                    <span data-i18n="Settings-BaseDefaultHP-Description">The base Creature Type HP. Used to set the minimum HP value for 0 HP Class Points investment.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_CtClassPoints" step="1" min="0" value="23" ><span data-i18n="Settings-CtClass-name-n"> Creature Type Class Points</span></label>
-                    <span data-i18n="Settings-CtClassPoints-Description">The systems Class Points allocated to Creature Type. Used for Creating or Editing Custom Creatures.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPoints" step="1" min="0" value="10" ><span data-i18n="Settings-BonusClass-name-n"> Class Points Growth</span></label>
-                    <span data-i18n="Settings-attr_LevelClassPoints-Description">Gain this many additional Class Points.</span>
-                    <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPointsRate" step="1" min="1" value="20" ><span data-i18n="Settings-BonusClassRate-name-n"> Class Points Growth Rate</span></label>
-                    <span data-i18n="Settings-attr_LevelClassPointsRate-Description">Gain Additional Class Points at these level milestones.</span>
+                  <h1 class="PrimaryTitle" data-i18n="Character-Config-Config-title-u">Game Config</h1>
+                  <label class="PrimaryLabel"><input type="checkbox" name="attr_StaticLevels" value="1" ><span data-i18n="Settings-StaticLevels-name-n"> Static Levels</span></label>
+                  <span data-i18n="Settings-StaticLevels-description">Instead of rolling your stats, you gain stat growths at a regular pace.</span>
+                  <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadLevels" value="1" ><span data-i18n="Settings-NoBadLevels-name-n"> No Bad Levels</span></label>
+                  <span data-i18n="Settings-NoBadLevels-Description">Guarentees 3 stat growths per level, but not what they are</span>
+                  <label class="PrimaryLabel"><input type="checkbox" name="attr_NoBadStats" value="1" ><span data-i18n="Settings-NoBadStats-name-n"> No Bad Stats</span></label>
+                  <span data-i18n="Settings-NoBadStats-Description">Not growing a stat increases it's chance of growing the next level.</span>
+                </div>
+                <div class="CharacterSheetFlexObject">
+                  <h1 class="PrimaryTitle" data-i18n="Character-Growth-Config-title-u">Growth Config</h1>
+                  <label class="PrimaryLabel"><input type="number" name="attr_BaseGrowthPoints" step="1" min="0" value="35" ><span data-i18n="Settings-StartingGrowth-name-n"> Base Growth Points</span></label>
+                  <span data-i18n="Settings-BaseGrowthPoints-Description">The systems Base Growth Points.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_BackgroundGrowthPoints" step="1" min="0" value="40" ><span data-i18n="Settings-BackgroundGrowth-name-n"> Background Growth Points</span></label>
+                  <span data-i18n="Settings-BackgroundGrowthPoints-Description">The additional Growth Points allocated to your background.</span>
+                </div>
+                <div class="CharacterSheetFlexObject">
+                  <h1 class="PrimaryTitle" data-i18n="Character-Class-Config-title-u">Class Config</h1>
+                  <label class="PrimaryLabel"><input type="number" name="attr_BaseDefaultHP" step="1" min="0" value="10" ><span data-i18n="Settings-BaseDefaultHP-name-n"> Base HP Points</span></label>
+                  <span data-i18n="Settings-BaseDefaultHP-Description">The base Creature Type HP. Used to set the minimum HP value for 0 HP Class Points investment.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_BaseClassPoints" step="1" min="0" value="20" ><span data-i18n="Settings-StartingClass-name-n"> Base Class Points</span></label>
+                  <span data-i18n="Settings-BaseClassPoints-Description">The systems Base Class Points.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_CtClassPoints" step="1" min="0" value="23" ><span data-i18n="Settings-CtClass-name-n"> Creature Type Class Points</span></label>
+                  <span data-i18n="Settings-CtClassPoints-Description">The systems Class Points allocated to Creature Type. Used for Creating or Editing Custom Creatures.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPoints" step="1" min="0" value="10" ><span data-i18n="Settings-BonusClass-name-n"> Class Points Growth</span></label>
+                  <span data-i18n="Settings-attr_LevelClassPoints-Description">Gain this many additional Class Points.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_LevelClassPointsRate" step="1" min="1" value="20" ><span data-i18n="Settings-BonusClassRate-name-n"> Class Points Growth Rate</span></label>
+                  <span data-i18n="Settings-attr_LevelClassPointsRate-Description">Gain Additional Class Points at these level milestones.</span>
+                </div>
+                <div class="CharacterSheetFlexObject">
+                  <h1 class="PrimaryTitle" data-i18n="Character-Skill-Config-title-u">Skill Config</h1>
+                  <label class="PrimaryLabel"><input type="number" name="attr_BaseCombatPoints" step="1" min="0" value="0" ><span data-i18n="Settings-StartingCombat-name-n"> Base Combat Points</span></label>
+                  <span data-i18n="Settings-BaseCombatPoints-Description">The systems Base Combat Points.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_LevelCombatPoints" step="1" min="0" value="1" ><span data-i18n="Settings-BonusCombat-name-n"> Combat Points Growth</span></label>
+                  <span data-i18n="Settings-attr_LevelCombatPoints-Description">Gain this many additional Combat Points.</span>
+                  <label class="PrimaryLabel"><input type="number" name="attr_LevelCombatPointsRate" step="1" min="1" value="5" ><span data-i18n="Settings-BonusCombatRate-name-n"> Combat Points Growth Rate</span></label>
+                  <span data-i18n="Settings-attr_LevelCombatPointsRate-Description">Gain Additional Combat Points at these level milestones.</span>
                 </div>
             </div>
         </div>
@@ -2483,10 +2499,10 @@ function CalculateStats() {
         "con":0,
         "wis":0
     };
-    getSectionIDs("repeating_CharacterLevel", function(idarray) {
+    getSectionIDs("repeating_characterlevel", function(idarray) {
         StatList.forEach(stat => {
             idarray.forEach(rowid => {
-                var LevelRoll = `repeating_CharacterLevel_${rowid}_${stat}_growth`;
+                var LevelRoll = `repeating_characterlevel_${rowid}_${stat}_growth`;
                 var GrowthEntryBase = `${stat}_growth_base`;
                 var GrowthEntryBackground = `${stat}_growth_bg`;
                 var GrowthEntrySkill = `${stat}_growth_skill`;
@@ -2536,10 +2552,10 @@ function CalculateSkillStats() {
         "con":0,
         "wis":0
     };
-    getSectionIDs("repeating_ClassSkillsList", function(idarray) {
+    getSectionIDs("repeating_classskillslist", function(idarray) {
         StatList.forEach(stat => {
             idarray.forEach(rowid => {
-                let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
+                let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
                 getAttrs([SkillName], function(values) {
                     let SkillNameValue = values[SkillName];
                     StatChanges[stat] = parseInt(StatChanges[stat]) + parseInt(ClassSkills[SkillNameValue][stat]);
@@ -2552,8 +2568,8 @@ function CalculateSkillStats() {
             });
         });
         idarray.forEach(rowid => {
-            let SkillName = `repeating_ClassSkillsList_${rowid}_ClassSkill`;
-            let SkillCost = `repeating_ClassSkillsList_${rowid}_ClassSkillCost`;
+            let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
+            let SkillCost = `repeating_classskillslist_${rowid}_ClassSkillCost`;
             getAttrs([SkillName], function(values) {
                 let SkillNameValue = values[SkillName];
                 StatChanges["mov"] = parseInt(StatChanges["mov"]) + parseInt(ClassSkills[SkillNameValue]["mov"]);
@@ -2565,41 +2581,64 @@ function CalculateSkillStats() {
             });
         });
         CalculateStats();
+        CalculateCombatSkillPoints();
     });
 };
 
-on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeating_CharacterLevel", function() {
+function CalculateCombatSkillPoints() {
+  getSectionIDs("repeating_classskillslist", function(ClassSkillArray) {
+    getSectionIDs("repeating_combatskillslist", function(CombatSkillArray) {
+      const GetArray = ["BaseCombatPoints","LevelCombatPoints","LevelCombatPointsRate","character_level"];
+      ClassSkillArray.forEach(rowid => {
+        GetArray.push(`repeating_classskillslist_${rowid}_ClassSkill`)
+      });
+      CombatSkillArray.forEach(rowid => {
+        GetArray.push(`repeating_combatskillslist_${rowid}_CombatSkillLevel`)
+      });
+      getAttrs(GetArray, function(v) {
+        var SkillPoints = Math.floor(Number(v["character_level"]) * Number(v["LevelCombatPoints"]) / Number(v["LevelCombatPointsRate"])) + Number(v["BaseCombatPoints"])
+        GetArray.forEach(i => {
+          if (i.includes("repeating_classskillslist_") && v[i] == "Combat Skill" ) { SkillPoints = SkillPoints + 1; }
+          if (i.includes("repeating_combatskillslist_") ) { SkillPoints = SkillPoints - Number(v[i]); }
+        });
+        setAttrs({
+          [`CombatSkillPointsAvailable`]: SkillPoints
+        });
+      });
+    });
+  });
+};
+
+on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeating_characterlevel", function() {
     CalculateStats();
 });
 
-on("change:repeating_ClassSkillsList:ClassSkill", function(eventInfo) {
-    getAttrs(["repeating_ClassSkillsList_ClassSkill"], function(values) {
-        let SkillName = values.repeating_ClassSkillsList_ClassSkill;
+on("change:repeating_classskillslist:ClassSkill", function(eventInfo) {
+    getAttrs(["repeating_classskillslist_ClassSkill"], function(values) {
+        let SkillName = values.repeating_classskillslist_ClassSkill;
         setAttrs({
-            repeating_ClassSkillsList_ClassSkillCost: ClassSkills[SkillName]["Cost"],
-            repeating_ClassSkillsList_ClassSkillDescription: ClassSkills[SkillName]["Description"],
-            repeating_ClassSkillsList_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
+            repeating_classskillslist_ClassSkillCost: ClassSkills[SkillName]["Cost"],
+            repeating_classskillslist_ClassSkillDescription: ClassSkills[SkillName]["Description"],
+            repeating_classskillslist_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
         });
     });
     CalculateSkillStats();
 });
 
 on("change:GreatSkill", function(eventInfo) {
-    getAttrs(["repeating_ClassSkillsList_ClassSkill"], function(values) {
-        let SkillName = values.repeating_ClassSkillsList_ClassSkill;
+    getAttrs(["GreatSkill"], function(values) {
+        let SkillName = values.GreatSkill;
         setAttrs({
-            repeating_ClassSkillsList_ClassSkillCost: ClassSkills[SkillName]["Cost"],
-            repeating_ClassSkillsList_ClassSkillDescription: ClassSkills[SkillName]["Description"],
-            repeating_ClassSkillsList_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
+          GreatSkillLevel: GreatSkills[SkillName]["Level"],
+          GreatSkillDescription: GreatSkills[SkillName]["Description"]
         });
     });
-    CalculateSkillStats();
 });
 
-on("change:repeating_CombatSkillsList:CombatSkill change:repeating_CombatSkillsList:CombatSkillLevel", function(eventInfo) {
-    getAttrs(["repeating_CombatSkillsList_CombatSkill","repeating_CombatSkillsList_CombatSkillLevel"], function(values) {
-        let SkillName = values.repeating_CombatSkillsList_CombatSkill;
-        let CurrentSkillLevel = values.repeating_CombatSkillsList_CombatSkillLevel;
+on("change:repeating_combatskillslist:CombatSkill change:repeating_combatskillslist:CombatSkillLevel", function(eventInfo) {
+    getAttrs(["repeating_combatskillslist_CombatSkill","repeating_combatskillslist_CombatSkillLevel"], function(values) {
+        let SkillName = values.repeating_combatskillslist_CombatSkill;
+        let CurrentSkillLevel = values.repeating_combatskillslist_CombatSkillLevel;
         var StatChoice = 0;
         var WeaponChoice = 0;
         let SelectorChoice = CombatSkills[SkillName]["Choice"];
@@ -2609,11 +2648,11 @@ on("change:repeating_CombatSkillsList:CombatSkill change:repeating_CombatSkillsL
             default: break;
         }
         setAttrs({
-            repeating_CombatSkillsList_CombatSkillLevel: Math.min(CurrentSkillLevel, CombatSkills[SkillName]["MaxLevel"]), 
-            repeating_CombatSkillsList_CombatSkillDescription: CombatSkills[SkillName]["Description"],
-            repeating_CombatSkillsList_CombatSkillEffect: CombatSkills[SkillName]["Effect"],
-            repeating_CombatSkillsList_StatCombatSkillSelectorDisplay: StatChoice,
-            repeating_CombatSkillsList_WeaponCombatSkillSelectorDisplay: WeaponChoice
+            repeating_combatskillslist_CombatSkillLevel: Math.min(CurrentSkillLevel, CombatSkills[SkillName]["MaxLevel"]), 
+            repeating_combatskillslist_CombatSkillDescription: CombatSkills[SkillName]["Description"],
+            repeating_combatskillslist_CombatSkillEffect: CombatSkills[SkillName]["Effect"],
+            repeating_combatskillslist_StatCombatSkillSelectorDisplay: StatChoice,
+            repeating_combatskillslist_WeaponCombatSkillSelectorDisplay: WeaponChoice
         });
     });
     CalculateSkillStats();

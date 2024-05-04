@@ -1,0 +1,24 @@
+Name,Level,Description,ActivationStat,ActivationMultiplier,EffectPower,Effect
+Moon Strike,Epic,"Your Strikes have a DEX% to reduce enemy defence by 1/2.",DEX,1,.5,Moon
+Sun Strike,Epic,"Your Strikes have a DEX% to recover HP equal to 1/2 damage dealt.",DEX,1,.5,Sun
+Brave Strike,Epic,"Your Strikes have a SPD% to trigger an additional time.",SPD,1,1,Brave
+Pierce Strike,Epic,"Your Strikes have a STR% to deal STR/2 additional damage",SPD,1,.5,Heavy
+Vengeful Strike,Epic,"Your Strikes have a CON% to deal your missing HP/2 undefensible damage",CON,1,.5,Vengence
+Charged Magic,Epic,"When you Engage with an opponent, you have an INT% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",INT,1,1,Blast
+Waiting Block,Epic,"When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive by 1/2.",WIS,1,.5,Shield
+Lunar Impact,Legendary,"Your Strikes have a DEX% chance to ignore enemy defence.",DEX,1,1,Moon
+Lunar Strike,Legendary,"Your Strikes have a DEXx2% chance to reduce enemy Defense by 1/2.",DEX,2,.5,Moon
+Solar Impact,Legendary,"Your Strikes have a DEX% chance to recover HP equal to the damage you deal.",DEX,1,1,Sun
+Solar Strike,Legendary,"Your Strikes have a DEXx2% chance to recover HP equal to 1/2 the damage you deal.",DEX,2,.5,Sun
+Astral Impact,Legendary,"Your Strikes have a DEX/2% ignore enemy defense and recover HP equal to damage dealt.",DEX,.5,1,Moon Sun
+Astral Strike,Legendary,"Your Strikes have a DEX% chance to reduce enemy defence by 1/2, and recover HP equal to 1/2 damage dealt.",DEX,1,.5,Moon Sun
+Hero Impact,Legendary,"Your Strikes have a SPD% to trigger 3 additional times.",SPD,1,3,Brave
+Hero Strike,Legendary,"Your Strikes have a SPDx2% to trigger an additional time.",SPD,2,1,Brave
+Colossal Impact,Legendary,"Your Strikes have a STR% to deal STR additional damage.",STR,1,1,Heavy
+Colossal Strike,Legendary,"Your Strikes have a STRx2% to deal STR/2 additional damage.",STR,2,.5,Heavy
+Retributive Impact,Legendary,"Your Strikes have a CON% to deal your missing HP in undefensible damage.",DEX,1,1,Vengence
+Retributive Strike,Legendary,"Your Strikes have a CONx2% to deal your missing HP/2 in undefensible damage.",DEX,2,.5,Vengence
+Explosive Magic,Legendary,"When you Engage with an opponent, you have an INT% chance to deal your Might x 1.5 - each enemy's Defence to all enemies adjacent to your target.",DEX,1,1.5,Blast
+Empowered Magic,Legendary,"When you Engage with an opponent, you have an INTx2% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",DEX,2,1,Blast
+Shielded Block,Legendary,"When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive to 0.",WIS,1,0,Shield
+Resistant Block,Legendary,"When an enemy Engages with you, you have a WISx2% chance to reduce the damage you actually receive by 1/2.",WIS,1,.5,Shield

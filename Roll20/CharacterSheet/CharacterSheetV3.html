@@ -623,9 +623,42 @@
                 <div class="CharacterSheetFlexObject"> <!-- Great Skills-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Great-Skills-title-u">Great Skills</h1>
                     <input type="checkbox" class="sheet-CombatGreatSkillsList-Check" name="attr_CombatGreatSkillsList-Check" value="0" />
-                    <span>Lorem Ipsum</span>
+                    <input type="hidden" class="GreatSkillSelector" name="attr_character_level">
+                    <label class="PrimaryLabel GreatSkillHeroic"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                        <option value="None" selected="selected" data-i18n="Great-Skill-None">None</option>
+                        </select>
+                    </label>
+                    <label class="PrimaryLabel GreatSkillEpic"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                        <option value="Moon Strike" selected="selected" data-i18n="Great-Skill-Moon Strike">Moon Strike</option>
+                        <option value="Sun Strike" selected="selected" data-i18n="Great-Skill-Sun Strike">Sun Strike</option>
+                        <option value="Brave Strike" selected="selected" data-i18n="Great-Skill-Brave Strike">Brave Strike</option>
+                        <option value="Pierce Strike" selected="selected" data-i18n="Great-Skill-Pierce Strike">Pierce Strike</option>
+                        <option value="Vengeful Strike" selected="selected" data-i18n="Great-Skill-Vengeful Strike">Vengeful Strike</option>
+                        <option value="Charged Magic" selected="selected" data-i18n="Great-Skill-Charged Magic">Charged Magic</option>
+                        <option value="Waiting Block" selected="selected" data-i18n="Great-Skill-Waiting Block">Waiting Block</option>
+                        </select>
+                    </label>
+                    <label class="PrimaryLabel GreatSkillLegendary"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                        <option value="Lunar Impact" selected="selected" data-i18n="Great-Skill-Lunar Impact">Lunar Impact</option>
+                        <option value="Lunar Strike" selected="selected" data-i18n="Great-Skill-Lunar Strike">Lunar Strike</option>
+                        <option value="Solar Impact" selected="selected" data-i18n="Great-Skill-Solar Impact">Solar Impact</option>
+                        <option value="Solar Strike" selected="selected" data-i18n="Great-Skill-Solar Strike">Solar Strike</option>
+                        <option value="Astral Impact" selected="selected" data-i18n="Great-Skill-Astral Impact">Astral Impact</option>
+                        <option value="Astral Strike" selected="selected" data-i18n="Great-Skill-Astral Strike">Astral Strike</option>
+                        <option value="Hero Impact" selected="selected" data-i18n="Great-Skill-Hero Impact">Hero Impact</option>
+                        <option value="Hero Strike" selected="selected" data-i18n="Great-Skill-Hero Strike">Hero Strike</option>
+                        <option value="Colossal Impact" selected="selected" data-i18n="Great-Skill-Colossal Impact">Colossal Impact</option>
+                        <option value="Colossal Strike" selected="selected" data-i18n="Great-Skill-Colossal Strike">Colossal Strike</option>
+                        <option value="Retributive Impact" selected="selected" data-i18n="Great-Skill-Retributive Impact">Retributive Impact</option>
+                        <option value="Retributive Strike" selected="selected" data-i18n="Great-Skill-Retributive Strike">Retributive Strike</option>
+                        <option value="Explosive Magic" selected="selected" data-i18n="Great-Skill-Explosive Magic">Explosive Magic</option>
+                        <option value="Empowered Magic" selected="selected" data-i18n="Great-Skill-Empowered Magic">Empowered Magic</option>
+                        <option value="Shielded Block" selected="selected" data-i18n="Great-Skill-Shielded Block">Shielded Block</option>
+                        <option value="Resistant Block" selected="selected" data-i18n="Great-Skill-Resistant Block">Resistant Block</option>
+                        </select>
+                    </label>
+                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Level">Level</span>: <select name="attr_GreatSkill"></select>
                 </div>
-                <!-- ToDo: Finish Class skills Section-->
             </div>
             <div class="SheetPageGrowth"> <!-- Character Growth Potential-->
                 <div class="CharacterSheetFlexObject"> <!-- Growth Rate-->
@@ -2219,6 +2252,216 @@ const ClassSkills = {
     }
 };
 
+const GreatSkills = {
+    "Colossal Impact": {
+      "Name": "Colossal Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a STR% to deal STR additional damage.",
+      "ActivationStat": "STR",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Heavy"
+    },
+    "Hero Impact": {
+      "Name": "Hero Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a SPD% to trigger 3 additional times.",
+      "ActivationStat": "SPD",
+      "ActivationMultiplier": "1",
+      "EffectPower": "3",
+      "Effect": "Brave"
+    },
+    "Waiting Block": {
+      "Name": "Waiting Block",
+      "Level": "Epic",
+      "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive by 1/2.",
+      "ActivationStat": "WIS",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Shield"
+    },
+    "Lunar Impact": {
+      "Name": "Lunar Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEX% chance to ignore enemy defence.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Moon"
+    },
+    "Astral Strike": {
+      "Name": "Astral Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEX% chance to reduce enemy defence by 1/2, and recover HP equal to 1/2 damage dealt.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Moon Sun"
+    },
+    "Hero Strike": {
+      "Name": "Hero Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a SPDx2% to trigger an additional time.",
+      "ActivationStat": "SPD",
+      "ActivationMultiplier": "2",
+      "EffectPower": "1",
+      "Effect": "Brave"
+    },
+    "Retributive Impact": {
+      "Name": "Retributive Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a CON% to deal your missing HP in undefensible damage.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Vengence"
+    },
+    "Vengeful Strike": {
+      "Name": "Vengeful Strike",
+      "Level": "Epic",
+      "Description": "Your Strikes have a CON% to deal your missing HP/2 undefensible damage",
+      "ActivationStat": "CON",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Vengence"
+    },
+    "Astral Impact": {
+      "Name": "Astral Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEX/2% ignore enemy defense and recover HP equal to damage dealt.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": ".5",
+      "EffectPower": "1",
+      "Effect": "Moon Sun"
+    },
+    "Retributive Strike": {
+      "Name": "Retributive Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a CONx2% to deal your missing HP/2 in undefensible damage.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "2",
+      "EffectPower": ".5",
+      "Effect": "Vengence"
+    },
+    "Solar Impact": {
+      "Name": "Solar Impact",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEX% chance to recover HP equal to the damage you deal.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Sun"
+    },
+    "Moon Strike": {
+      "Name": "Moon Strike",
+      "Level": "Epic",
+      "Description": "Your Strikes have a DEX% to reduce enemy defence by 1/2.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Moon"
+    },
+    "Shielded Block": {
+      "Name": "Shielded Block",
+      "Level": "Legendary",
+      "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive to 0.",
+      "ActivationStat": "WIS",
+      "ActivationMultiplier": "1",
+      "EffectPower": "0",
+      "Effect": "Shield"
+    },
+    "Charged Magic": {
+      "Name": "Charged Magic",
+      "Level": "Epic",
+      "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
+      "ActivationStat": "INT",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Blast"
+    },
+    "Resistant Block": {
+      "Name": "Resistant Block",
+      "Level": "Legendary",
+      "Description": "When an enemy Engages with you, you have a WISx2% chance to reduce the damage you actually receive by 1/2.",
+      "ActivationStat": "WIS",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Shield"
+    },
+    "Pierce Strike": {
+      "Name": "Pierce Strike",
+      "Level": "Epic",
+      "Description": "Your Strikes have a STR% to deal STR/2 additional damage",
+      "ActivationStat": "SPD",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Heavy"
+    },
+    "Brave Strike": {
+      "Name": "Brave Strike",
+      "Level": "Epic",
+      "Description": "Your Strikes have a SPD% to trigger an additional time.",
+      "ActivationStat": "SPD",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1",
+      "Effect": "Brave"
+    },
+    "Empowered Magic": {
+      "Name": "Empowered Magic",
+      "Level": "Legendary",
+      "Description": "When you Engage with an opponent, you have an INTx2% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "2",
+      "EffectPower": "1",
+      "Effect": "Blast"
+    },
+    "Colossal Strike": {
+      "Name": "Colossal Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a STRx2% to deal STR/2 additional damage.",
+      "ActivationStat": "STR",
+      "ActivationMultiplier": "2",
+      "EffectPower": ".5",
+      "Effect": "Heavy"
+    },
+    "Solar Strike": {
+      "Name": "Solar Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEXx2% chance to recover HP equal to 1/2 the damage you deal.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "2",
+      "EffectPower": ".5",
+      "Effect": "Sun"
+    },
+    "Explosive Magic": {
+      "Name": "Explosive Magic",
+      "Level": "Legendary",
+      "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might x 1.5 - each enemy's Defence to all enemies adjacent to your target.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": "1.5",
+      "Effect": "Blast"
+    },
+    "Lunar Strike": {
+      "Name": "Lunar Strike",
+      "Level": "Legendary",
+      "Description": "Your Strikes have a DEXx2% chance to reduce enemy Defense by 1/2.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "2",
+      "EffectPower": ".5",
+      "Effect": "Moon"
+    },
+    "Sun Strike": {
+      "Name": "Sun Strike",
+      "Level": "Epic",
+      "Description": "Your Strikes have a DEX% to recover HP equal to 1/2 damage dealt.",
+      "ActivationStat": "DEX",
+      "ActivationMultiplier": "1",
+      "EffectPower": ".5",
+      "Effect": "Sun"
+    }
+  };
+
 function CalculateStats() {
     var EarnedGrowths = {
         "hp":0,
@@ -2330,6 +2573,18 @@ on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeat
 });
 
 on("change:repeating_ClassSkillsList:ClassSkill", function(eventInfo) {
+    getAttrs(["repeating_ClassSkillsList_ClassSkill"], function(values) {
+        let SkillName = values.repeating_ClassSkillsList_ClassSkill;
+        setAttrs({
+            repeating_ClassSkillsList_ClassSkillCost: ClassSkills[SkillName]["Cost"],
+            repeating_ClassSkillsList_ClassSkillDescription: ClassSkills[SkillName]["Description"],
+            repeating_ClassSkillsList_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
+        });
+    });
+    CalculateSkillStats();
+});
+
+on("change:GreatSkill", function(eventInfo) {
     getAttrs(["repeating_ClassSkillsList_ClassSkill"], function(values) {
         let SkillName = values.repeating_ClassSkillsList_ClassSkill;
         setAttrs({

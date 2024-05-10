@@ -219,7 +219,7 @@ Knives are deadly weapons that can be easily wielded in close range, or thrown s
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
 | E   | 1     | Copper     | Physical | Green | 3     | 90       | 1-2
-| D   | 2     | Bronze     | Physical | Green | 7     | 85       | 1-2
+| D   | 2     | Bronze     | Physical | Green | 7     | 75       | 1-2
 | C   | 3     | Iron       | Physical | Green | 11    | 60       | 1-2
 | B   | 4     | Steel      | Physical | Green | 15    | 45       | 1-2
 | A   | 5     | Silvered   | Physical | Green | 19    | 30       | 1-2

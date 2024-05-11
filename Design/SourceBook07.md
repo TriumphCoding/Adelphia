@@ -77,7 +77,7 @@ Enemies choose equipment, just like players. That said, some enemies don't make 
 
 ### Claw / Hoof
 
-A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it.
+A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it. Hoves trade accuracy for critical chance, at 5 per weapon level.
 
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
@@ -91,7 +91,7 @@ A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of p
 
 ### Bite / Gore
 
-A Bite or Gore attack is done with the creature's head. It's a risky maneuver, but the creature can put it's full weight behind it.
+A Bite or Gore attack is done with the creature's head. It's a risky maneuver, but the creature can put it's full weight behind it. A gore trades 5 accuracy per level for 1 damage per level.
 
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
@@ -103,9 +103,9 @@ A Bite or Gore attack is done with the creature's head. It's a risky maneuver, b
 | S   | 6     | Gilded     | Physical | Red   | 24    | 20       | 1     |
 | S+  | 7     | Orichalcum | Physical | Red   | 28    | 5        | 1     |
 
-### Sting
+### Sting / Punch
 
-Stings are thin, piercing weapons used by creatures. They have a high amount of precision.
+Stings are thin, piercing weapons used by creatures. They have a high amount of precision. If the thrusts has a blunt end, it's a punch and trades 1 damage per level for 5 Accuracy per level.
 
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |

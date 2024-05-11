@@ -159,33 +159,258 @@
                     <h2 data-i18n="Weapon-Title">Weapon</h2>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Name"/></label>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_adjustment-stat">
-                            <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
-                            <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
-                            <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
-                            <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
-                            <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
-                            <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
-                            <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
-                            <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
-                            <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
-                            <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
-                            <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
-                            <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
-                            <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
-                            <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
-                            <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
-                            <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
-                            <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
-                            <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
-                            <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
-                            <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
-                            <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
-                            <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
-                            <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
-                            <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
-                            <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
-                            <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
-                            <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
+                            <optgroup label="Sword" data-i18n="Weapon-Type-Sword">
+                              <option value="Copper Sword" selected="selected" data-i18n="Copper Sword-Full-Name">Copper Sword</option>
+                              <option value="Bronze Sword" selected="selected" data-i18n="Bronze Sword-Full-Name">Bronze Sword</option>
+                              <option value="Iron Sword" selected="selected" data-i18n="Iron Sword-Full-Name">Iron Sword</option>
+                              <option value="Steel Sword" selected="selected" data-i18n="Steel Sword-Full-Name">Steel Sword</option>
+                              <option value="Silvered Sword" selected="selected" data-i18n="Silvered Sword-Full-Name">Silvered Sword</option>
+                              <option value="Gilded Sword" selected="selected" data-i18n="Gilded Sword-Full-Name">Gilded Sword</option>
+                              <option value="Orichalcum Sword" selected="selected" data-i18n="Orichalcum Sword-Full-Name">Orichalcum Sword</option>
+                          </optgroup>
+                          <optgroup label="Katana" data-i18n="Weapon-Type-Katana">
+                              <option value="Copper Katana" selected="selected" data-i18n="Copper Katana-Full-Name">Copper Katana</option>
+                              <option value="Bronze Katana" selected="selected" data-i18n="Bronze Katana-Full-Name">Bronze Katana</option>
+                              <option value="Iron Katana" selected="selected" data-i18n="Iron Katana-Full-Name">Iron Katana</option>
+                              <option value="Steel Katana" selected="selected" data-i18n="Steel Katana-Full-Name">Steel Katana</option>
+                              <option value="Silvered Katana" selected="selected" data-i18n="Silvered Katana-Full-Name">Silvered Katana</option>
+                              <option value="Gilded Katana" selected="selected" data-i18n="Gilded Katana-Full-Name">Gilded Katana</option>
+                              <option value="Orichalcum Katana" selected="selected" data-i18n="Orichalcum Katana-Full-Name">Orichalcum Katana</option>
+                          </optgroup>
+                          <optgroup label="Axe" data-i18n="Weapon-Type-Axe">
+                              <option value="Copper Axe" selected="selected" data-i18n="Copper Axe-Full-Name">Copper Axe</option>
+                              <option value="Bronze Axe" selected="selected" data-i18n="Bronze Axe-Full-Name">Bronze Axe</option>
+                              <option value="Iron Axe" selected="selected" data-i18n="Iron Axe-Full-Name">Iron Axe</option>
+                              <option value="Steel Axe" selected="selected" data-i18n="Steel Axe-Full-Name">Steel Axe</option>
+                              <option value="Silvered Axe" selected="selected" data-i18n="Silvered Axe-Full-Name">Silvered Axe</option>
+                              <option value="Gilded Axe" selected="selected" data-i18n="Gilded Axe-Full-Name">Gilded Axe</option>
+                              <option value="Orichalcum Axe" selected="selected" data-i18n="Orichalcum Axe-Full-Name">Orichalcum Axe</option>
+                          </optgroup>
+                          <optgroup label="Club" data-i18n="Weapon-Type-Club">
+                              <option value="Copper Club" selected="selected" data-i18n="Copper Club-Full-Name">Copper Club</option>
+                              <option value="Bronze Club" selected="selected" data-i18n="Bronze Club-Full-Name">Bronze Club</option>
+                              <option value="Iron Club" selected="selected" data-i18n="Iron Club-Full-Name">Iron Club</option>
+                              <option value="Steel Club" selected="selected" data-i18n="Steel Club-Full-Name">Steel Club</option>
+                              <option value="Silvered Club" selected="selected" data-i18n="Silvered Club-Full-Name">Silvered Club</option>
+                              <option value="Gilded Club" selected="selected" data-i18n="Gilded Club-Full-Name">Gilded Club</option>
+                              <option value="Orichalcum Club" selected="selected" data-i18n="Orichalcum Club-Full-Name">Orichalcum Club</option>
+                          </optgroup>
+                          <optgroup label="Lance" data-i18n="Weapon-Type-Lance">
+                              <option value="Copper Lance" selected="selected" data-i18n="Copper Lance-Full-Name">Copper Lance</option>
+                              <option value="Bronze Lance" selected="selected" data-i18n="Bronze Lance-Full-Name">Bronze Lance</option>
+                              <option value="Iron Lance" selected="selected" data-i18n="Iron Lance-Full-Name">Iron Lance</option>
+                              <option value="Steel Lance" selected="selected" data-i18n="Steel Lance-Full-Name">Steel Lance</option>
+                              <option value="Silvered Lance" selected="selected" data-i18n="Silvered Lance-Full-Name">Silvered Lance</option>
+                              <option value="Gilded Lance" selected="selected" data-i18n="Gilded Lance-Full-Name">Gilded Lance</option>
+                              <option value="Orichalcum Lance" selected="selected" data-i18n="Orichalcum Lance-Full-Name">Orichalcum Lance</option>
+                          </optgroup>
+                          <optgroup label="Naginata" data-i18n="Weapon-Type-Naginata">
+                              <option value="Copper Naginata" selected="selected" data-i18n="Copper Naginata-Full-Name">Copper Naginata</option>
+                              <option value="Bronze Naginata" selected="selected" data-i18n="Bronze Naginata-Full-Name">Bronze Naginata</option>
+                              <option value="Iron Naginata" selected="selected" data-i18n="Iron Naginata-Full-Name">Iron Naginata</option>
+                              <option value="Steel Naginata" selected="selected" data-i18n="Steel Naginata-Full-Name">Steel Naginata</option>
+                              <option value="Silvered Naginata" selected="selected" data-i18n="Silvered Naginata-Full-Name">Silvered Naginata</option>
+                              <option value="Gilded Naginata" selected="selected" data-i18n="Gilded Naginata-Full-Name">Gilded Naginata</option>
+                              <option value="Orichalcum Naginata" selected="selected" data-i18n="Orichalcum Naginata-Full-Name">Orichalcum Naginata</option>
+                          </optgroup>
+                          <optgroup label="Gauntlet" data-i18n="Weapon-Type-Gauntlet">
+                              <option value="Copper Gauntlet" selected="selected" data-i18n="Copper Gauntlet-Full-Name">Copper Gauntlet</option>
+                              <option value="Bronze Gauntlet" selected="selected" data-i18n="Bronze Gauntlet-Full-Name">Bronze Gauntlet</option>
+                              <option value="Iron Gauntlet" selected="selected" data-i18n="Iron Gauntlet-Full-Name">Iron Gauntlet</option>
+                              <option value="Steel Gauntlet" selected="selected" data-i18n="Steel Gauntlet-Full-Name">Steel Gauntlet</option>
+                              <option value="Silvered Gauntlet" selected="selected" data-i18n="Silvered Gauntlet-Full-Name">Silvered Gauntlet</option>
+                              <option value="Gilded Gauntlet" selected="selected" data-i18n="Gilded Gauntlet-Full-Name">Gilded Gauntlet</option>
+                              <option value="Orichalcum Gauntlet" selected="selected" data-i18n="Orichalcum Gauntlet-Full-Name">Orichalcum Gauntlet</option>
+                          </optgroup>
+                          <optgroup label="Crossbow" data-i18n="Weapon-Type-Crossbow">
+                              <option value="Copper Crossbow" selected="selected" data-i18n="Copper Crossbow-Full-Name">Copper Crossbow</option>
+                              <option value="Bronze Crossbow" selected="selected" data-i18n="Bronze Crossbow-Full-Name">Bronze Crossbow</option>
+                              <option value="Iron Crossbow" selected="selected" data-i18n="Iron Crossbow-Full-Name">Iron Crossbow</option>
+                              <option value="Steel Crossbow" selected="selected" data-i18n="Steel Crossbow-Full-Name">Steel Crossbow</option>
+                              <option value="Silvered Crossbow" selected="selected" data-i18n="Silvered Crossbow-Full-Name">Silvered Crossbow</option>
+                              <option value="Gilded Crossbow" selected="selected" data-i18n="Gilded Crossbow-Full-Name">Gilded Crossbow</option>
+                              <option value="Orichalcum Crossbow" selected="selected" data-i18n="Orichalcum Crossbow-Full-Name">Orichalcum Crossbow</option>
+                          </optgroup>
+                          <optgroup label="Arbalest" data-i18n="Weapon-Type-Arbalest">
+                              <option value="Copper Arbalest" selected="selected" data-i18n="Copper Arbalest-Full-Name">Copper Arbalest</option>
+                              <option value="Bronze Arbalest" selected="selected" data-i18n="Bronze Arbalest-Full-Name">Bronze Arbalest</option>
+                              <option value="Iron Arbalest" selected="selected" data-i18n="Iron Arbalest-Full-Name">Iron Arbalest</option>
+                              <option value="Steel Arbalest" selected="selected" data-i18n="Steel Arbalest-Full-Name">Steel Arbalest</option>
+                              <option value="Silvered Arbalest" selected="selected" data-i18n="Silvered Arbalest-Full-Name">Silvered Arbalest</option>
+                              <option value="Gilded Arbalest" selected="selected" data-i18n="Gilded Arbalest-Full-Name">Gilded Arbalest</option>
+                              <option value="Orichalcum Arbalest" selected="selected" data-i18n="Orichalcum Arbalest-Full-Name">Orichalcum Arbalest</option>
+                          </optgroup>
+                          <optgroup label="Knives" data-i18n="Weapon-Type-Knives">
+                              <option value="Copper Knives" selected="selected" data-i18n="Copper Knives-Full-Name">Copper Knives</option>
+                              <option value="Bronze Knives" selected="selected" data-i18n="Bronze Knives-Full-Name">Bronze Knives</option>
+                              <option value="Iron Knives" selected="selected" data-i18n="Iron Knives-Full-Name">Iron Knives</option>
+                              <option value="Steel Knives" selected="selected" data-i18n="Steel Knives-Full-Name">Steel Knives</option>
+                              <option value="Silvered Knives" selected="selected" data-i18n="Silvered Knives-Full-Name">Silvered Knives</option>
+                              <option value="Gilded Knives" selected="selected" data-i18n="Gilded Knives-Full-Name">Gilded Knives</option>
+                              <option value="Orichalcum Knives" selected="selected" data-i18n="Orichalcum Knives-Full-Name">Orichalcum Knives</option>
+                          </optgroup>
+                          <optgroup label="Shuriken" data-i18n="Weapon-Type-Shuriken">
+                              <option value="Copper Shuriken" selected="selected" data-i18n="Copper Shuriken-Full-Name">Copper Shuriken</option>
+                              <option value="Bronze Shuriken" selected="selected" data-i18n="Bronze Shuriken-Full-Name">Bronze Shuriken</option>
+                              <option value="Iron Shuriken" selected="selected" data-i18n="Iron Shuriken-Full-Name">Iron Shuriken</option>
+                              <option value="Steel Shuriken" selected="selected" data-i18n="Steel Shuriken-Full-Name">Steel Shuriken</option>
+                              <option value="Silvered Shuriken" selected="selected" data-i18n="Silvered Shuriken-Full-Name">Silvered Shuriken</option>
+                              <option value="Gilded Shuriken" selected="selected" data-i18n="Gilded Shuriken-Full-Name">Gilded Shuriken</option>
+                              <option value="Orichalcum Shuriken" selected="selected" data-i18n="Orichalcum Shuriken-Full-Name">Orichalcum Shuriken</option>
+                          </optgroup>
+                          <optgroup label="Bow" data-i18n="Weapon-Type-Bow">
+                              <option value="Copper Bow" selected="selected" data-i18n="Copper Bow-Full-Name">Copper Bow</option>
+                              <option value="Bronze Bow" selected="selected" data-i18n="Bronze Bow-Full-Name">Bronze Bow</option>
+                              <option value="Iron Bow" selected="selected" data-i18n="Iron Bow-Full-Name">Iron Bow</option>
+                              <option value="Steel Bow" selected="selected" data-i18n="Steel Bow-Full-Name">Steel Bow</option>
+                              <option value="Silvered Bow" selected="selected" data-i18n="Silvered Bow-Full-Name">Silvered Bow</option>
+                              <option value="Gilded Bow" selected="selected" data-i18n="Gilded Bow-Full-Name">Gilded Bow</option>
+                              <option value="Orichalcum Bow" selected="selected" data-i18n="Orichalcum Bow-Full-Name">Orichalcum Bow</option>
+                          </optgroup>
+                          <optgroup label="Yumi" data-i18n="Weapon-Type-Yumi">
+                              <option value="Copper Yumi" selected="selected" data-i18n="Copper Yumi-Full-Name">Copper Yumi</option>
+                              <option value="Bronze Yumi" selected="selected" data-i18n="Bronze Yumi-Full-Name">Bronze Yumi</option>
+                              <option value="Iron Yumi" selected="selected" data-i18n="Iron Yumi-Full-Name">Iron Yumi</option>
+                              <option value="Steel Yumi" selected="selected" data-i18n="Steel Yumi-Full-Name">Steel Yumi</option>
+                              <option value="Silvered Yumi" selected="selected" data-i18n="Silvered Yumi-Full-Name">Silvered Yumi</option>
+                              <option value="Gilded Yumi" selected="selected" data-i18n="Gilded Yumi-Full-Name">Gilded Yumi</option>
+                              <option value="Orichalcum Yumi" selected="selected" data-i18n="Orichalcum Yumi-Full-Name">Orichalcum Yumi</option>
+                          </optgroup>
+                          <optgroup label="Flintlock" data-i18n="Weapon-Type-Flintlock">
+                              <option value="Copper Flintlock" selected="selected" data-i18n="Copper Flintlock-Full-Name">Copper Flintlock</option>
+                              <option value="Bronze Flintlock" selected="selected" data-i18n="Bronze Flintlock-Full-Name">Bronze Flintlock</option>
+                              <option value="Iron Flintlock" selected="selected" data-i18n="Iron Flintlock-Full-Name">Iron Flintlock</option>
+                              <option value="Steel Flintlock" selected="selected" data-i18n="Steel Flintlock-Full-Name">Steel Flintlock</option>
+                              <option value="Silvered Flintlock" selected="selected" data-i18n="Silvered Flintlock-Full-Name">Silvered Flintlock</option>
+                              <option value="Gilded Flintlock" selected="selected" data-i18n="Gilded Flintlock-Full-Name">Gilded Flintlock</option>
+                              <option value="Orichalcum Flintlock" selected="selected" data-i18n="Orichalcum Flintlock-Full-Name">Orichalcum Flintlock</option>
+                          </optgroup>
+                          <optgroup label="Wind" data-i18n="Weapon-Type-Wind">
+                              <option value="Copper Wind" selected="selected" data-i18n="Copper Wind-Full-Name">Copper Wind</option>
+                              <option value="Bronze Wind" selected="selected" data-i18n="Bronze Wind-Full-Name">Bronze Wind</option>
+                              <option value="Iron Wind" selected="selected" data-i18n="Iron Wind-Full-Name">Iron Wind</option>
+                              <option value="Steel Wind" selected="selected" data-i18n="Steel Wind-Full-Name">Steel Wind</option>
+                              <option value="Silvered Wind" selected="selected" data-i18n="Silvered Wind-Full-Name">Silvered Wind</option>
+                              <option value="Gilded Wind" selected="selected" data-i18n="Gilded Wind-Full-Name">Gilded Wind</option>
+                              <option value="Orichalcum Wind" selected="selected" data-i18n="Orichalcum Wind-Full-Name">Orichalcum Wind</option>
+                          </optgroup>
+                          <optgroup label="Dark" data-i18n="Weapon-Type-Dark">
+                              <option value="Copper Dark" selected="selected" data-i18n="Copper Dark-Full-Name">Copper Dark</option>
+                              <option value="Bronze Dark" selected="selected" data-i18n="Bronze Dark-Full-Name">Bronze Dark</option>
+                              <option value="Iron Dark" selected="selected" data-i18n="Iron Dark-Full-Name">Iron Dark</option>
+                              <option value="Steel Dark" selected="selected" data-i18n="Steel Dark-Full-Name">Steel Dark</option>
+                              <option value="Silvered Dark" selected="selected" data-i18n="Silvered Dark-Full-Name">Silvered Dark</option>
+                              <option value="Gilded Dark" selected="selected" data-i18n="Gilded Dark-Full-Name">Gilded Dark</option>
+                              <option value="Orichalcum Dark" selected="selected" data-i18n="Orichalcum Dark-Full-Name">Orichalcum Dark</option>
+                          </optgroup>
+                          <optgroup label="Light" data-i18n="Weapon-Type-Light">
+                              <option value="Copper Light" selected="selected" data-i18n="Copper Light-Full-Name">Copper Light</option>
+                              <option value="Bronze Light" selected="selected" data-i18n="Bronze Light-Full-Name">Bronze Light</option>
+                              <option value="Iron Light" selected="selected" data-i18n="Iron Light-Full-Name">Iron Light</option>
+                              <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
+                              <option value="Silvered Light" selected="selected" data-i18n="Silvered Light-Full-Name">Silvered Light</option>
+                              <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
+                              <option value="Orichalcum Light" selected="selected" data-i18n="Orichalcum Light-Full-Name">Orichalcum Light</option>
+                          </optgroup>
+                          <optgroup label="Lightning" data-i18n="Weapon-Type-Lightning">
+                              <option value="Copper Lightning" selected="selected" data-i18n="Copper Lightning-Full-Name">Copper Lightning</option>
+                              <option value="Bronze Lightning" selected="selected" data-i18n="Bronze Lightning-Full-Name">Bronze Lightning</option>
+                              <option value="Iron Lightning" selected="selected" data-i18n="Iron Lightning-Full-Name">Iron Lightning</option>
+                              <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
+                              <option value="Silvered Lightning" selected="selected" data-i18n="Silvered Lightning-Full-Name">Silvered Lightning</option>
+                              <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
+                              <option value="Orichalcum Lightning" selected="selected" data-i18n="Orichalcum Lightning-Full-Name">Orichalcum Lightning</option>
+                          </optgroup>
+                          <optgroup label="Fire" data-i18n="Weapon-Type-Fire">
+                              <option value="Copper Fire" selected="selected" data-i18n="Copper Fire-Full-Name">Copper Fire</option>
+                              <option value="Bronze Fire" selected="selected" data-i18n="Bronze Fire-Full-Name">Bronze Fire</option>
+                              <option value="Iron Fire" selected="selected" data-i18n="Iron Fire-Full-Name">Iron Fire</option>
+                              <option value="Steel Fire" selected="selected" data-i18n="Steel Fire-Full-Name">Steel Fire</option>
+                              <option value="Silvered Fire" selected="selected" data-i18n="Silvered Fire-Full-Name">Silvered Fire</option>
+                              <option value="Gilded Fire" selected="selected" data-i18n="Gilded Fire-Full-Name">Gilded Fire</option>
+                              <option value="Orichalcum Fire" selected="selected" data-i18n="Orichalcum Fire-Full-Name">Orichalcum Fire</option>
+                          </optgroup>
+                          <optgroup label="Spirit" data-i18n="Weapon-Type-Spirit">
+                              <option value="Copper Spirit" selected="selected" data-i18n="Copper Spirit-Full-Name">Copper Spirit</option>
+                              <option value="Bronze Spirit" selected="selected" data-i18n="Bronze Spirit-Full-Name">Bronze Spirit</option>
+                              <option value="Iron Spirit" selected="selected" data-i18n="Iron Spirit-Full-Name">Iron Spirit</option>
+                              <option value="Steel Spirit" selected="selected" data-i18n="Steel Spirit-Full-Name">Steel Spirit</option>
+                              <option value="Silvered Spirit" selected="selected" data-i18n="Silvered Spirit-Full-Name">Silvered Spirit</option>
+                              <option value="Gilded Spirit" selected="selected" data-i18n="Gilded Spirit-Full-Name">Gilded Spirit</option>
+                              <option value="Orichalcum Spirit" selected="selected" data-i18n="Orichalcum Spirit-Full-Name">Orichalcum Spirit</option>
+                          </optgroup>
+                          <optgroup label="Staff" data-i18n="Weapon-Type-Staff">
+                              <option value="Copper Staff" selected="selected" data-i18n="Copper Staff-Full-Name">Copper Staff</option>
+                              <option value="Bronze Staff" selected="selected" data-i18n="Bronze Staff-Full-Name">Bronze Staff</option>
+                              <option value="Iron Staff" selected="selected" data-i18n="Iron Staff-Full-Name">Iron Staff</option>
+                              <option value="Steel Staff" selected="selected" data-i18n="Steel Staff-Full-Name">Steel Staff</option>
+                              <option value="Silvered Staff" selected="selected" data-i18n="Silvered Staff-Full-Name">Silvered Staff</option>
+                              <option value="Gilded Staff" selected="selected" data-i18n="Gilded Staff-Full-Name">Gilded Staff</option>
+                              <option value="Orichalcum Staff" selected="selected" data-i18n="Orichalcum Staff-Full-Name">Orichalcum Staff</option>
+                          </optgroup>
+                          <optgroup label="Claw" data-i18n="Weapon-Type-Claw">
+                              <option value="Copper Claw" selected="selected" data-i18n="Copper Claw-Full-Name">Copper Claw</option>
+                              <option value="Bronze Claw" selected="selected" data-i18n="Bronze Claw-Full-Name">Bronze Claw</option>
+                              <option value="Iron Claw" selected="selected" data-i18n="Iron Claw-Full-Name">Iron Claw</option>
+                              <option value="Steel Claw" selected="selected" data-i18n="Steel Claw-Full-Name">Steel Claw</option>
+                              <option value="Silvered Claw" selected="selected" data-i18n="Silvered Claw-Full-Name">Silvered Claw</option>
+                              <option value="Gilded Claw" selected="selected" data-i18n="Gilded Claw-Full-Name">Gilded Claw</option>
+                              <option value="Orichalcum Claw" selected="selected" data-i18n="Orichalcum Claw-Full-Name">Orichalcum Claw</option>
+                          </optgroup>
+                          <optgroup label="Hoof" data-i18n="Weapon-Type-Hoof">
+                              <option value="Copper Hoof" selected="selected" data-i18n="Copper Hoof-Full-Name">Copper Hoof</option>
+                              <option value="Bronze Hoof" selected="selected" data-i18n="Bronze Hoof-Full-Name">Bronze Hoof</option>
+                              <option value="Iron Hoof" selected="selected" data-i18n="Iron Hoof-Full-Name">Iron Hoof</option>
+                              <option value="Steel Hoof" selected="selected" data-i18n="Steel Hoof-Full-Name">Steel Hoof</option>
+                              <option value="Silvered Hoof" selected="selected" data-i18n="Silvered Hoof-Full-Name">Silvered Hoof</option>
+                              <option value="Gilded Hoof" selected="selected" data-i18n="Gilded Hoof-Full-Name">Gilded Hoof</option>
+                              <option value="Orichalcum Hoof" selected="selected" data-i18n="Orichalcum Hoof-Full-Name">Orichalcum Hoof</option>
+                          </optgroup>
+                          <optgroup label="Bite" data-i18n="Weapon-Type-Bite">
+                              <option value="Copper Bite" selected="selected" data-i18n="Copper Bite-Full-Name">Copper Bite</option>
+                              <option value="Bronze Bite" selected="selected" data-i18n="Bronze Bite-Full-Name">Bronze Bite</option>
+                              <option value="Iron Bite" selected="selected" data-i18n="Iron Bite-Full-Name">Iron Bite</option>
+                              <option value="Steel Bite" selected="selected" data-i18n="Steel Bite-Full-Name">Steel Bite</option>
+                              <option value="Silvered Bite" selected="selected" data-i18n="Silvered Bite-Full-Name">Silvered Bite</option>
+                              <option value="Gilded Bite" selected="selected" data-i18n="Gilded Bite-Full-Name">Gilded Bite</option>
+                              <option value="Orichalcum Bite" selected="selected" data-i18n="Orichalcum Bite-Full-Name">Orichalcum Bite</option>
+                          </optgroup>
+                          <optgroup label="Gore" data-i18n="Weapon-Type-Gore">
+                              <option value="Copper Gore" selected="selected" data-i18n="Copper Gore-Full-Name">Copper Gore</option>
+                              <option value="Bronze Gore" selected="selected" data-i18n="Bronze Gore-Full-Name">Bronze Gore</option>
+                              <option value="Iron Gore" selected="selected" data-i18n="Iron Gore-Full-Name">Iron Gore</option>
+                              <option value="Steel Gore" selected="selected" data-i18n="Steel Gore-Full-Name">Steel Gore</option>
+                              <option value="Silvered Gore" selected="selected" data-i18n="Silvered Gore-Full-Name">Silvered Gore</option>
+                              <option value="Gilded Gore" selected="selected" data-i18n="Gilded Gore-Full-Name">Gilded Gore</option>
+                              <option value="Orichalcum Gore" selected="selected" data-i18n="Orichalcum Gore-Full-Name">Orichalcum Gore</option>
+                          </optgroup>
+                          <optgroup label="Sting" data-i18n="Weapon-Type-Sting">
+                              <option value="Copper Sting" selected="selected" data-i18n="Copper Sting-Full-Name">Copper Sting</option>
+                              <option value="Bronze Sting" selected="selected" data-i18n="Bronze Sting-Full-Name">Bronze Sting</option>
+                              <option value="Iron Sting" selected="selected" data-i18n="Iron Sting-Full-Name">Iron Sting</option>
+                              <option value="Steel Sting" selected="selected" data-i18n="Steel Sting-Full-Name">Steel Sting</option>
+                              <option value="Silvered Sting" selected="selected" data-i18n="Silvered Sting-Full-Name">Silvered Sting</option>
+                              <option value="Gilded Sting" selected="selected" data-i18n="Gilded Sting-Full-Name">Gilded Sting</option>
+                              <option value="Orichalcum Sting" selected="selected" data-i18n="Orichalcum Sting-Full-Name">Orichalcum Sting</option>
+                          </optgroup>
+                          <optgroup label="Punch" data-i18n="Weapon-Type-Punch">
+                              <option value="Copper Punch" selected="selected" data-i18n="Copper Punch-Full-Name">Copper Punch</option>
+                              <option value="Bronze Punch" selected="selected" data-i18n="Bronze Punch-Full-Name">Bronze Punch</option>
+                              <option value="Iron Punch" selected="selected" data-i18n="Iron Punch-Full-Name">Iron Punch</option>
+                              <option value="Steel Punch" selected="selected" data-i18n="Steel Punch-Full-Name">Steel Punch</option>
+                              <option value="Silvered Punch" selected="selected" data-i18n="Silvered Punch-Full-Name">Silvered Punch</option>
+                              <option value="Gilded Punch" selected="selected" data-i18n="Gilded Punch-Full-Name">Gilded Punch</option>
+                              <option value="Orichalcum Punch" selected="selected" data-i18n="Orichalcum Punch-Full-Name">Orichalcum Punch</option>
+                          </optgroup>
+                          <optgroup label="Slam" data-i18n="Weapon-Type-Slam">
+                              <option value="Copper Slam" selected="selected" data-i18n="Copper Slam-Full-Name">Copper Slam</option>
+                              <option value="Bronze Slam" selected="selected" data-i18n="Bronze Slam-Full-Name">Bronze Slam</option>
+                              <option value="Iron Slam" selected="selected" data-i18n="Iron Slam-Full-Name">Iron Slam</option>
+                              <option value="Steel Slam" selected="selected" data-i18n="Steel Slam-Full-Name">Steel Slam</option>
+                              <option value="Silvered Slam" selected="selected" data-i18n="Silvered Slam-Full-Name">Silvered Slam</option>
+                              <option value="Gilded Slam" selected="selected" data-i18n="Gilded Slam-Full-Name">Gilded Slam</option>
+                              <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
+                          </optgroup>
                         </select>
                     </label>
                 </fieldset>
@@ -586,33 +811,258 @@
                             </label>
                             <input type="hidden" class="WeaponCombatSkillSelectorDisplay" name="attr_WeaponCombatSkillSelectorDisplay" value="0"/>
                             <label class="PrimaryLabel"><span data-i18n="Weapon-Title">Weapon</span>: <select name="attr_WeaponCombatSkillSelector">
-                                <option value="Sword" selected="selected" data-i18n="Weapon-Type-Sword">Sword</option>
-                                <option value="Katana" selected="selected" data-i18n="Weapon-Type-Katana">Katana</option>
-                                <option value="Axe" selected="selected" data-i18n="Weapon-Type-Axe">Axe</option>
-                                <option value="Club" selected="selected" data-i18n="Weapon-Type-Club">Club</option>
-                                <option value="Lance" selected="selected" data-i18n="Weapon-Type-Lance">Lance</option>
-                                <option value="Naginata" selected="selected" data-i18n="Weapon-Type-Naginata">Naginata</option>
-                                <option value="Gauntlet" selected="selected" data-i18n="Weapon-Type-Gauntlet">Gauntlet</option>
-                                <option value="Crossbow" selected="selected" data-i18n="Weapon-Type-Crossbow">Crossbow</option>
-                                <option value="Arbalest" selected="selected" data-i18n="Weapon-Type-Arbalest">Arbalest</option>
-                                <option value="Knives" selected="selected" data-i18n="Weapon-Type-Knives">Knives</option>
-                                <option value="Shuriken" selected="selected" data-i18n="Weapon-Type-Shuriken">Shuriken</option>
-                                <option value="Bow" selected="selected" data-i18n="Weapon-Type-Bow">Bow</option>
-                                <option value="Yumi" selected="selected" data-i18n="Weapon-Type-Yumi">Yumi</option>
-                                <option value="Flintlock" selected="selected" data-i18n="Weapon-Type-Flintlock">Flintlock</option>
-                                <option value="Wind" selected="selected" data-i18n="Weapon-Type-Wind">Wind</option>
-                                <option value="Dark" selected="selected" data-i18n="Weapon-Type-Dark">Dark</option>
-                                <option value="Light" selected="selected" data-i18n="Weapon-Type-Light">Light</option>
-                                <option value="Lightning" selected="selected" data-i18n="Weapon-Type-Lightning">Lightning</option>
-                                <option value="Fire" selected="selected" data-i18n="Weapon-Type-Fire">Fire</option>
-                                <option value="Spirit" selected="selected" data-i18n="Weapon-Type-Spirit">Spirit</option>
-                                <option value="Staff" selected="selected" data-i18n="Weapon-Type-Staff">Staff</option>
-                                <option value="Claw" selected="selected" data-i18n="Weapon-Type-Claw">Claw</option>
-                                <option value="Hoof" selected="selected" data-i18n="Weapon-Type-Hoof">Hoof</option>
-                                <option value="Bite" selected="selected" data-i18n="Weapon-Type-Bite">Bite</option>
-                                <option value="Gore" selected="selected" data-i18n="Weapon-Type-Gore">Gore</option>
-                                <option value="Sting" selected="selected" data-i18n="Weapon-Type-Sting">Sting</option>
-                                <option value="Slam" selected="selected" data-i18n="Weapon-Type-Slam">Slam</option>
+                                  <optgroup label="Sword" data-i18n="Weapon-Type-Sword">
+                                    <option value="Copper Sword" selected="selected" data-i18n="Copper Sword-Full-Name">Copper Sword</option>
+                                    <option value="Bronze Sword" selected="selected" data-i18n="Bronze Sword-Full-Name">Bronze Sword</option>
+                                    <option value="Iron Sword" selected="selected" data-i18n="Iron Sword-Full-Name">Iron Sword</option>
+                                    <option value="Steel Sword" selected="selected" data-i18n="Steel Sword-Full-Name">Steel Sword</option>
+                                    <option value="Silvered Sword" selected="selected" data-i18n="Silvered Sword-Full-Name">Silvered Sword</option>
+                                    <option value="Gilded Sword" selected="selected" data-i18n="Gilded Sword-Full-Name">Gilded Sword</option>
+                                    <option value="Orichalcum Sword" selected="selected" data-i18n="Orichalcum Sword-Full-Name">Orichalcum Sword</option>
+                                  </optgroup>
+                                  <optgroup label="Katana" data-i18n="Weapon-Type-Katana">
+                                      <option value="Copper Katana" selected="selected" data-i18n="Copper Katana-Full-Name">Copper Katana</option>
+                                      <option value="Bronze Katana" selected="selected" data-i18n="Bronze Katana-Full-Name">Bronze Katana</option>
+                                      <option value="Iron Katana" selected="selected" data-i18n="Iron Katana-Full-Name">Iron Katana</option>
+                                      <option value="Steel Katana" selected="selected" data-i18n="Steel Katana-Full-Name">Steel Katana</option>
+                                      <option value="Silvered Katana" selected="selected" data-i18n="Silvered Katana-Full-Name">Silvered Katana</option>
+                                      <option value="Gilded Katana" selected="selected" data-i18n="Gilded Katana-Full-Name">Gilded Katana</option>
+                                      <option value="Orichalcum Katana" selected="selected" data-i18n="Orichalcum Katana-Full-Name">Orichalcum Katana</option>
+                                  </optgroup>
+                                  <optgroup label="Axe" data-i18n="Weapon-Type-Axe">
+                                      <option value="Copper Axe" selected="selected" data-i18n="Copper Axe-Full-Name">Copper Axe</option>
+                                      <option value="Bronze Axe" selected="selected" data-i18n="Bronze Axe-Full-Name">Bronze Axe</option>
+                                      <option value="Iron Axe" selected="selected" data-i18n="Iron Axe-Full-Name">Iron Axe</option>
+                                      <option value="Steel Axe" selected="selected" data-i18n="Steel Axe-Full-Name">Steel Axe</option>
+                                      <option value="Silvered Axe" selected="selected" data-i18n="Silvered Axe-Full-Name">Silvered Axe</option>
+                                      <option value="Gilded Axe" selected="selected" data-i18n="Gilded Axe-Full-Name">Gilded Axe</option>
+                                      <option value="Orichalcum Axe" selected="selected" data-i18n="Orichalcum Axe-Full-Name">Orichalcum Axe</option>
+                                  </optgroup>
+                                  <optgroup label="Club" data-i18n="Weapon-Type-Club">
+                                      <option value="Copper Club" selected="selected" data-i18n="Copper Club-Full-Name">Copper Club</option>
+                                      <option value="Bronze Club" selected="selected" data-i18n="Bronze Club-Full-Name">Bronze Club</option>
+                                      <option value="Iron Club" selected="selected" data-i18n="Iron Club-Full-Name">Iron Club</option>
+                                      <option value="Steel Club" selected="selected" data-i18n="Steel Club-Full-Name">Steel Club</option>
+                                      <option value="Silvered Club" selected="selected" data-i18n="Silvered Club-Full-Name">Silvered Club</option>
+                                      <option value="Gilded Club" selected="selected" data-i18n="Gilded Club-Full-Name">Gilded Club</option>
+                                      <option value="Orichalcum Club" selected="selected" data-i18n="Orichalcum Club-Full-Name">Orichalcum Club</option>
+                                  </optgroup>
+                                  <optgroup label="Lance" data-i18n="Weapon-Type-Lance">
+                                      <option value="Copper Lance" selected="selected" data-i18n="Copper Lance-Full-Name">Copper Lance</option>
+                                      <option value="Bronze Lance" selected="selected" data-i18n="Bronze Lance-Full-Name">Bronze Lance</option>
+                                      <option value="Iron Lance" selected="selected" data-i18n="Iron Lance-Full-Name">Iron Lance</option>
+                                      <option value="Steel Lance" selected="selected" data-i18n="Steel Lance-Full-Name">Steel Lance</option>
+                                      <option value="Silvered Lance" selected="selected" data-i18n="Silvered Lance-Full-Name">Silvered Lance</option>
+                                      <option value="Gilded Lance" selected="selected" data-i18n="Gilded Lance-Full-Name">Gilded Lance</option>
+                                      <option value="Orichalcum Lance" selected="selected" data-i18n="Orichalcum Lance-Full-Name">Orichalcum Lance</option>
+                                  </optgroup>
+                                  <optgroup label="Naginata" data-i18n="Weapon-Type-Naginata">
+                                      <option value="Copper Naginata" selected="selected" data-i18n="Copper Naginata-Full-Name">Copper Naginata</option>
+                                      <option value="Bronze Naginata" selected="selected" data-i18n="Bronze Naginata-Full-Name">Bronze Naginata</option>
+                                      <option value="Iron Naginata" selected="selected" data-i18n="Iron Naginata-Full-Name">Iron Naginata</option>
+                                      <option value="Steel Naginata" selected="selected" data-i18n="Steel Naginata-Full-Name">Steel Naginata</option>
+                                      <option value="Silvered Naginata" selected="selected" data-i18n="Silvered Naginata-Full-Name">Silvered Naginata</option>
+                                      <option value="Gilded Naginata" selected="selected" data-i18n="Gilded Naginata-Full-Name">Gilded Naginata</option>
+                                      <option value="Orichalcum Naginata" selected="selected" data-i18n="Orichalcum Naginata-Full-Name">Orichalcum Naginata</option>
+                                  </optgroup>
+                                  <optgroup label="Gauntlet" data-i18n="Weapon-Type-Gauntlet">
+                                      <option value="Copper Gauntlet" selected="selected" data-i18n="Copper Gauntlet-Full-Name">Copper Gauntlet</option>
+                                      <option value="Bronze Gauntlet" selected="selected" data-i18n="Bronze Gauntlet-Full-Name">Bronze Gauntlet</option>
+                                      <option value="Iron Gauntlet" selected="selected" data-i18n="Iron Gauntlet-Full-Name">Iron Gauntlet</option>
+                                      <option value="Steel Gauntlet" selected="selected" data-i18n="Steel Gauntlet-Full-Name">Steel Gauntlet</option>
+                                      <option value="Silvered Gauntlet" selected="selected" data-i18n="Silvered Gauntlet-Full-Name">Silvered Gauntlet</option>
+                                      <option value="Gilded Gauntlet" selected="selected" data-i18n="Gilded Gauntlet-Full-Name">Gilded Gauntlet</option>
+                                      <option value="Orichalcum Gauntlet" selected="selected" data-i18n="Orichalcum Gauntlet-Full-Name">Orichalcum Gauntlet</option>
+                                  </optgroup>
+                                  <optgroup label="Crossbow" data-i18n="Weapon-Type-Crossbow">
+                                      <option value="Copper Crossbow" selected="selected" data-i18n="Copper Crossbow-Full-Name">Copper Crossbow</option>
+                                      <option value="Bronze Crossbow" selected="selected" data-i18n="Bronze Crossbow-Full-Name">Bronze Crossbow</option>
+                                      <option value="Iron Crossbow" selected="selected" data-i18n="Iron Crossbow-Full-Name">Iron Crossbow</option>
+                                      <option value="Steel Crossbow" selected="selected" data-i18n="Steel Crossbow-Full-Name">Steel Crossbow</option>
+                                      <option value="Silvered Crossbow" selected="selected" data-i18n="Silvered Crossbow-Full-Name">Silvered Crossbow</option>
+                                      <option value="Gilded Crossbow" selected="selected" data-i18n="Gilded Crossbow-Full-Name">Gilded Crossbow</option>
+                                      <option value="Orichalcum Crossbow" selected="selected" data-i18n="Orichalcum Crossbow-Full-Name">Orichalcum Crossbow</option>
+                                  </optgroup>
+                                  <optgroup label="Arbalest" data-i18n="Weapon-Type-Arbalest">
+                                      <option value="Copper Arbalest" selected="selected" data-i18n="Copper Arbalest-Full-Name">Copper Arbalest</option>
+                                      <option value="Bronze Arbalest" selected="selected" data-i18n="Bronze Arbalest-Full-Name">Bronze Arbalest</option>
+                                      <option value="Iron Arbalest" selected="selected" data-i18n="Iron Arbalest-Full-Name">Iron Arbalest</option>
+                                      <option value="Steel Arbalest" selected="selected" data-i18n="Steel Arbalest-Full-Name">Steel Arbalest</option>
+                                      <option value="Silvered Arbalest" selected="selected" data-i18n="Silvered Arbalest-Full-Name">Silvered Arbalest</option>
+                                      <option value="Gilded Arbalest" selected="selected" data-i18n="Gilded Arbalest-Full-Name">Gilded Arbalest</option>
+                                      <option value="Orichalcum Arbalest" selected="selected" data-i18n="Orichalcum Arbalest-Full-Name">Orichalcum Arbalest</option>
+                                  </optgroup>
+                                  <optgroup label="Knives" data-i18n="Weapon-Type-Knives">
+                                      <option value="Copper Knives" selected="selected" data-i18n="Copper Knives-Full-Name">Copper Knives</option>
+                                      <option value="Bronze Knives" selected="selected" data-i18n="Bronze Knives-Full-Name">Bronze Knives</option>
+                                      <option value="Iron Knives" selected="selected" data-i18n="Iron Knives-Full-Name">Iron Knives</option>
+                                      <option value="Steel Knives" selected="selected" data-i18n="Steel Knives-Full-Name">Steel Knives</option>
+                                      <option value="Silvered Knives" selected="selected" data-i18n="Silvered Knives-Full-Name">Silvered Knives</option>
+                                      <option value="Gilded Knives" selected="selected" data-i18n="Gilded Knives-Full-Name">Gilded Knives</option>
+                                      <option value="Orichalcum Knives" selected="selected" data-i18n="Orichalcum Knives-Full-Name">Orichalcum Knives</option>
+                                  </optgroup>
+                                  <optgroup label="Shuriken" data-i18n="Weapon-Type-Shuriken">
+                                      <option value="Copper Shuriken" selected="selected" data-i18n="Copper Shuriken-Full-Name">Copper Shuriken</option>
+                                      <option value="Bronze Shuriken" selected="selected" data-i18n="Bronze Shuriken-Full-Name">Bronze Shuriken</option>
+                                      <option value="Iron Shuriken" selected="selected" data-i18n="Iron Shuriken-Full-Name">Iron Shuriken</option>
+                                      <option value="Steel Shuriken" selected="selected" data-i18n="Steel Shuriken-Full-Name">Steel Shuriken</option>
+                                      <option value="Silvered Shuriken" selected="selected" data-i18n="Silvered Shuriken-Full-Name">Silvered Shuriken</option>
+                                      <option value="Gilded Shuriken" selected="selected" data-i18n="Gilded Shuriken-Full-Name">Gilded Shuriken</option>
+                                      <option value="Orichalcum Shuriken" selected="selected" data-i18n="Orichalcum Shuriken-Full-Name">Orichalcum Shuriken</option>
+                                  </optgroup>
+                                  <optgroup label="Bow" data-i18n="Weapon-Type-Bow">
+                                      <option value="Copper Bow" selected="selected" data-i18n="Copper Bow-Full-Name">Copper Bow</option>
+                                      <option value="Bronze Bow" selected="selected" data-i18n="Bronze Bow-Full-Name">Bronze Bow</option>
+                                      <option value="Iron Bow" selected="selected" data-i18n="Iron Bow-Full-Name">Iron Bow</option>
+                                      <option value="Steel Bow" selected="selected" data-i18n="Steel Bow-Full-Name">Steel Bow</option>
+                                      <option value="Silvered Bow" selected="selected" data-i18n="Silvered Bow-Full-Name">Silvered Bow</option>
+                                      <option value="Gilded Bow" selected="selected" data-i18n="Gilded Bow-Full-Name">Gilded Bow</option>
+                                      <option value="Orichalcum Bow" selected="selected" data-i18n="Orichalcum Bow-Full-Name">Orichalcum Bow</option>
+                                  </optgroup>
+                                  <optgroup label="Yumi" data-i18n="Weapon-Type-Yumi">
+                                      <option value="Copper Yumi" selected="selected" data-i18n="Copper Yumi-Full-Name">Copper Yumi</option>
+                                      <option value="Bronze Yumi" selected="selected" data-i18n="Bronze Yumi-Full-Name">Bronze Yumi</option>
+                                      <option value="Iron Yumi" selected="selected" data-i18n="Iron Yumi-Full-Name">Iron Yumi</option>
+                                      <option value="Steel Yumi" selected="selected" data-i18n="Steel Yumi-Full-Name">Steel Yumi</option>
+                                      <option value="Silvered Yumi" selected="selected" data-i18n="Silvered Yumi-Full-Name">Silvered Yumi</option>
+                                      <option value="Gilded Yumi" selected="selected" data-i18n="Gilded Yumi-Full-Name">Gilded Yumi</option>
+                                      <option value="Orichalcum Yumi" selected="selected" data-i18n="Orichalcum Yumi-Full-Name">Orichalcum Yumi</option>
+                                  </optgroup>
+                                  <optgroup label="Flintlock" data-i18n="Weapon-Type-Flintlock">
+                                      <option value="Copper Flintlock" selected="selected" data-i18n="Copper Flintlock-Full-Name">Copper Flintlock</option>
+                                      <option value="Bronze Flintlock" selected="selected" data-i18n="Bronze Flintlock-Full-Name">Bronze Flintlock</option>
+                                      <option value="Iron Flintlock" selected="selected" data-i18n="Iron Flintlock-Full-Name">Iron Flintlock</option>
+                                      <option value="Steel Flintlock" selected="selected" data-i18n="Steel Flintlock-Full-Name">Steel Flintlock</option>
+                                      <option value="Silvered Flintlock" selected="selected" data-i18n="Silvered Flintlock-Full-Name">Silvered Flintlock</option>
+                                      <option value="Gilded Flintlock" selected="selected" data-i18n="Gilded Flintlock-Full-Name">Gilded Flintlock</option>
+                                      <option value="Orichalcum Flintlock" selected="selected" data-i18n="Orichalcum Flintlock-Full-Name">Orichalcum Flintlock</option>
+                                  </optgroup>
+                                  <optgroup label="Wind" data-i18n="Weapon-Type-Wind">
+                                      <option value="Copper Wind" selected="selected" data-i18n="Copper Wind-Full-Name">Copper Wind</option>
+                                      <option value="Bronze Wind" selected="selected" data-i18n="Bronze Wind-Full-Name">Bronze Wind</option>
+                                      <option value="Iron Wind" selected="selected" data-i18n="Iron Wind-Full-Name">Iron Wind</option>
+                                      <option value="Steel Wind" selected="selected" data-i18n="Steel Wind-Full-Name">Steel Wind</option>
+                                      <option value="Silvered Wind" selected="selected" data-i18n="Silvered Wind-Full-Name">Silvered Wind</option>
+                                      <option value="Gilded Wind" selected="selected" data-i18n="Gilded Wind-Full-Name">Gilded Wind</option>
+                                      <option value="Orichalcum Wind" selected="selected" data-i18n="Orichalcum Wind-Full-Name">Orichalcum Wind</option>
+                                  </optgroup>
+                                  <optgroup label="Dark" data-i18n="Weapon-Type-Dark">
+                                      <option value="Copper Dark" selected="selected" data-i18n="Copper Dark-Full-Name">Copper Dark</option>
+                                      <option value="Bronze Dark" selected="selected" data-i18n="Bronze Dark-Full-Name">Bronze Dark</option>
+                                      <option value="Iron Dark" selected="selected" data-i18n="Iron Dark-Full-Name">Iron Dark</option>
+                                      <option value="Steel Dark" selected="selected" data-i18n="Steel Dark-Full-Name">Steel Dark</option>
+                                      <option value="Silvered Dark" selected="selected" data-i18n="Silvered Dark-Full-Name">Silvered Dark</option>
+                                      <option value="Gilded Dark" selected="selected" data-i18n="Gilded Dark-Full-Name">Gilded Dark</option>
+                                      <option value="Orichalcum Dark" selected="selected" data-i18n="Orichalcum Dark-Full-Name">Orichalcum Dark</option>
+                                  </optgroup>
+                                  <optgroup label="Light" data-i18n="Weapon-Type-Light">
+                                      <option value="Copper Light" selected="selected" data-i18n="Copper Light-Full-Name">Copper Light</option>
+                                      <option value="Bronze Light" selected="selected" data-i18n="Bronze Light-Full-Name">Bronze Light</option>
+                                      <option value="Iron Light" selected="selected" data-i18n="Iron Light-Full-Name">Iron Light</option>
+                                      <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
+                                      <option value="Silvered Light" selected="selected" data-i18n="Silvered Light-Full-Name">Silvered Light</option>
+                                      <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
+                                      <option value="Orichalcum Light" selected="selected" data-i18n="Orichalcum Light-Full-Name">Orichalcum Light</option>
+                                  </optgroup>
+                                  <optgroup label="Lightning" data-i18n="Weapon-Type-Lightning">
+                                      <option value="Copper Lightning" selected="selected" data-i18n="Copper Lightning-Full-Name">Copper Lightning</option>
+                                      <option value="Bronze Lightning" selected="selected" data-i18n="Bronze Lightning-Full-Name">Bronze Lightning</option>
+                                      <option value="Iron Lightning" selected="selected" data-i18n="Iron Lightning-Full-Name">Iron Lightning</option>
+                                      <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
+                                      <option value="Silvered Lightning" selected="selected" data-i18n="Silvered Lightning-Full-Name">Silvered Lightning</option>
+                                      <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
+                                      <option value="Orichalcum Lightning" selected="selected" data-i18n="Orichalcum Lightning-Full-Name">Orichalcum Lightning</option>
+                                  </optgroup>
+                                  <optgroup label="Fire" data-i18n="Weapon-Type-Fire">
+                                      <option value="Copper Fire" selected="selected" data-i18n="Copper Fire-Full-Name">Copper Fire</option>
+                                      <option value="Bronze Fire" selected="selected" data-i18n="Bronze Fire-Full-Name">Bronze Fire</option>
+                                      <option value="Iron Fire" selected="selected" data-i18n="Iron Fire-Full-Name">Iron Fire</option>
+                                      <option value="Steel Fire" selected="selected" data-i18n="Steel Fire-Full-Name">Steel Fire</option>
+                                      <option value="Silvered Fire" selected="selected" data-i18n="Silvered Fire-Full-Name">Silvered Fire</option>
+                                      <option value="Gilded Fire" selected="selected" data-i18n="Gilded Fire-Full-Name">Gilded Fire</option>
+                                      <option value="Orichalcum Fire" selected="selected" data-i18n="Orichalcum Fire-Full-Name">Orichalcum Fire</option>
+                                  </optgroup>
+                                  <optgroup label="Spirit" data-i18n="Weapon-Type-Spirit">
+                                      <option value="Copper Spirit" selected="selected" data-i18n="Copper Spirit-Full-Name">Copper Spirit</option>
+                                      <option value="Bronze Spirit" selected="selected" data-i18n="Bronze Spirit-Full-Name">Bronze Spirit</option>
+                                      <option value="Iron Spirit" selected="selected" data-i18n="Iron Spirit-Full-Name">Iron Spirit</option>
+                                      <option value="Steel Spirit" selected="selected" data-i18n="Steel Spirit-Full-Name">Steel Spirit</option>
+                                      <option value="Silvered Spirit" selected="selected" data-i18n="Silvered Spirit-Full-Name">Silvered Spirit</option>
+                                      <option value="Gilded Spirit" selected="selected" data-i18n="Gilded Spirit-Full-Name">Gilded Spirit</option>
+                                      <option value="Orichalcum Spirit" selected="selected" data-i18n="Orichalcum Spirit-Full-Name">Orichalcum Spirit</option>
+                                  </optgroup>
+                                  <optgroup label="Staff" data-i18n="Weapon-Type-Staff">
+                                      <option value="Copper Staff" selected="selected" data-i18n="Copper Staff-Full-Name">Copper Staff</option>
+                                      <option value="Bronze Staff" selected="selected" data-i18n="Bronze Staff-Full-Name">Bronze Staff</option>
+                                      <option value="Iron Staff" selected="selected" data-i18n="Iron Staff-Full-Name">Iron Staff</option>
+                                      <option value="Steel Staff" selected="selected" data-i18n="Steel Staff-Full-Name">Steel Staff</option>
+                                      <option value="Silvered Staff" selected="selected" data-i18n="Silvered Staff-Full-Name">Silvered Staff</option>
+                                      <option value="Gilded Staff" selected="selected" data-i18n="Gilded Staff-Full-Name">Gilded Staff</option>
+                                      <option value="Orichalcum Staff" selected="selected" data-i18n="Orichalcum Staff-Full-Name">Orichalcum Staff</option>
+                                  </optgroup>
+                                  <optgroup label="Claw" data-i18n="Weapon-Type-Claw">
+                                      <option value="Copper Claw" selected="selected" data-i18n="Copper Claw-Full-Name">Copper Claw</option>
+                                      <option value="Bronze Claw" selected="selected" data-i18n="Bronze Claw-Full-Name">Bronze Claw</option>
+                                      <option value="Iron Claw" selected="selected" data-i18n="Iron Claw-Full-Name">Iron Claw</option>
+                                      <option value="Steel Claw" selected="selected" data-i18n="Steel Claw-Full-Name">Steel Claw</option>
+                                      <option value="Silvered Claw" selected="selected" data-i18n="Silvered Claw-Full-Name">Silvered Claw</option>
+                                      <option value="Gilded Claw" selected="selected" data-i18n="Gilded Claw-Full-Name">Gilded Claw</option>
+                                      <option value="Orichalcum Claw" selected="selected" data-i18n="Orichalcum Claw-Full-Name">Orichalcum Claw</option>
+                                  </optgroup>
+                                  <optgroup label="Hoof" data-i18n="Weapon-Type-Hoof">
+                                      <option value="Copper Hoof" selected="selected" data-i18n="Copper Hoof-Full-Name">Copper Hoof</option>
+                                      <option value="Bronze Hoof" selected="selected" data-i18n="Bronze Hoof-Full-Name">Bronze Hoof</option>
+                                      <option value="Iron Hoof" selected="selected" data-i18n="Iron Hoof-Full-Name">Iron Hoof</option>
+                                      <option value="Steel Hoof" selected="selected" data-i18n="Steel Hoof-Full-Name">Steel Hoof</option>
+                                      <option value="Silvered Hoof" selected="selected" data-i18n="Silvered Hoof-Full-Name">Silvered Hoof</option>
+                                      <option value="Gilded Hoof" selected="selected" data-i18n="Gilded Hoof-Full-Name">Gilded Hoof</option>
+                                      <option value="Orichalcum Hoof" selected="selected" data-i18n="Orichalcum Hoof-Full-Name">Orichalcum Hoof</option>
+                                  </optgroup>
+                                  <optgroup label="Bite" data-i18n="Weapon-Type-Bite">
+                                      <option value="Copper Bite" selected="selected" data-i18n="Copper Bite-Full-Name">Copper Bite</option>
+                                      <option value="Bronze Bite" selected="selected" data-i18n="Bronze Bite-Full-Name">Bronze Bite</option>
+                                      <option value="Iron Bite" selected="selected" data-i18n="Iron Bite-Full-Name">Iron Bite</option>
+                                      <option value="Steel Bite" selected="selected" data-i18n="Steel Bite-Full-Name">Steel Bite</option>
+                                      <option value="Silvered Bite" selected="selected" data-i18n="Silvered Bite-Full-Name">Silvered Bite</option>
+                                      <option value="Gilded Bite" selected="selected" data-i18n="Gilded Bite-Full-Name">Gilded Bite</option>
+                                      <option value="Orichalcum Bite" selected="selected" data-i18n="Orichalcum Bite-Full-Name">Orichalcum Bite</option>
+                                  </optgroup>
+                                  <optgroup label="Gore" data-i18n="Weapon-Type-Gore">
+                                      <option value="Copper Gore" selected="selected" data-i18n="Copper Gore-Full-Name">Copper Gore</option>
+                                      <option value="Bronze Gore" selected="selected" data-i18n="Bronze Gore-Full-Name">Bronze Gore</option>
+                                      <option value="Iron Gore" selected="selected" data-i18n="Iron Gore-Full-Name">Iron Gore</option>
+                                      <option value="Steel Gore" selected="selected" data-i18n="Steel Gore-Full-Name">Steel Gore</option>
+                                      <option value="Silvered Gore" selected="selected" data-i18n="Silvered Gore-Full-Name">Silvered Gore</option>
+                                      <option value="Gilded Gore" selected="selected" data-i18n="Gilded Gore-Full-Name">Gilded Gore</option>
+                                      <option value="Orichalcum Gore" selected="selected" data-i18n="Orichalcum Gore-Full-Name">Orichalcum Gore</option>
+                                  </optgroup>
+                                  <optgroup label="Sting" data-i18n="Weapon-Type-Sting">
+                                      <option value="Copper Sting" selected="selected" data-i18n="Copper Sting-Full-Name">Copper Sting</option>
+                                      <option value="Bronze Sting" selected="selected" data-i18n="Bronze Sting-Full-Name">Bronze Sting</option>
+                                      <option value="Iron Sting" selected="selected" data-i18n="Iron Sting-Full-Name">Iron Sting</option>
+                                      <option value="Steel Sting" selected="selected" data-i18n="Steel Sting-Full-Name">Steel Sting</option>
+                                      <option value="Silvered Sting" selected="selected" data-i18n="Silvered Sting-Full-Name">Silvered Sting</option>
+                                      <option value="Gilded Sting" selected="selected" data-i18n="Gilded Sting-Full-Name">Gilded Sting</option>
+                                      <option value="Orichalcum Sting" selected="selected" data-i18n="Orichalcum Sting-Full-Name">Orichalcum Sting</option>
+                                  </optgroup>
+                                  <optgroup label="Punch" data-i18n="Weapon-Type-Punch">
+                                      <option value="Copper Punch" selected="selected" data-i18n="Copper Punch-Full-Name">Copper Punch</option>
+                                      <option value="Bronze Punch" selected="selected" data-i18n="Bronze Punch-Full-Name">Bronze Punch</option>
+                                      <option value="Iron Punch" selected="selected" data-i18n="Iron Punch-Full-Name">Iron Punch</option>
+                                      <option value="Steel Punch" selected="selected" data-i18n="Steel Punch-Full-Name">Steel Punch</option>
+                                      <option value="Silvered Punch" selected="selected" data-i18n="Silvered Punch-Full-Name">Silvered Punch</option>
+                                      <option value="Gilded Punch" selected="selected" data-i18n="Gilded Punch-Full-Name">Gilded Punch</option>
+                                      <option value="Orichalcum Punch" selected="selected" data-i18n="Orichalcum Punch-Full-Name">Orichalcum Punch</option>
+                                  </optgroup>
+                                  <optgroup label="Slam" data-i18n="Weapon-Type-Slam">
+                                      <option value="Copper Slam" selected="selected" data-i18n="Copper Slam-Full-Name">Copper Slam</option>
+                                      <option value="Bronze Slam" selected="selected" data-i18n="Bronze Slam-Full-Name">Bronze Slam</option>
+                                      <option value="Iron Slam" selected="selected" data-i18n="Iron Slam-Full-Name">Iron Slam</option>
+                                      <option value="Steel Slam" selected="selected" data-i18n="Steel Slam-Full-Name">Steel Slam</option>
+                                      <option value="Silvered Slam" selected="selected" data-i18n="Silvered Slam-Full-Name">Silvered Slam</option>
+                                      <option value="Gilded Slam" selected="selected" data-i18n="Gilded Slam-Full-Name">Gilded Slam</option>
+                                      <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
+                                  </optgroup>
                                 </select>
                             </label>
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Level">Level</span>: <input type="number" name="attr_CombatSkillLevel" min="1"/></label>

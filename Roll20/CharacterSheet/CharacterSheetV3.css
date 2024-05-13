@@ -512,6 +512,16 @@ label.GreatSkillLegendary { display: none; }
   width: fit-content;
 }
 
+.OptionCategoryH1 {
+  background:gray;
+  font-weight:bold;
+  color:white;
+}
+
+.OptionCategoryH2 {
+  font-weight:bold;
+}
+
 /*Page Selector Logic*/
 /*mark your sections invisible here*/
 .charsheet .SheetPageCharacter,

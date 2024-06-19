@@ -469,6 +469,64 @@ label.GreatSkillLegendary { display: none; }
   visibility: hidden;
 }
 
+.repcontainer[data-groupname=repeating_CharacterLevel] {
+  display: table;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+
+.RepeatingCharacterLevelSection {
+  display: table-row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.RepeatingCharacterLevelSectionHeader {
+  display: none;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterLevelGridItemHeader {
+  display: none;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.LevelupCharacterLevelGridItem {
+  display: table-cell;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader {
+  display: table-row;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader > .LevelupCharacterLevelGridItemHeader {
+  display: table-cell;
+}
+
+.repcontrol[data-groupname=repeating_characterlevel]  {
+  display: none;
+  visibility: hidden;
+}
+
 /*Notes*/
 
 /*Configuration*/

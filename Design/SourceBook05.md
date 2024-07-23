@@ -380,7 +380,7 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Creature Slayer** *Lv 2*: Choose a Creature Type. If your opponent is that creature type, triple the might of this weapon.
 
-**Masterwork** *Lv 2*: Skills that have a percent chance of activation increase their activation chance by 5% per skill level.
+**Masterwork** *Lv 2*: Skills that have a percent chance of activation increase their activation chance by 5% per Rune level.
 
 **Weapon Slayer** *Lv 3*: Choose a weapon type. If your opponent is wielding that weapon, triple the might of this weapon.
 

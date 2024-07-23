@@ -966,7 +966,7 @@
                               <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="LUK-Abbrev-Name">LUK</span></label></div>
                               <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="CON-Abbrev-Name">CON</span></label></div>
                               <div class="LevelupCharacterLevelGridItemHeader"><label class="PrimaryLabel"><span data-i18n="WIS-Abbrev-Name">WIS</span></label></div>
-                              <div class="LevelupCharacterLevelGridItemHeader"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level<br>Up</button></div>
+                              <div class="LevelupCharacterLevelGridItemHeader"><button type="action" class="PrimaryButton" name="act_LevelUp" data-i18n="LevelUp-LevelUp-button" >Level Up</button></div>
                           </div>
                           <div class="RepeatingCharacterLevelSection">
                               <div class="LevelupCharacterLevelGridItem"><input type="number" name="attr_hp_growth" step="1" min="0" max="18" /></div>
@@ -2713,7 +2713,7 @@
 
   function CalculateStats() {
 
-    const Growth = {
+    const GrowthTracker = {
       "Earned": {
         "hp": 0,
         "str": 0,
@@ -2746,19 +2746,19 @@
           getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, `${GrowthEntrySkill}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
               var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]) + parseInt(values[GrowthEntrySkill]);
               var Roll = parseInt(values[LevelRoll]);
-              if (Roll <= Growth + Growth.Wiff[stat]) {
-                Growth.Earned[stat] = Growth.Earned[stat] + 1;
+              if (Roll <= Growth + GrowthTracker.Wiff[stat]) {
+                GrowthTracker.Earned[stat] = GrowthTracker.Earned[stat] + 1;
               }
-              if (Roll > Growth + Growth.Wiff[stat] && parseInt(values.NoBadStats) == 1) {
-                Growth.Wiff[stat] = Growth.Wiff[stat] + 1;
+              if (Roll > Growth + GrowthTracker.Wiff[stat] && parseInt(values.NoBadStats) == 1) {
+                GrowthTracker.Wiff[stat] = GrowthTracker.Wiff[stat] + 1;
               } else {
-                Growth.Wiff[stat] = 0;
+                GrowthTracker.Wiff[stat] = 0;
               }
               if (parseInt(values.StaticLevels) == 1) {
-                Growth.Earned[stat] = Math.floor(parseInt(values.character_level) * Growth / 18.0);
+                GrowthTracker.Earned[stat] = Math.floor(parseInt(values.character_level) * Growth / 18.0);
               }
               setAttrs({
-                [`${stat}_stat_growth`]: Growth.Earned[stat]
+                [`${stat}_stat_growth`]: GrowthTracker.Earned[stat]
               });
           });
         });
@@ -2813,11 +2813,11 @@
         let SkillCost = `repeating_classskillslist_${rowid}_ClassSkillCost`;
         getAttrs([SkillName], function(values) {
           let SkillNameValue = values[SkillName];
-          StatChanges["mov"] = parseInt(StatChanges["mov"]) + parseInt(ClassSkills[SkillNameValue]["mov"]);
-          StatChanges["cost"] = parseInt(StatChanges["cost"]) + parseInt(ClassSkills[SkillNameValue]["Cost"]);
+          Changes.Stat["mov"] = parseInt(Changes.Stat["mov"]) + parseInt(ClassSkills[SkillNameValue]["mov"]);
+          Changes.Stat["cost"] = parseInt(Changes.Stat["cost"]) + parseInt(ClassSkills[SkillNameValue]["Cost"]);
           setAttrs({
-            [`mov_stat_skill`]: StatChanges["mov"],
-            [`growth_skill_points`]: StatChanges["cost"]
+            [`mov_stat_skill`]: Changes.Stat["mov"],
+            [`growth_skill_points`]: Changes.Stat["cost"]
           });
         });
       });

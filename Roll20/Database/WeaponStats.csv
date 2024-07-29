@@ -1,4 +1,4 @@
-Name,Type,Tier,Level,Metal,Type,Color,Might,Accuracy,Critical,RangeMin,RangeMax,str,int,dex,spd,luk,con,wis,Slayer,Special
+Name,Type,Tier,Level,Metal,DamageType,Color,Might,Accuracy,Critical,RangeMin,RangeMax,str,int,dex,spd,luk,con,wis,Slayer,Special
 Copper Sword,Sword,E,1,Copper,Physical,Red,4,95,0,1,1,0,0,0,0,0,0,0,-,-
 Bronze Sword,Sword,D,2,Bronze,Physical,Red,6,90,0,1,1,0,0,0,0,0,0,0,-,-
 Iron Sword,Sword,C,3,Iron,Physical,Red,8,85,0,1,1,0,0,0,0,0,0,0,-,-

@@ -1,28 +1,4 @@
 {
-  "Elf": {
-    "CreatureType": "Elf",
-    "HP": "7",
-    "STR": "2",
-    "INT": "2",
-    "DEX": "3",
-    "SPD": "4",
-    "LUK": "2",
-    "CON": "0",
-    "WIS": "2",
-    "MOV": "5"
-  },
-  "Dwarf": {
-    "CreatureType": "Dwarf",
-    "HP": "13",
-    "STR": "2",
-    "INT": "0",
-    "DEX": "2",
-    "SPD": "1",
-    "LUK": "2",
-    "CON": "3",
-    "WIS": "3",
-    "MOV": "5"
-  },
   "Carnivore": {
     "CreatureType": "Carnivore",
     "HP": "10",
@@ -34,6 +10,42 @@
     "CON": "2",
     "WIS": "0",
     "MOV": "5"
+  },
+  "Dragon": {
+    "CreatureType": "Dragon",
+    "HP": "10",
+    "STR": "2",
+    "INT": "4",
+    "DEX": "2",
+    "SPD": "1",
+    "LUK": "2",
+    "CON": "2",
+    "WIS": "3",
+    "MOV": "4"
+  },
+  "Human": {
+    "CreatureType": "Human",
+    "HP": "10",
+    "STR": "2",
+    "INT": "2",
+    "DEX": "2",
+    "SPD": "2",
+    "LUK": "2",
+    "CON": "2",
+    "WIS": "2",
+    "MOV": "5"
+  },
+  "Herbivore": {
+    "CreatureType": "Herbivore",
+    "HP": "10",
+    "STR": "2",
+    "INT": "2",
+    "DEX": "2",
+    "SPD": "3",
+    "LUK": "2",
+    "CON": "0",
+    "WIS": "1",
+    "MOV": "6"
   },
   "Cyborg": {
     "CreatureType": "Cyborg",
@@ -59,29 +71,29 @@
     "WIS": "2",
     "MOV": "5"
   },
-  "Human": {
-    "CreatureType": "Human",
-    "HP": "10",
+  "Elf": {
+    "CreatureType": "Elf",
+    "HP": "7",
     "STR": "2",
     "INT": "2",
-    "DEX": "2",
-    "SPD": "2",
+    "DEX": "3",
+    "SPD": "4",
     "LUK": "2",
-    "CON": "2",
+    "CON": "0",
     "WIS": "2",
     "MOV": "5"
   },
-  "Dragon": {
-    "CreatureType": "Dragon",
-    "HP": "10",
+  "Dwarf": {
+    "CreatureType": "Dwarf",
+    "HP": "13",
     "STR": "2",
-    "INT": "4",
+    "INT": "0",
     "DEX": "2",
     "SPD": "1",
     "LUK": "2",
-    "CON": "2",
+    "CON": "3",
     "WIS": "3",
-    "MOV": "4"
+    "MOV": "5"
   },
   "Goblin": {
     "CreatureType": "Goblin",
@@ -94,17 +106,5 @@
     "CON": "1",
     "WIS": "1",
     "MOV": "5"
-  },
-  "Herbivore": {
-    "CreatureType": "Herbivore",
-    "HP": "10",
-    "STR": "2",
-    "INT": "2",
-    "DEX": "2",
-    "SPD": "3",
-    "LUK": "2",
-    "CON": "0",
-    "WIS": "1",
-    "MOV": "6"
   }
 }

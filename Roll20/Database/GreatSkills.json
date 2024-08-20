@@ -1,30 +1,57 @@
 {
-  "Moon Strike": {
-    "Name": "Moon Strike",
-    "Level": "Epic",
-    "Description": "Your Strikes have a DEX% to reduce enemy defence by 1/2.",
+  "Lunar Strike": {
+    "Name": "Lunar Strike",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a DEXx2% chance to reduce enemy Defense by 1/2.",
     "ActivationStat": "DEX",
-    "ActivationMultiplier": "1",
+    "ActivationMultiplier": "2",
     "EffectPower": ".5",
     "Effect": "Moon"
   },
-  "Sun Strike": {
-    "Name": "Sun Strike",
-    "Level": "Epic",
-    "Description": "Your Strikes have a DEX% to recover HP equal to 1/2 damage dealt.",
+  "Explosive Magic": {
+    "Name": "Explosive Magic",
+    "Level": "Legendary",
+    "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might x 1.5 - each enemy's Defence to all enemies adjacent to your target.",
     "ActivationStat": "DEX",
     "ActivationMultiplier": "1",
-    "EffectPower": ".5",
-    "Effect": "Sun"
+    "EffectPower": "1.5",
+    "Effect": "Blast"
   },
-  "Charged Magic": {
-    "Name": "Charged Magic",
-    "Level": "Epic",
-    "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
-    "ActivationStat": "INT",
+  "Solar Impact": {
+    "Name": "Solar Impact",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a DEX% chance to recover HP equal to the damage you deal.",
+    "ActivationStat": "DEX",
     "ActivationMultiplier": "1",
     "EffectPower": "1",
-    "Effect": "Blast"
+    "Effect": "Sun"
+  },
+  "Astral Impact": {
+    "Name": "Astral Impact",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a DEX/2% ignore enemy defense and recover HP equal to damage dealt.",
+    "ActivationStat": "DEX",
+    "ActivationMultiplier": ".5",
+    "EffectPower": "1",
+    "Effect": "Moon Sun"
+  },
+  "Waiting Block": {
+    "Name": "Waiting Block",
+    "Level": "Epic",
+    "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive by 1/2.",
+    "ActivationStat": "WIS",
+    "ActivationMultiplier": "1",
+    "EffectPower": ".5",
+    "Effect": "Shield"
+  },
+  "Retributive Strike": {
+    "Name": "Retributive Strike",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a CONx2% to deal your missing HP/2 in undefensible damage.",
+    "ActivationStat": "DEX",
+    "ActivationMultiplier": "2",
+    "EffectPower": ".5",
+    "Effect": "Vengence"
   },
   "Colossal Impact": {
     "Name": "Colossal Impact",
@@ -35,14 +62,50 @@
     "EffectPower": "1",
     "Effect": "Heavy"
   },
-  "Resistant Block": {
-    "Name": "Resistant Block",
+  "Solar Strike": {
+    "Name": "Solar Strike",
     "Level": "Legendary",
-    "Description": "When an enemy Engages with you, you have a WISx2% chance to reduce the damage you actually receive by 1/2.",
-    "ActivationStat": "WIS",
+    "Description": "Your Strikes have a DEXx2% chance to recover HP equal to 1/2 the damage you deal.",
+    "ActivationStat": "DEX",
+    "ActivationMultiplier": "2",
+    "EffectPower": ".5",
+    "Effect": "Sun"
+  },
+  "Brave Strike": {
+    "Name": "Brave Strike",
+    "Level": "Epic",
+    "Description": "Your Strikes have a SPD% to trigger an additional time.",
+    "ActivationStat": "SPD",
+    "ActivationMultiplier": "1",
+    "EffectPower": "1",
+    "Effect": "Brave"
+  },
+  "Charged Magic": {
+    "Name": "Charged Magic",
+    "Level": "Epic",
+    "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
+    "ActivationStat": "INT",
+    "ActivationMultiplier": "1",
+    "EffectPower": "1",
+    "Effect": "Blast"
+  },
+  "Sun Strike": {
+    "Name": "Sun Strike",
+    "Level": "Epic",
+    "Description": "Your Strikes have a DEX% to recover HP equal to 1/2 damage dealt.",
+    "ActivationStat": "DEX",
     "ActivationMultiplier": "1",
     "EffectPower": ".5",
-    "Effect": "Shield"
+    "Effect": "Sun"
+  },
+  "Vengeful Strike": {
+    "Name": "Vengeful Strike",
+    "Level": "Epic",
+    "Description": "Your Strikes have a CON% to deal your missing HP/2 undefensible damage",
+    "ActivationStat": "CON",
+    "ActivationMultiplier": "1",
+    "EffectPower": ".5",
+    "Effect": "Vengence"
   },
   "Lunar Impact": {
     "Name": "Lunar Impact",
@@ -62,104 +125,14 @@
     "EffectPower": ".5",
     "Effect": "Moon Sun"
   },
-  "Brave Strike": {
-    "Name": "Brave Strike",
+  "Moon Strike": {
+    "Name": "Moon Strike",
     "Level": "Epic",
-    "Description": "Your Strikes have a SPD% to trigger an additional time.",
-    "ActivationStat": "SPD",
-    "ActivationMultiplier": "1",
-    "EffectPower": "1",
-    "Effect": "Brave"
-  },
-  "Astral Impact": {
-    "Name": "Astral Impact",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a DEX/2% ignore enemy defense and recover HP equal to damage dealt.",
+    "Description": "Your Strikes have a DEX% to reduce enemy defence by 1/2.",
     "ActivationStat": "DEX",
-    "ActivationMultiplier": ".5",
-    "EffectPower": "1",
-    "Effect": "Moon Sun"
-  },
-  "Empowered Magic": {
-    "Name": "Empowered Magic",
-    "Level": "Legendary",
-    "Description": "When you Engage with an opponent, you have an INTx2% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "2",
-    "EffectPower": "1",
-    "Effect": "Blast"
-  },
-  "Retributive Impact": {
-    "Name": "Retributive Impact",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a CON% to deal your missing HP in undefensible damage.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "1",
-    "EffectPower": "1",
-    "Effect": "Vengence"
-  },
-  "Colossal Strike": {
-    "Name": "Colossal Strike",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a STRx2% to deal STR/2 additional damage.",
-    "ActivationStat": "STR",
-    "ActivationMultiplier": "2",
-    "EffectPower": ".5",
-    "Effect": "Heavy"
-  },
-  "Vengeful Strike": {
-    "Name": "Vengeful Strike",
-    "Level": "Epic",
-    "Description": "Your Strikes have a CON% to deal your missing HP/2 undefensible damage",
-    "ActivationStat": "CON",
     "ActivationMultiplier": "1",
     "EffectPower": ".5",
-    "Effect": "Vengence"
-  },
-  "Hero Impact": {
-    "Name": "Hero Impact",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a SPD% to trigger 3 additional times.",
-    "ActivationStat": "SPD",
-    "ActivationMultiplier": "1",
-    "EffectPower": "3",
-    "Effect": "Brave"
-  },
-  "Solar Impact": {
-    "Name": "Solar Impact",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a DEX% chance to recover HP equal to the damage you deal.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "1",
-    "EffectPower": "1",
-    "Effect": "Sun"
-  },
-  "Solar Strike": {
-    "Name": "Solar Strike",
-    "Level": "Legendary",
-    "Description": "Your Strikes have a DEXx2% chance to recover HP equal to 1/2 the damage you deal.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "2",
-    "EffectPower": ".5",
-    "Effect": "Sun"
-  },
-  "Shielded Block": {
-    "Name": "Shielded Block",
-    "Level": "Legendary",
-    "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive to 0.",
-    "ActivationStat": "WIS",
-    "ActivationMultiplier": "1",
-    "EffectPower": "0",
-    "Effect": "Shield"
-  },
-  "Waiting Block": {
-    "Name": "Waiting Block",
-    "Level": "Epic",
-    "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive by 1/2.",
-    "ActivationStat": "WIS",
-    "ActivationMultiplier": "1",
-    "EffectPower": ".5",
-    "Effect": "Shield"
+    "Effect": "Moon"
   },
   "Pierce Strike": {
     "Name": "Pierce Strike",
@@ -170,15 +143,6 @@
     "EffectPower": ".5",
     "Effect": "Heavy"
   },
-  "Explosive Magic": {
-    "Name": "Explosive Magic",
-    "Level": "Legendary",
-    "Description": "When you Engage with an opponent, you have an INT% chance to deal your Might x 1.5 - each enemy's Defence to all enemies adjacent to your target.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "1",
-    "EffectPower": "1.5",
-    "Effect": "Blast"
-  },
   "Hero Strike": {
     "Name": "Hero Strike",
     "Level": "Legendary",
@@ -188,22 +152,58 @@
     "EffectPower": "1",
     "Effect": "Brave"
   },
-  "Retributive Strike": {
-    "Name": "Retributive Strike",
+  "Resistant Block": {
+    "Name": "Resistant Block",
     "Level": "Legendary",
-    "Description": "Your Strikes have a CONx2% to deal your missing HP/2 in undefensible damage.",
+    "Description": "When an enemy Engages with you, you have a WISx2% chance to reduce the damage you actually receive by 1/2.",
+    "ActivationStat": "WIS",
+    "ActivationMultiplier": "1",
+    "EffectPower": ".5",
+    "Effect": "Shield"
+  },
+  "Empowered Magic": {
+    "Name": "Empowered Magic",
+    "Level": "Legendary",
+    "Description": "When you Engage with an opponent, you have an INTx2% chance to deal your Might - each enemy's Defence to all enemies adjacent to your target.",
     "ActivationStat": "DEX",
     "ActivationMultiplier": "2",
+    "EffectPower": "1",
+    "Effect": "Blast"
+  },
+  "Colossal Strike": {
+    "Name": "Colossal Strike",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a STRx2% to deal STR/2 additional damage.",
+    "ActivationStat": "STR",
+    "ActivationMultiplier": "2",
     "EffectPower": ".5",
+    "Effect": "Heavy"
+  },
+  "Hero Impact": {
+    "Name": "Hero Impact",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a SPD% to trigger 3 additional times.",
+    "ActivationStat": "SPD",
+    "ActivationMultiplier": "1",
+    "EffectPower": "3",
+    "Effect": "Brave"
+  },
+  "Retributive Impact": {
+    "Name": "Retributive Impact",
+    "Level": "Legendary",
+    "Description": "Your Strikes have a CON% to deal your missing HP in undefensible damage.",
+    "ActivationStat": "DEX",
+    "ActivationMultiplier": "1",
+    "EffectPower": "1",
     "Effect": "Vengence"
   },
-  "Lunar Strike": {
-    "Name": "Lunar Strike",
+  "Shielded Block": {
+    "Name": "Shielded Block",
     "Level": "Legendary",
-    "Description": "Your Strikes have a DEXx2% chance to reduce enemy Defense by 1/2.",
-    "ActivationStat": "DEX",
-    "ActivationMultiplier": "2",
-    "EffectPower": ".5",
-    "Effect": "Moon"
+    "Description": "When an enemy Engages with you, you have a WIS% chance to reduce the damage you actually receive to 0.",
+    "ActivationStat": "WIS",
+    "ActivationMultiplier": "1",
+    "EffectPower": "0",
+    "Effect": "Shield"
   }
 }

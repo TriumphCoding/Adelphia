@@ -1,15 +1,4 @@
 {
-  "Herbivore": {
-    "CreatureType": "Herbivore",
-    "HP": "5",
-    "STR": "5",
-    "INT": "5",
-    "DEX": "5",
-    "SPD": "7",
-    "LUK": "5",
-    "CON": "4",
-    "WIS": "4"
-  },
   "Dwarf": {
     "CreatureType": "Dwarf",
     "HP": "6",
@@ -21,12 +10,12 @@
     "CON": "6",
     "WIS": "6"
   },
-  "Human": {
-    "CreatureType": "Human",
+  "Cyborg": {
+    "CreatureType": "Cyborg",
     "HP": "5",
-    "STR": "5",
+    "STR": "6",
     "INT": "5",
-    "DEX": "5",
+    "DEX": "4",
     "SPD": "5",
     "LUK": "5",
     "CON": "5",
@@ -42,17 +31,6 @@
     "LUK": "5",
     "CON": "5",
     "WIS": "4"
-  },
-  "Cyborg": {
-    "CreatureType": "Cyborg",
-    "HP": "5",
-    "STR": "6",
-    "INT": "5",
-    "DEX": "4",
-    "SPD": "5",
-    "LUK": "5",
-    "CON": "5",
-    "WIS": "5"
   },
   "Orc": {
     "CreatureType": "Orc",
@@ -76,12 +54,12 @@
     "CON": "3",
     "WIS": "5"
   },
-  "Goblin": {
-    "CreatureType": "Goblin",
-    "HP": "4",
+  "Herbivore": {
+    "CreatureType": "Herbivore",
+    "HP": "5",
     "STR": "5",
     "INT": "5",
-    "DEX": "6",
+    "DEX": "5",
     "SPD": "7",
     "LUK": "5",
     "CON": "4",
@@ -97,5 +75,27 @@
     "LUK": "4",
     "CON": "5",
     "WIS": "6"
+  },
+  "Goblin": {
+    "CreatureType": "Goblin",
+    "HP": "4",
+    "STR": "5",
+    "INT": "5",
+    "DEX": "6",
+    "SPD": "7",
+    "LUK": "5",
+    "CON": "4",
+    "WIS": "4"
+  },
+  "Human": {
+    "CreatureType": "Human",
+    "HP": "5",
+    "STR": "5",
+    "INT": "5",
+    "DEX": "5",
+    "SPD": "5",
+    "LUK": "5",
+    "CON": "5",
+    "WIS": "5"
   }
 }

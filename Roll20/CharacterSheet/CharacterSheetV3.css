@@ -133,6 +133,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  flex-direction: column;
 }
 
 .CharacterSheetFlexObject {
@@ -161,7 +162,7 @@
 }
 
 /*Weapons*/
-.SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] {
+.SheetPageWeapon > .SheetPageFlexContainer > .repcontainer[data-groupname="repeating_weapons"] {
   grid-row: span 3;
   grid-column: span 2;
   outline: auto;
@@ -173,7 +174,7 @@
   grid-template-rows: auto;
 }
 
-.SheetPageWeapon > .repcontainer[data-groupname="repeating_weapons"] > .repitem {
+.SheetPageWeapon > .SheetPageFlexContainer > .repcontainer[data-groupname="repeating_weapons"] > .repitem {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -184,7 +185,7 @@
   margin-bottom: 2px;
 }
 
-.SheetPageWeapon > .repcontrol[data-groupname="repeating_weapons"] {
+.SheetPageWeapon > .SheetPageFlexContainer > .repcontrol[data-groupname="repeating_weapons"] {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -195,7 +196,7 @@
 
 
 /*Items*/
-.SheetPageItem > .repcontrol[data-groupname="repeating_items"] {
+.SheetPageItem > .SheetPageFlexContainer > .repcontainer[data-groupname="repeating_items"] {
   grid-row: span 3;
   grid-column: span 2;
   outline: auto;
@@ -207,7 +208,7 @@
   grid-template-rows: auto;
 }
 
-.SheetPageItem > .repcontrol[data-groupname="repeating_items"] > .repitem {
+.SheetPageItem > .SheetPageFlexContainer > .repcontainer[data-groupname="repeating_items"] > .repitem {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -218,7 +219,7 @@
   margin-bottom: 2px;
 }
 
-.SheetPageItem > .repcontrol[data-groupname="repeating_items"] {
+.SheetPageItem > .SheetPageFlexContainer > .repcontrol[data-groupname="repeating_items"] {
   grid-row: span 1;
   grid-column: span 1;
   outline: auto;
@@ -599,4 +600,4 @@ label.GreatSkillLegendary { display: none; }
 .charsheet .tabstoggle[value="Skills"] ~ div.SheetPageSkills,
 .charsheet .tabstoggle[value="Growth"] ~ div.SheetPageGrowth,
 .charsheet .tabstoggle[value="Notes"] ~ div.SheetPageNotes,
-.charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; }
+.charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; flex-direction: column; }

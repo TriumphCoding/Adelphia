@@ -160,7 +160,7 @@ One of your ancestors made a pact with the spirit of a carnivorous animal. the r
 
 |Carnivore| HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
-| Base    |  10|    4|    3|    2|    3|    2|    2|    0|    5|
+| Base    |  10|    4|    1|    2|    3|    2|    2|    0|    5|
 | Growth  |   5|    7|    3|    5|    6|    5|    5|    4|  N/A|
 
 ### Herbivore

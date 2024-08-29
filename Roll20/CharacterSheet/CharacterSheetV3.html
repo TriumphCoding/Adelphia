@@ -389,6 +389,17 @@
                 <fieldset class="repeating_items">
                   <h2 data-i18n="Item-Title">Item</h2>
                   <label class="PrimaryLabel"><span data-i18n="Item-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Name"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="Item-Description-Label">Description</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Description"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="Item-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Tier"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span>: <input type="text" class="PrimaryEntry" name="attr_Item-HP"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Might"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Accuracy"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Critical"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Dodge"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Avoid"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Defense"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Resistance"/></label>
+                  <label class="PrimaryLabel"><span data-i18n="MOV-Full-Name">Movement</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Move"/></label>
                   <!-- ToDo: Finish Item Section -->
                 </fieldset>
               </div>
@@ -1064,6 +1075,409 @@
     "wis"
   ];
 
+/* Update Functions */
+  function CalculateStatPointGrid() {
+    getAttrs([
+      "hp_stat_base" ,"hp_stat_CT" ,"hp_stat_skill" ,"hp_stat_growth" ,
+      "str_stat_base","str_stat_CT","str_stat_skill","str_stat_growth",
+      "dex_stat_base","dex_stat_CT","dex_stat_skill","dex_stat_growth",
+      "int_stat_base","int_stat_CT","int_stat_skill","int_stat_growth",
+      "spd_stat_base","spd_stat_CT","spd_stat_skill","spd_stat_growth",
+      "luk_stat_base","luk_stat_CT","luk_stat_skill","luk_stat_growth",
+      "con_stat_base","con_stat_CT","con_stat_skill","con_stat_growth",
+      "wis_stat_base","wis_stat_CT","wis_stat_skill","wis_stat_growth",
+      "mov_stat_base","mov_stat_CT","mov_stat_skill",
+      "BaseClassPoints","CtClassPoints","LevelClassPoints","LevelClassPointsRate",
+      "character_level","growth_skill_points","BaseDefaultHP"
+    ], function(v) {
+      setAttrs({ 
+        stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
+        stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
+        hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth)) ,
+        str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth)),
+        dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth)),
+        int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth)),
+        spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth)),
+        luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth)),
+        con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth)),
+        wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth)),
+        mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill))
+      });
+    });
+  };
+
+  function CalculateGrowthPointGrid() {
+    getAttrs([
+      "hp_growth_base" ,"hp_growth_bg" ,"hp_growth_skill" ,
+      "str_growth_base","str_growth_bg","str_growth_skill",
+      "dex_growth_base","dex_growth_bg","dex_growth_skill",
+      "int_growth_base","int_growth_bg","int_growth_skill",
+      "spd_growth_base","spd_growth_bg","spd_growth_skill",
+      "luk_growth_base","luk_growth_bg","luk_growth_skill",
+      "con_growth_base","con_growth_bg","con_growth_skill",
+      "wis_growth_base","wis_growth_bg","wis_growth_skill",
+      "BaseGrowthPoints","BackgroundGrowthPoints"
+    ], function(v) {
+      setAttrs({
+        growth_base_points: (v.BaseGrowthPoints - v.hp_growth_base - v.str_growth_base - v.dex_growth_base - v.int_growth_base - v.spd_growth_base - v.luk_growth_base - v.con_growth_base - v.wis_growth_base),
+        growth_background_points: (v.BackgroundGrowthPoints - v.hp_growth_bg - v.str_growth_bg - v.dex_growth_bg - v.int_growth_bg - v.spd_growth_bg - v.luk_growth_bg - v.con_growth_bg - v.wis_growth_bg),
+        hp_growth_total:  (Number(v.hp_growth_base)  + Number(v.hp_growth_bg)  + Number(v.hp_growth_skill)) ,
+        str_growth_total: (Number(v.str_growth_base) + Number(v.str_growth_bg) + Number(v.str_growth_skill)),
+        dex_growth_total: (Number(v.dex_growth_base) + Number(v.dex_growth_bg) + Number(v.dex_growth_skill)),
+        int_growth_total: (Number(v.int_growth_base) + Number(v.int_growth_bg) + Number(v.int_growth_skill)),
+        spd_growth_total: (Number(v.spd_growth_base) + Number(v.spd_growth_bg) + Number(v.spd_growth_skill)),
+        luk_growth_total: (Number(v.luk_growth_base) + Number(v.luk_growth_bg) + Number(v.luk_growth_skill)),
+        con_growth_total: (Number(v.con_growth_base) + Number(v.con_growth_bg) + Number(v.con_growth_skill)),
+        wis_growth_total: (Number(v.wis_growth_base) + Number(v.wis_growth_bg) + Number(v.wis_growth_skill))
+      });
+    });
+  };
+
+  function CalculateStats() {
+
+    const GrowthTracker = {
+      "Earned": {
+        "hp": 0,
+        "str": 0,
+        "int": 0,
+        "dex": 0,
+        "spd": 0,
+        "luk": 0,
+        "con": 0,
+        "wis": 0
+      },
+      "Wiff": {
+        "hp": 0,
+        "str": 0,
+        "int": 0,
+        "dex": 0,
+        "spd": 0,
+        "luk": 0,
+        "con": 0,
+        "wis": 0
+      }
+    };
+
+    getSectionIDs("repeating_characterlevel", function(idarray) {
+      StatList.forEach(stat => {
+        idarray.forEach(rowid => {
+          var LevelRoll = `repeating_characterlevel_${rowid}_${stat}_growth`;
+          var GrowthEntryBase = `${stat}_growth_base`;
+          var GrowthEntryBackground = `${stat}_growth_bg`;
+          var GrowthEntrySkill = `${stat}_growth_skill`;
+          getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, `${GrowthEntrySkill}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
+              var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]) + parseInt(values[GrowthEntrySkill]);
+              var Roll = parseInt(values[LevelRoll]);
+              if (Roll <= Growth + GrowthTracker.Wiff[stat]) {
+                GrowthTracker.Earned[stat] = GrowthTracker.Earned[stat] + 1;
+              }
+              if (Roll > Growth + GrowthTracker.Wiff[stat] && parseInt(values.NoBadStats) == 1) {
+                GrowthTracker.Wiff[stat] = GrowthTracker.Wiff[stat] + 1;
+              } else {
+                GrowthTracker.Wiff[stat] = 0;
+              }
+              if (parseInt(values.StaticLevels) == 1) {
+                GrowthTracker.Earned[stat] = Math.floor(parseInt(values.character_level) * Growth / 18.0);
+              }
+              setAttrs({
+                [`${stat}_stat_growth`]: GrowthTracker.Earned[stat]
+              });
+          });
+        });
+      });
+    });
+  };
+
+  function CalculateSkillStats() {
+
+    const Changes = {
+      "Stat": {
+        "hp": 0,
+        "str": 0,
+        "int": 0,
+        "dex": 0,
+        "spd": 0,
+        "luk": 0,
+        "con": 0,
+        "wis": 0,
+        "mov": 0,
+        "cost": 0
+      },
+      "Growth": {
+        "hp": 0,
+        "str": 0,
+        "int": 0,
+        "dex": 0,
+        "spd": 0,
+        "luk": 0,
+        "con": 0,
+        "wis": 0
+      }
+    };
+
+    getSectionIDs("repeating_classskillslist", function(idarray) {
+      StatList.forEach(stat => {
+        idarray.forEach(rowid => {
+          let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
+          getAttrs([SkillName], function(values) {
+            let SkillNameValue = values[SkillName];
+            Changes.Stat[stat] = parseInt(Changes.Stat[stat]) + parseInt(ClassSkills[SkillNameValue][stat]);
+            Changes.Growth[stat] = parseInt(Changes.Growth[stat]) + parseInt(ClassSkills[SkillNameValue][`${stat}g`]);
+            setAttrs({
+              [`${stat}_stat_skill`]: Changes.Stat[stat],
+              [`${stat}_growth_skill`]: Changes.Growth[stat]
+            });
+          });
+        });
+      });
+      idarray.forEach(rowid => {
+        let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
+        let SkillCost = `repeating_classskillslist_${rowid}_ClassSkillCost`;
+        getAttrs([SkillName], function(values) {
+          let SkillNameValue = values[SkillName];
+          Changes.Stat["mov"] = parseInt(Changes.Stat["mov"]) + parseInt(ClassSkills[SkillNameValue]["mov"]);
+          Changes.Stat["cost"] = parseInt(Changes.Stat["cost"]) + parseInt(ClassSkills[SkillNameValue]["Cost"]);
+          setAttrs({
+            [`mov_stat_skill`]: Changes.Stat["mov"],
+            [`growth_skill_points`]: Changes.Stat["cost"]
+          });
+        });
+      });
+      CalculateStats();
+      CalculateCombatSkillPoints();
+    });
+  };
+
+  function CalculateCombatSkillPoints() {
+    getSectionIDs("repeating_classskillslist", function(ClassSkillArray) {
+      getSectionIDs("repeating_combatskillslist", function(CombatSkillArray) {
+        const GetArray = ["BaseCombatPoints","LevelCombatPoints","LevelCombatPointsRate","character_level"];
+        ClassSkillArray.forEach(rowid => {
+          GetArray.push(`repeating_classskillslist_${rowid}_ClassSkill`)
+        });
+        CombatSkillArray.forEach(rowid => {
+          GetArray.push(`repeating_combatskillslist_${rowid}_CombatSkillLevel`)
+        });
+        getAttrs(GetArray, function(v) {
+          var SkillPoints = Math.floor(Number(v["character_level"]) * Number(v["LevelCombatPoints"]) / Number(v["LevelCombatPointsRate"])) + Number(v["BaseCombatPoints"])
+          GetArray.forEach(i => {
+            if (i.includes("repeating_classskillslist_") && v[i] == "Combat Skill" ) { SkillPoints = SkillPoints + 1; }
+            if (i.includes("repeating_combatskillslist_") ) { SkillPoints = SkillPoints - Number(v[i]); }
+          });
+          setAttrs({
+            [`CombatSkillPointsAvailable`]: SkillPoints
+          });
+        });
+      });
+    });
+  };
+
+/* Watch Events */
+  on("change:background", function() {
+    getAttrs(["background"], function(values) {
+      let bg = values.background;
+      setAttrs({
+        "hp_growth_bg": BackgroundGrowth[bg].HP,
+        "str_growth_bg": BackgroundGrowth[bg].STR,
+        "int_growth_bg": BackgroundGrowth[bg].INT,
+        "dex_growth_bg": BackgroundGrowth[bg].DEX,
+        "spd_growth_bg": BackgroundGrowth[bg].SPD,
+        "luk_growth_bg": BackgroundGrowth[bg].LUK,
+        "con_growth_bg": BackgroundGrowth[bg].CON,
+        "wis_growth_bg": BackgroundGrowth[bg].WIS
+      });
+    });
+  });
+                    
+  on("change:hp_growth_base change:hp_growth_bg change:hp_growth_skill change:str_growth_base change:str_growth_bg change:str_growth_skill change:dex_growth_base change:dex_growth_bg change:dex_growth_skill change:int_growth_base change:int_growth_bg change:int_growth_skill change:spd_growth_base change:spd_growth_bg change:spd_growth_skill change:luk_growth_base change:luk_growth_bg change:luk_growth_skill change:con_growth_base change:con_growth_bg change:con_growth_skill change:wis_growth_base change:wis_growth_bg change:wis_growth_skill change:BaseGrowthPoints change:BackgroundGrowthPoints", function() {
+    CalculateGrowthPointGrid();
+  });
+
+  on("change:creature_type", function() {
+    getAttrs(["creature_type"], function(values) {
+        let ct = values.creature_type;
+        setAttrs({
+            "hp_stat_ct":  CreatureTypeStats[ct].HP,
+            "str_stat_ct": CreatureTypeStats[ct].STR,
+            "int_stat_ct": CreatureTypeStats[ct].INT,
+            "dex_stat_ct": CreatureTypeStats[ct].DEX,
+            "spd_stat_ct": CreatureTypeStats[ct].SPD,
+            "luk_stat_ct": CreatureTypeStats[ct].LUK,
+            "con_stat_ct": CreatureTypeStats[ct].CON,
+            "wis_stat_ct": CreatureTypeStats[ct].WIS,
+            "mov_stat_ct": CreatureTypeStats[ct].MOV
+        });
+        CalculateStats();
+    });
+  });
+
+  on("change:hp_stat_base change:hp_stat_CT change:hp_stat_skill change:hp_stat_growth change:str_stat_base change:str_stat_CT change:str_stat_skill change:str_stat_growth change:dex_stat_base change:dex_stat_CT change:dex_stat_skill change:dex_stat_growth change:int_stat_base change:int_stat_CT change:int_stat_skill change:int_stat_growth change:spd_stat_base change:spd_stat_CT change:spd_stat_skill change:spd_stat_growth change:luk_stat_base change:luk_stat_CT change:luk_stat_skill change:luk_stat_growth change:con_stat_base change:con_stat_CT change:con_stat_skill change:con_stat_growth change:wis_stat_base change:wis_stat_CT change:wis_stat_skill change:wis_stat_growth change:BaseClassPoints change:CtClassPoints change:LevelClassPoints change:LevelClassPointsRate change:character_level change:growth_skill_points change:BaseDefaultHP change:mov_stat_base change:mov_stat_CT change:mov_stat_skill", function() {
+    CalculateStatPointGrid();
+  });
+
+  on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeating_characterlevel", function() {
+    CalculateStats();
+  });
+
+  on("change:repeating_classskillslist:ClassSkill", function(eventInfo) {
+    getAttrs(["repeating_classskillslist_ClassSkill"], function(values) {
+        let SkillName = values.repeating_classskillslist_ClassSkill;
+        setAttrs({
+            repeating_classskillslist_ClassSkillCost: ClassSkills[SkillName]["Cost"],
+            repeating_classskillslist_ClassSkillDescription: ClassSkills[SkillName]["Description"],
+            repeating_classskillslist_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
+        });
+    });
+    CalculateSkillStats();
+  });
+
+  on("change:GreatSkill", function(eventInfo) {
+    getAttrs(["GreatSkill"], function(values) {
+        let SkillName = values.GreatSkill;
+        setAttrs({
+          GreatSkillLevel: GreatSkills[SkillName]["Level"],
+          GreatSkillDescription: GreatSkills[SkillName]["Description"]
+        });
+    });
+  });
+
+  on("change:repeating_combatskillslist:CombatSkill change:repeating_combatskillslist:CombatSkillLevel", function(eventInfo) {
+    getAttrs(["repeating_combatskillslist_CombatSkill","repeating_combatskillslist_CombatSkillLevel"], function(values) {
+        let SkillName = values.repeating_combatskillslist_CombatSkill;
+        let CurrentSkillLevel = values.repeating_combatskillslist_CombatSkillLevel;
+        var StatChoice = 0;
+        var WeaponChoice = 0;
+        let SelectorChoice = CombatSkills[SkillName]["Choice"];
+        switch (SelectorChoice) {
+            case "STAT": StatChoice = 1; break;
+            case "WEAPON": WeaponChoice = 1; break;
+            default: break;
+        }
+        setAttrs({
+            repeating_combatskillslist_CombatSkillLevel: Math.min(CurrentSkillLevel, CombatSkills[SkillName]["MaxLevel"]), 
+            repeating_combatskillslist_CombatSkillDescription: CombatSkills[SkillName]["Description"],
+            repeating_combatskillslist_CombatSkillEffect: CombatSkills[SkillName]["Effect"],
+            repeating_combatskillslist_StatCombatSkillSelectorDisplay: StatChoice,
+            repeating_combatskillslist_WeaponCombatSkillSelectorDisplay: WeaponChoice
+        });
+    });
+    CalculateSkillStats();
+  });
+
+  StatList.forEach(stat => {
+    on(`change:${stat}_growth_base change:${stat}_growth_bg`, function() {
+        CalculateStats();
+    });
+  });
+
+/* Level Up Grid Manager */
+  function RollLevel(rowid) {
+    var vGrowthQty = 0;
+    getAttrs([
+        "hp_growth_base" ,"hp_growth_bg" ,"hp_growth_skill" ,
+        "str_growth_base","str_growth_bg","str_growth_skill",
+        "dex_growth_base","dex_growth_bg","dex_growth_skill",
+        "int_growth_base","int_growth_bg","int_growth_skill",
+        "spd_growth_base","spd_growth_bg","spd_growth_skill",
+        "luk_growth_base","luk_growth_bg","luk_growth_skill",
+        "con_growth_base","con_growth_bg","con_growth_skill",
+        "wis_growth_base","wis_growth_bg","wis_growth_skill",
+        "NoBadLevels"
+    ], function(growthrate) {
+        var vGrowth = {
+            "hp" : parseInt(growthrate.hp_growth_base)  + parseInt(growthrate.hp_growth_bg)  + parseInt(growthrate.hp_growth_skill) ,
+            "str": parseInt(growthrate.str_growth_base) + parseInt(growthrate.str_growth_bg) + parseInt(growthrate.str_growth_skill),
+            "dex": parseInt(growthrate.dex_growth_base) + parseInt(growthrate.dex_growth_bg) + parseInt(growthrate.dex_growth_skill),
+            "int": parseInt(growthrate.int_growth_base) + parseInt(growthrate.int_growth_bg) + parseInt(growthrate.int_growth_skill),
+            "spd": parseInt(growthrate.spd_growth_base) + parseInt(growthrate.spd_growth_bg) + parseInt(growthrate.spd_growth_skill),
+            "luk": parseInt(growthrate.luk_growth_base) + parseInt(growthrate.luk_growth_bg) + parseInt(growthrate.luk_growth_skill),
+            "con": parseInt(growthrate.con_growth_base) + parseInt(growthrate.con_growth_bg) + parseInt(growthrate.con_growth_skill),
+            "wis": parseInt(growthrate.wis_growth_base) + parseInt(growthrate.wis_growth_bg) + parseInt(growthrate.wis_growth_skill)
+        };
+        var vGrowthRoll = {
+            "hp": 0,
+            "str": 0,
+            "dex": 0,
+            "int": 0,
+            "spd": 0,
+            "luk": 0,
+            "con": 0,
+            "wis": 0
+        };
+        for (let i = 0; i < 1000; i++) {
+            vGrowthRoll.hp  = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.str = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.dex = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.int = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.spd = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.luk = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.con = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthRoll.wis = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
+            vGrowthQty = 0;
+            if (vGrowthRoll.hp <= vGrowth.hp ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.str <= vGrowth.str ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.dex <= vGrowth.dex ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.int <= vGrowth.int ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.spd <= vGrowth.spd ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.luk <= vGrowth.luk ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.con <= vGrowth.con ) { vGrowthQty = vGrowthQty + 1; }
+            if (vGrowthRoll.wis <= vGrowth.wis ) { vGrowthQty = vGrowthQty + 1; }
+            if ( (!growthrate.NoBadLevels) || (vGrowthQty >= 3) ) {
+                break;
+            }
+        }
+        setAttrs({
+            [`repeating_characterlevel_${rowid}_hp_growth`]: vGrowthRoll.hp,
+            [`repeating_characterlevel_${rowid}_str_growth`]: vGrowthRoll.str,
+            [`repeating_characterlevel_${rowid}_dex_growth`]: vGrowthRoll.dex,
+            [`repeating_characterlevel_${rowid}_int_growth`]: vGrowthRoll.int,
+            [`repeating_characterlevel_${rowid}_spd_growth`]: vGrowthRoll.spd,
+            [`repeating_characterlevel_${rowid}_luk_growth`]: vGrowthRoll.luk,
+            [`repeating_characterlevel_${rowid}_con_growth`]: vGrowthRoll.con,
+            [`repeating_characterlevel_${rowid}_wis_growth`]: vGrowthRoll.wis
+        });
+    });
+  };
+
+  function SetLevel() {
+    getSectionIDs("repeating_characterlevel", function(idarray) {
+        setAttrs({
+            character_level: idarray.length
+        });
+        if (idarray.length === 0) {
+            const newrowid = generateRowID();
+            RollLevel(newrowid);
+            setAttrs({
+                character_level: 1
+            });
+        }
+    });
+  };
+
+  on("change:repeating_characterlevel sheet:opened", function() { 
+    SetLevel();
+  });
+
+  on("clicked:repeating_characterlevel", function(eventInfo) {
+    const rowid = eventInfo.sourceAttribute.split('_')[2];
+    switch(eventInfo.htmlAttributes.name) {
+        case "act_DeleteLevel":                
+            removeRepeatingRow(`repeating_characterlevel_${rowid}`);
+            break;
+        case "act_RerollLevel":
+            RollLevel(rowid);
+            break;
+        case "act_LevelUp":
+            const newrowid = generateRowID();
+            RollLevel(newrowid);
+            break;
+        default:
+            console.log("Button not recognized");
+    }
+    SetLevel();
+  });
+
+  //Database
   const BackgroundGrowth = {
     "Dwarf": {
       "CreatureType": "Dwarf",
@@ -9114,412 +9528,6 @@
       "Special": "-"
     }
   }
-  
-  
-  
-  
-
-/* Update Functions */
-  function CalculateStatPointGrid() {
-    getAttrs([
-      "hp_stat_base" ,"hp_stat_CT" ,"hp_stat_skill" ,"hp_stat_growth" ,
-      "str_stat_base","str_stat_CT","str_stat_skill","str_stat_growth",
-      "dex_stat_base","dex_stat_CT","dex_stat_skill","dex_stat_growth",
-      "int_stat_base","int_stat_CT","int_stat_skill","int_stat_growth",
-      "spd_stat_base","spd_stat_CT","spd_stat_skill","spd_stat_growth",
-      "luk_stat_base","luk_stat_CT","luk_stat_skill","luk_stat_growth",
-      "con_stat_base","con_stat_CT","con_stat_skill","con_stat_growth",
-      "wis_stat_base","wis_stat_CT","wis_stat_skill","wis_stat_growth",
-      "mov_stat_base","mov_stat_CT","mov_stat_skill",
-      "BaseClassPoints","CtClassPoints","LevelClassPoints","LevelClassPointsRate",
-      "character_level","growth_skill_points","BaseDefaultHP"
-    ], function(v) {
-      setAttrs({ 
-        stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
-        stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
-        hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth)) ,
-        str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth)),
-        dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth)),
-        int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth)),
-        spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth)),
-        luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth)),
-        con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth)),
-        wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth)),
-        mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill))
-      });
-    });
-  };
-
-  function CalculateGrowthPointGrid() {
-    getAttrs([
-      "hp_growth_base" ,"hp_growth_bg" ,"hp_growth_skill" ,
-      "str_growth_base","str_growth_bg","str_growth_skill",
-      "dex_growth_base","dex_growth_bg","dex_growth_skill",
-      "int_growth_base","int_growth_bg","int_growth_skill",
-      "spd_growth_base","spd_growth_bg","spd_growth_skill",
-      "luk_growth_base","luk_growth_bg","luk_growth_skill",
-      "con_growth_base","con_growth_bg","con_growth_skill",
-      "wis_growth_base","wis_growth_bg","wis_growth_skill",
-      "BaseGrowthPoints","BackgroundGrowthPoints"
-    ], function(v) {
-      setAttrs({
-        growth_base_points: (v.BaseGrowthPoints - v.hp_growth_base - v.str_growth_base - v.dex_growth_base - v.int_growth_base - v.spd_growth_base - v.luk_growth_base - v.con_growth_base - v.wis_growth_base),
-        growth_background_points: (v.BackgroundGrowthPoints - v.hp_growth_bg - v.str_growth_bg - v.dex_growth_bg - v.int_growth_bg - v.spd_growth_bg - v.luk_growth_bg - v.con_growth_bg - v.wis_growth_bg),
-        hp_growth_total:  (Number(v.hp_growth_base)  + Number(v.hp_growth_bg)  + Number(v.hp_growth_skill)) ,
-        str_growth_total: (Number(v.str_growth_base) + Number(v.str_growth_bg) + Number(v.str_growth_skill)),
-        dex_growth_total: (Number(v.dex_growth_base) + Number(v.dex_growth_bg) + Number(v.dex_growth_skill)),
-        int_growth_total: (Number(v.int_growth_base) + Number(v.int_growth_bg) + Number(v.int_growth_skill)),
-        spd_growth_total: (Number(v.spd_growth_base) + Number(v.spd_growth_bg) + Number(v.spd_growth_skill)),
-        luk_growth_total: (Number(v.luk_growth_base) + Number(v.luk_growth_bg) + Number(v.luk_growth_skill)),
-        con_growth_total: (Number(v.con_growth_base) + Number(v.con_growth_bg) + Number(v.con_growth_skill)),
-        wis_growth_total: (Number(v.wis_growth_base) + Number(v.wis_growth_bg) + Number(v.wis_growth_skill))
-      });
-    });
-  };
-
-  function CalculateStats() {
-
-    const GrowthTracker = {
-      "Earned": {
-        "hp": 0,
-        "str": 0,
-        "int": 0,
-        "dex": 0,
-        "spd": 0,
-        "luk": 0,
-        "con": 0,
-        "wis": 0
-      },
-      "Wiff": {
-        "hp": 0,
-        "str": 0,
-        "int": 0,
-        "dex": 0,
-        "spd": 0,
-        "luk": 0,
-        "con": 0,
-        "wis": 0
-      }
-    };
-
-    getSectionIDs("repeating_characterlevel", function(idarray) {
-      StatList.forEach(stat => {
-        idarray.forEach(rowid => {
-          var LevelRoll = `repeating_characterlevel_${rowid}_${stat}_growth`;
-          var GrowthEntryBase = `${stat}_growth_base`;
-          var GrowthEntryBackground = `${stat}_growth_bg`;
-          var GrowthEntrySkill = `${stat}_growth_skill`;
-          getAttrs([`${LevelRoll}`, `${GrowthEntryBase}`, `${GrowthEntryBackground}`, `${GrowthEntrySkill}`, "NoBadStats", "character_level", "StaticLevels"], function(values) {
-              var Growth = parseInt(values[GrowthEntryBase]) + parseInt(values[GrowthEntryBackground]) + parseInt(values[GrowthEntrySkill]);
-              var Roll = parseInt(values[LevelRoll]);
-              if (Roll <= Growth + GrowthTracker.Wiff[stat]) {
-                GrowthTracker.Earned[stat] = GrowthTracker.Earned[stat] + 1;
-              }
-              if (Roll > Growth + GrowthTracker.Wiff[stat] && parseInt(values.NoBadStats) == 1) {
-                GrowthTracker.Wiff[stat] = GrowthTracker.Wiff[stat] + 1;
-              } else {
-                GrowthTracker.Wiff[stat] = 0;
-              }
-              if (parseInt(values.StaticLevels) == 1) {
-                GrowthTracker.Earned[stat] = Math.floor(parseInt(values.character_level) * Growth / 18.0);
-              }
-              setAttrs({
-                [`${stat}_stat_growth`]: GrowthTracker.Earned[stat]
-              });
-          });
-        });
-      });
-    });
-  };
-
-  function CalculateSkillStats() {
-
-    const Changes = {
-      "Stat": {
-        "hp": 0,
-        "str": 0,
-        "int": 0,
-        "dex": 0,
-        "spd": 0,
-        "luk": 0,
-        "con": 0,
-        "wis": 0,
-        "mov": 0,
-        "cost": 0
-      },
-      "Growth": {
-        "hp": 0,
-        "str": 0,
-        "int": 0,
-        "dex": 0,
-        "spd": 0,
-        "luk": 0,
-        "con": 0,
-        "wis": 0
-      }
-    };
-
-    getSectionIDs("repeating_classskillslist", function(idarray) {
-      StatList.forEach(stat => {
-        idarray.forEach(rowid => {
-          let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
-          getAttrs([SkillName], function(values) {
-            let SkillNameValue = values[SkillName];
-            Changes.Stat[stat] = parseInt(Changes.Stat[stat]) + parseInt(ClassSkills[SkillNameValue][stat]);
-            Changes.Growth[stat] = parseInt(Changes.Growth[stat]) + parseInt(ClassSkills[SkillNameValue][`${stat}g`]);
-            setAttrs({
-              [`${stat}_stat_skill`]: Changes.Stat[stat],
-              [`${stat}_growth_skill`]: Changes.Growth[stat]
-            });
-          });
-        });
-      });
-      idarray.forEach(rowid => {
-        let SkillName = `repeating_classskillslist_${rowid}_ClassSkill`;
-        let SkillCost = `repeating_classskillslist_${rowid}_ClassSkillCost`;
-        getAttrs([SkillName], function(values) {
-          let SkillNameValue = values[SkillName];
-          Changes.Stat["mov"] = parseInt(Changes.Stat["mov"]) + parseInt(ClassSkills[SkillNameValue]["mov"]);
-          Changes.Stat["cost"] = parseInt(Changes.Stat["cost"]) + parseInt(ClassSkills[SkillNameValue]["Cost"]);
-          setAttrs({
-            [`mov_stat_skill`]: Changes.Stat["mov"],
-            [`growth_skill_points`]: Changes.Stat["cost"]
-          });
-        });
-      });
-      CalculateStats();
-      CalculateCombatSkillPoints();
-    });
-  };
-
-  function CalculateCombatSkillPoints() {
-    getSectionIDs("repeating_classskillslist", function(ClassSkillArray) {
-      getSectionIDs("repeating_combatskillslist", function(CombatSkillArray) {
-        const GetArray = ["BaseCombatPoints","LevelCombatPoints","LevelCombatPointsRate","character_level"];
-        ClassSkillArray.forEach(rowid => {
-          GetArray.push(`repeating_classskillslist_${rowid}_ClassSkill`)
-        });
-        CombatSkillArray.forEach(rowid => {
-          GetArray.push(`repeating_combatskillslist_${rowid}_CombatSkillLevel`)
-        });
-        getAttrs(GetArray, function(v) {
-          var SkillPoints = Math.floor(Number(v["character_level"]) * Number(v["LevelCombatPoints"]) / Number(v["LevelCombatPointsRate"])) + Number(v["BaseCombatPoints"])
-          GetArray.forEach(i => {
-            if (i.includes("repeating_classskillslist_") && v[i] == "Combat Skill" ) { SkillPoints = SkillPoints + 1; }
-            if (i.includes("repeating_combatskillslist_") ) { SkillPoints = SkillPoints - Number(v[i]); }
-          });
-          setAttrs({
-            [`CombatSkillPointsAvailable`]: SkillPoints
-          });
-        });
-      });
-    });
-  };
-
-/* Watch Events */
-  on("change:background", function() {
-    getAttrs(["background"], function(values) {
-      let bg = values.background;
-      setAttrs({
-        "hp_growth_bg": BackgroundGrowth[bg].HP,
-        "str_growth_bg": BackgroundGrowth[bg].STR,
-        "int_growth_bg": BackgroundGrowth[bg].INT,
-        "dex_growth_bg": BackgroundGrowth[bg].DEX,
-        "spd_growth_bg": BackgroundGrowth[bg].SPD,
-        "luk_growth_bg": BackgroundGrowth[bg].LUK,
-        "con_growth_bg": BackgroundGrowth[bg].CON,
-        "wis_growth_bg": BackgroundGrowth[bg].WIS
-      });
-    });
-  });
-                    
-  on("change:hp_growth_base change:hp_growth_bg change:hp_growth_skill change:str_growth_base change:str_growth_bg change:str_growth_skill change:dex_growth_base change:dex_growth_bg change:dex_growth_skill change:int_growth_base change:int_growth_bg change:int_growth_skill change:spd_growth_base change:spd_growth_bg change:spd_growth_skill change:luk_growth_base change:luk_growth_bg change:luk_growth_skill change:con_growth_base change:con_growth_bg change:con_growth_skill change:wis_growth_base change:wis_growth_bg change:wis_growth_skill change:BaseGrowthPoints change:BackgroundGrowthPoints", function() {
-    CalculateGrowthPointGrid();
-  });
-
-  on("change:creature_type", function() {
-    getAttrs(["creature_type"], function(values) {
-        let ct = values.creature_type;
-        setAttrs({
-            "hp_stat_ct":  CreatureTypeStats[ct].HP,
-            "str_stat_ct": CreatureTypeStats[ct].STR,
-            "int_stat_ct": CreatureTypeStats[ct].INT,
-            "dex_stat_ct": CreatureTypeStats[ct].DEX,
-            "spd_stat_ct": CreatureTypeStats[ct].SPD,
-            "luk_stat_ct": CreatureTypeStats[ct].LUK,
-            "con_stat_ct": CreatureTypeStats[ct].CON,
-            "wis_stat_ct": CreatureTypeStats[ct].WIS,
-            "mov_stat_ct": CreatureTypeStats[ct].MOV
-        });
-        CalculateStats();
-    });
-  });
-
-  on("change:hp_stat_base change:hp_stat_CT change:hp_stat_skill change:hp_stat_growth change:str_stat_base change:str_stat_CT change:str_stat_skill change:str_stat_growth change:dex_stat_base change:dex_stat_CT change:dex_stat_skill change:dex_stat_growth change:int_stat_base change:int_stat_CT change:int_stat_skill change:int_stat_growth change:spd_stat_base change:spd_stat_CT change:spd_stat_skill change:spd_stat_growth change:luk_stat_base change:luk_stat_CT change:luk_stat_skill change:luk_stat_growth change:con_stat_base change:con_stat_CT change:con_stat_skill change:con_stat_growth change:wis_stat_base change:wis_stat_CT change:wis_stat_skill change:wis_stat_growth change:BaseClassPoints change:CtClassPoints change:LevelClassPoints change:LevelClassPointsRate change:character_level change:growth_skill_points change:BaseDefaultHP change:mov_stat_base change:mov_stat_CT change:mov_stat_skill", function() {
-    CalculateStatPointGrid();
-  });
-
-  on("clicked:RecalculateStats change:StaticLevels change:NoBadStats change:repeating_characterlevel", function() {
-    CalculateStats();
-  });
-
-  on("change:repeating_classskillslist:ClassSkill", function(eventInfo) {
-    getAttrs(["repeating_classskillslist_ClassSkill"], function(values) {
-        let SkillName = values.repeating_classskillslist_ClassSkill;
-        setAttrs({
-            repeating_classskillslist_ClassSkillCost: ClassSkills[SkillName]["Cost"],
-            repeating_classskillslist_ClassSkillDescription: ClassSkills[SkillName]["Description"],
-            repeating_classskillslist_ClassSkillEffect: ClassSkills[SkillName]["Effect"]
-        });
-    });
-    CalculateSkillStats();
-  });
-
-  on("change:GreatSkill", function(eventInfo) {
-    getAttrs(["GreatSkill"], function(values) {
-        let SkillName = values.GreatSkill;
-        setAttrs({
-          GreatSkillLevel: GreatSkills[SkillName]["Level"],
-          GreatSkillDescription: GreatSkills[SkillName]["Description"]
-        });
-    });
-  });
-
-  on("change:repeating_combatskillslist:CombatSkill change:repeating_combatskillslist:CombatSkillLevel", function(eventInfo) {
-    getAttrs(["repeating_combatskillslist_CombatSkill","repeating_combatskillslist_CombatSkillLevel"], function(values) {
-        let SkillName = values.repeating_combatskillslist_CombatSkill;
-        let CurrentSkillLevel = values.repeating_combatskillslist_CombatSkillLevel;
-        var StatChoice = 0;
-        var WeaponChoice = 0;
-        let SelectorChoice = CombatSkills[SkillName]["Choice"];
-        switch (SelectorChoice) {
-            case "STAT": StatChoice = 1; break;
-            case "WEAPON": WeaponChoice = 1; break;
-            default: break;
-        }
-        setAttrs({
-            repeating_combatskillslist_CombatSkillLevel: Math.min(CurrentSkillLevel, CombatSkills[SkillName]["MaxLevel"]), 
-            repeating_combatskillslist_CombatSkillDescription: CombatSkills[SkillName]["Description"],
-            repeating_combatskillslist_CombatSkillEffect: CombatSkills[SkillName]["Effect"],
-            repeating_combatskillslist_StatCombatSkillSelectorDisplay: StatChoice,
-            repeating_combatskillslist_WeaponCombatSkillSelectorDisplay: WeaponChoice
-        });
-    });
-    CalculateSkillStats();
-  });
-
-  StatList.forEach(stat => {
-    on(`change:${stat}_growth_base change:${stat}_growth_bg`, function() {
-        CalculateStats();
-    });
-  });
-
-/* Level Up Grid Manager */
-  function RollLevel(rowid) {
-    var vGrowthQty = 0;
-    getAttrs([
-        "hp_growth_base" ,"hp_growth_bg" ,"hp_growth_skill" ,
-        "str_growth_base","str_growth_bg","str_growth_skill",
-        "dex_growth_base","dex_growth_bg","dex_growth_skill",
-        "int_growth_base","int_growth_bg","int_growth_skill",
-        "spd_growth_base","spd_growth_bg","spd_growth_skill",
-        "luk_growth_base","luk_growth_bg","luk_growth_skill",
-        "con_growth_base","con_growth_bg","con_growth_skill",
-        "wis_growth_base","wis_growth_bg","wis_growth_skill",
-        "NoBadLevels"
-    ], function(growthrate) {
-        var vGrowth = {
-            "hp" : parseInt(growthrate.hp_growth_base)  + parseInt(growthrate.hp_growth_bg)  + parseInt(growthrate.hp_growth_skill) ,
-            "str": parseInt(growthrate.str_growth_base) + parseInt(growthrate.str_growth_bg) + parseInt(growthrate.str_growth_skill),
-            "dex": parseInt(growthrate.dex_growth_base) + parseInt(growthrate.dex_growth_bg) + parseInt(growthrate.dex_growth_skill),
-            "int": parseInt(growthrate.int_growth_base) + parseInt(growthrate.int_growth_bg) + parseInt(growthrate.int_growth_skill),
-            "spd": parseInt(growthrate.spd_growth_base) + parseInt(growthrate.spd_growth_bg) + parseInt(growthrate.spd_growth_skill),
-            "luk": parseInt(growthrate.luk_growth_base) + parseInt(growthrate.luk_growth_bg) + parseInt(growthrate.luk_growth_skill),
-            "con": parseInt(growthrate.con_growth_base) + parseInt(growthrate.con_growth_bg) + parseInt(growthrate.con_growth_skill),
-            "wis": parseInt(growthrate.wis_growth_base) + parseInt(growthrate.wis_growth_bg) + parseInt(growthrate.wis_growth_skill)
-        };
-        var vGrowthRoll = {
-            "hp": 0,
-            "str": 0,
-            "dex": 0,
-            "int": 0,
-            "spd": 0,
-            "luk": 0,
-            "con": 0,
-            "wis": 0
-        };
-        for (let i = 0; i < 1000; i++) {
-            vGrowthRoll.hp  = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.str = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.dex = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.int = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.spd = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.luk = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.con = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthRoll.wis = Math.floor(Math.random() * (10)) + Math.floor(Math.random() * (10));
-            vGrowthQty = 0;
-            if (vGrowthRoll.hp <= vGrowth.hp ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.str <= vGrowth.str ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.dex <= vGrowth.dex ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.int <= vGrowth.int ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.spd <= vGrowth.spd ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.luk <= vGrowth.luk ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.con <= vGrowth.con ) { vGrowthQty = vGrowthQty + 1; }
-            if (vGrowthRoll.wis <= vGrowth.wis ) { vGrowthQty = vGrowthQty + 1; }
-            if ( (!growthrate.NoBadLevels) || (vGrowthQty >= 3) ) {
-                break;
-            }
-        }
-        setAttrs({
-            [`repeating_characterlevel_${rowid}_hp_growth`]: vGrowthRoll.hp,
-            [`repeating_characterlevel_${rowid}_str_growth`]: vGrowthRoll.str,
-            [`repeating_characterlevel_${rowid}_dex_growth`]: vGrowthRoll.dex,
-            [`repeating_characterlevel_${rowid}_int_growth`]: vGrowthRoll.int,
-            [`repeating_characterlevel_${rowid}_spd_growth`]: vGrowthRoll.spd,
-            [`repeating_characterlevel_${rowid}_luk_growth`]: vGrowthRoll.luk,
-            [`repeating_characterlevel_${rowid}_con_growth`]: vGrowthRoll.con,
-            [`repeating_characterlevel_${rowid}_wis_growth`]: vGrowthRoll.wis
-        });
-    });
-  };
-
-  function SetLevel() {
-    getSectionIDs("repeating_characterlevel", function(idarray) {
-        setAttrs({
-            character_level: idarray.length
-        });
-        if (idarray.length === 0) {
-            const newrowid = generateRowID();
-            RollLevel(newrowid);
-            setAttrs({
-                character_level: 1
-            });
-        }
-    });
-  };
-
-  on("change:repeating_characterlevel sheet:opened", function() { 
-    SetLevel();
-  });
-
-  on("clicked:repeating_characterlevel", function(eventInfo) {
-    const rowid = eventInfo.sourceAttribute.split('_')[2];
-    switch(eventInfo.htmlAttributes.name) {
-        case "act_DeleteLevel":                
-            removeRepeatingRow(`repeating_characterlevel_${rowid}`);
-            break;
-        case "act_RerollLevel":
-            RollLevel(rowid);
-            break;
-        case "act_LevelUp":
-            const newrowid = generateRowID();
-            RollLevel(newrowid);
-            break;
-        default:
-            console.log("Button not recognized");
-    }
-    SetLevel();
-  });
 
 /* Tab Manager */
   const buttonlist = [

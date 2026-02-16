@@ -1505,58 +1505,47 @@
     const weaponName = `repeating_weapons_${rowId}_Weapon-Name`;
     const weaponType = `repeating_weapons_${rowId}_Weapon-Type`;
     const weaponRune = `repeating_weapons_${rowId}_Weapon-Rune`;
-    const weaponColor = `repeating_weapons_${rowId}_Weapon-Color`;
-    const weaponDamageType = `repeating_weapons_${rowId}_Weapon-DamageType`;
-    const weaponMight = `repeating_weapons_${rowId}_Weapon-Might`;
-    const weaponAccuracy = `repeating_weapons_${rowId}_Weapon-Accuracy`;
-    const weaponCritical = `repeating_weapons_${rowId}_Weapon-Critical`;
-    const weaponRangeMin = `repeating_weapons_${rowId}_Weapon-RangeMin`;
-    const weaponRangeMax = `repeating_weapons_${rowId}_Weapon-RangeMax`;
-    const weaponSTR = `repeating_weapons_${rowId}_Weapon-STR`;
-    const weaponINT = `repeating_weapons_${rowId}_Weapon-INT`;
-    const weaponDEX = `repeating_weapons_${rowId}_Weapon-DEX`;
-    const weaponSPD = `repeating_weapons_${rowId}_Weapon-SPD`;
-    const weaponLUK = `repeating_weapons_${rowId}_Weapon-LUK`;
-    const weaponCON = `repeating_weapons_${rowId}_Weapon-CON`;
-    const weaponWIS = `repeating_weapons_${rowId}_Weapon-WIS`;
-    const weaponNotes = `repeating_weapons_${rowId}_Weapon-Notes`;
+    getAttrs([weaponName, weaponType, weaponRune], function(values) {
+      const selectedWeaponName = values[weaponName] || values[weaponType] || "";
+      const selectedWeaponType = values[weaponType] || selectedWeaponName;
+      const selectedRune = values[weaponRune] || "";
 
-    getAttrs([
-      weaponName, weaponType, weaponRune, weaponColor, weaponDamageType,
-      weaponMight, weaponAccuracy, weaponCritical,
-      weaponRangeMin, weaponRangeMax,
-      weaponSTR, weaponINT, weaponDEX, weaponSPD, weaponLUK, weaponCON, weaponWIS,
-      weaponNotes
-    ], function(values) {
-      const rangeMin = toNumber(values[weaponRangeMin]);
-      const rangeMax = toNumber(values[weaponRangeMax]);
+      const baseWeapon = WeaponStats[selectedWeaponType] || WeaponStats[selectedWeaponName];
+      if (!baseWeapon) { return; }
+
+      const rune = getRuneData(selectedRune);
+      const finalMight = toNumber(baseWeapon.Might) + rune.Might;
+      const finalAccuracy = toNumber(baseWeapon.Accuracy) + rune.Accuracy;
+      const finalCritical = toNumber(baseWeapon.Critical) + rune.Critical;
+      const rangeMin = toNumber(baseWeapon.RangeMin) + rune.RangeMin;
+      const rangeMax = toNumber(baseWeapon.RangeMax) + rune.RangeMax;
+      const notes = [baseWeapon.Special, rune.Description].filter(Boolean).join(" | ");
 
       setAttrs({
-        Equipped_Weapon_Name: values[weaponName] || values[weaponType] || "",
-        Equipped_Weapon_Rune: values[weaponRune] || "",
-        Equipped_Weapon_Color: values[weaponColor] || "",
-        Equipped_Weapon_Might: toNumber(values[weaponMight]),
-        Equipped_Weapon_Accuracy: toNumber(values[weaponAccuracy]),
-        Equipped_Weapon_Critical: toNumber(values[weaponCritical]),
+        Equipped_Weapon_Name: values[weaponName] || baseWeapon.Name || selectedWeaponType,
+        Equipped_Weapon_Rune: rune.Name,
+        Equipped_Weapon_Color: baseWeapon.Color || "",
+        Equipped_Weapon_Might: finalMight,
+        Equipped_Weapon_Accuracy: finalAccuracy,
+        Equipped_Weapon_Critical: finalCritical,
         Equipped_Weapon_Range_Min: rangeMin,
         Equipped_Weapon_Range_Max: rangeMax,
         Equipped_Weapon_Range: buildRangeLabel(rangeMin, rangeMax),
-        Equipped_Weapon_DamageType: values[weaponDamageType] || "Physical",
-        Equipped_Weapon_STR: toNumber(values[weaponSTR]),
-        Equipped_Weapon_INT: toNumber(values[weaponINT]),
-        Equipped_Weapon_DEX: toNumber(values[weaponDEX]),
-        Equipped_Weapon_SPD: toNumber(values[weaponSPD]),
-        Equipped_Weapon_LUK: toNumber(values[weaponLUK]),
-        Equipped_Weapon_CON: toNumber(values[weaponCON]),
-        Equipped_Weapon_WIS: toNumber(values[weaponWIS]),
-        Equipped_Weapon_Notes: values[weaponNotes] || "",
-        Equipped_Weapon_Type: values[weaponType] || ""
+        Equipped_Weapon_DamageType: rune.Type || baseWeapon.DamageType || "Physical",
+        Equipped_Weapon_STR: toNumber(baseWeapon.str) + parseWorkerFormula(rune.str, rune.Level),
+        Equipped_Weapon_INT: toNumber(baseWeapon.int) + parseWorkerFormula(rune.int, rune.Level),
+        Equipped_Weapon_DEX: toNumber(baseWeapon.dex) + parseWorkerFormula(rune.dex, rune.Level),
+        Equipped_Weapon_SPD: toNumber(baseWeapon.spd) + parseWorkerFormula(rune.spd, rune.Level),
+        Equipped_Weapon_LUK: toNumber(baseWeapon.luk) + parseWorkerFormula(rune.luk, rune.Level),
+        Equipped_Weapon_CON: toNumber(baseWeapon.con) + parseWorkerFormula(rune.con, rune.Level),
+        Equipped_Weapon_WIS: toNumber(baseWeapon.wis) + parseWorkerFormula(rune.wis, rune.Level),
+        Equipped_Weapon_Notes: notes,
+        Equipped_Weapon_Type: baseWeapon.Type || ""
       });
 
       CalculateFrontSheetStats();
     });
   }
-
 
   function EquipItemFromRow(rowId) {
     const itemName = `repeating_items_${rowId}_Item-Name`;
@@ -1759,31 +1748,7 @@
     if (rowId) { EquipWeaponFromRow(rowId); }
   });
 
-  on("clicked:repeating_weapons:act_SetWeapon", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipWeaponFromRow(rowId); }
-  });
-
-  on("clicked:repeating_weapons:setweapon", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipWeaponFromRow(rowId); }
-  });
-
   on("clicked:repeating_items:SetItem", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipItemFromRow(rowId); }
-  });
-
-  on("clicked:repeating_items:act_SetItem", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipItemFromRow(rowId); }
-  });
-
-  on("clicked:repeating_items:setitem", function(eventInfo) {
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipItemFromRow(rowId); }

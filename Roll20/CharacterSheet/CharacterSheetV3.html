@@ -1777,41 +1777,19 @@
     });
   }
 
-  on("clicked:repeating_weapons:SetWeapon", function(eventInfo) {
+  on("clicked:repeating_weapons", function(eventInfo) {
+    console.log("Setting Weapon");
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipWeaponFromRow(rowId); }
   });
 
-  on("clicked:repeating_weapons:act_SetWeapon", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipWeaponFromRow(rowId); }
-  });
-
-  on("clicked:repeating_weapons:setweapon", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipWeaponFromRow(rowId); }
-  });
-
-  on("clicked:repeating_items:SetItem", function(eventInfo) {
+  on("clicked:repeating_items", function(eventInfo) {
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipItemFromRow(rowId); }
   });
 
-  on("clicked:repeating_items:act_SetItem", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipItemFromRow(rowId); }
-  });
-
-  on("clicked:repeating_items:setitem", function(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
-    const rowId = eventInfo.sourceAttribute.split("_")[2];
-    if (rowId) { EquipItemFromRow(rowId); }
-  });
 
   on("change:repeating_weapons:Weapon-Type change:repeating_weapons:Weapon-Rune", function(eventInfo) {
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }

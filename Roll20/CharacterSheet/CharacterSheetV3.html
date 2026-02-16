@@ -1753,19 +1753,39 @@
     });
   }
 
-  function getRepeatingRowId(eventInfo) {
-    if (!eventInfo || !eventInfo.sourceAttribute) { return ""; }
-    const parts = eventInfo.sourceAttribute.split("_");
-    return parts.length > 2 ? parts[2] : "";
-  }
-
-  on("clicked:repeating_weapons:SetWeapon clicked:repeating_weapons:act_SetWeapon clicked:repeating_weapons:setweapon", function(eventInfo) {
-    const rowId = getRepeatingRowId(eventInfo);
+  on("clicked:repeating_weapons:SetWeapon", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipWeaponFromRow(rowId); }
   });
 
-  on("clicked:repeating_items:SetItem clicked:repeating_items:act_SetItem clicked:repeating_items:setitem", function(eventInfo) {
-    const rowId = getRepeatingRowId(eventInfo);
+  on("clicked:repeating_weapons:act_SetWeapon", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipWeaponFromRow(rowId); }
+  });
+
+  on("clicked:repeating_weapons:setweapon", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipWeaponFromRow(rowId); }
+  });
+
+  on("clicked:repeating_items:SetItem", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipItemFromRow(rowId); }
+  });
+
+  on("clicked:repeating_items:act_SetItem", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipItemFromRow(rowId); }
+  });
+
+  on("clicked:repeating_items:setitem", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipItemFromRow(rowId); }
   });
 

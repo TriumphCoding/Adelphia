@@ -611,3 +611,40 @@ label.GreatSkillLegendary { display: none; }
 .charsheet .tabstoggle[value="Growth"] ~ div.SheetPageGrowth,
 .charsheet .tabstoggle[value="Notes"] ~ div.SheetPageNotes,
 .charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; flex-direction: column; }
+
+/* Roll template: adelphiaattack */
+.sheet-rolltemplate-adelphiaattack {
+  border: 1px solid #1f2937;
+  background: #f8fafc;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-title {
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-bottom: 4px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-section {
+  margin-top: 6px;
+  font-weight: 700;
+  border-bottom: 1px solid #94a3b8;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 10px;
+  align-items: start;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row > span:first-child {
+  font-weight: 600;
+}

@@ -113,6 +113,7 @@
                 <br>
                 <div class="CharacterSheetFlexObject"> <!-- Attacking Stats -->
                     <h1 class="PrimaryTitle" data-i18n="Attack-title-u">Attack</h1>
+                    <button type="roll" class="PrimaryButton" name="roll_Attack" value="&{template:adelphiaattack} {{name=@{character_name} - Attack}} {{attack_header=Attack}} {{attack_roll=[[@{AttackAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=@{AttackMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}" data-i18n="trigger-button">Trigger</button>
                     <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
                     <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
                     <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
@@ -123,6 +124,7 @@
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Riposte Stats -->
                     <h1 class="PrimaryTitle" data-i18n="Attack-Riposte-u">Riposte</h1>
+                    <button type="roll" class="PrimaryButton" name="roll_Riposte" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte}} {{attack_header=Attack}} {{attack_roll=[[@{RiposteAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=@{RiposteMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}" data-i18n="trigger-button">Trigger</button>
                     <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
                     <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
                     <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
@@ -1173,6 +1175,28 @@
         </div>
     </div>
 </div>
+
+<rolltemplate class="sheet-rolltemplate-adelphiaattack">
+  <div class="sheet-template-container">
+    {{#name}}<div class="sheet-template-title">{{name}}</div>{{/name}}
+    {{#shared_roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{shared_roll}}</span></div>{{/shared_roll}}
+    {{#attack_header}}<div class="sheet-template-section">{{attack_header}}</div>{{/attack_header}}
+    {{#attack_roll}}<div class="sheet-template-row"><span>Attack Roll</span><span>{{attack_roll}}</span></div>{{/attack_roll}}
+    {{#critical_roll}}<div class="sheet-template-row"><span>Critical Roll</span><span>{{critical_roll}}</span></div>{{/critical_roll}}
+    {{#damage}}<div class="sheet-template-row"><span>Damage</span><span>{{damage}}</span></div>{{/damage}}
+    {{#speed}}<div class="sheet-template-row"><span>Speed</span><span>{{speed}}</span></div>{{/speed}}
+    {{#weapon_range}}<div class="sheet-template-row"><span>Weapon Range</span><span>{{weapon_range}}</span></div>{{/weapon_range}}
+    {{#weapon_properties}}<div class="sheet-template-row"><span>Weapon Properties</span><span>{{weapon_properties}}</span></div>{{/weapon_properties}}
+    {{#item_properties}}<div class="sheet-template-row"><span>Item Properties</span><span>{{item_properties}}</span></div>{{/item_properties}}
+    {{#great_skill}}<div class="sheet-template-row"><span>Great Skill</span><span>{{great_skill}}</span></div>{{/great_skill}}
+    {{#defense_header}}<div class="sheet-template-section">{{defense_header}}</div>{{/defense_header}}
+    {{#defense_speed}}<div class="sheet-template-row"><span>Speed</span><span>{{defense_speed}}</span></div>{{/defense_speed}}
+    {{#dodge}}<div class="sheet-template-row"><span>Dodge</span><span>{{dodge}}</span></div>{{/dodge}}
+    {{#avoid}}<div class="sheet-template-row"><span>Avoid</span><span>{{avoid}}</span></div>{{/avoid}}
+    {{#defense}}<div class="sheet-template-row"><span>Defense</span><span>{{defense}}</span></div>{{/defense}}
+    {{#resistance}}<div class="sheet-template-row"><span>Resistance</span><span>{{resistance}}</span></div>{{/resistance}}
+  </div>
+</rolltemplate>
 
 <!-- use text/worker to submit. Use text/javascript to get syntax highlighting. -->
 <script type="text/worker">

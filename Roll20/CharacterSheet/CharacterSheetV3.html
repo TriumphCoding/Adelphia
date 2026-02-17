@@ -1591,6 +1591,77 @@
     return toNumber(cleaned);
   }
 
+  function getGreatSkillActivationFromDescription(description, fallbackStat, fallbackMultiplier) {
+    const text = String(description || "");
+    const match = text.match(/\b(STR|INT|DEX|SPD|LUK|CON|WIS)\s*(?:([x\/])\s*(\d+(?:\.\d+)?))?%/i);
+    if (!match) {
+      return {
+        stat: String(fallbackStat || "").toUpperCase(),
+        multiplier: toNumber(fallbackMultiplier) || 1
+      };
+    }
+
+    const parsedStat = String(match[1] || fallbackStat || "").toUpperCase();
+    const operator = match[2] || "";
+    const value = toNumber(match[3] || "1") || 1;
+    let parsedMultiplier = 1;
+    if (operator === "x") { parsedMultiplier = value; }
+    if (operator === "/") { parsedMultiplier = 1 / value; }
+
+    return {
+      stat: parsedStat,
+      multiplier: parsedMultiplier
+    };
+  }
+
+  function getGreatSkillActivationRoll(description, activationStat, activationMultiplier) {
+    const statData = getGreatSkillActivationFromDescription(description, activationStat, activationMultiplier);
+    const statMap = {
+      STR: { base: "str_stat_total", weapon: "Equipped_Weapon_STR" },
+      INT: { base: "int_stat_total", weapon: "Equipped_Weapon_INT" },
+      DEX: { base: "dex_stat_total", weapon: "Equipped_Weapon_DEX" },
+      SPD: { base: "spd_stat_total", weapon: "Equipped_Weapon_SPD" },
+      LUK: { base: "luk_stat_total", weapon: "Equipped_Weapon_LUK" },
+      CON: { base: "con_stat_total", weapon: "Equipped_Weapon_CON" },
+      WIS: { base: "wis_stat_total", weapon: "Equipped_Weapon_WIS" }
+    };
+
+    const selected = statMap[statData.stat];
+    if (!selected) { return ""; }
+
+    const baseExpression = `[[@{${selected.base}}+@{${selected.weapon}}]]`;
+    const multiplier = statData.multiplier;
+    let thresholdExpression = `floor(${baseExpression}) + 1`;
+    if (multiplier !== 1) {
+      thresholdExpression = (multiplier === 0.5)
+        ? `floor(${baseExpression}/2) + 1`
+        : `floor(${baseExpression}*${multiplier}) + 1`;
+    }
+
+    return `[[1d100<[[${thresholdExpression}]]]]`;
+  }
+
+  function updateGreatSkillDescription() {
+    getAttrs(["GreatSkill"], function(values) {
+      const skillName = values.GreatSkill;
+      const skill = GreatSkills[skillName];
+      if (!skill) {
+        setAttrs({ GreatSkillLevel: "", GreatSkillDescription: "" });
+        return;
+      }
+
+      const activationRoll = getGreatSkillActivationRoll(skill.Description, skill.ActivationStat, skill.ActivationMultiplier);
+      const fullDescription = activationRoll
+        ? `${skill.Description} Activation Roll: ${activationRoll}`
+        : skill.Description;
+
+      setAttrs({
+        GreatSkillLevel: skill.Level,
+        GreatSkillDescription: fullDescription
+      });
+    });
+  }
+
   function buildRangeLabel(minRange, maxRange) {
     const min = toNumber(minRange);
     const max = toNumber(maxRange);
@@ -1852,13 +1923,11 @@
   });
 
   on("change:GreatSkill", function(eventInfo) {
-    getAttrs(["GreatSkill"], function(values) {
-        let SkillName = values.GreatSkill;
-        setAttrs({
-          GreatSkillLevel: GreatSkills[SkillName]["Level"],
-          GreatSkillDescription: GreatSkills[SkillName]["Description"]
-        });
-    });
+    updateGreatSkillDescription();
+  });
+
+  on("change:str_stat_total change:int_stat_total change:dex_stat_total change:spd_stat_total change:luk_stat_total change:con_stat_total change:wis_stat_total change:Equipped_Weapon_STR change:Equipped_Weapon_INT change:Equipped_Weapon_DEX change:Equipped_Weapon_SPD change:Equipped_Weapon_LUK change:Equipped_Weapon_CON change:Equipped_Weapon_WIS", function() {
+    updateGreatSkillDescription();
   });
 
   on("change:repeating_combatskillslist:CombatSkill change:repeating_combatskillslist:CombatSkillLevel", function(eventInfo) {

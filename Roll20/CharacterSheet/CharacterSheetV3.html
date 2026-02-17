@@ -1615,7 +1615,6 @@
     });
   }
 
-
   function EquipItemFromRow(rowId) {
     const itemName = `repeating_items_${rowId}_Item-Name`;
     const itemDescription = `repeating_items_${rowId}_Item-Description`;
@@ -1815,7 +1814,6 @@
   }
 
   on("clicked:repeating_weapons", function(eventInfo) {
-    console.log("Setting Weapon");
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipWeaponFromRow(rowId); }

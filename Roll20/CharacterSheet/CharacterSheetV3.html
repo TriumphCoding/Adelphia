@@ -1742,13 +1742,13 @@
     });
   }
 
-  on("clicked:repeating_weapons:SetWeapon", function(eventInfo) {
+  on("clicked:repeating_weapons", function(eventInfo) {
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipWeaponFromRow(rowId); }
   });
 
-  on("clicked:repeating_items:SetItem", function(eventInfo) {
+  on("clicked:repeating_items", function(eventInfo) {
     if (!eventInfo || !eventInfo.sourceAttribute) { return; }
     const rowId = eventInfo.sourceAttribute.split("_")[2];
     if (rowId) { EquipItemFromRow(rowId); }

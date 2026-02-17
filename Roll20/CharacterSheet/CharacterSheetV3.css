@@ -1057,6 +1057,11 @@ button[type="action"]:hover {
   color: #1f2435;
 }
 
+.sheet-rolltemplate-adelphiaattack .sheet-template-description {
+  color: #1f2435;
+  margin-bottom: 4px;
+}
+
 
 /* Roll template: adelphiaquirk */
 .sheet-rolltemplate-adelphiaquirk {

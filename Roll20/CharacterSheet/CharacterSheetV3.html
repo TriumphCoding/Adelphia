@@ -14,7 +14,7 @@
             </div>
 
             <div class="CharacterHPFlexItem">
-                <label class="PrimaryLabel CharacterHPLabel"><span data-i18n="HP-Full-Name">HP</span>: <input type="number" class="PrimaryEntry CharacterHPInput" name="attr_current_hp" value="0" min="0"> / <span name="attr_hp_stat_total"></span></label>
+                <label class="PrimaryLabel CharacterHPLabel"><span data-i18n="HP-Short-Name">HP</span>: <input type="number" class="PrimaryEntry CharacterHPInput" name="attr_current_hp" value="0" min="0"> / <span name="attr_hp_stat_total"></span></label>
             </div>
 
             <div class="CharacterEquippedFlexItem"> <!-- Weapon Selector -->
@@ -411,57 +411,63 @@
                         <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
                     </select></label>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Rune-Label">Rune</span>: <select name="attr_Weapon-Rune" class="PrimaryDropdown">
-                        <option value="">None</option>
-                        <option value="Wind Sword">Wind Sword</option>
-                        <option value="Shadow">Shadow</option>
-                        <option value="Slayer (Herbivore)">Slayer (Herbivore)</option>
-                        <option value="Slayer (Lance)">Slayer (Lance)</option>
-                        <option value="Evasive">Evasive</option>
-                        <option value="Mighty">Mighty</option>
-                        <option value="Resistant">Resistant</option>
-                        <option value="Slayer (Fly)">Slayer (Fly)</option>
-                        <option value="Heavy">Heavy</option>
-                        <option value="Slayer (Nobility)">Slayer (Nobility)</option>
-                        <option value="Wicked">Wicked</option>
-                        <option value="Slayer (Bow)">Slayer (Bow)</option>
-                        <option value="Slayer (Staff)">Slayer (Staff)</option>
-                        <option value="Slayer (Wind)">Slayer (Wind)</option>
-                        <option value="Slayer (Goblin)">Slayer (Goblin)</option>
-                        <option value="Slayer (Beast)">Slayer (Beast)</option>
-                        <option value="Throwing">Throwing</option>
-                        <option value="Sweep">Sweep</option>
-                        <option value="Slayer (Ride)">Slayer (Ride)</option>
-                        <option value="Conquerer">Conquerer</option>
-                        <option value="Light">Light</option>
-                        <option value="Seeking">Seeking</option>
-                        <option value="Slayer (Knives)">Slayer (Knives)</option>
-                        <option value="Slayer (Gauntlet)">Slayer (Gauntlet)</option>
-                        <option value="Slayer (Sing)">Slayer (Sing)</option>
-                        <option value="Slayer (Light)">Slayer (Light)</option>
-                        <option value="Slayer (Elf)">Slayer (Elf)</option>
-                        <option value="Fortress">Fortress</option>
-                        <option value="Slayer (Dragon)">Slayer (Dragon)</option>
-                        <option value="Slayer (Human)">Slayer (Human)</option>
-                        <option value="Fire Lance">Fire Lance</option>
-                        <option value="Slayer (Axe)">Slayer (Axe)</option>
-                        <option value="Slayer (Flintlock)">Slayer (Flintlock)</option>
-                        <option value="Healing">Healing</option>
-                        <option value="Slayer (Cyborg)">Slayer (Cyborg)</option>
-                        <option value="Slayer (Crossbow)">Slayer (Crossbow)</option>
-                        <option value="Slayer (Orc)">Slayer (Orc)</option>
-                        <option value="Blessed">Blessed</option>
-                        <option value="Bolt Axe">Bolt Axe</option>
-                        <option value="Slayer (Fire)">Slayer (Fire)</option>
-                        <option value="Slayer (Carnivore)">Slayer (Carnivore)</option>
-                        <option value="Slayer (Sword)">Slayer (Sword)</option>
-                        <option value="Slayer (Runed)">Slayer (Runed)</option>
-                        <option value="Slayer (Dwarf)">Slayer (Dwarf)</option>
-                        <option value="Reaver">Reaver</option>
-                        <option value="Defensive">Defensive</option>
-                        <option value="Slayer (Armored)">Slayer (Armored)</option>
-                        <option value="Brave">Brave</option>
-                        <option value="Hero">Hero</option>
-                        <option value="Masterwork">Masterwork</option>
+                        <option disabled data-i18n="Rune-Level-0-indent" class="OptionCategoryH2"> > No Rune</option>
+                        <option value="" data-i18n="NoRune-Full-Name">None</option>
+                        <option disabled data-i18n="Rune-Level-1-indent" class="OptionCategoryH2"> > Level 1</option>
+                        <option value="Blessed" data-i18n="Blessed-Full-Name">Blessed</option>
+                        <option value="Defensive" data-i18n="Defensive-Full-Name">Defensive</option>
+                        <option value="Evasive" data-i18n="Evasive-Full-Name">Evasive</option>
+                        <option value="Fortress" data-i18n="Fortress-Full-Name">Fortress</option>
+                        <option value="Healing" data-i18n="Healing-Full-Name">Healing</option>
+                        <option value="Heavy" data-i18n="Heavy-Full-Name">Heavy</option>
+                        <option value="Light" data-i18n="Light-Full-Name">Light</option>
+                        <option value="Resistant" data-i18n="Resistant-Full-Name">Resistant</option>
+                        <option value="Seeking" data-i18n="Seeking-Full-Name">Seeking</option>
+                        <option value="Wicked" data-i18n="Wicked-Full-Name">Wicked</option>
+                        <option disabled data-i18n="Rune-Level-2-indent" class="OptionCategoryH2"> > Level 2</option>
+                        <option value="Brave" data-i18n="Brave-Full-Name">Brave</option>
+                        <option value="Masterwork" data-i18n="Masterwork-Full-Name">Masterwork</option>
+                        <option value="Reaver" data-i18n="Reaver-Full-Name">Reaver</option>
+                        <option value="Shadow" data-i18n="Shadow-Full-Name">Shadow</option>
+                        <option value="Slayer (Armored)" data-i18n="Slayer (Armored)-Full-Name">Slayer (Armored)</option>
+                        <option value="Slayer (Fly)" data-i18n="Slayer (Fly)-Full-Name">Slayer (Fly)</option>
+                        <option value="Slayer (Nobility)" data-i18n="Slayer (Nobility)-Full-Name">Slayer (Nobility)</option>
+                        <option value="Slayer (Ride)" data-i18n="Slayer (Ride)-Full-Name">Slayer (Ride)</option>
+                        <option value="Slayer (Runed)" data-i18n="Slayer (Runed)-Full-Name">Slayer (Runed)</option>
+                        <option value="Slayer (Sing)" data-i18n="Slayer (Sing)-Full-Name">Slayer (Sing)</option>
+                        <option value="Slayer (Beast)" data-i18n="Slayer (Beast)-Full-Name">Slayer (Beast)</option>
+                        <option value="Slayer (Carnivore)" data-i18n="Slayer (Carnivore)-Full-Name">Slayer (Carnivore)</option>
+                        <option value="Slayer (Cyborg)" data-i18n="Slayer (Cyborg)-Full-Name">Slayer (Cyborg)</option>
+                        <option value="Slayer (Dragon)" data-i18n="Slayer (Dragon)-Full-Name">Slayer (Dragon)</option>
+                        <option value="Slayer (Dwarf)" data-i18n="Slayer (Dwarf)-Full-Name">Slayer (Dwarf)</option>
+                        <option value="Slayer (Elf)" data-i18n="Slayer (Elf)-Full-Name">Slayer (Elf)</option>
+                        <option value="Slayer (Goblin)" data-i18n="Slayer (Goblin)-Full-Name">Slayer (Goblin)</option>
+                        <option value="Slayer (Herbivore)" data-i18n="Slayer (Herbivore)-Full-Name">Slayer (Herbivore)</option>
+                        <option value="Slayer (Human)" data-i18n="Slayer (Human)-Full-Name">Slayer (Human)</option>
+                        <option value="Slayer (Orc)" data-i18n="Slayer (Orc)-Full-Name">Slayer (Orc)</option>
+                        <option value="Sweep" data-i18n="Sweep-Full-Name">Sweep</option>
+                        <option value="Throwing" data-i18n="Throwing-Full-Name">Throwing</option>
+                        <option disabled data-i18n="Rune-Level-3-indent" class="OptionCategoryH2"> > Level 3</option>
+                        <option value="Bolt Axe" data-i18n="Bolt Axe-Full-Name">Bolt Axe</option>
+                        <option value="Conquerer" data-i18n="Conquerer-Full-Name">Conquerer</option>
+                        <option value="Fire Lance" data-i18n="Fire Lance-Full-Name">Fire Lance</option>
+                        <option value="Slayer (Axe)" data-i18n="Slayer (Axe)-Full-Name">Slayer (Axe)</option>
+                        <option value="Slayer (Bow)" data-i18n="Slayer (Bow)-Full-Name">Slayer (Bow)</option>
+                        <option value="Slayer (Crossbow)" data-i18n="Slayer (Crossbow)-Full-Name">Slayer (Crossbow)</option>
+                        <option value="Slayer (Fire)" data-i18n="Slayer (Fire)-Full-Name">Slayer (Fire)</option>
+                        <option value="Slayer (Flintlock)" data-i18n="Slayer (Flintlock)-Full-Name">Slayer (Flintlock)</option>
+                        <option value="Slayer (Gauntlet)" data-i18n="Slayer (Gauntlet)-Full-Name">Slayer (Gauntlet)</option>
+                        <option value="Slayer (Knives)" data-i18n="Slayer (Knives)-Full-Name">Slayer (Knives)</option>
+                        <option value="Slayer (Lance)" data-i18n="Slayer (Lance)-Full-Name">Slayer (Lance)</option>
+                        <option value="Slayer (Light)" data-i18n="Slayer (Light)-Full-Name">Slayer (Light)</option>
+                        <option value="Slayer (Staff)" data-i18n="Slayer (Staff)-Full-Name">Slayer (Staff)</option>
+                        <option value="Slayer (Sword)" data-i18n="Slayer (Sword)-Full-Name">Slayer (Sword)</option>
+                        <option value="Slayer (Wind)" data-i18n="Slayer (Wind)-Full-Name">Slayer (Wind)</option>
+                        <option value="Wind Sword" data-i18n="Wind Sword-Full-Name">Wind Sword</option>
+                        <option disabled data-i18n="Rune-Level-4-indent" class="OptionCategoryH2"> > Level 4</option>
+                        <option value="Hero" data-i18n="Hero-Full-Name">Hero</option>
+                        <option disabled data-i18n="Rune-Level-5-indent" class="OptionCategoryH2"> > Level 5</option>
+                        <option value="Mighty" data-i18n="Mighty-Full-Name">Mighty</option>
                     </select></label>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Damage-Type-Label">Damage Type</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-DamageType" readonly/></label>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Color-Label">Color</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Color" readonly/></label>
@@ -492,27 +498,27 @@
                 <fieldset class="repeating_items">
                   <input type="text" class="BuilderNameHeader" name="attr_Item-Name" readonly/>
                   <label class="PrimaryLabel"><span data-i18n="Item-Selector-Label">Template</span>: <select name="attr_Item-Template" class="PrimaryDropdown">
-                    <option value="Cursed Ring (Legend)">Cursed Ring (Legend)</option>
-                    <option value="Angel Ring (Legend)">Angel Ring (Legend)</option>
-                    <option value="Hermes Shoes">Hermes Shoes</option>
-                    <option value="Setiemson">Setiemson</option>
-                    <option value="Tynar Rouge">Tynar Rouge</option>
-                    <option value="Cursed Ring (Epic)">Cursed Ring (Epic)</option>
-                    <option value="Diamond Bracelet">Diamond Bracelet</option>
-                    <option value="Elven Cloak">Elven Cloak</option>
-                    <option value="Jade Armlet">Jade Armlet</option>
-                    <option value="Cursed Ring (Hero)">Cursed Ring (Hero)</option>
-                    <option value="Cherche">Cherche</option>
-                    <option value="Germinas Boots">Germinas Boots</option>
-                    <option value="Glove">Glove</option>
-                    <option value="Angel Ring (Hero)">Angel Ring (Hero)</option>
-                    <option value="Empyreal Armband">Empyreal Armband</option>
-                    <option value="Angel Ring (Epic)">Angel Ring (Epic)</option>
-                    <option value="Shoulder Cape">Shoulder Cape</option>
-                    <option value="Feather Mantle">Feather Mantle</option>
-                    <option value="Battle Boots">Battle Boots</option>
-                    <option value="Gauntlet">Gauntlet</option>
-                    <option value="Bracer">Bracer</option>
+                    <option value="Angel Ring (Hero)" data-i18n="Angel Ring (Hero)-Full-Name">Angel Ring (Hero)</option>
+                    <option value="Angel Ring (Epic)" data-i18n="Angel Ring (Epic)-Full-Name">Angel Ring (Epic)</option>
+                    <option value="Angel Ring (Legend)" data-i18n="Angel Ring (Legend)-Full-Name">Angel Ring (Legend)</option>
+                    <option value="Battle Boots" data-i18n="Battle Boots-Full-Name">Battle Boots</option>
+                    <option value="Bracer" data-i18n="Bracer-Full-Name">Bracer</option>
+                    <option value="Cherche" data-i18n="Cherche-Full-Name">Cherche</option>
+                    <option value="Cursed Ring (Hero)" data-i18n="Cursed Ring (Hero)-Full-Name">Cursed Ring (Hero)</option>
+                    <option value="Cursed Ring (Epic)" data-i18n="Cursed Ring (Epic)-Full-Name">Cursed Ring (Epic)</option>
+                    <option value="Cursed Ring (Legend)" data-i18n="Cursed Ring (Legend)-Full-Name">Cursed Ring (Legend)</option>
+                    <option value="Diamond Bracelet" data-i18n="Diamond Bracelet-Full-Name">Diamond Bracelet</option>
+                    <option value="Elven Cloak" data-i18n="Elven Cloak-Full-Name">Elven Cloak</option>
+                    <option value="Empyreal Armband" data-i18n="Empyreal Armband-Full-Name">Empyreal Armband</option>
+                    <option value="Feather Mantle" data-i18n="Feather Mantle-Full-Name">Feather Mantle</option>
+                    <option value="Gauntlet" data-i18n="Gauntlet-Full-Name">Gauntlet</option>
+                    <option value="Germinas Boots" data-i18n="Germinas Boots-Full-Name">Germinas Boots</option>
+                    <option value="Glove" data-i18n="Glove-Full-Name">Glove</option>
+                    <option value="Hermes Shoes" data-i18n="Hermes Shoes-Full-Name">Hermes Shoes</option>
+                    <option value="Jade Armlet" data-i18n="Jade Armlet-Full-Name">Jade Armlet</option>
+                    <option value="Setiemson" data-i18n="Setiemson-Full-Name">Setiemson</option>
+                    <option value="Shoulder Cape" data-i18n="Shoulder Cape-Full-Name">Shoulder Cape</option>
+                    <option value="Tynar Rouge" data-i18n="Tynar Rouge-Full-Name">Tynar Rouge</option>
                   </select></label>
                   <label class="PrimaryLabel"><span data-i18n="Item-Description-Label">Description</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Description" readonly/></label>
                   <label class="PrimaryLabel"><span data-i18n="Item-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Tier" readonly/></label>

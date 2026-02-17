@@ -461,3 +461,49 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 **Shielded Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive to 0.
 
 **Resistant Block**: When an enemy **Engages** with you, you have a **WIS**x2% chance to reduce the damage you actually receive by 1/2.
+
+## Items
+
+Items are a bit looser than the rest of the weapons and skills in this section. In general, by about level 5 in a tier, a character should have an item of that tier's level. Since you can only really have one item at a time, there's no real reason to have a gate on them, give them out as rewards as feels thematic or appropriate. As a rough guide, hand out an item on levels that end in 5, so 5 - 15 - 25 - 35 - 45 - 55 - 65 - 75.
+
+**Battle Boots**: *Hero* - +1 **MOV**
+
+**Germinas Boots**: *Epic* - +2 **MOV**
+
+**Hermes Shoes**: *Legend* - +3 **MOV**
+
+**Glove**: *Hero* - +5 **Might** +15 **Accuracy**
+
+**Bracer**: *Epic* - +10 **Might** +30 **Accuracy**
+
+**Gauntlet**: *Legend* - +15 **Might** +45 **Accuracy**
+
+**Cursed Ring (Hero)**: *Hero* - -10 **HP**, **Defense**, **Resistance**. +10 **Might**
+
+**Cursed Ring (Epic)**: *Epic* - -20 **HP**, **Defense**, **Resistance**. +20 **Might****
+
+**Cursed Ring (Legend)**: *Legend* - -30 **HP**, **Defense**, **Resistance**. +30 **Might**
+
+**Angel Ring (Hero)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once.
+
+**Angel Ring (Epic)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per combat
+
+**Angel Ring (Legend)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per engagement.
+
+**Jade Armlet**: *Hero* - +10 **Dodge**, +5 **Resistance**
+
+**Diamond Bracelet**: *Epic* - +20 **Dodge**, +10 **Resistance**
+
+**Empyreal Armband**: *Legend* - +30 **Dodge**, +15 **Resistance**
+
+**Shoulder Cape**: *Hero* - +15 **Dodge**, +5 **Avoid**
+
+**Elven Cloak**: *Epic* - +30 **Dodge**, +10 **Avoid**
+
+**Feather Mantle**: *Legend* - +45 **Dodge**, +15 **Avoid**
+
+**Cherche**: *Hero* - +5 **Critical**, +5 **Defense**
+
+**Setiemson**: *Epic* - +10 **Critical**, +10 **Defense**
+
+**Tynar Rouge**: *Legend* - +15 **Critical**, +15 **Defense**

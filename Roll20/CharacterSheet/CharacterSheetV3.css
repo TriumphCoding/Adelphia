@@ -1082,19 +1082,41 @@ button[type="action"]:hover {
 .sheet-rolltemplate-adelphiaquirk .sheet-template-body {
   border: 2px solid #c8a05a;
   border-radius: 6px;
-  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
   padding: 8px;
   display: grid;
-  gap: 4px;
+  gap: 8px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-panel {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-section {
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #623313;
+  text-transform: uppercase;
 }
 
 .sheet-rolltemplate-adelphiaquirk .sheet-template-row {
   display: grid;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 8px;
+  align-items: start;
+  margin-bottom: 2px;
 }
 
 .sheet-rolltemplate-adelphiaquirk .sheet-template-row > span:first-child {
   font-weight: 700;
   color: #623313;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-description {
+  color: #1f2435;
 }

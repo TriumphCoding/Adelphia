@@ -1210,11 +1210,18 @@
   <div class="sheet-template-container">
     {{#name}}<div class="sheet-template-title">{{name}}</div>{{/name}}
     <div class="sheet-template-body">
-      {{#roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{roll}}</span></div>{{/roll}}
-      {{#stat_used}}<div class="sheet-template-row"><span>Stat Used</span><span>{{stat_used}}</span></div>{{/stat_used}}
-      {{#difficulty_result}}<div class="sheet-template-row"><span>Difficulty Hit</span><span>{{difficulty_result}}</span></div>{{/difficulty_result}}
-      {{#critical_result}}<div class="sheet-template-row"><span>Critical</span><span>{{critical_result}}</span></div>{{/critical_result}}
-      {{#description}}<div class="sheet-template-row"><span>Description</span><span>{{description}}</span></div>{{/description}}
+      <div class="sheet-template-panel">
+        {{#roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{roll}}</span></div>{{/roll}}
+        {{#stat_used}}<div class="sheet-template-row"><span>Stat Used</span><span>{{stat_used}}</span></div>{{/stat_used}}
+        {{#difficulty_result}}<div class="sheet-template-row"><span>Difficulty Hit</span><span>{{difficulty_result}}</span></div>{{/difficulty_result}}
+        {{#critical_result}}<div class="sheet-template-row"><span>Critical</span><span>{{critical_result}}</span></div>{{/critical_result}}
+      </div>
+      {{#description}}
+      <div class="sheet-template-panel">
+        <div class="sheet-template-section">Description</div>
+        <div class="sheet-template-description">{{description}}</div>
+      </div>
+      {{/description}}
     </div>
   </div>
 </rolltemplate>
@@ -1229,12 +1236,12 @@
   function d100() { return getRandomInt(99); };
 
   const QuirkDifficultyTable = [
-    { name: "Trivial", bonus: 100 },
-    { name: "Easy", bonus: 75 },
-    { name: "Average", bonus: 50 },
-    { name: "Difficult", bonus: 25 },
-    { name: "Legendary", bonus: 0 },
-    { name: "Impossible", bonus: -25 }
+    { name: "Trivial (100)", bonus: 100 },
+    { name: "Easy (75)", bonus: 75 },
+    { name: "Average (50)", bonus: 50 },
+    { name: "Difficult (25)", bonus: 25 },
+    { name: "Legendary (0)", bonus: 0 },
+    { name: "Impossible (-25)", bonus: -25 }
   ];
 
   const QuirkStatAttributeMap = {

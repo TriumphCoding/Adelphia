@@ -140,9 +140,15 @@
                     <h1 class="PrimaryTitle" data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</h1>
                     <button type="action" class="PrimaryButton" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
                     <fieldset class="repeating_tempstatlist">
+                        <div class="CharacterTempStatAdjustmentHeaderRow">
+                            <span data-i18n="stat-change-column-change">Change</span>
+                            <span data-i18n="stat-change-column-stat">Stat</span>
+                            <span data-i18n="stat-change-column-turns">Turns</span>
+                            <span data-i18n="stat-change-column-notes">Notes</span>
+                        </div>
                         <div class="CharacterTempStatAdjustmentSubgrid">
-                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-change">Change</span><input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/></label>
-                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span><select name="attr_adjustment-stat" class="PrimaryDropdown">
+                            <input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/>
+                            <select name="attr_adjustment-stat" class="PrimaryDropdown">
                                 <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                                 <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
@@ -159,9 +165,9 @@
                                 <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
                                 <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                                 <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
-                            </select></label>
-                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-turns">Turns</span><input type="number" name="attr_adjustment-turns" value="0" class="PrimaryEntry"/></label>
-                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-notes">Notes</span><input type="text" name="attr_adjustment-notes" value="" class="PrimaryEntry"/></label>
+                            </select>
+                            <input type="number" name="attr_adjustment-turns" value="0" class="PrimaryEntry"/>
+                            <input type="text" name="attr_adjustment-notes" value="" class="PrimaryEntry" placeholder="Add Notes"/>
                         </div>
                     </fieldset>
                 </div>
@@ -1250,6 +1256,71 @@
     "wis"
   ];
 
+  const TempAdjustmentAttributeMap = {
+    HP: "temp_mod_hp",
+    STR: "temp_mod_str",
+    INT: "temp_mod_int",
+    DEX: "temp_mod_dex",
+    SPD: "temp_mod_spd",
+    LUK: "temp_mod_luk",
+    CON: "temp_mod_con",
+    WIS: "temp_mod_wis",
+    MOV: "temp_mod_mov",
+    MGT: "temp_mod_mgt",
+    ACC: "temp_mod_acc",
+    CRT: "temp_mod_crt",
+    DGE: "temp_mod_dge",
+    AVD: "temp_mod_avd",
+    DEF: "temp_mod_def",
+    RES: "temp_mod_res"
+  };
+
+  const TempAdjustmentAttributes = Object.values(TempAdjustmentAttributeMap);
+
+  function CalculateTempAdjustments(callback) {
+    getSectionIDs("repeating_tempstatlist", function(ids) {
+      const totals = {};
+      TempAdjustmentAttributes.forEach((attr) => {
+        totals[attr] = 0;
+      });
+
+      if (!ids || ids.length === 0) {
+        setAttrs(totals, { silent: true }, callback);
+        return;
+      }
+
+      const adjustmentAttrs = [];
+      ids.forEach((id) => {
+        adjustmentAttrs.push(`repeating_tempstatlist_${id}_adjustment-value`);
+        adjustmentAttrs.push(`repeating_tempstatlist_${id}_adjustment-stat`);
+        adjustmentAttrs.push(`repeating_tempstatlist_${id}_adjustment-turns`);
+      });
+
+      getAttrs(adjustmentAttrs, function(values) {
+        ids.forEach((id) => {
+          const valueKey = `repeating_tempstatlist_${id}_adjustment-value`;
+          const statKey = `repeating_tempstatlist_${id}_adjustment-stat`;
+          const turnsKey = `repeating_tempstatlist_${id}_adjustment-turns`;
+
+          if (toNumber(values[turnsKey]) <= 0) { return; }
+
+          const targetAttr = TempAdjustmentAttributeMap[values[statKey]];
+          if (!targetAttr) { return; }
+          totals[targetAttr] += toNumber(values[valueKey]);
+        });
+
+        setAttrs(totals, { silent: true }, callback);
+      });
+    });
+  }
+
+  function RefreshTempAdjustments() {
+    CalculateTempAdjustments(function() {
+      CalculateStatPointGrid();
+      CalculateFrontSheetStats();
+    });
+  }
+
 /* Update Functions */
   function CalculateStatPointGrid() {
     getAttrs([
@@ -1263,20 +1334,21 @@
       "wis_stat_base","wis_stat_CT","wis_stat_skill","wis_stat_growth",
       "mov_stat_base","mov_stat_CT","mov_stat_skill",
       "BaseClassPoints","CtClassPoints","LevelClassPoints","LevelClassPointsRate",
+      "temp_mod_hp","temp_mod_str","temp_mod_int","temp_mod_dex","temp_mod_spd","temp_mod_luk","temp_mod_con","temp_mod_wis","temp_mod_mov",
       "character_level","growth_skill_points","BaseDefaultHP"
     ], function(v) {
       setAttrs({ 
         stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
         stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
-        hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth)) ,
-        str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth)),
-        dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth)),
-        int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth)),
-        spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth)),
-        luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth)),
-        con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth)),
-        wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth)),
-        mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill))
+        hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth) + toNumber(v.temp_mod_hp)) ,
+        str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth) + toNumber(v.temp_mod_str)),
+        dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth) + toNumber(v.temp_mod_dex)),
+        int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth) + toNumber(v.temp_mod_int)),
+        spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth) + toNumber(v.temp_mod_spd)),
+        luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth) + toNumber(v.temp_mod_luk)),
+        con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth) + toNumber(v.temp_mod_con)),
+        wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth) + toNumber(v.temp_mod_wis)),
+        mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill) + toNumber(v.temp_mod_mov))
       });
     });
   };
@@ -1504,7 +1576,8 @@
       "str_stat_total","int_stat_total","dex_stat_total","spd_stat_total","luk_stat_total","con_stat_total","wis_stat_total",
       "Equipped_Weapon_DamageType","Equipped_Weapon_Might","Equipped_Weapon_Accuracy","Equipped_Weapon_Critical",
       "Equipped_Weapon_STR","Equipped_Weapon_INT","Equipped_Weapon_DEX","Equipped_Weapon_SPD","Equipped_Weapon_LUK","Equipped_Weapon_CON","Equipped_Weapon_WIS",
-      "Equipped_Item_Might","Equipped_Item_Accuracy","Equipped_Item_Critical","Equipped_Item_Dodge","Equipped_Item_Avoid","Equipped_Item_Defense","Equipped_Item_Resistance"
+      "Equipped_Item_Might","Equipped_Item_Accuracy","Equipped_Item_Critical","Equipped_Item_Dodge","Equipped_Item_Avoid","Equipped_Item_Defense","Equipped_Item_Resistance",
+      "temp_mod_mgt","temp_mod_acc","temp_mod_crt","temp_mod_dge","temp_mod_avd","temp_mod_def","temp_mod_res"
     ], function(v) {
       const effectiveStr = toNumber(v.str_stat_total) + toNumber(v.Equipped_Weapon_STR);
       const effectiveInt = toNumber(v.int_stat_total) + toNumber(v.Equipped_Weapon_INT);
@@ -1529,13 +1602,13 @@
       const itemDefense = toNumber(v.Equipped_Item_Defense);
       const itemResistance = toNumber(v.Equipped_Item_Resistance);
 
-      const attackMight = powerStat + weaponMight + itemMight;
-      const attackAccuracy = (effectiveDex * 2) + effectiveLuk + weaponAccuracy + itemAccuracy;
-      const attackCritical = effectiveDex + Math.floor(effectiveLuk / 2) + weaponCritical + itemCritical;
-      const attackDodge = (effectiveSpd * 2) + itemDodge;
-      const attackAvoid = (effectiveSpd * 2) + effectiveLuk + itemAvoid;
-      const attackDefense = effectiveCon + itemDefense;
-      const attackResistance = effectiveWis + itemResistance;
+      const attackMight = powerStat + weaponMight + itemMight + toNumber(v.temp_mod_mgt);
+      const attackAccuracy = (effectiveDex * 2) + effectiveLuk + weaponAccuracy + itemAccuracy + toNumber(v.temp_mod_acc);
+      const attackCritical = effectiveDex + Math.floor(effectiveLuk / 2) + weaponCritical + itemCritical + toNumber(v.temp_mod_crt);
+      const attackDodge = (effectiveSpd * 2) + itemDodge + toNumber(v.temp_mod_dge);
+      const attackAvoid = (effectiveSpd * 2) + effectiveLuk + itemAvoid + toNumber(v.temp_mod_avd);
+      const attackDefense = effectiveCon + itemDefense + toNumber(v.temp_mod_def);
+      const attackResistance = effectiveWis + itemResistance + toNumber(v.temp_mod_res);
 
       setAttrs({
         AttackMight: attackMight,
@@ -1826,6 +1899,10 @@
     SyncEquipmentRowsFromSelectors();
   });
 
+  on("sheet:opened", function() {
+    RefreshTempAdjustments();
+  });
+
   StatList.forEach(stat => {
     on(`change:${stat}_growth_base change:${stat}_growth_bg`, function() {
         CalculateStats();
@@ -1841,11 +1918,23 @@
         ids.forEach((id) => {
           const key = `repeating_tempstatlist_${id}_adjustment-turns`;
           const turns = Math.max(0, toNumber(values[key]));
-          updates[key] = Math.max(0, turns - 1);
+          if (turns <= 1) {
+            removeRepeatingRow(`repeating_tempstatlist_${id}`);
+            return;
+          }
+          updates[key] = turns - 1;
         });
-        setAttrs(updates);
+        if (Object.keys(updates).length > 0) {
+          setAttrs(updates, {}, RefreshTempAdjustments);
+          return;
+        }
+        RefreshTempAdjustments();
       });
     });
+  });
+
+  on("change:repeating_tempstatlist:adjustment-value change:repeating_tempstatlist:adjustment-stat change:repeating_tempstatlist:adjustment-turns", function() {
+    RefreshTempAdjustments();
   });
 
   on("clicked:repeating_quirklist", function(eventInfo) {

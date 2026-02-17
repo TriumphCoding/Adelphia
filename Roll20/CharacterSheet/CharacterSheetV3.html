@@ -11,6 +11,10 @@
             <div class="CharacterTokenFlexItem"><img name="attr_character_token"/></div>
             <div class="CharacterDescriptionFlexItem"><textarea name="attr_character_notes" class="PrimaryNotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea></div>
 
+            <div class="CharacterHPFlexItem">
+                <label class="PrimaryLabel CharacterHPLabel"><span data-i18n="HP-Full-Name">HP</span>: <input type="number" class="PrimaryEntry CharacterHPInput" name="attr_current_hp" value="0" min="0"> / <span name="attr_hp_stat_total"></span></label>
+            </div>
+
             <div class="CharacterEquippedFlexItem"> <!-- Weapon Selector -->
                 <h1 class="PrimaryTitle" data-i18n="weapon-title-u">Weapons</h1>
                 <fieldset class="repeating_weapons">
@@ -88,65 +92,57 @@
                     <h1 class="PrimaryTitle" data-i18n="quirks-title-u">Quirks</h1>
                     <fieldset class="repeating_quirklist">
                         <div class="CharacterQuirkSubgrid">
-                            <button type="roll" class="PrimaryButton" value="&{template:default} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}}" name="roll_QuirkCheck"></button>
+                            <button type="action" class="PrimaryButton QuirkRollButton" name="act_QuirkCheck"></button>
                             <input type="text" class="PrimaryEntry" name="attr_quirk_name" placeholder="Quirk Name Goes Here" data-i18n-place="sheet-CharacterQuirkPlaceholder"/>
-                            <select name="attr_quirk-stat" class="PrimaryDropdown">
+                            <select name="attr_quirk-stat" class="PrimaryDropdown QuirkStatDropdown">
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                                 <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                                 <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
                                 <option value="SPD" selected="selected" data-i18n="SPD-Full-Name">Speed</option>
-                                <option value="LUK" selected="selected" data-i18n="LUK-Full-Name">Luck</option>
                                 <option value="CON" selected="selected" data-i18n="CON-Full-Name">Constitution</option>
                                 <option value="WIS" selected="selected" data-i18n="WIS-Full-Name">Wisdom</option>
-                                <option value="MOV" selected="selected" data-i18n="MOV-Full-Name">Movement</option>
-                                <option value="MGT" selected="selected" data-i18n="MGT-Full-Name">Might</option>
-                                <option value="ACC" selected="selected" data-i18n="ACC-Full-Name">Accuracy</option>
-                                <option value="CRT" selected="selected" data-i18n="CRT-Full-Name">Critical</option>
-                                <option value="DGE" selected="selected" data-i18n="DGE-Full-Name">Dodge</option>
-                                <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
-                                <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
-                                <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
                             </select>
+                            <input type="text" class="PrimaryEntry" name="attr_quirk_description" placeholder="Quirk Description" data-i18n-place="sheet-CharacterQuirkDescriptionPlaceholder"/>
                         </div>
                     </fieldset>
                 </div>
                 <br>
-                <div class="CharacterSheetFlexObject"> <!-- Attacking Stats -->
-                    <h1 class="PrimaryTitle" data-i18n="Attack-title-u">Attack</h1>
-                    <button type="roll" class="PrimaryButton" name="roll_Attack" value="&{template:adelphiaattack} {{name=@{character_name} - Attack}} {{attack_header=Attack}} {{attack_roll=[[@{AttackAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=@{AttackMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}" data-i18n="trigger-button">Trigger</button>
-                    <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
-                    <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_AttackDodge"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_AttackAvoid"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_AttackDefense"></span></label>
-                    <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_AttackResistance"></span></label>
-                </div>
-                <div class="CharacterSheetFlexObject"> <!-- Riposte Stats -->
-                    <h1 class="PrimaryTitle" data-i18n="Attack-Riposte-u">Riposte</h1>
-                    <button type="roll" class="PrimaryButton" name="roll_Riposte" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte}} {{attack_header=Attack}} {{attack_roll=[[@{RiposteAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=@{RiposteMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}" data-i18n="trigger-button">Trigger</button>
-                    <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
-                    <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_RiposteDodge"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_RiposteAvoid"></span><span>%</span></label>
-                    <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_RiposteDefense"></span></label>
-                    <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_RiposteResistance"></span></label>
+                <div class="AttackRiposteRow">
+                    <div class="CharacterSheetFlexObject"> <!-- Attacking Stats -->
+                        <div class="AttackRiposteHeaderRow">
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Attack" value="&{template:adelphiaattack} {{name=@{character_name} - Attack}} {{attack_header=Attack}} {{attack_roll=[[@{AttackAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=@{AttackMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}"></button>
+                            <h1 class="PrimaryTitle" data-i18n="Attack-title-u">Attack</h1>
+                        </div>
+                        <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
+                        <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_AttackAccuracy"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_AttackCritical"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_AttackDodge"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_AttackAvoid"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_AttackDefense"></span></label>
+                        <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_AttackResistance"></span></label>
+                    </div>
+                    <div class="CharacterSheetFlexObject"> <!-- Riposte Stats -->
+                        <div class="AttackRiposteHeaderRow">
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Riposte" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte}} {{attack_header=Attack}} {{attack_roll=[[@{RiposteAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=@{RiposteMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}"></button>
+                            <h1 class="PrimaryTitle" data-i18n="Attack-Riposte-u">Riposte</h1>
+                        </div>
+                        <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
+                        <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span><span>: </span><span name="attr_RiposteAccuracy"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span><span>: </span><span name="attr_RiposteCritical"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span><span>: </span><span name="attr_RiposteDodge"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span><span>: </span><span name="attr_RiposteAvoid"></span><span>%</span></label>
+                        <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span><span>: </span><span name="attr_RiposteDefense"></span></label>
+                        <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span><span>: </span><span name="attr_RiposteResistance"></span></label>
+                    </div>
                 </div>
                 <br>
                 <div class="CharacterSheetFlexObject"> <!-- Temporary Stat Adjustment -->
                     <h1 class="PrimaryTitle" data-i18n="temp-stat-adj-title-u">Temp Stat Adjustment</h1>
                     <button type="action" class="PrimaryButton" name="act_temp-stats-start-of-turn" data-i18n="trigger-button">Trigger</button>
-                    <div class="CharacterTempStatAdjustmentSubgrid">
-                        <div class="PrimaryLabel"><label data-i18n="stat-change-column-change">Change</label></div>
-                        <div class="PrimaryLabel"><label data-i18n="stat-change-column-stat">Stat</label></div>
-                        <div class="PrimaryLabel"><label data-i18n="stat-change-column-turns">Turns</label></div>
-                        <div class="PrimaryLabel"><label data-i18n="stat-change-column-notes">Notes</label></div>
-                    </div>
                     <fieldset class="repeating_tempstatlist">
                         <div class="CharacterTempStatAdjustmentSubgrid">
-                            <input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/>
-                            <select name="attr_adjustment-stat" class="PrimaryDropdown">
+                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-change">Change</span><input type="number" name="attr_adjustment-value" value="0" class="PrimaryEntry"/></label>
+                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span><select name="attr_adjustment-stat" class="PrimaryDropdown">
                                 <option value="HP" selected="selected" data-i18n="HP-Full-Name">Hit Points</option>
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                                 <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
@@ -163,9 +159,9 @@
                                 <option value="AVD" selected="selected" data-i18n="AVD-Full-Name">Avoid</option>
                                 <option value="DEF" selected="selected" data-i18n="DEF-Full-Name">Defense</option>
                                 <option value="RES" selected="selected" data-i18n="RES-Full-Name">Resistance</option>
-                            </select>
-                            <input type="number" name="attr_adjustment-turns" value="0" class="PrimaryEntry"/>
-                            <input type="text" name="attr_adjustment-notes" value="" class="PrimaryEntry"/>
+                            </select></label>
+                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-turns">Turns</span><input type="number" name="attr_adjustment-turns" value="0" class="PrimaryEntry"/></label>
+                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-notes">Notes</span><input type="text" name="attr_adjustment-notes" value="" class="PrimaryEntry"/></label>
                         </div>
                     </fieldset>
                 </div>
@@ -1202,6 +1198,19 @@
   </div>
 </rolltemplate>
 
+<rolltemplate class="sheet-rolltemplate-adelphiaquirk">
+  <div class="sheet-template-container">
+    {{#name}}<div class="sheet-template-title">{{name}}</div>{{/name}}
+    <div class="sheet-template-body">
+      {{#roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{roll}}</span></div>{{/roll}}
+      {{#stat_used}}<div class="sheet-template-row"><span>Stat Used</span><span>{{stat_used}}</span></div>{{/stat_used}}
+      {{#difficulty_result}}<div class="sheet-template-row"><span>Difficulty Hit</span><span>{{difficulty_result}}</span></div>{{/difficulty_result}}
+      {{#critical_result}}<div class="sheet-template-row"><span>Critical</span><span>{{critical_result}}</span></div>{{/critical_result}}
+      {{#description}}<div class="sheet-template-row"><span>Description</span><span>{{description}}</span></div>{{/description}}
+    </div>
+  </div>
+</rolltemplate>
+
 <!-- use text/worker to submit. Use text/javascript to get syntax highlighting. -->
 <script type="text/worker">
 
@@ -1210,6 +1219,24 @@
   function d10() { return getRandomInt(9); };
   function d10d10() { return getRandomInt(9) + getRandomInt(9); };
   function d100() { return getRandomInt(99); };
+
+  const QuirkDifficultyTable = [
+    { name: "Trivial", bonus: 100 },
+    { name: "Easy", bonus: 75 },
+    { name: "Average", bonus: 50 },
+    { name: "Difficult", bonus: 25 },
+    { name: "Legendary", bonus: 0 },
+    { name: "Impossible", bonus: -25 }
+  ];
+
+  const QuirkStatAttributeMap = {
+    STR: "str_stat_total",
+    INT: "int_stat_total",
+    DEX: "dex_stat_total",
+    SPD: "spd_stat_total",
+    CON: "con_stat_total",
+    WIS: "wis_stat_total"
+  };
 
 /* Database List */
   const StatList = [
@@ -1802,6 +1829,65 @@
   StatList.forEach(stat => {
     on(`change:${stat}_growth_base change:${stat}_growth_bg`, function() {
         CalculateStats();
+    });
+  });
+
+  on("clicked:temp-stats-start-of-turn", function() {
+    getSectionIDs("repeating_tempstatlist", function(ids) {
+      if (!ids || ids.length === 0) { return; }
+      const turnAttrs = ids.map((id) => `repeating_tempstatlist_${id}_adjustment-turns`);
+      getAttrs(turnAttrs, function(values) {
+        const updates = {};
+        ids.forEach((id) => {
+          const key = `repeating_tempstatlist_${id}_adjustment-turns`;
+          const turns = Math.max(0, toNumber(values[key]));
+          updates[key] = Math.max(0, turns - 1);
+        });
+        setAttrs(updates);
+      });
+    });
+  });
+
+  on("clicked:repeating_quirklist", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute || !eventInfo.htmlAttributes || eventInfo.htmlAttributes.name !== "act_QuirkCheck") { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (!rowId) { return; }
+
+    const statKey = `repeating_quirklist_${rowId}_quirk-stat`;
+    const quirkNameKey = `repeating_quirklist_${rowId}_quirk_name`;
+    const quirkDescriptionKey = `repeating_quirklist_${rowId}_quirk_description`;
+
+    getAttrs(["character_name", "luk_stat_total", statKey, quirkNameKey, quirkDescriptionKey], function(values) {
+      const characterName = values.character_name || "Character";
+      const quirkName = values[quirkNameKey] || "Unnamed Quirk";
+      const quirkDescription = values[quirkDescriptionKey] || "-";
+      const statCode = values[statKey] || "STR";
+      const statAttrName = QuirkStatAttributeMap[statCode];
+
+      if (!statAttrName) { return; }
+
+      getAttrs([statAttrName], function(statValues) {
+        const statValue = toNumber(statValues[statAttrName]);
+        const lukValue = toNumber(values.luk_stat_total);
+        const roll = Math.floor(Math.random() * 100) + 1;
+
+        let difficultyResult = "No Tier Reached";
+        for (let i = QuirkDifficultyTable.length - 1; i >= 0; i -= 1) {
+          const threshold = QuirkDifficultyTable[i].bonus + statValue;
+          if (roll <= threshold) {
+            difficultyResult = QuirkDifficultyTable[i].name;
+            break;
+          }
+        }
+
+        const success = difficultyResult !== "No Tier Reached";
+        const isCritical = success && roll <= lukValue;
+
+        const rollTemplate = `&{template:adelphiaquirk} {{name=${characterName} - ${quirkName}}} {{roll=${roll}}} {{stat_used=${statCode} (${statValue})}} {{difficulty_result=${difficultyResult}}} {{critical_result=${isCritical ? "Yes" : "No"}}} {{description=${quirkDescription}}}`;
+        startRoll(rollTemplate, function(results) {
+          finishRoll(results.rollId, {});
+        });
+      });
     });
   });
 

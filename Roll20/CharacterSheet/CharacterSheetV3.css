@@ -51,6 +51,7 @@
 }
 
 .CharacterNameFlexItem {
+  width: 100%;
   max-width: 271px;
   justify-content: center;
 }
@@ -231,24 +232,40 @@
 /*Class*/
 .ClassStatGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr repeat(5, minmax(88px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: row;
+  gap: 4px;
   outline: none;
-  outline-width: 0;
-  outline-style: none;
   max-height: fit-content;
 }
 
 .ClassStatGridItem {
   grid-row: span 1;
   grid-column: span 1;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
+  padding: 4px 6px;
+  min-height: 34px;
   max-height: fit-content;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.ClassStatGridItem:nth-child(6n + 1) {
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.ClassStatGridItem input {
+  width: 64px;
+  text-align: center;
+}
+
+.ClassStatGridItem .PrimaryLabel {
+  margin: 0;
+  width: 100%;
 }
 
 .charsheet .sheet-classskillslist-Check {
@@ -390,84 +407,115 @@ label.GreatSkillLegendary { display: none; }
 .charsheet .GreatSkillSelector[value="79"] ~ label.GreatSkillLegendary,
 .charsheet .GreatSkillSelector[value="80"] ~ label.GreatSkillLegendary { display: block; }
 
+
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"],
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"],
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"],
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem {
+  border: 2px solid var(--fe-gold);
+  border-radius: 6px;
+  padding: 8px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+}
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 6px;
+}
+
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel > span::after {
+  content: "";
+}
+
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem textarea.PrimaryDescription,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem textarea.PrimaryDescription {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 110px;
+}
+
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel:nth-last-child(-n+2),
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel:nth-last-child(-n+2) {
+  display: block;
+}
+
+.repcontrol[data-groupname=repeating_classskillslist],
+.repcontrol[data-groupname=repeating_combatskillslist] {
+  display: block;
+  visibility: visible;
+  margin-top: 8px;
+}
+
+.repcontrol[data-groupname=repeating_classskillslist] .btn,
+.repcontrol[data-groupname=repeating_combatskillslist] .btn {
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  background: #d7d7d7;
+  color: #3f3f3f;
+  font-weight: 600;
+  padding: 4px 10px;
+  margin-right: 6px;
+}
+
 /*Growth*/
 .GrowthGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr repeat(4, minmax(88px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: row;
+  gap: 4px;
   outline: none;
-  outline-width: 0;
-  outline-style: none;
   max-height: fit-content;
 }
 
 .GrowthGridItem {
   grid-row: span 1;
   grid-column: span 1;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
+  padding: 4px 6px;
+  min-height: 34px;
   max-height: fit-content;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.GrowthGridItem:nth-child(5n + 1) {
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.GrowthGridItem input {
+  width: 64px;
   text-align: center;
 }
 
-.repcontainer[data-groupname=repeating_combatskillslist] {
-  display: table;
-  outline: none;
-  outline-width: 0;
-  outline-style: none;
-  max-height: fit-content;
-}
-
-.RepeatingcombatskillslistSection {
-  display: table-row;
-  outline: none;
-  outline-width: 0;
-  outline-style: none;
-  max-height: fit-content;
-}
-
-.RepeatingcombatskillslistSectionHeader {
-  display: none;
-  outline: none;
-  outline-width: 0;
-  outline-style: none;
-  max-height: fit-content;
-}
-
-.LevelupcombatskillslistGridItemHeader {
-  display: none;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-  text-align: center;
-}
-
-.LevelupcombatskillslistGridItem {
-  display: table-cell;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
-  padding: 5px;
-  max-height: fit-content;
-  text-align: center;
-}
-
-.repcontainer[data-groupname=repeating_combatskillslist] > .repitem:first-child > .RepeatingcombatskillslistSectionHeader {
-  display: table-row;
-}
-
-.repcontainer[data-groupname=repeating_combatskillslist] > .repitem:first-child > .RepeatingcombatskillslistSectionHeader > .LevelupcombatskillslistGridItemHeader {
-  display: table-cell;
-}
-
-.repcontrol[data-groupname=repeating_combatskillslist]  {
-  display: none;
-  visibility: hidden;
+.GrowthGridItem .PrimaryLabel {
+  margin: 0;
+  width: 100%;
 }
 
 .repcontainer[data-groupname=repeating_CharacterLevel] {
@@ -533,62 +581,217 @@ label.GreatSkillLegendary { display: none; }
 /*Configuration*/
 
 /*Titles, Labels, and Input*/
+.charsheet {
+  --fe-red-dark: #66271f;
+  --fe-red-mid: #8a3a2e;
+  --fe-parchment: #efe7c7;
+  --fe-panel: #273a73;
+  --fe-panel-mid: #3f59a4;
+  --fe-panel-light: #5e76bf;
+  --fe-gold: #c8a05a;
+  --fe-gold-light: #e7cf8f;
+  --fe-ink: #1b1a21;
+  --fe-line: #1a2245;
+
+  color: var(--fe-ink);
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+.charsheet .MasterGrid {
+  background: linear-gradient(155deg, #6f2b23 0%, var(--fe-red-mid) 38%, #4c1a17 100%);
+  border: 2px solid var(--fe-gold);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px rgba(45, 16, 12, 0.45), 0 8px 22px rgba(15, 11, 20, 0.3);
+  padding: 8px;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.CharacterGridcell,
+.PageSelectorGridcell,
+.CharacterSheetGridcell,
+.CharacterEquippedFlexItem,
+.CharacterSheetFlexObject,
+.ClassStatGridItem,
+.GrowthGridItem,
+.LevelupcombatskillslistGridItem,
+.LevelupcombatskillslistGridItemHeader,
+.LevelupCharacterLevelGridItem,
+.LevelupCharacterLevelGridItemHeader,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"],
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] > .repitem,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_weapons"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] > .repitem,
+.SheetPageItem > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_items"] {
+  border: 2px solid var(--fe-gold);
+  border-radius: 6px;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.32);
+}
+
+.CharacterGridcell,
+.PageSelectorGridcell {
+  background: linear-gradient(145deg, #f8f2dc 0%, var(--fe-parchment) 100%);
+  color: var(--fe-ink);
+}
+
+.CharacterSheetGridcell {
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+}
+
+.CharacterEquippedFlexItem,
+.CharacterSheetFlexObject,
+.ClassStatGridItem,
+.GrowthGridItem,
+.LevelupcombatskillslistGridItem,
+.LevelupcombatskillslistGridItemHeader,
+.LevelupCharacterLevelGridItem,
+.LevelupCharacterLevelGridItemHeader,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"],
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] > .repitem,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_weapons"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] > .repitem,
+.SheetPageItem > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_items"] {
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #2b2521;
+}
+
+.CharacterPicFlexItem img,
+.CharacterTokenFlexItem img {
+  width: 100%;
+  border: 2px solid var(--fe-gold);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(12, 10, 18, 0.35);
+}
+
 .PrimaryTitle {
-  font: auto;
+  margin: 0 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #623313;
+}
+
+.CharacterNameHeader {
+  width: 100%;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #623313;
+  background: transparent;
+  border: 1px solid rgba(168, 140, 87, 0.75);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.CharacterNameHeader:focus {
+  background: #fff9ea;
+}
+
+.BuilderNameHeader {
+  display: block;
+  width: calc(100% - 14px);
+  margin: 0 0 10px;
+  padding: 2px 6px 3px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #623313;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.BuilderNameHeader:focus {
+  border-color: #a88c57;
+  background: #fff9ea;
 }
 
 .PrimaryLabel {
-  font: auto;
+  display: block;
   width: fit-content;
+  margin-bottom: 2px;
+  font-size: 0.84rem;
+  letter-spacing: 0.02em;
 }
 
-.PrimaryEntry {
-  font: auto;
-  outline: none;
-  width: auto;
+.PrimaryEntry,
+.PrimaryDropdown,
+select,
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #a88c57;
+  border-radius: 4px;
+  background: #fff9ea;
+  color: #1d2130;
+  padding: 2px 6px;
+  min-height: 24px;
+}
+
+.PrimaryEntry:focus,
+.PrimaryDropdown:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #89a7ff;
+  outline-offset: 1px;
+}
+
+.PrimaryNotesEntry,
+.PrimaryDescription,
+textarea {
+  border: 1px solid #9f8752;
+  border-radius: 4px;
+  width: 96%;
+  max-width: 96%;
+  min-width: 96%;
+  background: #fff9ea;
+  color: #1c2030;
+  resize: vertical;
 }
 
 .PrimaryNotesEntry {
-  outline: none;
-  width: 96%;
-  max-width: 96%;
-  min-width: 96%;
   height: 98%;
   max-height: 98%;
   min-height: 98%;
-  background: none;
-  resize: none;
 }
 
-.PrimaryDescription {
-  outline: none;
-  width: 96%;
-  max-width: 96%;
-  min-width: 96%;
-  height: auto;
-  background: none;
-  resize: auto;
+.PrimaryButton,
+button[type="roll"],
+button[type="action"] {
+  border: 1px solid #f2d79e;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  color: #fffdf5;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  padding: 3px 8px;
+  min-height: 24px;
+  box-shadow: inset 0 0 0 1px rgba(244, 232, 203, 0.35);
 }
 
-.PrimaryDropdown {
-  font: auto;
-  width: fit-content;
-}
-
-.PrimaryButton {
-  font: auto;
-  height: fit-content;
-  width: fit-content;
+.PrimaryButton:hover,
+button[type="roll"]:hover,
+button[type="action"]:hover {
+  filter: brightness(1.08);
 }
 
 .OptionCategoryH1 {
-  background:gray;
-  font-weight:bold;
-  color:white;
+  background: #324a8d;
+  font-weight: bold;
+  color: #f5e9c5;
 }
 
 .OptionCategoryH2 {
-  font-weight:bold;
+  font-weight: bold;
+  color: #d7c18d;
 }
 
 /*Page Selector Logic*/
@@ -614,37 +817,64 @@ label.GreatSkillLegendary { display: none; }
 
 /* Roll template: adelphiaattack */
 .sheet-rolltemplate-adelphiaattack {
-  border: 1px solid #1f2937;
-  background: #f8fafc;
-  border-radius: 6px;
+  border: 2px solid #c8a05a;
+  background: linear-gradient(155deg, #6f2b23 0%, #8a3a2e 40%, #4c1a17 100%);
+  border-radius: 8px;
   padding: 8px;
-}
-
-.sheet-rolltemplate-adelphiaattack .sheet-template-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 4px;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.25);
+  color: #2b2521;
 }
 
 .sheet-rolltemplate-adelphiaattack .sheet-template-title {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 4px 8px;
   font-weight: 700;
-  font-size: 1.05em;
-  margin-bottom: 4px;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-body {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-panel {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
 }
 
 .sheet-rolltemplate-adelphiaattack .sheet-template-section {
-  margin-top: 6px;
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  margin-bottom: 6px;
+  padding-bottom: 2px;
   font-weight: 700;
-  border-bottom: 1px solid #94a3b8;
+  color: #623313;
+  text-transform: uppercase;
 }
 
 .sheet-rolltemplate-adelphiaattack .sheet-template-row {
   display: grid;
   grid-template-columns: 130px 1fr;
-  column-gap: 10px;
+  column-gap: 8px;
   align-items: start;
+  font-size: 0.95em;
+  margin-bottom: 2px;
 }
 
 .sheet-rolltemplate-adelphiaattack .sheet-template-row > span:first-child {
-  font-weight: 600;
+  font-weight: 700;
+  color: #623313;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row > span:last-child {
+  color: #1f2435;
 }

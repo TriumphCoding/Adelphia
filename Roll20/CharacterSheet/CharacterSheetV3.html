@@ -24,6 +24,24 @@
                 <label class="PrimaryLabel"><span data-i18n="equipped-weapon-accuracy-n">Accuracy</span>: <span name="attr_Equipped_Weapon_Accuracy"></span></label>
                 <label class="PrimaryLabel"><span data-i18n="equipped-weapon-range-n">Range</span>: <span name="attr_Equipped_Weapon_Range"></span></label>
                 <label class="PrimaryLabel"><span data-i18n="equipped-weapon-notes-n">Notes</span>: <span name="attr_Equipped_Weapon_Notes"></span></label>
+                <input type="hidden" name="attr_Equipped_Weapon_Name" value=""/>
+                <input type="hidden" name="attr_Equipped_Weapon_Rune" value=""/>
+                <input type="hidden" name="attr_Equipped_Weapon_Color" value=""/>
+                <input type="hidden" name="attr_Equipped_Weapon_Might" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_Accuracy" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_Critical" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_Range_Min" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_Range_Max" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_DamageType" value="Physical"/>
+                <input type="hidden" name="attr_Equipped_Weapon_STR" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_INT" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_DEX" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_SPD" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_LUK" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_CON" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_WIS" value="0"/>
+                <input type="hidden" name="attr_Equipped_Weapon_Notes" value=""/>
+                <input type="hidden" name="attr_Equipped_Weapon_Type" value=""/>
             </div>
 
             <div class="CharacterEquippedFlexItem"> <!-- Item Selector -->
@@ -34,7 +52,17 @@
                 </fieldset>
                 <label class="PrimaryLabel"><span data-i18n="equipped-item-name-n">Name</span>: <span name="attr_Equipped_Item_Name"></span></label>
                 <label class="PrimaryLabel"><span data-i18n="equipped-item-notes-n">Notes</span>: <span name="attr_Equipped_Item_Notes"></span></label>
-                <input type="hidden" value="" name="attr_Equipped_Item_Name"/>
+                <input type="hidden" name="attr_Equipped_Item_Name" value=""/>
+                <input type="hidden" name="attr_Equipped_Item_Notes" value=""/>
+                <input type="hidden" name="attr_Equipped_Item_HP" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Might" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Accuracy" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Critical" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Dodge" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Avoid" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Defense" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Resistance" value="0"/>
+                <input type="hidden" name="attr_Equipped_Item_Move" value="0"/>
             </div>
         </div>
     </div>
@@ -377,7 +405,77 @@
                         <option value="Gilded Slam" selected="selected" data-i18n="Gilded Slam-Full-Name">Gilded Slam</option>
                         <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
                     </select></label>
-                    <!-- ToDo: Finish Weapon Section -->
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Rune-Label">Rune</span>: <select name="attr_Weapon-Rune" class="PrimaryDropdown">
+                        <option value="">None</option>
+                        <option value="Wind Sword">Wind Sword</option>
+                        <option value="Shadow">Shadow</option>
+                        <option value="Slayer (Herbivore)">Slayer (Herbivore)</option>
+                        <option value="Slayer (Lance)">Slayer (Lance)</option>
+                        <option value="Evasive">Evasive</option>
+                        <option value="Mighty">Mighty</option>
+                        <option value="Resistant">Resistant</option>
+                        <option value="Slayer (Fly)">Slayer (Fly)</option>
+                        <option value="Heavy">Heavy</option>
+                        <option value="Slayer (Nobility)">Slayer (Nobility)</option>
+                        <option value="Wicked">Wicked</option>
+                        <option value="Slayer (Bow)">Slayer (Bow)</option>
+                        <option value="Slayer (Staff)">Slayer (Staff)</option>
+                        <option value="Slayer (Wind)">Slayer (Wind)</option>
+                        <option value="Slayer (Goblin)">Slayer (Goblin)</option>
+                        <option value="Slayer (Beast)">Slayer (Beast)</option>
+                        <option value="Throwing">Throwing</option>
+                        <option value="Sweep">Sweep</option>
+                        <option value="Slayer (Ride)">Slayer (Ride)</option>
+                        <option value="Conquerer">Conquerer</option>
+                        <option value="Light">Light</option>
+                        <option value="Seeking">Seeking</option>
+                        <option value="Slayer (Knives)">Slayer (Knives)</option>
+                        <option value="Slayer (Gauntlet)">Slayer (Gauntlet)</option>
+                        <option value="Slayer (Sing)">Slayer (Sing)</option>
+                        <option value="Slayer (Light)">Slayer (Light)</option>
+                        <option value="Slayer (Elf)">Slayer (Elf)</option>
+                        <option value="Fortress">Fortress</option>
+                        <option value="Slayer (Dragon)">Slayer (Dragon)</option>
+                        <option value="Slayer (Human)">Slayer (Human)</option>
+                        <option value="Fire Lance">Fire Lance</option>
+                        <option value="Slayer (Axe)">Slayer (Axe)</option>
+                        <option value="Slayer (Flintlock)">Slayer (Flintlock)</option>
+                        <option value="Healing">Healing</option>
+                        <option value="Slayer (Cyborg)">Slayer (Cyborg)</option>
+                        <option value="Slayer (Crossbow)">Slayer (Crossbow)</option>
+                        <option value="Slayer (Orc)">Slayer (Orc)</option>
+                        <option value="Blessed">Blessed</option>
+                        <option value="Bolt Axe">Bolt Axe</option>
+                        <option value="Slayer (Fire)">Slayer (Fire)</option>
+                        <option value="Slayer (Carnivore)">Slayer (Carnivore)</option>
+                        <option value="Slayer (Sword)">Slayer (Sword)</option>
+                        <option value="Slayer (Runed)">Slayer (Runed)</option>
+                        <option value="Slayer (Dwarf)">Slayer (Dwarf)</option>
+                        <option value="Reaver">Reaver</option>
+                        <option value="Defensive">Defensive</option>
+                        <option value="Slayer (Armored)">Slayer (Armored)</option>
+                        <option value="Brave">Brave</option>
+                        <option value="Hero">Hero</option>
+                        <option value="Masterwork">Masterwork</option>
+                    </select></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Damage-Type-Label">Damage Type</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-DamageType" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Color-Label">Color</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Color" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Tier" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-Might" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-Accuracy" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-Critical" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Range-Min-Label">Range Min</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-RangeMin" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Range-Max-Label">Range Max</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-RangeMax" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="STR-Full-Name">Strength</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-STR" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="INT-Full-Name">Intelligence</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-INT" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="DEX-Full-Name">Dexterity</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-DEX" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="SPD-Full-Name">Speed</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-SPD" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="LUK-Full-Name">Luck</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-LUK" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="CON-Full-Name">Constitution</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-CON" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="WIS-Full-Name">Wisdom</span>: <input type="number" class="PrimaryEntry" name="attr_Weapon-WIS" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Special-Label">Special</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Special" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Slayer-Label">Slayer</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Slayer" readonly/></label>
+                    <label class="PrimaryLabel"><span data-i18n="Weapon-Description-Label">Notes</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Notes" readonly/></label>
                 </fieldset>
               </div>
             </div>
@@ -388,19 +486,41 @@
               <div class="CharacterSheetFlexObject">
                 <fieldset class="repeating_items">
                   <h2 data-i18n="Item-Title">Item</h2>
-                  <label class="PrimaryLabel"><span data-i18n="Item-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Name"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="Item-Description-Label">Description</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Description"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="Item-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Tier"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span>: <input type="text" class="PrimaryEntry" name="attr_Item-HP"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Might"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Accuracy"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Critical"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Dodge"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Avoid"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Defense"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Resistance"/></label>
-                  <label class="PrimaryLabel"><span data-i18n="MOV-Full-Name">Movement</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Move"/></label>
-                  <!-- ToDo: Finish Item Section -->
+                  <label class="PrimaryLabel"><span data-i18n="Item-Selector-Label">Template</span>: <select name="attr_Item-Template" class="PrimaryDropdown">
+                    <option value="Cursed Ring (Legend)">Cursed Ring (Legend)</option>
+                    <option value="Angel Ring (Legend)">Angel Ring (Legend)</option>
+                    <option value="Hermes Shoes">Hermes Shoes</option>
+                    <option value="Setiemson">Setiemson</option>
+                    <option value="Tynar Rouge">Tynar Rouge</option>
+                    <option value="Cursed Ring (Epic)">Cursed Ring (Epic)</option>
+                    <option value="Diamond Bracelet">Diamond Bracelet</option>
+                    <option value="Elven Cloak">Elven Cloak</option>
+                    <option value="Jade Armlet">Jade Armlet</option>
+                    <option value="Cursed Ring (Hero)">Cursed Ring (Hero)</option>
+                    <option value="Cherche">Cherche</option>
+                    <option value="Germinas Boots">Germinas Boots</option>
+                    <option value="Glove">Glove</option>
+                    <option value="Angel Ring (Hero)">Angel Ring (Hero)</option>
+                    <option value="Empyreal Armband">Empyreal Armband</option>
+                    <option value="Angel Ring (Epic)">Angel Ring (Epic)</option>
+                    <option value="Shoulder Cape">Shoulder Cape</option>
+                    <option value="Feather Mantle">Feather Mantle</option>
+                    <option value="Battle Boots">Battle Boots</option>
+                    <option value="Gauntlet">Gauntlet</option>
+                    <option value="Bracer">Bracer</option>
+                  </select></label>
+                  <label class="PrimaryLabel"><span data-i18n="Item-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Name" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="Item-Description-Label">Description</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Description" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="Item-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Tier" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span>: <input type="number" class="PrimaryEntry" name="attr_Item-HP" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Might" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="ACC-Full-Name">Accuracy</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Accuracy" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="CRT-Full-Name">Critical</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Critical" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="DGE-Full-Name">Dodge</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Dodge" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="AVD-Full-Name">Avoid</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Avoid" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="DEF-Full-Name">Defense</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Defense" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="RES-Full-Name">Resistance</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Resistance" readonly/></label>
+                  <label class="PrimaryLabel"><span data-i18n="MOV-Full-Name">Movement</span>: <input type="number" class="PrimaryEntry" name="attr_Item-Move" readonly/></label>
                 </fieldset>
               </div>
             </div>
@@ -1272,6 +1392,264 @@
     });
   };
 
+
+
+  function toNumber(value) {
+    const n = Number(value);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function parseWorkerFormula(value, level = 1) {
+    if (value === undefined || value === null || value === "") { return 0; }
+    if (typeof value === "number") { return value; }
+    const cleaned = String(value).trim();
+    if (cleaned.endsWith("lvl")) {
+      return toNumber(cleaned.replace("lvl", "")) * toNumber(level);
+    }
+    return toNumber(cleaned);
+  }
+
+  function buildRangeLabel(minRange, maxRange) {
+    const min = toNumber(minRange);
+    const max = toNumber(maxRange);
+    return (min === max) ? `${min}` : `${min}-${max}`;
+  }
+
+  function getRuneData(runeName) {
+    if (!runeName || !RuneStats[runeName]) {
+      return {
+        Name: "",
+        Description: "",
+        Level: 0,
+        Type: "",
+        Might: 0,
+        Accuracy: 0,
+        Critical: 0,
+        RangeMin: 0,
+        RangeMax: 0
+      };
+    }
+    const rune = RuneStats[runeName];
+    const level = toNumber(rune.Level);
+    return {
+      Name: rune.Name || "",
+      Description: rune.Description || "",
+      Level: level,
+      Type: rune.Type || "",
+      Might: parseWorkerFormula(rune.Might, level),
+      Accuracy: parseWorkerFormula(rune.Accuracy, level),
+      Critical: parseWorkerFormula(rune.Critical, level),
+      RangeMin: parseWorkerFormula(rune.RangeMin, level),
+      RangeMax: parseWorkerFormula(rune.RangeMax, level)
+    };
+  }
+
+
+  function getTempStatAdjustments(callback) {
+    getSectionIDs("repeating_tempstatlist", function(idArray) {
+      const adjustments = {
+        HP: 0, STR: 0, INT: 0, DEX: 0, SPD: 0, LUK: 0, CON: 0, WIS: 0, MOV: 0,
+        MGT: 0, ACC: 0, CRT: 0, DGE: 0, AVD: 0, DEF: 0, RES: 0
+      };
+
+      if (!idArray || idArray.length === 0) {
+        callback(adjustments);
+        return;
+      }
+
+      const attrList = [];
+      idArray.forEach((rowId) => {
+        attrList.push(`repeating_tempstatlist_${rowId}_adjustment-value`);
+        attrList.push(`repeating_tempstatlist_${rowId}_adjustment-stat`);
+      });
+
+      getAttrs(attrList, function(values) {
+        idArray.forEach((rowId) => {
+          const valueKey = `repeating_tempstatlist_${rowId}_adjustment-value`;
+          const statKey = `repeating_tempstatlist_${rowId}_adjustment-stat`;
+          const stat = String(values[statKey] || "").toUpperCase();
+          const value = toNumber(values[valueKey]);
+          if (Object.prototype.hasOwnProperty.call(adjustments, stat)) {
+            adjustments[stat] = adjustments[stat] + value;
+          }
+        });
+        callback(adjustments);
+      });
+    });
+  }
+
+  function CalculateFrontSheetStats() {
+    getAttrs([
+      "str_stat_total","int_stat_total","dex_stat_total","spd_stat_total","luk_stat_total","con_stat_total","wis_stat_total",
+      "Equipped_Weapon_DamageType","Equipped_Weapon_Might","Equipped_Weapon_Accuracy","Equipped_Weapon_Critical",
+      "Equipped_Weapon_STR","Equipped_Weapon_INT","Equipped_Weapon_DEX","Equipped_Weapon_SPD","Equipped_Weapon_LUK","Equipped_Weapon_CON","Equipped_Weapon_WIS",
+      "Equipped_Item_Might","Equipped_Item_Accuracy","Equipped_Item_Critical","Equipped_Item_Dodge","Equipped_Item_Avoid","Equipped_Item_Defense","Equipped_Item_Resistance"
+    ], function(v) {
+      getTempStatAdjustments(function(temp) {
+        const effectiveStr = toNumber(v.str_stat_total) + toNumber(v.Equipped_Weapon_STR) + temp.STR;
+        const effectiveInt = toNumber(v.int_stat_total) + toNumber(v.Equipped_Weapon_INT) + temp.INT;
+        const effectiveDex = toNumber(v.dex_stat_total) + toNumber(v.Equipped_Weapon_DEX) + temp.DEX;
+        const effectiveSpd = toNumber(v.spd_stat_total) + toNumber(v.Equipped_Weapon_SPD) + temp.SPD;
+        const effectiveLuk = toNumber(v.luk_stat_total) + toNumber(v.Equipped_Weapon_LUK) + temp.LUK;
+        const effectiveCon = toNumber(v.con_stat_total) + toNumber(v.Equipped_Weapon_CON) + temp.CON;
+        const effectiveWis = toNumber(v.wis_stat_total) + toNumber(v.Equipped_Weapon_WIS) + temp.WIS;
+
+        const isMagicWeapon = String(v.Equipped_Weapon_DamageType || "").toLowerCase() === "magical";
+        const powerStat = isMagicWeapon ? effectiveInt : effectiveStr;
+
+        const weaponMight = toNumber(v.Equipped_Weapon_Might);
+        const weaponAccuracy = toNumber(v.Equipped_Weapon_Accuracy);
+        const weaponCritical = toNumber(v.Equipped_Weapon_Critical);
+
+        const itemMight = toNumber(v.Equipped_Item_Might);
+        const itemAccuracy = toNumber(v.Equipped_Item_Accuracy);
+        const itemCritical = toNumber(v.Equipped_Item_Critical);
+        const itemDodge = toNumber(v.Equipped_Item_Dodge);
+        const itemAvoid = toNumber(v.Equipped_Item_Avoid);
+        const itemDefense = toNumber(v.Equipped_Item_Defense);
+        const itemResistance = toNumber(v.Equipped_Item_Resistance);
+
+        const attackMight = powerStat + weaponMight + itemMight + temp.MGT;
+        const attackAccuracy = (effectiveDex * 2) + effectiveLuk + weaponAccuracy + itemAccuracy + temp.ACC;
+        const attackCritical = effectiveDex + Math.floor(effectiveLuk / 2) + weaponCritical + itemCritical + temp.CRT;
+        const attackDodge = (effectiveSpd * 2) + itemDodge + temp.DGE;
+        const attackAvoid = (effectiveSpd * 2) + effectiveLuk + itemAvoid + temp.AVD;
+        const attackDefense = effectiveCon + itemDefense + temp.DEF;
+        const attackResistance = effectiveWis + itemResistance + temp.RES;
+
+        setAttrs({
+          AttackMight: attackMight,
+          AttackAccuracy: attackAccuracy,
+          AttackCritical: attackCritical,
+          AttackDodge: attackDodge,
+          AttackAvoid: attackAvoid,
+          AttackDefense: attackDefense,
+          AttackResistance: attackResistance,
+          RiposteMight: attackMight,
+          RiposteAccuracy: attackAccuracy,
+          RiposteCritical: attackCritical,
+          RiposteDodge: attackDodge,
+          RiposteAvoid: attackAvoid,
+          RiposteDefense: attackDefense,
+          RiposteResistance: attackResistance
+        });
+      });
+    });
+  }
+
+
+  function EquipWeaponFromRow(rowId) {
+    const weaponName = `repeating_weapons_${rowId}_Weapon-Name`;
+    const weaponType = `repeating_weapons_${rowId}_Weapon-Type`;
+    const weaponRune = `repeating_weapons_${rowId}_Weapon-Rune`;
+    const weaponColor = `repeating_weapons_${rowId}_Weapon-Color`;
+    const weaponDamageType = `repeating_weapons_${rowId}_Weapon-DamageType`;
+    const weaponMight = `repeating_weapons_${rowId}_Weapon-Might`;
+    const weaponAccuracy = `repeating_weapons_${rowId}_Weapon-Accuracy`;
+    const weaponCritical = `repeating_weapons_${rowId}_Weapon-Critical`;
+    const weaponRangeMin = `repeating_weapons_${rowId}_Weapon-RangeMin`;
+    const weaponRangeMax = `repeating_weapons_${rowId}_Weapon-RangeMax`;
+    const weaponSTR = `repeating_weapons_${rowId}_Weapon-STR`;
+    const weaponINT = `repeating_weapons_${rowId}_Weapon-INT`;
+    const weaponDEX = `repeating_weapons_${rowId}_Weapon-DEX`;
+    const weaponSPD = `repeating_weapons_${rowId}_Weapon-SPD`;
+    const weaponLUK = `repeating_weapons_${rowId}_Weapon-LUK`;
+    const weaponCON = `repeating_weapons_${rowId}_Weapon-CON`;
+    const weaponWIS = `repeating_weapons_${rowId}_Weapon-WIS`;
+    const weaponNotes = `repeating_weapons_${rowId}_Weapon-Notes`;
+
+    getAttrs([
+      weaponName, weaponType, weaponRune, weaponColor, weaponDamageType,
+      weaponMight, weaponAccuracy, weaponCritical,
+      weaponRangeMin, weaponRangeMax,
+      weaponSTR, weaponINT, weaponDEX, weaponSPD, weaponLUK, weaponCON, weaponWIS,
+      weaponNotes
+    ], function(values) {
+      const selectedWeaponName = values[weaponName] || values[weaponType] || "";
+      const selectedWeaponType = values[weaponType] || selectedWeaponName;
+      const selectedRune = values[weaponRune] || "";
+      const baseWeapon = WeaponStats[selectedWeaponType] || WeaponStats[selectedWeaponName];
+      const rune = getRuneData(selectedRune);
+
+      const might = (values[weaponMight] !== undefined && values[weaponMight] !== "") ? toNumber(values[weaponMight]) : (baseWeapon ? toNumber(baseWeapon.Might) + rune.Might : 0);
+      const accuracy = (values[weaponAccuracy] !== undefined && values[weaponAccuracy] !== "") ? toNumber(values[weaponAccuracy]) : (baseWeapon ? toNumber(baseWeapon.Accuracy) + rune.Accuracy : 0);
+      const critical = (values[weaponCritical] !== undefined && values[weaponCritical] !== "") ? toNumber(values[weaponCritical]) : (baseWeapon ? toNumber(baseWeapon.Critical) + rune.Critical : 0);
+      const rangeMin = (values[weaponRangeMin] !== undefined && values[weaponRangeMin] !== "") ? toNumber(values[weaponRangeMin]) : (baseWeapon ? toNumber(baseWeapon.RangeMin) + rune.RangeMin : 0);
+      const rangeMax = (values[weaponRangeMax] !== undefined && values[weaponRangeMax] !== "") ? toNumber(values[weaponRangeMax]) : (baseWeapon ? toNumber(baseWeapon.RangeMax) + rune.RangeMax : 0);
+
+      const strMod = (values[weaponSTR] !== undefined && values[weaponSTR] !== "") ? toNumber(values[weaponSTR]) : (baseWeapon ? toNumber(baseWeapon.str) + parseWorkerFormula(rune.str, rune.Level) : 0);
+      const intMod = (values[weaponINT] !== undefined && values[weaponINT] !== "") ? toNumber(values[weaponINT]) : (baseWeapon ? toNumber(baseWeapon.int) + parseWorkerFormula(rune.int, rune.Level) : 0);
+      const dexMod = (values[weaponDEX] !== undefined && values[weaponDEX] !== "") ? toNumber(values[weaponDEX]) : (baseWeapon ? toNumber(baseWeapon.dex) + parseWorkerFormula(rune.dex, rune.Level) : 0);
+      const spdMod = (values[weaponSPD] !== undefined && values[weaponSPD] !== "") ? toNumber(values[weaponSPD]) : (baseWeapon ? toNumber(baseWeapon.spd) + parseWorkerFormula(rune.spd, rune.Level) : 0);
+      const lukMod = (values[weaponLUK] !== undefined && values[weaponLUK] !== "") ? toNumber(values[weaponLUK]) : (baseWeapon ? toNumber(baseWeapon.luk) + parseWorkerFormula(rune.luk, rune.Level) : 0);
+      const conMod = (values[weaponCON] !== undefined && values[weaponCON] !== "") ? toNumber(values[weaponCON]) : (baseWeapon ? toNumber(baseWeapon.con) + parseWorkerFormula(rune.con, rune.Level) : 0);
+      const wisMod = (values[weaponWIS] !== undefined && values[weaponWIS] !== "") ? toNumber(values[weaponWIS]) : (baseWeapon ? toNumber(baseWeapon.wis) + parseWorkerFormula(rune.wis, rune.Level) : 0);
+
+      const damageType = values[weaponDamageType] || rune.Type || (baseWeapon ? baseWeapon.DamageType : "Physical");
+      const color = values[weaponColor] || (baseWeapon ? baseWeapon.Color : "");
+      const notes = values[weaponNotes] || [baseWeapon ? baseWeapon.Special : "", rune.Description].filter(Boolean).join(" | ");
+
+      setAttrs({
+        Equipped_Weapon_Name: selectedWeaponName,
+        Equipped_Weapon_Rune: selectedRune,
+        Equipped_Weapon_Color: color,
+        Equipped_Weapon_Might: might,
+        Equipped_Weapon_Accuracy: accuracy,
+        Equipped_Weapon_Critical: critical,
+        Equipped_Weapon_Range_Min: rangeMin,
+        Equipped_Weapon_Range_Max: rangeMax,
+        Equipped_Weapon_Range: buildRangeLabel(rangeMin, rangeMax),
+        Equipped_Weapon_DamageType: damageType,
+        Equipped_Weapon_STR: strMod,
+        Equipped_Weapon_INT: intMod,
+        Equipped_Weapon_DEX: dexMod,
+        Equipped_Weapon_SPD: spdMod,
+        Equipped_Weapon_LUK: lukMod,
+        Equipped_Weapon_CON: conMod,
+        Equipped_Weapon_WIS: wisMod,
+        Equipped_Weapon_Notes: notes,
+        Equipped_Weapon_Type: selectedWeaponType
+      });
+
+      CalculateFrontSheetStats();
+    });
+  }
+
+
+  function EquipItemFromRow(rowId) {
+    const itemName = `repeating_items_${rowId}_Item-Name`;
+    const itemDescription = `repeating_items_${rowId}_Item-Description`;
+    const itemHP = `repeating_items_${rowId}_Item-HP`;
+    const itemMight = `repeating_items_${rowId}_Item-Might`;
+    const itemAccuracy = `repeating_items_${rowId}_Item-Accuracy`;
+    const itemCritical = `repeating_items_${rowId}_Item-Critical`;
+    const itemDodge = `repeating_items_${rowId}_Item-Dodge`;
+    const itemAvoid = `repeating_items_${rowId}_Item-Avoid`;
+    const itemDefense = `repeating_items_${rowId}_Item-Defense`;
+    const itemResistance = `repeating_items_${rowId}_Item-Resistance`;
+    const itemMove = `repeating_items_${rowId}_Item-Move`;
+    const itemTemplate = `repeating_items_${rowId}_Item-Template`;
+
+    getAttrs([itemName,itemDescription,itemHP,itemMight,itemAccuracy,itemCritical,itemDodge,itemAvoid,itemDefense,itemResistance,itemMove,itemTemplate], function(values) {
+      const selectedTemplate = values[itemTemplate] || values[itemName] || "";
+      const baseItem = ItemStats[selectedTemplate];
+      setAttrs({
+        Equipped_Item_Name: values[itemName] || (baseItem ? baseItem.Name : selectedTemplate),
+        Equipped_Item_Notes: values[itemDescription] || (baseItem ? baseItem.Description : ""),
+        Equipped_Item_HP: (values[itemHP] !== undefined && values[itemHP] !== "") ? toNumber(values[itemHP]) : (baseItem ? toNumber(baseItem.HP) : 0),
+        Equipped_Item_Might: (values[itemMight] !== undefined && values[itemMight] !== "") ? toNumber(values[itemMight]) : (baseItem ? toNumber(baseItem.Might) : 0),
+        Equipped_Item_Accuracy: (values[itemAccuracy] !== undefined && values[itemAccuracy] !== "") ? toNumber(values[itemAccuracy]) : (baseItem ? toNumber(baseItem.Accuracy) : 0),
+        Equipped_Item_Critical: (values[itemCritical] !== undefined && values[itemCritical] !== "") ? toNumber(values[itemCritical]) : (baseItem ? toNumber(baseItem.Critical) : 0),
+        Equipped_Item_Dodge: (values[itemDodge] !== undefined && values[itemDodge] !== "") ? toNumber(values[itemDodge]) : (baseItem ? toNumber(baseItem.Dodge) : 0),
+        Equipped_Item_Avoid: (values[itemAvoid] !== undefined && values[itemAvoid] !== "") ? toNumber(values[itemAvoid]) : (baseItem ? toNumber(baseItem.Avoid) : 0),
+        Equipped_Item_Defense: (values[itemDefense] !== undefined && values[itemDefense] !== "") ? toNumber(values[itemDefense]) : (baseItem ? toNumber(baseItem.Defense) : 0),
+        Equipped_Item_Resistance: (values[itemResistance] !== undefined && values[itemResistance] !== "") ? toNumber(values[itemResistance]) : (baseItem ? toNumber(baseItem.Resistance) : 0),
+        Equipped_Item_Move: (values[itemMove] !== undefined && values[itemMove] !== "") ? toNumber(values[itemMove]) : (baseItem ? toNumber(baseItem.Move) : 0)
+      });
+      CalculateFrontSheetStats();
+    });
+  }
+
 /* Watch Events */
   on("change:background", function() {
     getAttrs(["background"], function(values) {
@@ -1362,6 +1740,139 @@
         });
     });
     CalculateSkillStats();
+  });
+
+
+
+  function PopulateWeaponRow(rowId) {
+    const weaponType = `repeating_weapons_${rowId}_Weapon-Type`;
+    const weaponRune = `repeating_weapons_${rowId}_Weapon-Rune`;
+    const weaponName = `repeating_weapons_${rowId}_Weapon-Name`;
+    getAttrs([weaponType, weaponRune, weaponName], function(values) {
+      const selectedWeaponType = values[weaponType] || "Copper Sword";
+      const selectedRune = values[weaponRune] || "";
+      const baseWeapon = WeaponStats[selectedWeaponType];
+      if (!baseWeapon) { return; }
+      const rune = getRuneData(selectedRune);
+      const rangeMin = toNumber(baseWeapon.RangeMin) + rune.RangeMin;
+      const rangeMax = toNumber(baseWeapon.RangeMax) + rune.RangeMax;
+      const notes = [baseWeapon.Special, rune.Description].filter(Boolean).join(" | ");
+
+      setAttrs({
+        [weaponName]: baseWeapon.Name || selectedWeaponType,
+        [`repeating_weapons_${rowId}_Weapon-DamageType`]: rune.Type || baseWeapon.DamageType || "Physical",
+        [`repeating_weapons_${rowId}_Weapon-Color`]: baseWeapon.Color || "",
+        [`repeating_weapons_${rowId}_Weapon-Tier`]: baseWeapon.Tier || "",
+        [`repeating_weapons_${rowId}_Weapon-Might`]: toNumber(baseWeapon.Might) + rune.Might,
+        [`repeating_weapons_${rowId}_Weapon-Accuracy`]: toNumber(baseWeapon.Accuracy) + rune.Accuracy,
+        [`repeating_weapons_${rowId}_Weapon-Critical`]: toNumber(baseWeapon.Critical) + rune.Critical,
+        [`repeating_weapons_${rowId}_Weapon-RangeMin`]: rangeMin,
+        [`repeating_weapons_${rowId}_Weapon-RangeMax`]: rangeMax,
+        [`repeating_weapons_${rowId}_Weapon-STR`]: toNumber(baseWeapon.str) + parseWorkerFormula(rune.str, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-INT`]: toNumber(baseWeapon.int) + parseWorkerFormula(rune.int, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-DEX`]: toNumber(baseWeapon.dex) + parseWorkerFormula(rune.dex, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-SPD`]: toNumber(baseWeapon.spd) + parseWorkerFormula(rune.spd, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-LUK`]: toNumber(baseWeapon.luk) + parseWorkerFormula(rune.luk, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-CON`]: toNumber(baseWeapon.con) + parseWorkerFormula(rune.con, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-WIS`]: toNumber(baseWeapon.wis) + parseWorkerFormula(rune.wis, rune.Level),
+        [`repeating_weapons_${rowId}_Weapon-Special`]: baseWeapon.Special || "",
+        [`repeating_weapons_${rowId}_Weapon-Slayer`]: baseWeapon.Slayer || "",
+        [`repeating_weapons_${rowId}_Weapon-Notes`]: notes
+      });
+    });
+  }
+
+  function PopulateItemRow(rowId) {
+    const itemTemplate = `repeating_items_${rowId}_Item-Template`;
+    getAttrs([itemTemplate], function(values) {
+      const selectedItem = values[itemTemplate];
+      const baseItem = ItemStats[selectedItem];
+      if (!baseItem) { return; }
+      setAttrs({
+        [`repeating_items_${rowId}_Item-Name`]: baseItem.Name || selectedItem,
+        [`repeating_items_${rowId}_Item-Description`]: baseItem.Description || "",
+        [`repeating_items_${rowId}_Item-Tier`]: baseItem.Tier || "",
+        [`repeating_items_${rowId}_Item-HP`]: toNumber(baseItem.HP),
+        [`repeating_items_${rowId}_Item-Might`]: toNumber(baseItem.Might),
+        [`repeating_items_${rowId}_Item-Accuracy`]: toNumber(baseItem.Accuracy),
+        [`repeating_items_${rowId}_Item-Critical`]: toNumber(baseItem.Critical),
+        [`repeating_items_${rowId}_Item-Dodge`]: toNumber(baseItem.Dodge),
+        [`repeating_items_${rowId}_Item-Avoid`]: toNumber(baseItem.Avoid),
+        [`repeating_items_${rowId}_Item-Defense`]: toNumber(baseItem.Defense),
+        [`repeating_items_${rowId}_Item-Resistance`]: toNumber(baseItem.Resistance),
+        [`repeating_items_${rowId}_Item-Move`]: toNumber(baseItem.Move)
+      });
+    });
+  }
+
+  function SyncEquipmentRowsFromSelectors() {
+    getSectionIDs("repeating_weapons", function(weaponIds) {
+      weaponIds.forEach(PopulateWeaponRow);
+    });
+    getSectionIDs("repeating_items", function(itemIds) {
+      itemIds.forEach(PopulateItemRow);
+    });
+  }
+
+  on("clicked:repeating_weapons", function(eventInfo) {
+    console.log("Setting Weapon");
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipWeaponFromRow(rowId); }
+  });
+
+  on("clicked:repeating_items", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { EquipItemFromRow(rowId); }
+  });
+
+
+
+  on("clicked:temp-stats-start-of-turn", function() {
+    getSectionIDs("repeating_tempstatlist", function(idArray) {
+      if (!idArray || idArray.length === 0) {
+        CalculateFrontSheetStats();
+        return;
+      }
+
+      const valueKeys = idArray.map((rowId) => `repeating_tempstatlist_${rowId}_adjustment-value`);
+      getAttrs(valueKeys, function(values) {
+        const updates = {};
+        idArray.forEach((rowId) => {
+          const key = `repeating_tempstatlist_${rowId}_adjustment-value`;
+          const current = toNumber(values[key]);
+          const nextValue = (current > 0) ? current - 1 : (current < 0 ? current + 1 : 0);
+          if (nextValue === 0) {
+            removeRepeatingRow(`repeating_tempstatlist_${rowId}`);
+          } else {
+            updates[key] = nextValue;
+          }
+        });
+
+        if (Object.keys(updates).length > 0) {
+          setAttrs(updates);
+        }
+        CalculateFrontSheetStats();
+      });
+    });
+  });
+
+  on("change:repeating_weapons:Weapon-Type change:repeating_weapons:Weapon-Rune", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { PopulateWeaponRow(rowId); }
+  });
+
+  on("change:repeating_items:Item-Template", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute) { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (rowId) { PopulateItemRow(rowId); }
+  });
+
+  on("change:str_stat_total change:int_stat_total change:dex_stat_total change:spd_stat_total change:luk_stat_total change:con_stat_total change:wis_stat_total change:Equipped_Weapon_DamageType change:Equipped_Weapon_Might change:Equipped_Weapon_Accuracy change:Equipped_Weapon_Critical change:Equipped_Weapon_STR change:Equipped_Weapon_INT change:Equipped_Weapon_DEX change:Equipped_Weapon_SPD change:Equipped_Weapon_LUK change:Equipped_Weapon_CON change:Equipped_Weapon_WIS change:Equipped_Item_Might change:Equipped_Item_Accuracy change:Equipped_Item_Critical change:Equipped_Item_Dodge change:Equipped_Item_Avoid change:Equipped_Item_Defense change:Equipped_Item_Resistance change:repeating_tempstatlist:adjustment-value change:repeating_tempstatlist:adjustment-stat sheet:opened", function() {
+    CalculateFrontSheetStats();
+    SyncEquipmentRowsFromSelectors();
   });
 
   StatList.forEach(stat => {

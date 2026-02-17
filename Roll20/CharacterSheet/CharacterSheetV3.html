@@ -5,11 +5,13 @@
     <div class="CharacterGridcell"> <!-- Character Info -->
 
         <div class="CharacterFlexContainer"> <!-- Character Picture and Info -->
-            
-            <div class="CharacterNameFlexItem"><input type="text" class="PrimaryEntry CharacterNameHeader" name="attr_character_name" placeholder="Name" data-i18n-place="name-u"/></div>
-            <div class="CharacterPicFlexItem"><img name="attr_character_avatar"/></div>
-            <div class="CharacterTokenFlexItem"><img name="attr_character_token"/></div>
-            <div class="CharacterDescriptionFlexItem"><textarea name="attr_character_notes" class="PrimaryNotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea></div>
+
+            <div class="CharacterIdentityFlexItem">
+                <div class="CharacterNameFlexItem"><input type="text" class="PrimaryEntry CharacterNameHeader" name="attr_character_name" placeholder="Name" data-i18n-place="name-u"/></div>
+                <div class="CharacterPicFlexItem"><img name="attr_character_avatar"/></div>
+                <div class="CharacterTokenFlexItem"><img name="attr_character_token"/></div>
+                <div class="CharacterDescriptionFlexItem"><textarea name="attr_character_notes" class="PrimaryNotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea></div>
+            </div>
 
             <div class="CharacterHPFlexItem">
                 <label class="PrimaryLabel CharacterHPLabel"><span data-i18n="HP-Full-Name">HP</span>: <input type="number" class="PrimaryEntry CharacterHPInput" name="attr_current_hp" value="0" min="0"> / <span name="attr_hp_stat_total"></span></label>

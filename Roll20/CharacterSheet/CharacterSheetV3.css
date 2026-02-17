@@ -45,9 +45,21 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
+  align-items: flex-start;
+  gap: 6px;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.CharacterIdentityFlexItem {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 271px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .CharacterNameFlexItem {
@@ -76,10 +88,8 @@
 .CharacterHPFlexItem {
   width: 100%;
   max-width: 271px;
-  outline: auto;
-  outline-width: thin;
-  outline-style: solid;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 .CharacterHPLabel {
@@ -98,6 +108,25 @@
   outline-width: thin;
   outline-style: solid;
   padding: 5px;
+}
+
+.CharacterEquippedFlexItem fieldset.repeating_weapons,
+.CharacterEquippedFlexItem fieldset.repeating_items {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 0 0 8px;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.CharacterEquippedFlexItem fieldset.repeating_weapons::after,
+.CharacterEquippedFlexItem fieldset.repeating_items::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
 }
 
 .CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_weapons"] {
@@ -751,6 +780,8 @@ label.GreatSkillLegendary { display: none; }
 .CharacterGridcell,
 .PageSelectorGridcell,
 .CharacterSheetGridcell,
+.CharacterIdentityFlexItem,
+.CharacterHPFlexItem,
 .CharacterEquippedFlexItem,
 .CharacterSheetFlexObject,
 .ClassStatGridItem,
@@ -781,6 +812,8 @@ label.GreatSkillLegendary { display: none; }
   background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
 }
 
+.CharacterIdentityFlexItem,
+.CharacterHPFlexItem,
 .CharacterEquippedFlexItem,
 .CharacterSheetFlexObject,
 .ClassStatGridItem,
@@ -802,9 +835,13 @@ label.GreatSkillLegendary { display: none; }
 .CharacterPicFlexItem img,
 .CharacterTokenFlexItem img {
   width: 100%;
-  border: 2px solid var(--fe-gold);
+}
+
+.CharacterIdentityFlexItem .CharacterPicFlexItem img,
+.CharacterIdentityFlexItem .CharacterTokenFlexItem img {
+  border: none;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(12, 10, 18, 0.35);
+  box-shadow: none;
 }
 
 .PrimaryTitle {

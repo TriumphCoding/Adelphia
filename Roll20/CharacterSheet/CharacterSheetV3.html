@@ -1,4 +1,4 @@
-<link href="CharactersheetV2.css" rel="stylesheet" type="text/css">
+<link href="CharacterSheetV3.css" rel="stylesheet" type="text/css">
 
 <div class="MasterGrid"> <!-- The Character Sheet Layout -->
 
@@ -6,7 +6,7 @@
 
         <div class="CharacterFlexContainer"> <!-- Character Picture and Info -->
             
-            <div class="CharacterNameFlexItem"><input type="text" class="PrimaryEntry" name="attr_character_name" placeholder="Name" data-i18n-place="name-u"/></div>
+            <div class="CharacterNameFlexItem"><input type="text" class="PrimaryEntry CharacterNameHeader" name="attr_character_name" placeholder="Name" data-i18n-place="name-u"/></div>
             <div class="CharacterPicFlexItem"><img name="attr_character_avatar"/></div>
             <div class="CharacterTokenFlexItem"><img name="attr_character_token"/></div>
             <div class="CharacterDescriptionFlexItem"><textarea name="attr_character_notes" class="PrimaryNotesEntry" placeholder="Character Notes" data-i18n-place="sheet-CharacterNotesPlaceholder" ></textarea></div>
@@ -176,8 +176,7 @@
               </div>
               <div class="CharacterSheetFlexObject">
                 <fieldset class="repeating_weapons">
-                    <h2 data-i18n="Weapon-Title">Weapon</h2>
-                    <label class="PrimaryLabel"><span data-i18n="Weapon-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Weapon-Name"/></label>
+                    <input type="text" class="BuilderNameHeader" name="attr_Weapon-Name" placeholder="Weapon Name" data-i18n-place="Weapon-Name-Label"/>
                     <label class="PrimaryLabel"><span data-i18n="Weapon-Type-Label">Type</span>: <select name="attr_Weapon-Type">
                         <option disabled data-i18n="Weapon-Type-Physical" class="OptionCategoryH1">Physical</option>
                         <option disabled data-i18n="Weapon-Type-Sword-indent" class="OptionCategoryH2"> > Sword</option>
@@ -487,7 +486,7 @@
               </div>
               <div class="CharacterSheetFlexObject">
                 <fieldset class="repeating_items">
-                  <h2 data-i18n="Item-Title">Item</h2>
+                  <input type="text" class="BuilderNameHeader" name="attr_Item-Name" readonly/>
                   <label class="PrimaryLabel"><span data-i18n="Item-Selector-Label">Template</span>: <select name="attr_Item-Template" class="PrimaryDropdown">
                     <option value="Cursed Ring (Legend)">Cursed Ring (Legend)</option>
                     <option value="Angel Ring (Legend)">Angel Ring (Legend)</option>
@@ -511,7 +510,6 @@
                     <option value="Gauntlet">Gauntlet</option>
                     <option value="Bracer">Bracer</option>
                   </select></label>
-                  <label class="PrimaryLabel"><span data-i18n="Item-Name-Label">Name</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Name" readonly/></label>
                   <label class="PrimaryLabel"><span data-i18n="Item-Description-Label">Description</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Description" readonly/></label>
                   <label class="PrimaryLabel"><span data-i18n="Item-Tier-Label">Tier</span>: <input type="text" class="PrimaryEntry" name="attr_Item-Tier" readonly/></label>
                   <label class="PrimaryLabel"><span data-i18n="HP-Abbrev-Name">HP</span>: <input type="number" class="PrimaryEntry" name="attr_Item-HP" readonly/></label>
@@ -614,7 +612,7 @@
                     <input type="checkbox" class="sheet-classskillslist-Check" name="attr_classskillslist-Check" value="0" />
                     <div class="sheet-classskillslist-Short">
                         <fieldset class="repeating_classskillslist">
-                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
+                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span> <select name="attr_ClassSkill">
                                 <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
                                 <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
                                 <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
@@ -629,7 +627,7 @@
                     </div>
                     <div class="sheet-classskillslist-Long">
                         <fieldset class="repeating_classskillslist">
-                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span>: <select name="attr_ClassSkill">
+                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span> <select name="attr_ClassSkill">
                                 <option value="Nobility" data-i18n="Class-Skill-Nobility">Nobility</option>
                                 <option value="Ride" data-i18n="Class-Skill-Ride">Ride</option>
                                 <option value="Fly" data-i18n="Class-Skill-Fly">Fly</option>
@@ -640,9 +638,9 @@
                                 <option value="Weapon Skill" data-i18n="Class-Skill-Weapon Skill">Weapon Skill</option>
                                 </select>
                             </label>
-                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Cost">Cost</span>: <input type="number" name="attr_ClassSkillCost" /></label>
-                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Description">Description</span>: <textarea class="PrimaryDescription" name="attr_ClassSkillDescription"></textarea></label>
-                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span>: <textarea class="PrimaryDescription" name="attr_ClassSkillEffect"></textarea></label>
+                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Cost">Cost</span> <input type="number" name="attr_ClassSkillCost" /></label>
+                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Description">Description</span> <textarea class="PrimaryDescription" name="attr_ClassSkillDescription"></textarea></label>
+                            <label class="PrimaryLabel"><span data-i18n="Class-Skill-Effect">Effect</span> <textarea class="PrimaryDescription" name="attr_ClassSkillEffect"></textarea></label>
                         </fieldset>
                     </div>
                 </div>
@@ -650,11 +648,11 @@
             <div class="SheetPageSkills"> <!-- Character Skills Creation-->
                 <div class="CharacterSheetFlexObject"> <!-- Combat Skills-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
-                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span>: <span name="attr_CombatSkillPointsAvailable"></span></label>
+                    <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span> <span name="attr_CombatSkillPointsAvailable"></span></label>
                     <input type="checkbox" class="sheet-combatskillslist-Check" name="attr_combatskillslist-Check" value="0" />
                     <div class="sheet-combatskillslist-Short">
                         <fieldset class="repeating_combatskillslist">
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
+                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
                                 <option value="Buckler" selected="selected" data-i18n="Combat-Skill-Buckler">Buckler</option>
@@ -693,7 +691,7 @@
                     </div>
                     <div class="sheet-combatskillslist-Long">
                         <fieldset class="repeating_combatskillslist">
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span>: <select name="attr_CombatSkill">
+                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
                                 <option value="Buckler" selected="selected" data-i18n="Combat-Skill-Buckler">Buckler</option>
@@ -730,7 +728,7 @@
                                 </select>
                             </label>
                             <input type="hidden" class="StatCombatSkillSelectorDisplay" name="attr_StatCombatSkillSelectorDisplay" value="0" />
-                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span>: <select name="attr_StatCombatSkillSelector">
+                            <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span> <select name="attr_StatCombatSkillSelector">
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>
                                 <option value="INT" selected="selected" data-i18n="INT-Full-Name">Intelligence</option>
                                 <option value="DEX" selected="selected" data-i18n="DEX-Full-Name">Dexterity</option>
@@ -741,7 +739,7 @@
                                 </select>
                             </label>
                             <input type="hidden" class="WeaponCombatSkillSelectorDisplay" name="attr_WeaponCombatSkillSelectorDisplay" value="0"/>
-                            <label class="PrimaryLabel"><span data-i18n="Weapon-Title">Weapon</span>: <select name="attr_WeaponCombatSkillSelector">
+                            <label class="PrimaryLabel"><span data-i18n="Weapon-Title">Weapon</span> <select name="attr_WeaponCombatSkillSelector">
                                 <option disabled data-i18n="Weapon-Type-Physical" class="OptionCategoryH1">Physical</option>
                                 <option disabled data-i18n="Weapon-Type-Sword-indent" class="OptionCategoryH2"> > Sword</option>
                                 <option value="Copper Sword" selected="selected" data-i18n="Copper Sword-Full-Name">Copper Sword</option>
@@ -970,20 +968,20 @@
                                 <option value="Gilded Slam" selected="selected" data-i18n="Gilded Slam-Full-Name">Gilded Slam</option>
                                 <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
                             </select></label>
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Level">Level</span>: <input type="number" name="attr_CombatSkillLevel" min="1"/></label>
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Description">Description</span>: <textarea class="PrimaryDescription" name="attr_CombatSkillDescription"></textarea></label>
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Effect">Effect</span>: <textarea class="PrimaryDescription" name="attr_CombatSkillEffect"></textarea></label>
+                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Level">Level</span> <input type="number" name="attr_CombatSkillLevel" min="1"/></label>
+                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Description">Description</span> <textarea class="PrimaryDescription" name="attr_CombatSkillDescription"></textarea></label>
+                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Effect">Effect</span> <textarea class="PrimaryDescription" name="attr_CombatSkillEffect"></textarea></label>
                         </fieldset>
                     </div>
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Great Skills-->
                     <h1 class="PrimaryTitle" data-i18n="Levelup-Great-Skills-title-u">Great Skills</h1>
                     <input type="hidden" class="GreatSkillSelector" name="attr_character_level">
-                    <label class="PrimaryLabel GreatSkillHeroic"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                    <label class="PrimaryLabel GreatSkillHeroic"><span data-i18n="Great-Skill-Name">Skill</span> <select name="attr_GreatSkill">
                         <option value="None" selected="selected" data-i18n="Great-Skill-None">None</option>
                         </select>
                     </label>
-                    <label class="PrimaryLabel GreatSkillEpic"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                    <label class="PrimaryLabel GreatSkillEpic"><span data-i18n="Great-Skill-Name">Skill</span> <select name="attr_GreatSkill">
                         <option value="Moon Strike" selected="selected" data-i18n="Great-Skill-Moon Strike">Moon Strike</option>
                         <option value="Sun Strike" selected="selected" data-i18n="Great-Skill-Sun Strike">Sun Strike</option>
                         <option value="Brave Strike" selected="selected" data-i18n="Great-Skill-Brave Strike">Brave Strike</option>
@@ -993,7 +991,7 @@
                         <option value="Waiting Block" selected="selected" data-i18n="Great-Skill-Waiting Block">Waiting Block</option>
                         </select>
                     </label>
-                    <label class="PrimaryLabel GreatSkillLegendary"><span data-i18n="Great-Skill-Name">Skill</span>: <select name="attr_GreatSkill">
+                    <label class="PrimaryLabel GreatSkillLegendary"><span data-i18n="Great-Skill-Name">Skill</span> <select name="attr_GreatSkill">
                         <option value="Lunar Impact" selected="selected" data-i18n="Great-Skill-Lunar Impact">Lunar Impact</option>
                         <option value="Lunar Strike" selected="selected" data-i18n="Great-Skill-Lunar Strike">Lunar Strike</option>
                         <option value="Solar Impact" selected="selected" data-i18n="Great-Skill-Solar Impact">Solar Impact</option>
@@ -1012,8 +1010,8 @@
                         <option value="Resistant Block" selected="selected" data-i18n="Great-Skill-Resistant Block">Resistant Block</option>
                         </select>
                     </label>
-                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Level">Level</span>: <span name="attr_GreatSkillLevel"></span></label>
-                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Description">Description</span>: <textarea class="PrimaryNotesEntry" name="attr_GreatSkillDescription"></textarea></label>
+                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Level">Level</span> <span name="attr_GreatSkillLevel"></span></label>
+                    <label class="PrimaryLabel"><span data-i18n="Great-Skill-Description">Description</span> <textarea class="PrimaryNotesEntry" name="attr_GreatSkillDescription"></textarea></label>
                 </div>
             </div>
             <div class="SheetPageGrowth"> <!-- Character Growth Potential-->
@@ -1179,22 +1177,28 @@
 <rolltemplate class="sheet-rolltemplate-adelphiaattack">
   <div class="sheet-template-container">
     {{#name}}<div class="sheet-template-title">{{name}}</div>{{/name}}
-    {{#shared_roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{shared_roll}}</span></div>{{/shared_roll}}
-    {{#attack_header}}<div class="sheet-template-section">{{attack_header}}</div>{{/attack_header}}
-    {{#attack_roll}}<div class="sheet-template-row"><span>Attack Roll</span><span>{{attack_roll}}</span></div>{{/attack_roll}}
-    {{#critical_roll}}<div class="sheet-template-row"><span>Critical Roll</span><span>{{critical_roll}}</span></div>{{/critical_roll}}
-    {{#damage}}<div class="sheet-template-row"><span>Damage</span><span>{{damage}}</span></div>{{/damage}}
-    {{#speed}}<div class="sheet-template-row"><span>Speed</span><span>{{speed}}</span></div>{{/speed}}
-    {{#weapon_range}}<div class="sheet-template-row"><span>Weapon Range</span><span>{{weapon_range}}</span></div>{{/weapon_range}}
-    {{#weapon_properties}}<div class="sheet-template-row"><span>Weapon Properties</span><span>{{weapon_properties}}</span></div>{{/weapon_properties}}
-    {{#item_properties}}<div class="sheet-template-row"><span>Item Properties</span><span>{{item_properties}}</span></div>{{/item_properties}}
-    {{#great_skill}}<div class="sheet-template-row"><span>Great Skill</span><span>{{great_skill}}</span></div>{{/great_skill}}
-    {{#defense_header}}<div class="sheet-template-section">{{defense_header}}</div>{{/defense_header}}
-    {{#defense_speed}}<div class="sheet-template-row"><span>Speed</span><span>{{defense_speed}}</span></div>{{/defense_speed}}
-    {{#dodge}}<div class="sheet-template-row"><span>Dodge</span><span>{{dodge}}</span></div>{{/dodge}}
-    {{#avoid}}<div class="sheet-template-row"><span>Avoid</span><span>{{avoid}}</span></div>{{/avoid}}
-    {{#defense}}<div class="sheet-template-row"><span>Defense</span><span>{{defense}}</span></div>{{/defense}}
-    {{#resistance}}<div class="sheet-template-row"><span>Resistance</span><span>{{resistance}}</span></div>{{/resistance}}
+    <div class="sheet-template-body">
+      {{#shared_roll}}<div class="sheet-template-row"><span>Roll (d100)</span><span>{{shared_roll}}</span></div>{{/shared_roll}}
+      <div class="sheet-template-panel sheet-template-panel-attack">
+        {{#attack_header}}<div class="sheet-template-section">{{attack_header}}</div>{{/attack_header}}
+        {{#attack_roll}}<div class="sheet-template-row"><span>Attack Roll</span><span>{{attack_roll}}</span></div>{{/attack_roll}}
+        {{#critical_roll}}<div class="sheet-template-row"><span>Critical Roll</span><span>{{critical_roll}}</span></div>{{/critical_roll}}
+        {{#damage}}<div class="sheet-template-row"><span>Damage</span><span>{{damage}}</span></div>{{/damage}}
+        {{#speed}}<div class="sheet-template-row"><span>Speed</span><span>{{speed}}</span></div>{{/speed}}
+        {{#weapon_range}}<div class="sheet-template-row"><span>Weapon Range</span><span>{{weapon_range}}</span></div>{{/weapon_range}}
+        {{#weapon_properties}}<div class="sheet-template-row"><span>Weapon Properties</span><span>{{weapon_properties}}</span></div>{{/weapon_properties}}
+        {{#item_properties}}<div class="sheet-template-row"><span>Item Properties</span><span>{{item_properties}}</span></div>{{/item_properties}}
+        {{#great_skill}}<div class="sheet-template-row"><span>Great Skill</span><span>{{great_skill}}</span></div>{{/great_skill}}
+      </div>
+      <div class="sheet-template-panel sheet-template-panel-defense">
+        {{#defense_header}}<div class="sheet-template-section">{{defense_header}}</div>{{/defense_header}}
+        {{#defense_speed}}<div class="sheet-template-row"><span>Speed</span><span>{{defense_speed}}</span></div>{{/defense_speed}}
+        {{#dodge}}<div class="sheet-template-row"><span>Dodge</span><span>{{dodge}}</span></div>{{/dodge}}
+        {{#avoid}}<div class="sheet-template-row"><span>Avoid</span><span>{{avoid}}</span></div>{{/avoid}}
+        {{#defense}}<div class="sheet-template-row"><span>Defense</span><span>{{defense}}</span></div>{{/defense}}
+        {{#resistance}}<div class="sheet-template-row"><span>Resistance</span><span>{{resistance}}</span></div>{{/resistance}}
+      </div>
+    </div>
   </div>
 </rolltemplate>
 

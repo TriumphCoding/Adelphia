@@ -272,7 +272,7 @@ Wind magic is incredibly accurate. Mages who wield wind tend to be efficient and
 | S   | 6     | Gilded     | Magical  | Green | 12    | 85       | 1-2   | Slayer (Flight)
 | S+  | 7     | Orichalcum | Magical  | Green | 14    | 65       | 1-2   | Slayer (Flight)
 
->Magic Tomes are actually crafted books, carried around by mages. The power of the mage usually confirms how much raw power a mage can bring to bear, but without time consuming rituals and the proper foci of power it is almost impossible to bring the power of magic to bear, especially in the heat of battle. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.
+>Magic Tomes are actually crafted books, carried around by mages. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.
 
 ### Light
 

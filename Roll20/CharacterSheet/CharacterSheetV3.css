@@ -284,6 +284,28 @@
   padding: 3px 6px;
 }
 
+.TriangleRollButton {
+  min-width: 38px;
+  padding: 3px 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.TriangleRollButton:hover,
+.TriangleRollButton:focus {
+  color: #fff;
+}
+
+.TriangleRollButtonAdvantage {
+  background: #2e8b57;
+  border-color: #1f5f3c;
+}
+
+.TriangleRollButtonDisadvantage {
+  background: #b22222;
+  border-color: #7a1717;
+}
+
 .CharacterTempStatAdjustmentHeaderRow {
   display: grid;
   grid-template-columns: 74px minmax(120px, 1fr) 74px minmax(120px, 1fr);
@@ -1011,6 +1033,18 @@ button[type="action"]:hover {
   padding: 4px 8px;
   font-weight: 700;
   font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-subtitle {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 3px 8px;
+  font-weight: 700;
+  font-size: 0.98em;
   margin-bottom: 8px;
 }
 

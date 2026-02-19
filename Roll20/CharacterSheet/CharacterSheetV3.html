@@ -663,8 +663,11 @@
                     </div>
                 </div>
                 <div class="CharacterSheetFlexObject"> <!-- Class Abilities-->
-                    <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Abilities</h1>
-                    <input type="checkbox" class="sheet-classskillslist-Check" name="attr_classskillslist-Check" value="0" />
+                    <input type="checkbox" id="classskillslist-toggle" class="sheet-classskillslist-Check" name="attr_classskillslist-Check" value="0" />
+                    <div class="SectionTitleWithToggle">
+                        <h1 class="PrimaryTitle" data-i18n="Levelup-Class-Skills-title-u">Class Abilities</h1>
+                        <label for="classskillslist-toggle" class="sheet-classskillslist-ToggleButton"></label>
+                    </div>
                     <div class="sheet-classskillslist-Short">
                         <fieldset class="repeating_classskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Class-Skill-Name">Skill</span> <select name="attr_ClassSkill">
@@ -702,9 +705,12 @@
             </div>
             <div class="SheetPageSkills"> <!-- Character Skills Creation-->
                 <div class="CharacterSheetFlexObject"> <!-- Combat Skills-->
-                    <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
+                    <input type="checkbox" id="combatskillslist-toggle" class="sheet-combatskillslist-Check" name="attr_combatskillslist-Check" value="0" />
+                    <div class="SectionTitleWithToggle">
+                        <h1 class="PrimaryTitle" data-i18n="Levelup-Combat-Skills-title-u">Combat Skills</h1>
+                        <label for="combatskillslist-toggle" class="sheet-combatskillslist-ToggleButton"></label>
+                    </div>
                     <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span> <span name="attr_CombatSkillPointsAvailable"></span></label>
-                    <input type="checkbox" class="sheet-combatskillslist-Check" name="attr_combatskillslist-Check" value="0" />
                     <div class="sheet-combatskillslist-Short">
                         <fieldset class="repeating_combatskillslist">
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">

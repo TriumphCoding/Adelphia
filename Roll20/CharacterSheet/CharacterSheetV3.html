@@ -113,9 +113,9 @@
                 <div class="AttackRiposteRow">
                     <div class="CharacterSheetFlexObject"> <!-- Attacking Stats -->
                         <div class="AttackRiposteHeaderRow">
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Attack" value="&{template:adelphiaattack} {{name=@{character_name} - Attack}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[@{AttackAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=@{AttackMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}"></button>
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonAdvantage" name="roll_AttackAdvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Attack (Advantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{AttackAccuracy}+(@{Equipped_Weapon_Level}*15))-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=[[@{AttackMight}+@{Equipped_Weapon_Level}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}">Adv</button>
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonDisadvantage" name="roll_AttackDisadvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Attack (Disadvantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{AttackAccuracy}-(@{Equipped_Weapon_Level}*15))-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=[[@{AttackMight}-@{Equipped_Weapon_Level}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}">Dis</button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Attack" value="&{template:adelphiaattack} {{name=@{character_name} - Attack}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{AttackAccuracy}+(@{AttackTriangleNeutralLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=[[@{AttackMight}+@{AttackTriangleNeutralLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}"></button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonAdvantage" name="roll_AttackAdvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Attack (Advantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{AttackAccuracy}+(@{AttackTriangleAdvantageLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=[[@{AttackMight}+@{AttackTriangleAdvantageLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}">Adv</button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonDisadvantage" name="roll_AttackDisadvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Attack (Disadvantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{AttackAccuracy}-(@{AttackTriangleDisadvantageLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{AttackCritical}-(1d100-1)]]}} {{damage=[[@{AttackMight}-@{AttackTriangleDisadvantageLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{AttackDodge}}} {{avoid=@{AttackAvoid}}} {{defense=@{AttackDefense}}} {{resistance=@{AttackResistance}}}">Dis</button>
                             <h1 class="PrimaryTitle" data-i18n="Attack-title-u">Attack</h1>
                         </div>
                         <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_AttackMight"></span></label>
@@ -128,9 +128,9 @@
                     </div>
                     <div class="CharacterSheetFlexObject"> <!-- Riposte Stats -->
                         <div class="AttackRiposteHeaderRow">
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Riposte" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[@{RiposteAccuracy}-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=@{RiposteMight}}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}"></button>
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonAdvantage" name="roll_RiposteAdvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte (Advantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{RiposteAccuracy}+(@{Equipped_Weapon_Level}*15))-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=[[@{RiposteMight}+@{Equipped_Weapon_Level}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}">Adv</button>
-                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonDisadvantage" name="roll_RiposteDisadvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte (Disadvantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{RiposteAccuracy}-(@{Equipped_Weapon_Level}*15))-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=[[@{RiposteMight}-@{Equipped_Weapon_Level}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}">Dis</button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton" name="roll_Riposte" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{RiposteAccuracy}+(@{RiposteTriangleNeutralLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=[[@{RiposteMight}+@{RiposteTriangleNeutralLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}"></button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonAdvantage" name="roll_RiposteAdvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte (Advantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{RiposteAccuracy}+(@{RiposteTriangleAdvantageLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=[[@{RiposteMight}+@{RiposteTriangleAdvantageLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}">Adv</button>
+                            <button type="roll" class="PrimaryButton AttackRiposteRollButton TriangleRollButton TriangleRollButtonDisadvantage" name="roll_RiposteDisadvantage" value="&{template:adelphiaattack} {{name=@{character_name} - Riposte (Disadvantage)}} {{weapon_summary=@{Equipped_Weapon_Name} (@{Equipped_Weapon_Color})}} {{attack_header=Attack}} {{attack_roll=[[(@{RiposteAccuracy}-(@{RiposteTriangleDisadvantageLevel}*15))-(1d100-1)]]}} {{critical_roll=[[@{RiposteCritical}-(1d100-1)]]}} {{damage=[[@{RiposteMight}-@{RiposteTriangleDisadvantageLevel}]]}} {{speed=@{spd_stat_total}}} {{weapon_range=@{Equipped_Weapon_Range}}} {{weapon_properties=@{Equipped_Weapon_Notes}}} {{item_properties=@{Equipped_Item_Notes}}} {{great_skill=@{GreatSkillDescription}}} {{defense_header=Defense}} {{defense_speed=@{spd_stat_total}}} {{dodge=@{RiposteDodge}}} {{avoid=@{RiposteAvoid}}} {{defense=@{RiposteDefense}}} {{resistance=@{RiposteResistance}}}">Dis</button>
                             <h1 class="PrimaryTitle" data-i18n="Attack-Riposte-u">Riposte</h1>
                         </div>
                         <label class="PrimaryLabel"><span data-i18n="MGT-Full-Name">Might</span><span>: </span><span name="attr_RiposteMight"></span></label>
@@ -795,233 +795,19 @@
                             </label>
                             <input type="hidden" class="WeaponCombatSkillSelectorDisplay" name="attr_WeaponCombatSkillSelectorDisplay" value="0"/>
                             <label class="PrimaryLabel"><span data-i18n="Weapon-Title">Weapon</span> <select name="attr_WeaponCombatSkillSelector">
-                                <option disabled data-i18n="Weapon-Type-Physical" class="OptionCategoryH1">Physical</option>
-                                <option disabled data-i18n="Weapon-Type-Sword-indent" class="OptionCategoryH2"> > Sword</option>
-                                <option value="Copper Sword" selected="selected" data-i18n="Copper Sword-Full-Name">Copper Sword</option>
-                                <option value="Bronze Sword" selected="selected" data-i18n="Bronze Sword-Full-Name">Bronze Sword</option>
-                                <option value="Iron Sword" selected="selected" data-i18n="Iron Sword-Full-Name">Iron Sword</option>
-                                <option value="Steel Sword" selected="selected" data-i18n="Steel Sword-Full-Name">Steel Sword</option>
-                                <option value="Silvered Sword" selected="selected" data-i18n="Silvered Sword-Full-Name">Silvered Sword</option>
-                                <option value="Gilded Sword" selected="selected" data-i18n="Gilded Sword-Full-Name">Gilded Sword</option>
-                                <option value="Orichalcum Sword" selected="selected" data-i18n="Orichalcum Sword-Full-Name">Orichalcum Sword</option>
-                                <option disabled data-i18n="Weapon-Type-Katana-indent" class="OptionCategoryH2"> > Katana</option>
-                                <option value="Copper Katana" selected="selected" data-i18n="Copper Katana-Full-Name">Copper Katana</option>
-                                <option value="Bronze Katana" selected="selected" data-i18n="Bronze Katana-Full-Name">Bronze Katana</option>
-                                <option value="Iron Katana" selected="selected" data-i18n="Iron Katana-Full-Name">Iron Katana</option>
-                                <option value="Steel Katana" selected="selected" data-i18n="Steel Katana-Full-Name">Steel Katana</option>
-                                <option value="Silvered Katana" selected="selected" data-i18n="Silvered Katana-Full-Name">Silvered Katana</option>
-                                <option value="Gilded Katana" selected="selected" data-i18n="Gilded Katana-Full-Name">Gilded Katana</option>
-                                <option value="Orichalcum Katana" selected="selected" data-i18n="Orichalcum Katana-Full-Name">Orichalcum Katana</option>
-                                <option disabled data-i18n="Weapon-Type-Axe-indent" class="OptionCategoryH2"> > Axe</option>
-                                <option value="Copper Axe" selected="selected" data-i18n="Copper Axe-Full-Name">Copper Axe</option>
-                                <option value="Bronze Axe" selected="selected" data-i18n="Bronze Axe-Full-Name">Bronze Axe</option>
-                                <option value="Iron Axe" selected="selected" data-i18n="Iron Axe-Full-Name">Iron Axe</option>
-                                <option value="Steel Axe" selected="selected" data-i18n="Steel Axe-Full-Name">Steel Axe</option>
-                                <option value="Silvered Axe" selected="selected" data-i18n="Silvered Axe-Full-Name">Silvered Axe</option>
-                                <option value="Gilded Axe" selected="selected" data-i18n="Gilded Axe-Full-Name">Gilded Axe</option>
-                                <option value="Orichalcum Axe" selected="selected" data-i18n="Orichalcum Axe-Full-Name">Orichalcum Axe</option>
-                                <option disabled data-i18n="Weapon-Type-Club-indent" class="OptionCategoryH2"> > Club</option>
-                                <option value="Copper Club" selected="selected" data-i18n="Copper Club-Full-Name">Copper Club</option>
-                                <option value="Bronze Club" selected="selected" data-i18n="Bronze Club-Full-Name">Bronze Club</option>
-                                <option value="Iron Club" selected="selected" data-i18n="Iron Club-Full-Name">Iron Club</option>
-                                <option value="Steel Club" selected="selected" data-i18n="Steel Club-Full-Name">Steel Club</option>
-                                <option value="Silvered Club" selected="selected" data-i18n="Silvered Club-Full-Name">Silvered Club</option>
-                                <option value="Gilded Club" selected="selected" data-i18n="Gilded Club-Full-Name">Gilded Club</option>
-                                <option value="Orichalcum Club" selected="selected" data-i18n="Orichalcum Club-Full-Name">Orichalcum Club</option>
-                                <option disabled data-i18n="Weapon-Type-Lance-indent" class="OptionCategoryH2"> > Lance</option>
-                                <option value="Copper Lance" selected="selected" data-i18n="Copper Lance-Full-Name">Copper Lance</option>
-                                <option value="Bronze Lance" selected="selected" data-i18n="Bronze Lance-Full-Name">Bronze Lance</option>
-                                <option value="Iron Lance" selected="selected" data-i18n="Iron Lance-Full-Name">Iron Lance</option>
-                                <option value="Steel Lance" selected="selected" data-i18n="Steel Lance-Full-Name">Steel Lance</option>
-                                <option value="Silvered Lance" selected="selected" data-i18n="Silvered Lance-Full-Name">Silvered Lance</option>
-                                <option value="Gilded Lance" selected="selected" data-i18n="Gilded Lance-Full-Name">Gilded Lance</option>
-                                <option value="Orichalcum Lance" selected="selected" data-i18n="Orichalcum Lance-Full-Name">Orichalcum Lance</option>
-                                <option disabled data-i18n="Weapon-Type-Naginata-indent" class="OptionCategoryH2"> > Naginata</option>
-                                <option value="Copper Naginata" selected="selected" data-i18n="Copper Naginata-Full-Name">Copper Naginata</option>
-                                <option value="Bronze Naginata" selected="selected" data-i18n="Bronze Naginata-Full-Name">Bronze Naginata</option>
-                                <option value="Iron Naginata" selected="selected" data-i18n="Iron Naginata-Full-Name">Iron Naginata</option>
-                                <option value="Steel Naginata" selected="selected" data-i18n="Steel Naginata-Full-Name">Steel Naginata</option>
-                                <option value="Silvered Naginata" selected="selected" data-i18n="Silvered Naginata-Full-Name">Silvered Naginata</option>
-                                <option value="Gilded Naginata" selected="selected" data-i18n="Gilded Naginata-Full-Name">Gilded Naginata</option>
-                                <option value="Orichalcum Naginata" selected="selected" data-i18n="Orichalcum Naginata-Full-Name">Orichalcum Naginata</option>
-                                <option disabled data-i18n="Weapon-Type-Gauntlet-indent" class="OptionCategoryH2"> > Gauntlet</option>
-                                <option value="Copper Gauntlet" selected="selected" data-i18n="Copper Gauntlet-Full-Name">Copper Gauntlet</option>
-                                <option value="Bronze Gauntlet" selected="selected" data-i18n="Bronze Gauntlet-Full-Name">Bronze Gauntlet</option>
-                                <option value="Iron Gauntlet" selected="selected" data-i18n="Iron Gauntlet-Full-Name">Iron Gauntlet</option>
-                                <option value="Steel Gauntlet" selected="selected" data-i18n="Steel Gauntlet-Full-Name">Steel Gauntlet</option>
-                                <option value="Silvered Gauntlet" selected="selected" data-i18n="Silvered Gauntlet-Full-Name">Silvered Gauntlet</option>
-                                <option value="Gilded Gauntlet" selected="selected" data-i18n="Gilded Gauntlet-Full-Name">Gilded Gauntlet</option>
-                                <option value="Orichalcum Gauntlet" selected="selected" data-i18n="Orichalcum Gauntlet-Full-Name">Orichalcum Gauntlet</option>
-                                <option disabled data-i18n="Weapon-Type-Crossbow-indent" class="OptionCategoryH2"> > Crossbow</option>
-                                <option value="Copper Crossbow" selected="selected" data-i18n="Copper Crossbow-Full-Name">Copper Crossbow</option>
-                                <option value="Bronze Crossbow" selected="selected" data-i18n="Bronze Crossbow-Full-Name">Bronze Crossbow</option>
-                                <option value="Iron Crossbow" selected="selected" data-i18n="Iron Crossbow-Full-Name">Iron Crossbow</option>
-                                <option value="Steel Crossbow" selected="selected" data-i18n="Steel Crossbow-Full-Name">Steel Crossbow</option>
-                                <option value="Silvered Crossbow" selected="selected" data-i18n="Silvered Crossbow-Full-Name">Silvered Crossbow</option>
-                                <option value="Gilded Crossbow" selected="selected" data-i18n="Gilded Crossbow-Full-Name">Gilded Crossbow</option>
-                                <option value="Orichalcum Crossbow" selected="selected" data-i18n="Orichalcum Crossbow-Full-Name">Orichalcum Crossbow</option>
-                                <option disabled data-i18n="Weapon-Type-Arbalest-indent" class="OptionCategoryH2"> > Arbalast</option>
-                                <option value="Copper Arbalest" selected="selected" data-i18n="Copper Arbalest-Full-Name">Copper Arbalest</option>
-                                <option value="Bronze Arbalest" selected="selected" data-i18n="Bronze Arbalest-Full-Name">Bronze Arbalest</option>
-                                <option value="Iron Arbalest" selected="selected" data-i18n="Iron Arbalest-Full-Name">Iron Arbalest</option>
-                                <option value="Steel Arbalest" selected="selected" data-i18n="Steel Arbalest-Full-Name">Steel Arbalest</option>
-                                <option value="Silvered Arbalest" selected="selected" data-i18n="Silvered Arbalest-Full-Name">Silvered Arbalest</option>
-                                <option value="Gilded Arbalest" selected="selected" data-i18n="Gilded Arbalest-Full-Name">Gilded Arbalest</option>
-                                <option value="Orichalcum Arbalest" selected="selected" data-i18n="Orichalcum Arbalest-Full-Name">Orichalcum Arbalest</option>
-                                <option disabled data-i18n="Weapon-Type-Knives-indent" class="OptionCategoryH2"> > Knives</option>
-                                <option value="Copper Knives" selected="selected" data-i18n="Copper Knives-Full-Name">Copper Knives</option>
-                                <option value="Bronze Knives" selected="selected" data-i18n="Bronze Knives-Full-Name">Bronze Knives</option>
-                                <option value="Iron Knives" selected="selected" data-i18n="Iron Knives-Full-Name">Iron Knives</option>
-                                <option value="Steel Knives" selected="selected" data-i18n="Steel Knives-Full-Name">Steel Knives</option>
-                                <option value="Silvered Knives" selected="selected" data-i18n="Silvered Knives-Full-Name">Silvered Knives</option>
-                                <option value="Gilded Knives" selected="selected" data-i18n="Gilded Knives-Full-Name">Gilded Knives</option>
-                                <option value="Orichalcum Knives" selected="selected" data-i18n="Orichalcum Knives-Full-Name">Orichalcum Knives</option>
-                                <option disabled data-i18n="Weapon-Type-Shuriken-indent" class="OptionCategoryH2"> > Shuriken</option>
-                                <option value="Copper Shuriken" selected="selected" data-i18n="Copper Shuriken-Full-Name">Copper Shuriken</option>
-                                <option value="Bronze Shuriken" selected="selected" data-i18n="Bronze Shuriken-Full-Name">Bronze Shuriken</option>
-                                <option value="Iron Shuriken" selected="selected" data-i18n="Iron Shuriken-Full-Name">Iron Shuriken</option>
-                                <option value="Steel Shuriken" selected="selected" data-i18n="Steel Shuriken-Full-Name">Steel Shuriken</option>
-                                <option value="Silvered Shuriken" selected="selected" data-i18n="Silvered Shuriken-Full-Name">Silvered Shuriken</option>
-                                <option value="Gilded Shuriken" selected="selected" data-i18n="Gilded Shuriken-Full-Name">Gilded Shuriken</option>
-                                <option value="Orichalcum Shuriken" selected="selected" data-i18n="Orichalcum Shuriken-Full-Name">Orichalcum Shuriken</option>
-                                <option disabled data-i18n="Weapon-Type-Bow-indent" class="OptionCategoryH2"> > Bow</option>
-                                <option value="Copper Bow" selected="selected" data-i18n="Copper Bow-Full-Name">Copper Bow</option>
-                                <option value="Bronze Bow" selected="selected" data-i18n="Bronze Bow-Full-Name">Bronze Bow</option>
-                                <option value="Iron Bow" selected="selected" data-i18n="Iron Bow-Full-Name">Iron Bow</option>
-                                <option value="Steel Bow" selected="selected" data-i18n="Steel Bow-Full-Name">Steel Bow</option>
-                                <option value="Silvered Bow" selected="selected" data-i18n="Silvered Bow-Full-Name">Silvered Bow</option>
-                                <option value="Gilded Bow" selected="selected" data-i18n="Gilded Bow-Full-Name">Gilded Bow</option>
-                                <option value="Orichalcum Bow" selected="selected" data-i18n="Orichalcum Bow-Full-Name">Orichalcum Bow</option>
-                                <option disabled data-i18n="Weapon-Type-Yumi-indent" class="OptionCategoryH2"> > Yumi</option>
-                                <option value="Copper Yumi" selected="selected" data-i18n="Copper Yumi-Full-Name">Copper Yumi</option>
-                                <option value="Bronze Yumi" selected="selected" data-i18n="Bronze Yumi-Full-Name">Bronze Yumi</option>
-                                <option value="Iron Yumi" selected="selected" data-i18n="Iron Yumi-Full-Name">Iron Yumi</option>
-                                <option value="Steel Yumi" selected="selected" data-i18n="Steel Yumi-Full-Name">Steel Yumi</option>
-                                <option value="Silvered Yumi" selected="selected" data-i18n="Silvered Yumi-Full-Name">Silvered Yumi</option>
-                                <option value="Gilded Yumi" selected="selected" data-i18n="Gilded Yumi-Full-Name">Gilded Yumi</option>
-                                <option value="Orichalcum Yumi" selected="selected" data-i18n="Orichalcum Yumi-Full-Name">Orichalcum Yumi</option>
-                                <option disabled data-i18n="Weapon-Type-Flintlock-indent" class="OptionCategoryH2"> > Flintlock</option>
-                                <option value="Copper Flintlock" selected="selected" data-i18n="Copper Flintlock-Full-Name">Copper Flintlock</option>
-                                <option value="Bronze Flintlock" selected="selected" data-i18n="Bronze Flintlock-Full-Name">Bronze Flintlock</option>
-                                <option value="Iron Flintlock" selected="selected" data-i18n="Iron Flintlock-Full-Name">Iron Flintlock</option>
-                                <option value="Steel Flintlock" selected="selected" data-i18n="Steel Flintlock-Full-Name">Steel Flintlock</option>
-                                <option value="Silvered Flintlock" selected="selected" data-i18n="Silvered Flintlock-Full-Name">Silvered Flintlock</option>
-                                <option value="Gilded Flintlock" selected="selected" data-i18n="Gilded Flintlock-Full-Name">Gilded Flintlock</option>
-                                <option value="Orichalcum Flintlock" selected="selected" data-i18n="Orichalcum Flintlock-Full-Name">Orichalcum Flintlock</option>
-                                <option disabled data-i18n="Weapon-Type-Magical" class="OptionCategoryH1">Magical</option>
-                                <option disabled data-i18n="Weapon-Type-Wind-indent" class="OptionCategoryH2"> > Wind</option>
-                                <option value="Copper Wind" selected="selected" data-i18n="Copper Wind-Full-Name">Copper Wind</option>
-                                <option value="Bronze Wind" selected="selected" data-i18n="Bronze Wind-Full-Name">Bronze Wind</option>
-                                <option value="Iron Wind" selected="selected" data-i18n="Iron Wind-Full-Name">Iron Wind</option>
-                                <option value="Steel Wind" selected="selected" data-i18n="Steel Wind-Full-Name">Steel Wind</option>
-                                <option value="Silvered Wind" selected="selected" data-i18n="Silvered Wind-Full-Name">Silvered Wind</option>
-                                <option value="Gilded Wind" selected="selected" data-i18n="Gilded Wind-Full-Name">Gilded Wind</option>
-                                <option value="Orichalcum Wind" selected="selected" data-i18n="Orichalcum Wind-Full-Name">Orichalcum Wind</option>
-                                <option disabled data-i18n="Weapon-Type-Dark-indent" class="OptionCategoryH2"> > Dark</option>
-                                <option value="Copper Dark" selected="selected" data-i18n="Copper Dark-Full-Name">Copper Dark</option>
-                                <option value="Bronze Dark" selected="selected" data-i18n="Bronze Dark-Full-Name">Bronze Dark</option>
-                                <option value="Iron Dark" selected="selected" data-i18n="Iron Dark-Full-Name">Iron Dark</option>
-                                <option value="Steel Dark" selected="selected" data-i18n="Steel Dark-Full-Name">Steel Dark</option>
-                                <option value="Silvered Dark" selected="selected" data-i18n="Silvered Dark-Full-Name">Silvered Dark</option>
-                                <option value="Gilded Dark" selected="selected" data-i18n="Gilded Dark-Full-Name">Gilded Dark</option>
-                                <option value="Orichalcum Dark" selected="selected" data-i18n="Orichalcum Dark-Full-Name">Orichalcum Dark</option>
-                                <option disabled data-i18n="Weapon-Type-Light-indent" class="OptionCategoryH2"> > Light</option>
-                                <option value="Copper Light" selected="selected" data-i18n="Copper Light-Full-Name">Copper Light</option>
-                                <option value="Bronze Light" selected="selected" data-i18n="Bronze Light-Full-Name">Bronze Light</option>
-                                <option value="Iron Light" selected="selected" data-i18n="Iron Light-Full-Name">Iron Light</option>
-                                <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
-                                <option value="Silvered Light" selected="selected" data-i18n="Silvered Light-Full-Name">Silvered Light</option>
-                                <option value="Steel Light" selected="selected" data-i18n="Steel Light-Full-Name">Steel Light</option>
-                                <option value="Orichalcum Light" selected="selected" data-i18n="Orichalcum Light-Full-Name">Orichalcum Light</option>
-                                <option disabled data-i18n="Weapon-Type-Lightning-indent" class="OptionCategoryH2"> > Lightning</option>
-                                <option value="Copper Lightning" selected="selected" data-i18n="Copper Lightning-Full-Name">Copper Lightning</option>
-                                <option value="Bronze Lightning" selected="selected" data-i18n="Bronze Lightning-Full-Name">Bronze Lightning</option>
-                                <option value="Iron Lightning" selected="selected" data-i18n="Iron Lightning-Full-Name">Iron Lightning</option>
-                                <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
-                                <option value="Silvered Lightning" selected="selected" data-i18n="Silvered Lightning-Full-Name">Silvered Lightning</option>
-                                <option value="Steel Lightning" selected="selected" data-i18n="Steel Lightning-Full-Name">Steel Lightning</option>
-                                <option value="Orichalcum Lightning" selected="selected" data-i18n="Orichalcum Lightning-Full-Name">Orichalcum Lightning</option>
-                                <option disabled data-i18n="Weapon-Type-Fire-indent" class="OptionCategoryH2"> > Fire</option>
-                                <option value="Copper Fire" selected="selected" data-i18n="Copper Fire-Full-Name">Copper Fire</option>
-                                <option value="Bronze Fire" selected="selected" data-i18n="Bronze Fire-Full-Name">Bronze Fire</option>
-                                <option value="Iron Fire" selected="selected" data-i18n="Iron Fire-Full-Name">Iron Fire</option>
-                                <option value="Steel Fire" selected="selected" data-i18n="Steel Fire-Full-Name">Steel Fire</option>
-                                <option value="Silvered Fire" selected="selected" data-i18n="Silvered Fire-Full-Name">Silvered Fire</option>
-                                <option value="Gilded Fire" selected="selected" data-i18n="Gilded Fire-Full-Name">Gilded Fire</option>
-                                <option value="Orichalcum Fire" selected="selected" data-i18n="Orichalcum Fire-Full-Name">Orichalcum Fire</option>
-                                <option disabled data-i18n="Weapon-Type-Spirit-indent" class="OptionCategoryH2"> > Spirit</option>
-                                <option value="Copper Spirit" selected="selected" data-i18n="Copper Spirit-Full-Name">Copper Spirit</option>
-                                <option value="Bronze Spirit" selected="selected" data-i18n="Bronze Spirit-Full-Name">Bronze Spirit</option>
-                                <option value="Iron Spirit" selected="selected" data-i18n="Iron Spirit-Full-Name">Iron Spirit</option>
-                                <option value="Steel Spirit" selected="selected" data-i18n="Steel Spirit-Full-Name">Steel Spirit</option>
-                                <option value="Silvered Spirit" selected="selected" data-i18n="Silvered Spirit-Full-Name">Silvered Spirit</option>
-                                <option value="Gilded Spirit" selected="selected" data-i18n="Gilded Spirit-Full-Name">Gilded Spirit</option>
-                                <option value="Orichalcum Spirit" selected="selected" data-i18n="Orichalcum Spirit-Full-Name">Orichalcum Spirit</option>
-                                <option disabled data-i18n="Weapon-Type-Staff-indent" class="OptionCategoryH2"> > Staff</option>
-                                <option value="Copper Staff" selected="selected" data-i18n="Copper Staff-Full-Name">Copper Staff</option>
-                                <option value="Bronze Staff" selected="selected" data-i18n="Bronze Staff-Full-Name">Bronze Staff</option>
-                                <option value="Iron Staff" selected="selected" data-i18n="Iron Staff-Full-Name">Iron Staff</option>
-                                <option value="Steel Staff" selected="selected" data-i18n="Steel Staff-Full-Name">Steel Staff</option>
-                                <option value="Silvered Staff" selected="selected" data-i18n="Silvered Staff-Full-Name">Silvered Staff</option>
-                                <option value="Gilded Staff" selected="selected" data-i18n="Gilded Staff-Full-Name">Gilded Staff</option>
-                                <option value="Orichalcum Staff" selected="selected" data-i18n="Orichalcum Staff-Full-Name">Orichalcum Staff</option>
-                                <option disabled data-i18n="Weapon-Type-Animal" class="OptionCategoryH1">Animal</option>
-                                <option disabled data-i18n="Weapon-Type-Claw-indent" class="OptionCategoryH2"> > Claw</option>
-                                <option value="Copper Claw" selected="selected" data-i18n="Copper Claw-Full-Name">Copper Claw</option>
-                                <option value="Bronze Claw" selected="selected" data-i18n="Bronze Claw-Full-Name">Bronze Claw</option>
-                                <option value="Iron Claw" selected="selected" data-i18n="Iron Claw-Full-Name">Iron Claw</option>
-                                <option value="Steel Claw" selected="selected" data-i18n="Steel Claw-Full-Name">Steel Claw</option>
-                                <option value="Silvered Claw" selected="selected" data-i18n="Silvered Claw-Full-Name">Silvered Claw</option>
-                                <option value="Gilded Claw" selected="selected" data-i18n="Gilded Claw-Full-Name">Gilded Claw</option>
-                                <option value="Orichalcum Claw" selected="selected" data-i18n="Orichalcum Claw-Full-Name">Orichalcum Claw</option>
-                                <option disabled data-i18n="Weapon-Type-Hoof-indent" class="OptionCategoryH2"> > Hoof</option>
-                                <option value="Copper Hoof" selected="selected" data-i18n="Copper Hoof-Full-Name">Copper Hoof</option>
-                                <option value="Bronze Hoof" selected="selected" data-i18n="Bronze Hoof-Full-Name">Bronze Hoof</option>
-                                <option value="Iron Hoof" selected="selected" data-i18n="Iron Hoof-Full-Name">Iron Hoof</option>
-                                <option value="Steel Hoof" selected="selected" data-i18n="Steel Hoof-Full-Name">Steel Hoof</option>
-                                <option value="Silvered Hoof" selected="selected" data-i18n="Silvered Hoof-Full-Name">Silvered Hoof</option>
-                                <option value="Gilded Hoof" selected="selected" data-i18n="Gilded Hoof-Full-Name">Gilded Hoof</option>
-                                <option value="Orichalcum Hoof" selected="selected" data-i18n="Orichalcum Hoof-Full-Name">Orichalcum Hoof</option>
-                                <option disabled data-i18n="Weapon-Type-Bite-indent" class="OptionCategoryH2"> > Bite</option>
-                                <option value="Copper Bite" selected="selected" data-i18n="Copper Bite-Full-Name">Copper Bite</option>
-                                <option value="Bronze Bite" selected="selected" data-i18n="Bronze Bite-Full-Name">Bronze Bite</option>
-                                <option value="Iron Bite" selected="selected" data-i18n="Iron Bite-Full-Name">Iron Bite</option>
-                                <option value="Steel Bite" selected="selected" data-i18n="Steel Bite-Full-Name">Steel Bite</option>
-                                <option value="Silvered Bite" selected="selected" data-i18n="Silvered Bite-Full-Name">Silvered Bite</option>
-                                <option value="Gilded Bite" selected="selected" data-i18n="Gilded Bite-Full-Name">Gilded Bite</option>
-                                <option value="Orichalcum Bite" selected="selected" data-i18n="Orichalcum Bite-Full-Name">Orichalcum Bite</option>
-                                <option disabled data-i18n="Weapon-Type-Gore-indent" class="OptionCategoryH2"> > Gore</option>
-                                <option value="Copper Gore" selected="selected" data-i18n="Copper Gore-Full-Name">Copper Gore</option>
-                                <option value="Bronze Gore" selected="selected" data-i18n="Bronze Gore-Full-Name">Bronze Gore</option>
-                                <option value="Iron Gore" selected="selected" data-i18n="Iron Gore-Full-Name">Iron Gore</option>
-                                <option value="Steel Gore" selected="selected" data-i18n="Steel Gore-Full-Name">Steel Gore</option>
-                                <option value="Silvered Gore" selected="selected" data-i18n="Silvered Gore-Full-Name">Silvered Gore</option>
-                                <option value="Gilded Gore" selected="selected" data-i18n="Gilded Gore-Full-Name">Gilded Gore</option>
-                                <option value="Orichalcum Gore" selected="selected" data-i18n="Orichalcum Gore-Full-Name">Orichalcum Gore</option>
-                                <option disabled data-i18n="Weapon-Type-Sting-indent" class="OptionCategoryH2"> > Sting</option>
-                                <option value="Copper Sting" selected="selected" data-i18n="Copper Sting-Full-Name">Copper Sting</option>
-                                <option value="Bronze Sting" selected="selected" data-i18n="Bronze Sting-Full-Name">Bronze Sting</option>
-                                <option value="Iron Sting" selected="selected" data-i18n="Iron Sting-Full-Name">Iron Sting</option>
-                                <option value="Steel Sting" selected="selected" data-i18n="Steel Sting-Full-Name">Steel Sting</option>
-                                <option value="Silvered Sting" selected="selected" data-i18n="Silvered Sting-Full-Name">Silvered Sting</option>
-                                <option value="Gilded Sting" selected="selected" data-i18n="Gilded Sting-Full-Name">Gilded Sting</option>
-                                <option value="Orichalcum Sting" selected="selected" data-i18n="Orichalcum Sting-Full-Name">Orichalcum Sting</option>
-                                <option disabled data-i18n="Weapon-Type-Punch-indent" class="OptionCategoryH2"> > Punch</option>
-                                <option value="Copper Punch" selected="selected" data-i18n="Copper Punch-Full-Name">Copper Punch</option>
-                                <option value="Bronze Punch" selected="selected" data-i18n="Bronze Punch-Full-Name">Bronze Punch</option>
-                                <option value="Iron Punch" selected="selected" data-i18n="Iron Punch-Full-Name">Iron Punch</option>
-                                <option value="Steel Punch" selected="selected" data-i18n="Steel Punch-Full-Name">Steel Punch</option>
-                                <option value="Silvered Punch" selected="selected" data-i18n="Silvered Punch-Full-Name">Silvered Punch</option>
-                                <option value="Gilded Punch" selected="selected" data-i18n="Gilded Punch-Full-Name">Gilded Punch</option>
-                                <option value="Orichalcum Punch" selected="selected" data-i18n="Orichalcum Punch-Full-Name">Orichalcum Punch</option>
-                                <option disabled data-i18n="Weapon-Type-Slam-indent" class="OptionCategoryH2"> > Slam</option>
-                                <option value="Copper Slam" selected="selected" data-i18n="Copper Slam-Full-Name">Copper Slam</option>
-                                <option value="Bronze Slam" selected="selected" data-i18n="Bronze Slam-Full-Name">Bronze Slam</option>
-                                <option value="Iron Slam" selected="selected" data-i18n="Iron Slam-Full-Name">Iron Slam</option>
-                                <option value="Steel Slam" selected="selected" data-i18n="Steel Slam-Full-Name">Steel Slam</option>
-                                <option value="Silvered Slam" selected="selected" data-i18n="Silvered Slam-Full-Name">Silvered Slam</option>
-                                <option value="Gilded Slam" selected="selected" data-i18n="Gilded Slam-Full-Name">Gilded Slam</option>
-                                <option value="Orichalcum Slam" selected="selected" data-i18n="Orichalcum Slam-Full-Name">Orichalcum Slam</option>
+                                <option value="Sword" selected="selected">Sword</option>
+                                <option value="Axe" selected="selected">Axe</option>
+                                <option value="Lance" selected="selected">Lance</option>
+                                <option value="Gauntlet" selected="selected">Gauntlet</option>
+                                <option value="Crossbow" selected="selected">Crossbow</option>
+                                <option value="Knives" selected="selected">Knives</option>
+                                <option value="Bow" selected="selected">Bow</option>
+                                <option value="Flintlock" selected="selected">Flintlock</option>
+                                <option value="Wind" selected="selected">Wind</option>
+                                <option value="Light" selected="selected">Light</option>
+                                <option value="Fire" selected="selected">Fire</option>
+                                <option value="Staff" selected="selected">Staff</option>
+                                <option value="Beast" selected="selected">Beast</option>
                             </select></label>
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Level">Level</span> <input type="number" name="attr_CombatSkillLevel" min="1"/></label>
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Description">Description</span> <textarea class="PrimaryDescription" name="attr_CombatSkillDescription"></textarea></label>
@@ -1398,18 +1184,21 @@
       "temp_mod_hp","temp_mod_str","temp_mod_int","temp_mod_dex","temp_mod_spd","temp_mod_luk","temp_mod_con","temp_mod_wis","temp_mod_mov",
       "character_level","growth_skill_points","BaseDefaultHP"
     ], function(v) {
-      setAttrs({ 
-        stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
-        stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
-        hp_stat_total:  (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth) + toNumber(v.temp_mod_hp)) ,
-        str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth) + toNumber(v.temp_mod_str)),
-        dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth) + toNumber(v.temp_mod_dex)),
-        int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth) + toNumber(v.temp_mod_int)),
-        spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth) + toNumber(v.temp_mod_spd)),
-        luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth) + toNumber(v.temp_mod_luk)),
-        con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth) + toNumber(v.temp_mod_con)),
-        wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth) + toNumber(v.temp_mod_wis)),
-        mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill) + toNumber(v.temp_mod_mov))
+      const baseHpTotal = (Number(v.hp_stat_base)  + Number(v.hp_stat_CT)  + Number(v.hp_stat_skill)  + Number(v.hp_stat_growth) + toNumber(v.temp_mod_hp));
+      getHeartyHpBonus(baseHpTotal, function(heartyHpBonus) {
+        setAttrs({ 
+          stat_base_points: ( Number(v.BaseClassPoints) + Math.floor(Number(v.character_level)/Number(v.LevelClassPointsRate))*Number(v.LevelClassPoints) - ( Math.floor((Number(v.hp_stat_base) + 2.0) / 3.0) + Number(v.str_stat_base) + Number(v.int_stat_base) + Number(v.dex_stat_base) + Number(v.spd_stat_base) + Math.floor(Number(v.luk_stat_base)/2.0) + Number(v.con_stat_base) + Number(v.wis_stat_base) + Math.floor(Number(v.mov_stat_base)*2.0) + Number(v.growth_skill_points) ) ),
+          stat_creature_type_points: (Number(v.CtClassPoints) - ( Math.floor( ( Number(v.hp_stat_CT) - Number(v.BaseDefaultHP) ) / 3.0) + Number(v.str_stat_CT) + Number(v.int_stat_CT) + Number(v.dex_stat_CT) + Number(v.spd_stat_CT) + Math.floor(Number(v.luk_stat_CT)/2.0) + Number(v.con_stat_CT) + Number(v.wis_stat_CT) + Math.floor(Number(v.mov_stat_CT)*2.0) ) ),
+          hp_stat_total:  (baseHpTotal + heartyHpBonus) ,
+          str_stat_total: (Number(v.str_stat_base) + Number(v.str_stat_CT) + Number(v.str_stat_skill) + Number(v.str_stat_growth) + toNumber(v.temp_mod_str)),
+          dex_stat_total: (Number(v.dex_stat_base) + Number(v.dex_stat_CT) + Number(v.dex_stat_skill) + Number(v.dex_stat_growth) + toNumber(v.temp_mod_dex)),
+          int_stat_total: (Number(v.int_stat_base) + Number(v.int_stat_CT) + Number(v.int_stat_skill) + Number(v.int_stat_growth) + toNumber(v.temp_mod_int)),
+          spd_stat_total: (Number(v.spd_stat_base) + Number(v.spd_stat_CT) + Number(v.spd_stat_skill) + Number(v.spd_stat_growth) + toNumber(v.temp_mod_spd)),
+          luk_stat_total: (Number(v.luk_stat_base) + Number(v.luk_stat_CT) + Number(v.luk_stat_skill) + Number(v.luk_stat_growth) + toNumber(v.temp_mod_luk)),
+          con_stat_total: (Number(v.con_stat_base) + Number(v.con_stat_CT) + Number(v.con_stat_skill) + Number(v.con_stat_growth) + toNumber(v.temp_mod_con)),
+          wis_stat_total: (Number(v.wis_stat_base) + Number(v.wis_stat_CT) + Number(v.wis_stat_skill) + Number(v.wis_stat_growth) + toNumber(v.temp_mod_wis)),
+          mov_stat_total: (Number(v.mov_stat_base) + Number(v.mov_stat_CT) + Number(v.mov_stat_skill) + toNumber(v.temp_mod_mov))
+        });
       });
     });
   };
@@ -1597,6 +1386,51 @@
     return toNumber(cleaned);
   }
 
+  function getCombatSkillRows(callback) {
+    getSectionIDs("repeating_combatskillslist", function(ids) {
+      if (!ids || ids.length === 0) {
+        callback([]);
+        return;
+      }
+
+      const attrs = [];
+      ids.forEach((id) => {
+        attrs.push(`repeating_combatskillslist_${id}_CombatSkill`);
+        attrs.push(`repeating_combatskillslist_${id}_CombatSkillLevel`);
+        attrs.push(`repeating_combatskillslist_${id}_StatCombatSkillSelector`);
+        attrs.push(`repeating_combatskillslist_${id}_WeaponCombatSkillSelector`);
+      });
+
+      getAttrs(attrs, function(values) {
+        const rows = ids.map((id) => ({
+          name: values[`repeating_combatskillslist_${id}_CombatSkill`] || "",
+          level: toNumber(values[`repeating_combatskillslist_${id}_CombatSkillLevel`]),
+          stat: (values[`repeating_combatskillslist_${id}_StatCombatSkillSelector`] || "").toLowerCase(),
+          weapon: values[`repeating_combatskillslist_${id}_WeaponCombatSkillSelector`] || ""
+        }));
+        callback(rows);
+      });
+    });
+  }
+
+  function applyPercentStatBonus(target, stat, baseValue, percentPerLevel, level) {
+    if (!target[stat]) { target[stat] = 0; }
+    target[stat] += Math.floor(baseValue * percentPerLevel * level);
+  }
+
+  function getHeartyHpBonus(baseHpTotal, callback) {
+    getCombatSkillRows(function(rows) {
+      let totalHeartyLevel = 0;
+      rows.forEach((row) => {
+        if (row.name === "Hearty") {
+          totalHeartyLevel += row.level;
+        }
+      });
+
+      callback(Math.floor(toNumber(baseHpTotal) * 0.2 * totalHeartyLevel));
+    });
+  }
+
   function getGreatSkillActivationFromDescription(description, fallbackStat, fallbackMultiplier) {
     const text = String(description || "");
     const match = text.match(/\b(STR|INT|DEX|SPD|LUK|CON|WIS)\s*(?:([x\/])\s*(\d+(?:\.\d+)?))?%/i);
@@ -1736,22 +1570,154 @@
 
   function CalculateFrontSheetStats() {
     getAttrs([
+      "current_hp","hp_stat_total","character_level",
       "str_stat_total","int_stat_total","dex_stat_total","spd_stat_total","luk_stat_total","con_stat_total","wis_stat_total",
-      "Equipped_Weapon_DamageType","Equipped_Weapon_Might","Equipped_Weapon_Accuracy","Equipped_Weapon_Critical",
+      "Equipped_Weapon_Type",
+      "Equipped_Weapon_DamageType","Equipped_Weapon_Level","Equipped_Weapon_Might","Equipped_Weapon_Accuracy","Equipped_Weapon_Critical",
       "Equipped_Weapon_STR","Equipped_Weapon_INT","Equipped_Weapon_DEX","Equipped_Weapon_SPD","Equipped_Weapon_LUK","Equipped_Weapon_CON","Equipped_Weapon_WIS",
       "Equipped_Item_Might","Equipped_Item_Accuracy","Equipped_Item_Critical","Equipped_Item_Dodge","Equipped_Item_Avoid","Equipped_Item_Defense","Equipped_Item_Resistance",
       "temp_mod_mgt","temp_mod_acc","temp_mod_crt","temp_mod_dge","temp_mod_avd","temp_mod_def","temp_mod_res"
     ], function(v) {
-      const effectiveStr = toNumber(v.str_stat_total) + toNumber(v.Equipped_Weapon_STR);
-      const effectiveInt = toNumber(v.int_stat_total) + toNumber(v.Equipped_Weapon_INT);
-      const effectiveDex = toNumber(v.dex_stat_total) + toNumber(v.Equipped_Weapon_DEX);
-      const effectiveSpd = toNumber(v.spd_stat_total) + toNumber(v.Equipped_Weapon_SPD);
-      const effectiveLuk = toNumber(v.luk_stat_total) + toNumber(v.Equipped_Weapon_LUK);
-      const effectiveCon = toNumber(v.con_stat_total) + toNumber(v.Equipped_Weapon_CON);
-      const effectiveWis = toNumber(v.wis_stat_total) + toNumber(v.Equipped_Weapon_WIS);
+      getCombatSkillRows(function(skillRows) {
+        const baseStats = {
+          str: toNumber(v.str_stat_total),
+          int: toNumber(v.int_stat_total),
+          dex: toNumber(v.dex_stat_total),
+          spd: toNumber(v.spd_stat_total),
+          luk: toNumber(v.luk_stat_total),
+          con: toNumber(v.con_stat_total),
+          wis: toNumber(v.wis_stat_total)
+        };
+
+        const sharedStatBonus = { str: 0, int: 0, dex: 0, spd: 0, luk: 0, con: 0, wis: 0 };
+        const attackOnlyStatBonus = { str: 0, int: 0, dex: 0, spd: 0, luk: 0, con: 0, wis: 0 };
+        const riposteOnlyStatBonus = { str: 0, int: 0, dex: 0, spd: 0, luk: 0, con: 0, wis: 0 };
+        let neutralTriangleBonus = 0;
+        let advantageTriangleBonus = 0;
+        let disadvantageTriangleReduction = 0;
+        let masteryAccuracyBonus = 0;
+        let masteryMightPercent = 0;
+        let masteryCriticalPercent = 0;
+
+        const hpNow = toNumber(v.current_hp);
+        const hpTotal = Math.max(1, toNumber(v.hp_stat_total));
+        const hpRatio = hpNow / hpTotal;
+        const equippedWeaponType = v.Equipped_Weapon_Type || "";
+
+        skillRows.forEach((row) => {
+          const level = Math.max(0, row.level);
+          if (!row.name || level <= 0) { return; }
+
+          switch (row.name) {
+            case "Fury":
+              ["str", "int", "dex", "spd", "luk", "con", "wis"].forEach((stat) => {
+                applyPercentStatBonus(sharedStatBonus, stat, baseStats[stat], 0.1, level);
+              });
+              break;
+            case "Rapturous Brutality":
+              applyPercentStatBonus(sharedStatBonus, "str", baseStats.str, 0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "int", baseStats.int, 0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "spd", baseStats.spd, 0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "dex", baseStats.dex, -0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "con", baseStats.con, -0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "wis", baseStats.wis, -0.1, level);
+              break;
+            case "Resolute Bastion":
+              applyPercentStatBonus(sharedStatBonus, "str", baseStats.str, -0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "int", baseStats.int, -0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "spd", baseStats.spd, -0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "dex", baseStats.dex, 0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "con", baseStats.con, 0.1, level);
+              applyPercentStatBonus(sharedStatBonus, "wis", baseStats.wis, 0.1, level);
+              break;
+            case "Controlled Strike":
+              if (hpRatio > 0.7 && row.stat) {
+                applyPercentStatBonus(sharedStatBonus, row.stat, baseStats[row.stat] || 0, 0.1, level);
+              }
+              break;
+            case "Cornered Strike":
+              if (hpRatio <= 0.5 && row.stat) {
+                applyPercentStatBonus(sharedStatBonus, row.stat, baseStats[row.stat] || 0, 0.1, level);
+              }
+              break;
+            case "Practiced Aggression":
+              if (row.stat) {
+                applyPercentStatBonus(attackOnlyStatBonus, row.stat, baseStats[row.stat] || 0, 0.1, level);
+              }
+              break;
+            case "Elegant Riposte":
+              if (row.stat) {
+                applyPercentStatBonus(riposteOnlyStatBonus, row.stat, baseStats[row.stat] || 0, 0.1, level);
+              }
+              break;
+            case "Colorblind Fighter":
+              neutralTriangleBonus += level;
+              break;
+            case "Janken Mastery":
+              advantageTriangleBonus += level;
+              break;
+            case "Janken Defense":
+              disadvantageTriangleReduction += level;
+              break;
+            case "Weapon Mastery 1":
+              if (row.weapon === equippedWeaponType) {
+                masteryAccuracyBonus += level * toNumber(v.character_level);
+              }
+              break;
+            case "Weapon Mastery 2":
+              if (row.weapon === equippedWeaponType) {
+                masteryMightPercent += 0.1 * level * toNumber(v.character_level);
+              }
+              break;
+            case "Weapon Mastery 3":
+              if (row.weapon === equippedWeaponType) {
+                masteryCriticalPercent += 0.5 * level * toNumber(v.character_level);
+              }
+              break;
+            default:
+              break;
+          }
+        });
+
+        const attackStats = {
+          str: baseStats.str + sharedStatBonus.str + attackOnlyStatBonus.str,
+          int: baseStats.int + sharedStatBonus.int + attackOnlyStatBonus.int,
+          dex: baseStats.dex + sharedStatBonus.dex + attackOnlyStatBonus.dex,
+          spd: baseStats.spd + sharedStatBonus.spd + attackOnlyStatBonus.spd,
+          luk: baseStats.luk + sharedStatBonus.luk + attackOnlyStatBonus.luk,
+          con: baseStats.con + sharedStatBonus.con + attackOnlyStatBonus.con,
+          wis: baseStats.wis + sharedStatBonus.wis + attackOnlyStatBonus.wis
+        };
+
+        const riposteStats = {
+          str: baseStats.str + sharedStatBonus.str + riposteOnlyStatBonus.str,
+          int: baseStats.int + sharedStatBonus.int + riposteOnlyStatBonus.int,
+          dex: baseStats.dex + sharedStatBonus.dex + riposteOnlyStatBonus.dex,
+          spd: baseStats.spd + sharedStatBonus.spd + riposteOnlyStatBonus.spd,
+          luk: baseStats.luk + sharedStatBonus.luk + riposteOnlyStatBonus.luk,
+          con: baseStats.con + sharedStatBonus.con + riposteOnlyStatBonus.con,
+          wis: baseStats.wis + sharedStatBonus.wis + riposteOnlyStatBonus.wis
+        };
+
+      const effectiveAttackStr = attackStats.str + toNumber(v.Equipped_Weapon_STR);
+      const effectiveAttackInt = attackStats.int + toNumber(v.Equipped_Weapon_INT);
+      const effectiveAttackDex = attackStats.dex + toNumber(v.Equipped_Weapon_DEX);
+      const effectiveAttackSpd = attackStats.spd + toNumber(v.Equipped_Weapon_SPD);
+      const effectiveAttackLuk = attackStats.luk + toNumber(v.Equipped_Weapon_LUK);
+      const effectiveAttackCon = attackStats.con + toNumber(v.Equipped_Weapon_CON);
+      const effectiveAttackWis = attackStats.wis + toNumber(v.Equipped_Weapon_WIS);
+
+      const effectiveRiposteStr = riposteStats.str + toNumber(v.Equipped_Weapon_STR);
+      const effectiveRiposteInt = riposteStats.int + toNumber(v.Equipped_Weapon_INT);
+      const effectiveRiposteDex = riposteStats.dex + toNumber(v.Equipped_Weapon_DEX);
+      const effectiveRiposteSpd = riposteStats.spd + toNumber(v.Equipped_Weapon_SPD);
+      const effectiveRiposteLuk = riposteStats.luk + toNumber(v.Equipped_Weapon_LUK);
+      const effectiveRiposteCon = riposteStats.con + toNumber(v.Equipped_Weapon_CON);
+      const effectiveRiposteWis = riposteStats.wis + toNumber(v.Equipped_Weapon_WIS);
 
       const isMagicWeapon = String(v.Equipped_Weapon_DamageType || "").toLowerCase() === "magical";
-      const powerStat = isMagicWeapon ? effectiveInt : effectiveStr;
+      const attackPowerStat = isMagicWeapon ? effectiveAttackInt : effectiveAttackStr;
+      const ripostePowerStat = isMagicWeapon ? effectiveRiposteInt : effectiveRiposteStr;
 
       const weaponMight = toNumber(v.Equipped_Weapon_Might);
       const weaponAccuracy = toNumber(v.Equipped_Weapon_Accuracy);
@@ -1765,13 +1731,31 @@
       const itemDefense = toNumber(v.Equipped_Item_Defense);
       const itemResistance = toNumber(v.Equipped_Item_Resistance);
 
-      const attackMight = powerStat + weaponMight + itemMight + toNumber(v.temp_mod_mgt);
-      const attackAccuracy = (effectiveDex * 2) + effectiveLuk + weaponAccuracy + itemAccuracy + toNumber(v.temp_mod_acc);
-      const attackCritical = effectiveDex + Math.floor(effectiveLuk / 2) + weaponCritical + itemCritical + toNumber(v.temp_mod_crt);
-      const attackDodge = (effectiveSpd * 2) + itemDodge + toNumber(v.temp_mod_dge);
-      const attackAvoid = (effectiveSpd * 2) + effectiveLuk + itemAvoid + toNumber(v.temp_mod_avd);
-      const attackDefense = effectiveCon + itemDefense + toNumber(v.temp_mod_def);
-      const attackResistance = effectiveWis + itemResistance + toNumber(v.temp_mod_res);
+      let attackMight = attackPowerStat + weaponMight + itemMight + toNumber(v.temp_mod_mgt);
+      let attackAccuracy = (effectiveAttackDex * 2) + effectiveAttackLuk + weaponAccuracy + itemAccuracy + toNumber(v.temp_mod_acc);
+      let attackCritical = effectiveAttackDex + Math.floor(effectiveAttackLuk / 2) + weaponCritical + itemCritical + toNumber(v.temp_mod_crt);
+      const attackDodge = (effectiveAttackSpd * 2) + itemDodge + toNumber(v.temp_mod_dge);
+      const attackAvoid = (effectiveAttackSpd * 2) + effectiveAttackLuk + itemAvoid + toNumber(v.temp_mod_avd);
+      const attackDefense = effectiveAttackCon + itemDefense + toNumber(v.temp_mod_def);
+      const attackResistance = effectiveAttackWis + itemResistance + toNumber(v.temp_mod_res);
+
+      attackMight += Math.floor(attackMight * masteryMightPercent);
+      attackAccuracy += masteryAccuracyBonus;
+      attackCritical += Math.floor(attackCritical * masteryCriticalPercent);
+
+      let riposteMight = ripostePowerStat + weaponMight + itemMight + toNumber(v.temp_mod_mgt);
+      let riposteAccuracy = (effectiveRiposteDex * 2) + effectiveRiposteLuk + weaponAccuracy + itemAccuracy + toNumber(v.temp_mod_acc);
+      let riposteCritical = effectiveRiposteDex + Math.floor(effectiveRiposteLuk / 2) + weaponCritical + itemCritical + toNumber(v.temp_mod_crt);
+      const riposteDodge = (effectiveRiposteSpd * 2) + itemDodge + toNumber(v.temp_mod_dge);
+      const riposteAvoid = (effectiveRiposteSpd * 2) + effectiveRiposteLuk + itemAvoid + toNumber(v.temp_mod_avd);
+      const riposteDefense = effectiveRiposteCon + itemDefense + toNumber(v.temp_mod_def);
+      const riposteResistance = effectiveRiposteWis + itemResistance + toNumber(v.temp_mod_res);
+
+      riposteMight += Math.floor(riposteMight * masteryMightPercent);
+      riposteAccuracy += masteryAccuracyBonus;
+      riposteCritical += Math.floor(riposteCritical * masteryCriticalPercent);
+
+      const baseTriangleLevel = toNumber(v.Equipped_Weapon_Level);
 
       setAttrs({
         AttackMight: attackMight,
@@ -1781,13 +1765,20 @@
         AttackAvoid: attackAvoid,
         AttackDefense: attackDefense,
         AttackResistance: attackResistance,
-        RiposteMight: attackMight,
-        RiposteAccuracy: attackAccuracy,
-        RiposteCritical: attackCritical,
-        RiposteDodge: attackDodge,
-        RiposteAvoid: attackAvoid,
-        RiposteDefense: attackDefense,
-        RiposteResistance: attackResistance
+        RiposteMight: riposteMight,
+        RiposteAccuracy: riposteAccuracy,
+        RiposteCritical: riposteCritical,
+        RiposteDodge: riposteDodge,
+        RiposteAvoid: riposteAvoid,
+        RiposteDefense: riposteDefense,
+        RiposteResistance: riposteResistance,
+        AttackTriangleNeutralLevel: neutralTriangleBonus,
+        AttackTriangleAdvantageLevel: baseTriangleLevel + advantageTriangleBonus,
+        AttackTriangleDisadvantageLevel: Math.max(0, baseTriangleLevel - disadvantageTriangleReduction),
+        RiposteTriangleNeutralLevel: neutralTriangleBonus,
+        RiposteTriangleAdvantageLevel: baseTriangleLevel + advantageTriangleBonus,
+        RiposteTriangleDisadvantageLevel: Math.max(0, baseTriangleLevel - disadvantageTriangleReduction)
+      });
       });
     });
   }
@@ -1958,6 +1949,7 @@
         });
     });
     CalculateSkillStats();
+    CalculateStatPointGrid();
   });
 
 
@@ -2056,7 +2048,7 @@
     if (rowId) { PopulateItemRow(rowId); }
   });
 
-  on("change:str_stat_total change:int_stat_total change:dex_stat_total change:spd_stat_total change:luk_stat_total change:con_stat_total change:wis_stat_total change:Equipped_Weapon_DamageType change:Equipped_Weapon_Might change:Equipped_Weapon_Accuracy change:Equipped_Weapon_Critical change:Equipped_Weapon_STR change:Equipped_Weapon_INT change:Equipped_Weapon_DEX change:Equipped_Weapon_SPD change:Equipped_Weapon_LUK change:Equipped_Weapon_CON change:Equipped_Weapon_WIS change:Equipped_Item_Might change:Equipped_Item_Accuracy change:Equipped_Item_Critical change:Equipped_Item_Dodge change:Equipped_Item_Avoid change:Equipped_Item_Defense change:Equipped_Item_Resistance sheet:opened", function() {
+  on("change:current_hp change:hp_stat_total change:str_stat_total change:int_stat_total change:dex_stat_total change:spd_stat_total change:luk_stat_total change:con_stat_total change:wis_stat_total change:Equipped_Weapon_DamageType change:Equipped_Weapon_Type change:Equipped_Weapon_Level change:Equipped_Weapon_Might change:Equipped_Weapon_Accuracy change:Equipped_Weapon_Critical change:Equipped_Weapon_STR change:Equipped_Weapon_INT change:Equipped_Weapon_DEX change:Equipped_Weapon_SPD change:Equipped_Weapon_LUK change:Equipped_Weapon_CON change:Equipped_Weapon_WIS change:Equipped_Item_Might change:Equipped_Item_Accuracy change:Equipped_Item_Critical change:Equipped_Item_Dodge change:Equipped_Item_Avoid change:Equipped_Item_Defense change:Equipped_Item_Resistance change:repeating_combatskillslist:CombatSkill change:repeating_combatskillslist:CombatSkillLevel change:repeating_combatskillslist:StatCombatSkillSelector change:repeating_combatskillslist:WeaponCombatSkillSelector sheet:opened", function() {
     CalculateFrontSheetStats();
     SyncEquipmentRowsFromSelectors();
   });

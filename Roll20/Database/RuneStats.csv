@@ -1,0 +1,51 @@
+Name,Description,Weapon,Level,Max Level,Type,Might,Accuracy,Critical,Dodge,RangeMin,RangeMax,str,int,dex,spd,luk,con,wis,AttackCount,RiposteCount,ftAttackCount,ftRiposteCount,AttackPriority,RipostePriority,ftAttackPriority,ftRipostePriority,SkillSuccess,GreatSkillSuccess,GreatSkillDamage,Effect,Slayer
+Heavy,+1 Might per Rune Level,All,1,10,,1lvl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Light,+1 SPD per Rune Level,All,1,10,,0,0,0,0,0,0,0,0,0,1lvl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Seeking,+5 Accuracy per Rune Level,All,1,10,,0,5lvl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Defensive,+2 CON per Rune Level,All,1,10,,0,0,0,0,0,0,0,0,0,0,0,2lvl,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Resistant,+2 WIS per Rune Level,All,1,10,,0,0,0,0,0,0,0,0,0,0,0,0,2lvl,0,0,0,0,0,0,0,0,0,0,0,-,
+Fortress,+1 CON and WIS per Rune Level,All,1,10,,0,0,0,0,0,0,0,0,0,0,0,1lvl,1lvl,0,0,0,0,0,0,0,0,0,0,0,-,
+Evasive,+5 Dodge per Rune Level,All,1,10,,0,0,0,5lvl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Wicked,+5 Critical per Rune Level,All,1,10,,0,0,5lvl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Blessed,"At the start of your turn, recover 3 HP per Rune Level",All,1,10,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Healing,"The weapon can be used as a staff, and can heal an Ally by Might + INT HP",All,1,1,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Throwing,"Your weapon gains +1 Max Range, at the cost of 2 Might and 10 Accuracy","Sword, Axe, Lance",2,2,,-2,-10,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,
+Brave,Your Attack and Follow Through Attack trigger twice. Lose 5 Speed and Might,All,2,2,,-5,0,0,0,0,0,0,0,0,-5,0,0,0,0,0,1,1,0,0,0,0,0,0,0,-,
+Shadow,Your Follow Through Attacks trigger immediately after your basic attacks,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,-,
+Sweep,Neither you nor your opponent can Follow Through Attack or Riposte,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Sweep,
+Reaver,Reverse the direction of the Weapon Triangle,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Reaver,
+Slayer (Nobility),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Nobility,Nobility
+Slayer (Ride),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Ride,Ride
+Slayer (Fly),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Fly,Fly
+Slayer (Armored),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Armored,Armored
+Slayer (Runed),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Runed,Runed
+Slayer (Sing),Triple Weapon Might when using this weapon against an opponent with this Skill,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Sing,Sing
+Slayer (Human),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Human,Human
+Slayer (Elf),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Elf,Elf
+Slayer (Dwarf),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Dwarf,Dwarf
+Slayer (Orc),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Orc,Orc
+Slayer (Goblin),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Goblin,Goblin
+Slayer (Cyborg),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Cyborg,Cyborg
+Slayer (Carnivore),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Carnivore,Carnivore
+Slayer (Herbivore),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Herbivore,Herbivore
+Slayer (Dragon),Triple Weapon Might when using this weapon against an opponent with this Creature Type,All,2,2,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Dragon,Dragon
+Slayer (Sword),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Sword,Sword
+Slayer (Lance),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Lance,Lance
+Slayer (Axe),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Axe,Axe
+Slayer (Gauntlet),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Gauntlet,Gauntlet
+Slayer (Crossbow),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Crossbow,Crossbow
+Slayer (Knives),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Knives,Knives
+Slayer (Bow),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Bow,Bow
+Slayer (Flintlock),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Flintlock,Flintlock
+Slayer (Wind),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Wind,Wind
+Slayer (Light),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Light,Light
+Slayer (Fire),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Fire,Fire
+Slayer (Staff),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Staff,Staff
+Slayer (Beast),Triple Weapon Might when using this weapon against an opponent with this Weapon,All,3,3,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Beast,Beast
+Masterwork,Skills that have a %chance of activation get +5% per Rune Level,All,2,10,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.05lvl,0,0,-,-
+Wind Sword,"Your Sword becomes Magic, Gains Range 1-2, and the special ability Slayer (Fly)",Sword,3,3,Magical,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Fly,Fly
+Bolt Axe,"Your Axe becomes Magic, Gains Range 1-2, and the special ability Slayer (Dragon)",Axe,3,3,Magical,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Dragon,Dragon
+Fire Lance,"Your Lance becomes Magic, Gains Range 1-2, and the special ability Slayer (Carnivore) and Slayer (Herbivore)",Lance,3,3,Magical,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Slayer-Carnivore|Slayer-Herbivore,Carnivore|Herbivore
+Conquerer,"When you are attacked without the ability to Counter Attack, reduce damage taken by 10% per Rune Level",All,3,10,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Conquerer-0.1lvl,
+Hero,"Your Attacks, Follow Through Attacks, Ripostes, and Follow through Ripostes trigger twice in a row. -5 Might and -5 Speed",All,4,4,,-5,0,0,0,0,0,0,0,0,-5,0,0,0,1,1,1,1,0,0,0,0,0,0,0,-,-
+Mighty,"Great Skills that have a %chance of activation get +5% per Rune Level, and Great Skills that deal damage deal +2 Damage per rune level when they trigger",All,5,10,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.05lvl,2lvl,-,-

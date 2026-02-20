@@ -1,0 +1,22 @@
+Name,Description,Tier,HP,Might,Accuracy,Critical,Dodge,Avoid,Defense,Resistance,Move
+Battle Boots,+1 Mov,Hero,0,0,0,0,0,0,0,0,1
+Germinas Boots,+2 Mov,Epic,0,0,0,0,0,0,0,0,2
+Hermes Shoes,+3 Mov,Legend,0,0,0,0,0,0,0,0,3
+Glove,+5 Might +15 Accuracy,Hero,0,5,15,0,0,0,0,0,0
+Bracer,+10 Might +30 Accuracy,Epic,0,10,30,0,0,0,0,0,0
+Gauntlet,+15 Might +45 Accuracy,Legend,0,15,45,0,0,0,0,0,0
+Cursed Ring (Hero),"-10 HP, Defense, Resistance. +10 Might",Hero,-10,10,0,0,0,0,-10,-10,0
+Cursed Ring (Epic),"-20 HP, Defense, Resistance. +20 Might",Epic,-20,20,0,0,0,0,-20,-20,0
+Cursed Ring (Legend),"-30 HP, Defense, Resistance. +30 Might",Legend,-30,30,0,0,0,0,-30,-30,0
+Angel Ring (Hero),"If you die from an attack and have more than 1 HP, you are left with 1 HP. Functions once.",Epic,0,0,0,0,0,0,0,0,0
+Angel Ring (Epic),"If you die from an attack and have more than 1 HP, you are left with 1 HP. Functions once per combat",Epic,0,0,0,0,0,0,0,0,0
+Angel Ring (Legend),"If you die from an attack and have more than 1 HP, you are left with 1 HP. Functions once per engagement.",Epic,0,0,0,0,0,0,0,0,0
+Jade Armlet,"+10 Dodge, +5 Resistance",Hero,0,0,0,0,10,0,0,5,0
+Diamond Bracelet,"+20 Dodge, +10 Resistance",Epic,0,0,0,0,20,0,0,10,0
+Empyreal Armband,"+30 Dodge, +15 Resistance",Legend,0,0,0,0,30,0,0,15,0
+Shoulder Cape,"+15 Dodge, +5 Avoid",Hero,0,0,0,0,15,5,0,0,0
+Elven Cloak,"+30 Dodge, +10 Avoid",Epic,0,0,0,0,30,10,0,0,0
+Feather Mantle,"+45 Dodge, +15 Avoid",Legend,0,0,0,0,45,15,0,0,0
+Cherche,"+5 Critical, +5 Defense",Hero,0,0,0,5,0,0,5,0,0
+Setiemson,"+10 Critical, +10 Defense",Epic,0,0,0,10,0,0,10,0,0
+Tynar Rouge,"+15 Critical, +15 Defense",Legend,0,0,0,15,0,0,15,0,0

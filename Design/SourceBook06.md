@@ -45,7 +45,7 @@ Some squares might be fortified terrain. These cost additional movement to enter
 | Heavy         | 3        | 3       | 30    | 10           |
 | Difficult (N) | N        | 0       | 0     | 0            |
 
-For example, fighting on stairs might be considered fighting on light fortification, and getting into an arrow-slit might count as taking Medium Fortification. Characters with the **Flight** class skill only pay 1 point of movement for all terrain type movements.
+For example, fighting on stairs might be considered fighting on light fortification, and getting into an arrow-slit might count as taking Medium Fortification. Characters with the **Flight** class ability only pay 1 point of movement for all terrain type movements.
 
 Most walls block movement completely, along with most short objects and fortifications. Characters with **Flight** can end their movement on these, hovering in place, but do try to keep in mind the physics of the situation. A character with flight can't fly over indoor walls, for example.
 

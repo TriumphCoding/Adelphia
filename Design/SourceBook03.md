@@ -38,7 +38,7 @@ Your character's **Growth** determines how each of your character's stats will c
 
 ## Class Points
 
-Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. HP is purchased at a rate of 3HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
+Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. **HP** is purchased at a rate of 3 HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
 
 ### Monico Aaronway Stats
 
@@ -55,13 +55,13 @@ Your character's **Class** is what determines your character's stats right now. 
 | MOV       | 5    | x0.5 | 2      | +1     | 5 + 1 = **6**     |
 | **Total** |      |      | **20** |        |                   |
 
-However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Skills**. But don't worry too much, as you'll get more Class points as you **level up**.
+However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Abilities**. But don't worry too much, as you'll get more Class points as you **level up**.
 
-## Class Skills
+## Class Abilities
 
-You can spend your **Class Points** on skills that might be relevant to your character, and truly set them apart from everyone else. Each skill costs a certain number of Class Points. Simply spend the points to activate the Class Skill, and you can have as many as you can afford.
+You can spend your **Class Points** on abilities that might be relevant to your character, and truly set them apart from everyone else. Each ability costs a certain number of Class Points. Simply spend the points to activate the Class Ability, and you can have as many as you can afford.
 
->While all of these class skills are named and themed, don't feel beholden to their exact flavor. Taking **Ride** might mean your character moves uncannily quickly, or **Fly** might mean your character has access to some magic and not necessarily wings. Use what makes sense for you, and the setting you are in.
+>While all of these class abilities are named and themed, don't feel beholden to their exact flavor. Taking **Ride** might mean your character moves uncannily quickly, or **Fly** might mean your character has access to some form of flight magic and not necessarily wings. Use what makes sense for you, and the setting you are in.
 
 ### Nobility
 
@@ -103,7 +103,7 @@ Creature Types add a little bit of fantasy flavor to your setting. Work with you
 
 Humans are the base to which all other creatures compare. They lean in into whatever interests them the most, and are highly adaptable.
 
-|Human   | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Human   | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  10|    2|    2|    2|    2|    2|    2|    2|    5|
 | Growth |   5|    5|    5|    5|    5|    5|    5|    5|  N/A|
@@ -112,7 +112,7 @@ Humans are the base to which all other creatures compare. They lean in into what
 
 Elves move quickly and gracefully, and tend to need to avoid danger instead of taking it head on.
 
-|Elf     | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Elf     | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |   7|    2|    2|    3|    4|    2|    0|    2|    5|
 | Growth |   4|    5|    5|    7|    6|    5|    3|    5|  N/A|
@@ -121,7 +121,7 @@ Elves move quickly and gracefully, and tend to need to avoid danger instead of t
 
 Dwarves are stout and hearty. They tend to be direct with their problem solving, for both their good and their ill.
 
-|Dwarf   | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Dwarf   | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  13|    2|    0|    2|    1|    2|    3|    3|    5|
 | Growth |   6|    5|    3|    5|    4|    5|    6|    6|  N/A|
@@ -130,7 +130,7 @@ Dwarves are stout and hearty. They tend to be direct with their problem solving,
 
 Orcs are more muscle than anything else. Even so, they tend to find themselves with the short end of the stick more than they rightly deserve.
 
-|Orc     | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Orc     | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  10|    4|    2|    1|    2|    0|    2|    2|    5|
 | Growth |   5|    6|    5|    4|    5|    5|    5|    5|  N/A|
@@ -139,7 +139,7 @@ Orcs are more muscle than anything else. Even so, they tend to find themselves w
 
 Goblins are clever creatures, and when dedicated to a task can find themselves amongst its greatest masters. That is if they can live long enough to put in the time.
 
-|Goblin  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Goblin  | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |   7|    2|    2|    3|    4|    2|    1|    1|    5|
 | Growth |   4|    5|    5|    6|    7|    5|    4|    4|  N/A|
@@ -148,7 +148,7 @@ Goblins are clever creatures, and when dedicated to a task can find themselves a
 
 Some or all of your physical body has been replaced with machinery that runs on Magic, or something even more exotic like steam. How much of your old personality survived the process is up to you to decide.
 
-|Cyborg  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Cyborg  | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  10|    4|    0|    2|    2|    2|    3|    1|    5|
 | Growth |   5|    6|    5|    4|    5|    5|    5|    5|  N/A|
@@ -158,16 +158,16 @@ Some or all of your physical body has been replaced with machinery that runs on 
 One of your ancestors made a pact with the spirit of a carnivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 >Animal Characters can be as animalistic or as humanoid as you prefer. Work with your GM to determine what makes the most sense in the setting.
 
-|Carnivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Carnivore| HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
-| Base    |  10|    4|    3|    2|    3|    2|    2|    0|    5|
+| Base    |  10|    4|    1|    2|    3|    2|    2|    0|    5|
 | Growth  |   5|    7|    3|    5|    6|    5|    5|    4|  N/A|
 
 ### Herbivore
 
 One of your ancestors made a pact with the spirit of a herbivorous animal. the remnants of that pact remains in you, with your animalistic attitude and appearance. Which animal it was is up to you.
 
-|Herbivore| HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Herbivore| HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base    |  10|    2|    2|    2|    3|    2|    0|    1|    6|
 | Growth  |   5|    5|    5|    5|    7|    5|    4|    4|  N/A|
@@ -176,7 +176,7 @@ One of your ancestors made a pact with the spirit of a herbivorous animal. the r
 
 You have dragon blood, and it manifests itself in you in interesting ways.
 
-|Dragon  | HP | STR | MAG | SKL | SPD | LUK | DEF | RES | MOV |
+|Dragon  | HP | STR | INT | DEX | SPD | LUK | DEF | RES | MOV |
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  10|    2|    4|    2|    1|    2|    2|    3|    4|
 | Growth |   5|    5|    7|    5|    3|    4|    5|    6|  N/A|

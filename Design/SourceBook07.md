@@ -77,59 +77,59 @@ Enemies choose equipment, just like players. That said, some enemies don't make 
 
 ### Claw / Hoof
 
-A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it.
+A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it. Hoves trade accuracy for critical chance, at 5 per weapon level.
 
-|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
-| E   | 1     | Copper     | Physical | Green | 4     | 95       | 1
-| D   | 2     | Bronze     | Physical | Green | 7     | 85       | 1
-| C   | 3     | Iron       | Physical | Green | 10    | 75       | 1
-| B   | 4     | Steel      | Physical | Green | 13    | 65       | 1
-| A   | 5     | Silvered   | Physical | Green | 16    | 55       | 1
-| S   | 6     | Gilded     | Physical | Green | 19    | 45       | 1
-| S+  | 7     | Orichalcum | Physical | Green | 22    | 35       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
+| E   | 1     | Copper     | Physical | Green | 4     | 95       | 1     |
+| D   | 2     | Bronze     | Physical | Green | 7     | 85       | 1     |
+| C   | 3     | Iron       | Physical | Green | 10    | 75       | 1     |
+| B   | 4     | Steel      | Physical | Green | 13    | 65       | 1     |
+| A   | 5     | Silvered   | Physical | Green | 16    | 55       | 1     |
+| S   | 6     | Gilded     | Physical | Green | 19    | 45       | 1     |
+| S+  | 7     | Orichalcum | Physical | Green | 22    | 35       | 1     |
 
 ### Bite / Gore
 
-A Bite or Gore attack is done with the creature's head. It's a risky maneuver, but the creature can put it's full weight behind it.
+A Bite or Gore attack is done with the creature's head. It's a risky maneuver, but the creature can put it's full weight behind it. A gore trades 5 accuracy per level for 1 damage per level.
 
-|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
-| E   | 1     | Copper     | Physical | Red   | 4     | 95       | 1
-| D   | 2     | Bronze     | Physical | Red   | 8     | 80       | 1
-| C   | 3     | Iron       | Physical | Red   | 12    | 65       | 1
-| B   | 4     | Steel      | Physical | Red   | 16    | 50       | 1
-| A   | 5     | Silvered   | Physical | Red   | 20    | 35       | 1
-| S   | 6     | Gilded     | Physical | Red   | 24    | 20       | 1
-| S+  | 7     | Orichalcum | Physical | Red   | 28    | 5        | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
+| E   | 1     | Copper     | Physical | Red   | 4     | 95       | 1     |
+| D   | 2     | Bronze     | Physical | Red   | 8     | 80       | 1     |
+| C   | 3     | Iron       | Physical | Red   | 12    | 65       | 1     |
+| B   | 4     | Steel      | Physical | Red   | 16    | 50       | 1     |
+| A   | 5     | Silvered   | Physical | Red   | 20    | 35       | 1     |
+| S   | 6     | Gilded     | Physical | Red   | 24    | 20       | 1     |
+| S+  | 7     | Orichalcum | Physical | Red   | 28    | 5        | 1     |
 
-### Sting
+### Sting / Punch
 
-Stings are thin, piercing weapons used by creatures. They have a high amount of precision.
+Stings are thin, piercing weapons used by creatures. They have a high amount of precision. If the thrusts has a blunt end, it's a punch and trades 1 damage per level for 5 Accuracy per level.
 
-|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
-| E   | 1     | Copper     | Physical | Blue  | 4     | 95       | 1
-| D   | 2     | Bronze     | Physical | Blue  | 6     | 90       | 1
-| C   | 3     | Iron       | Physical | Blue  | 8     | 85       | 1
-| B   | 4     | Steel      | Physical | Blue  | 10    | 80       | 1
-| A   | 5     | Silvered   | Physical | Blue  | 12    | 75       | 1
-| S   | 6     | Gilded     | Physical | Blue  | 14    | 70       | 1
-| S+  | 7     | Orichalcum | Physical | Blue  | 16    | 65       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
+| E   | 1     | Copper     | Physical | Blue  | 4     | 95       | 1     |
+| C   | 3     | Iron       | Physical | Blue  | 8     | 85       | 1     |
+| B   | 4     | Steel      | Physical | Blue  | 10    | 80       | 1     |
+| D   | 2     | Bronze     | Physical | Blue  | 6     | 90       | 1     |
+| A   | 5     | Silvered   | Physical | Blue  | 12    | 75       | 1     |
+| S   | 6     | Gilded     | Physical | Blue  | 14    | 70       | 1     |
+| S+  | 7     | Orichalcum | Physical | Blue  | 16    | 65       | 1     |
 
 ### Slam
 
 Slam attacks are performed with the creature's body, or sometimes with a heavy appendage like a tail.
 
-|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
-|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
-| E   | 1     | Copper     | Physical | Grey  | 1     | 90       | 1
-| D   | 2     | Bronze     | Physical | Grey  | 3     | 80       | 1
-| C   | 3     | Iron       | Physical | Grey  | 6     | 70       | 1
-| B   | 4     | Steel      | Physical | Grey  | 8     | 60       | 1
-| A   | 5     | Silvered   | Physical | Grey  | 11    | 50       | 1
-| S   | 6     | Gilded     | Physical | Grey  | 13    | 40       | 1
-| S+  | 7     | Orichalcum | Physical | Grey  | 16    | 30       | 1
+|Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range |
+|:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  |
+| E   | 1     | Copper     | Physical | Grey  | 1     | 90       | 1     |
+| D   | 2     | Bronze     | Physical | Grey  | 3     | 80       | 1     |
+| C   | 3     | Iron       | Physical | Grey  | 6     | 70       | 1     |
+| B   | 4     | Steel      | Physical | Grey  | 8     | 60       | 1     |
+| A   | 5     | Silvered   | Physical | Grey  | 11    | 50       | 1     |
+| S   | 6     | Gilded     | Physical | Grey  | 13    | 40       | 1     |
+| S+  | 7     | Orichalcum | Physical | Grey  | 16    | 30       | 1     |
 
 ### Magic Attacks
 
@@ -146,7 +146,7 @@ This is where you let your creative muscle flex. Using the rules as given, consi
 - Centaur
   - Base Creature Type: Human
   - Weapons: Hoof, Bow
-  - Stats: High **SKL** and **SPD**, low **DEF** and **HP**
+  - Stats: High **DEX** and **SPD**, low **DEF** and **HP**
   - Skills: Ride
 - Harpy
   - Base Creature Type: Carnivore

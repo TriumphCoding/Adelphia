@@ -28,13 +28,13 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Hearty**: Increase **Total HP** by 20% of your **Level**
 
-**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Cornered Strike**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at less than 50% **Current HP**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Controlled Strike**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** if you are at more than 70% HP. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Strike**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Elegant Riposte**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Attack** and **Follow Through Attack**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
-**Empowered Riposte**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
+**Practiced Aggression**: Increase **STR**, **INT**, **DEX**, **SPD**, **CON**, or **WIS** by 10% of your **Level** when you **Riposte** and **Follow Through Riposte**. Choose which stat you increase on purchase of the skill. You may take this multiple times for different skills.
 
 **Janken Mastery**: Increases **Weapon Triangle** effects by 1 level if you are on the winning side of the weapon triangle.
 
@@ -42,11 +42,11 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Colorblind Fighter**: Grants 1 **Weapon Triangle** effect level when fighting grey weapons.
 
-**Reckless Offense**: Increase **STR**, **INT**, **SPD** by 10%/20%/30% of your level, reduce **SKL**, **WIS** and **CON** by 10%/20%/30% of your **Level**.
+**Rapturous Brutality**: Increase **STR**, **INT**, **SPD** by 10%/20%/30% of your level, reduce **DEX**, **WIS** and **CON** by 10%/20%/30% of your **Level**.
 
-**Fortress Defense**: Increase **WIS** and **CON** by 10%/20%/30% of your **Level**, reduce **STR** and **INT** by 10%/20%/30% of your **Level**.
+**Resolute Bastion**: Increase **WIS** and **CON** by 10%/20%/30% of your **Level**, reduce **STR** and **INT** by 10%/20%/30% of your **Level**.
 
-**Fury**: Increase **STR**, **INT**, **DEX**, **SKL**, **SPD**, **CON**, and **WIS** by 10% of your **Level**, but you take 10% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
+**Fury**: Increase **STR**, **INT**, **DEX**, **DEX**, **SPD**, **CON**, and **WIS** by 10% of your **Level**, but you take 10% of your **Total HP** in damage after each combat you participate in. This damage can't kill you, leaving you at 1HP.
 
 **Weapon Mastery**: You may take this skill multiple times, each time applying the skill to a new weapon type. Up to 3 total points can be invested into a single weapon type.
 
@@ -74,23 +74,23 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 
 **Desperation**: You have a **SPD**% chance of having your **Follow Through Attack** happen immediately after your **Attack**. This skill can only be purchased once.
 
-**Vantage**: You have a **SKL**% chance to have your **Riposte** happen before your opponent's **Attack**. This skill can only be purchased once.
+**Vantage**: You have a **DEX**% chance to have your **Riposte** happen before your opponent's **Attack**. This skill can only be purchased once.
 
-**Bold**: You have a **SKL**% chance to activate an additional **Follow Through Attack**, regardless of speed. This skill can only be purchased once.
+**Bold**: You have a **DEX**% chance to activate an additional **Follow Through Attack**, regardless of speed. This skill can only be purchased once.
 
-**Buckler**: You have a **SKL**% chance to reduce incoming physical damage by 50%. This skill can only be purchased once.
+**Buckler**: You have a **DEX**% chance to reduce incoming physical damage by 50%. This skill can only be purchased once.
 
-**Escutcheon**: You have a **SKL**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
+**Escutcheon**: You have a **DEX**% chance to reduce incoming magical damage by 50%. This skill can only be purchased once.
 
-**Physical Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+**Superiority**: You have a **STR**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
 
-**Magical Superiority**: You have an **INT**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
+**Forsight**: You have an **INT**% chance to prevent your opponent's **Riposte** and **Follow Through Riposte**. This skill can only be purchased once.
 
 **Cautious**: As long as you are over 50% health, you and your opponent cannot **Follow Through**
 
 **Grit**: Whenever you are attacked more than once in a row without being able to counterattack, reduce all damage from the second attack onward by 70%.
 
-**Patience**: You have a **SKL**% chance to have your **Riposte** activate after your opponent's **Follow Through Attack**.
+**Patience**: You have a **DEX**% chance to have your **Riposte** activate after your opponent's **Follow Through Attack**.
 
 ## Gaining Weapons
 
@@ -110,7 +110,7 @@ Roughly speaking, weapon levels follow the below schedule:
 | S   | 6     |Gilded     | 40                   | 55
 | S+  | 7     |Orichalcum | 50                   | 65
 
-Taking Steel weapons as an example, at level 10 you will gain access to your first steal weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 25, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
+Taking Steel weapons as an example, at level 10 you will gain access to your first steel weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 35, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
 
 ## Weapon Cycle
 
@@ -219,7 +219,7 @@ Knives are deadly weapons that can be easily wielded in close range, or thrown s
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---
 | E   | 1     | Copper     | Physical | Green | 3     | 90       | 1-2
-| D   | 2     | Bronze     | Physical | Green | 7     | 85       | 1-2
+| D   | 2     | Bronze     | Physical | Green | 7     | 75       | 1-2
 | C   | 3     | Iron       | Physical | Green | 11    | 60       | 1-2
 | B   | 4     | Steel      | Physical | Green | 15    | 45       | 1-2
 | A   | 5     | Silvered   | Physical | Green | 19    | 30       | 1-2
@@ -272,7 +272,7 @@ Wind magic is incredibly accurate. Mages who wield wind tend to be efficient and
 | S   | 6     | Gilded     | Magical  | Green | 12    | 85       | 1-2   | Slayer (Flight)
 | S+  | 7     | Orichalcum | Magical  | Green | 14    | 65       | 1-2   | Slayer (Flight)
 
->Magic Tomes are actually crafted books, carried around by mages. The power of the mage usually confirms how much raw power a mage can bring to bear, but without time consuming rituals and the proper foci of power it is almost impossible to bring the power of magic to bear, especially in the heat of battle. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.
+>Magic Tomes are actually crafted books, carried around by mages. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.
 
 ### Light
 
@@ -324,23 +324,23 @@ Staffs are special weapons that can technically be used to send raw magical forc
 
 In a world of fantasy and magic, Weapons can be more than simple metal tools. Placing a rune into a weapon fills it with magical properties. Like weapons, the runes that your character has access to are roughly determined by level.
 
-|Tier | Level | Metal     | Acquired Level |
-|:--- | :---  |:---       | :---           |
-| D   | 1     |Bronze     | 4              |
-| C   | 1     |Iron       | 8              |
-| C   | 2     |Iron       | 12             |
-| B   | 1     |Steel      | 16             |
-| B   | 2     |Steel      | 20             |
-| B   | 3     |Steel      | 24             |
-| A   | 1     |Silvered   | 28             |
-| A   | 2     |Silvered   | 32             |
-| A   | 3     |Silvered   | 36             |
-| A   | 4     |Silvered   | 40             |
-| S   | 1     |Gilded     | 44             |
-| S   | 2     |Gilded     | 48             |
-| S   | 3     |Gilded     | 52             |
-| S   | 4     |Gilded     | 56             |
-| S   | 5     |Gilded     | 60             |
+|Tier | Level | Metal     | Acquired Level
+|:--- | :---  |:---       | :---
+| D   | 1     |Bronze     | 4
+| C   | 1     |Iron       | 8
+| C   | 2     |Iron       | 12
+| B   | 1     |Steel      | 16
+| B   | 2     |Steel      | 20
+| B   | 3     |Steel      | 24
+| A   | 1     |Silvered   | 28
+| A   | 2     |Silvered   | 32
+| A   | 3     |Silvered   | 36
+| A   | 4     |Silvered   | 40
+| S   | 1     |Gilded     | 44
+| S   | 2     |Gilded     | 48
+| S   | 3     |Gilded     | 52
+| S   | 4     |Gilded     | 56
+| S   | 5     |Gilded     | 60
 
 When choosing a weapon, you will traditionally choose a weapon metal and a rune for that metal that you meet the requirements for. Some runes get more powerful depending on the rune's level, and some runes have a minimum level requirement in order to place them. For example, if a rune requires "Level 2", you can't place one on an Iron weapon until level 12, and you can't place them on a steel weapon until level 20. You can never place that rune on a Bronze weapon. The Minimum Level requirement of the rune is listed after the rune name.
 
@@ -376,11 +376,11 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 
 **Reaver** *Lv 2*: Reverses the direction of the Weapon triangle for combats involving this weapon.
 
-**Class Slayer** *Lv 2*: Choose a Class Skill. If your opponent has that class skill, triple the might of this weapon.
+**Class Slayer** *Lv 2*: Choose a Class Ability. If your opponent has that class ability, triple the might of this weapon.
 
 **Creature Slayer** *Lv 2*: Choose a Creature Type. If your opponent is that creature type, triple the might of this weapon.
 
-**Masterwork** *Lv 2*: Skills that have a percent chance of activation increase their activation chance by 5% per skill level.
+**Masterwork** *Lv 2*: Skills that have a percent chance of activation increase their activation chance by 5% per Rune level.
 
 **Weapon Slayer** *Lv 3*: Choose a weapon type. If your opponent is wielding that weapon, triple the might of this weapon.
 
@@ -414,9 +414,9 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 
 ### Epic Great Skills
 
-**Moon Strike**: Your **Strikes** have a **SKL**% to reduce enemy **defence** by 1/2.
+**Moon Strike**: Your **Strikes** have a **DEX**% to reduce enemy **defence** by 1/2.
 
-**Sun Strike**: Your **Strikes** have a **SKL**% to recover **HP** equal to 1/2 damage dealt.
+**Sun Strike**: Your **Strikes** have a **DEX**% to recover **HP** equal to 1/2 damage dealt.
 
 **Brave Strike**: Your **Strikes** have a **SPD**% to trigger an additional time.
 
@@ -430,17 +430,17 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 
 ### Legendary Great Skills
 
-**Lunar Impact**: Your **Strikes** have a **SKL**% chance to ignore enemy defence.
+**Lunar Impact**: Your **Strikes** have a **DEX**% chance to ignore enemy defence.
 
-**Lunar Strike**: Your **Strikes** have a **SKL**x2% chance to reduce enemy **Defense** by 1/2.
+**Lunar Strike**: Your **Strikes** have a **DEX**x2% chance to reduce enemy **Defense** by 1/2.
 
-**Solar Impact**: Your **Strikes** have a **SKL**% chance to recover HP equal to the damage you deal.
+**Solar Impact**: Your **Strikes** have a **DEX**% chance to recover HP equal to the damage you deal.
 
-**Solar Strike**: Your **Strikes** have a **SKL**x2% chance to recover HP equal to 1/2 the damage you deal.
+**Solar Strike**: Your **Strikes** have a **DEX**x2% chance to recover HP equal to 1/2 the damage you deal.
 
-**Astral Impact**: Your **Strikes** have a **SKL**/2% ignore enemy **defense** and recover **HP** equal to damage dealt.
+**Astral Impact**: Your **Strikes** have a **DEX**/2% ignore enemy **defense** and recover **HP** equal to damage dealt.
 
-**Astral Strike**: Your **Strikes** have a **SKL**% chance to reduce enemy **defence** by 1/2, and recover HP equal to 1/2 damage dealt.
+**Astral Strike**: Your **Strikes** have a **DEX**% chance to reduce enemy **defence** by 1/2, and recover HP equal to 1/2 damage dealt.
 
 **Hero Impact**: Your **Strikes** have a **SPD**% to trigger 3 additional times.
 
@@ -461,3 +461,49 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 **Shielded Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive to 0.
 
 **Resistant Block**: When an enemy **Engages** with you, you have a **WIS**x2% chance to reduce the damage you actually receive by 1/2.
+
+## Items
+
+Items are a bit looser than the rest of the weapons and skills in this section. In general, by about level 5 in a tier, a character should have an item of that tier's level. Since you can only really have one item at a time, there's no real reason to have a gate on them, give them out as rewards as feels thematic or appropriate. As a rough guide, hand out an item on levels that end in 5, so 5 - 15 - 25 - 35 - 45 - 55 - 65 - 75.
+
+**Battle Boots**: *Hero* - +1 **MOV**
+
+**Germinas Boots**: *Epic* - +2 **MOV**
+
+**Hermes Shoes**: *Legend* - +3 **MOV**
+
+**Glove**: *Hero* - +5 **Might** +15 **Accuracy**
+
+**Bracer**: *Epic* - +10 **Might** +30 **Accuracy**
+
+**Gauntlet**: *Legend* - +15 **Might** +45 **Accuracy**
+
+**Cursed Ring (Hero)**: *Hero* - -10 **HP**, **Defense**, **Resistance**. +10 **Might**
+
+**Cursed Ring (Epic)**: *Epic* - -20 **HP**, **Defense**, **Resistance**. +20 **Might****
+
+**Cursed Ring (Legend)**: *Legend* - -30 **HP**, **Defense**, **Resistance**. +30 **Might**
+
+**Angel Ring (Hero)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once.
+
+**Angel Ring (Epic)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per combat
+
+**Angel Ring (Legend)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per engagement.
+
+**Jade Armlet**: *Hero* - +10 **Dodge**, +5 **Resistance**
+
+**Diamond Bracelet**: *Epic* - +20 **Dodge**, +10 **Resistance**
+
+**Empyreal Armband**: *Legend* - +30 **Dodge**, +15 **Resistance**
+
+**Shoulder Cape**: *Hero* - +15 **Dodge**, +5 **Avoid**
+
+**Elven Cloak**: *Epic* - +30 **Dodge**, +10 **Avoid**
+
+**Feather Mantle**: *Legend* - +45 **Dodge**, +15 **Avoid**
+
+**Cherche**: *Hero* - +5 **Critical**, +5 **Defense**
+
+**Setiemson**: *Epic* - +10 **Critical**, +10 **Defense**
+
+**Tynar Rouge**: *Legend* - +15 **Critical**, +15 **Defense**

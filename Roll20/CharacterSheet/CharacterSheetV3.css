@@ -1,0 +1,1334 @@
+/*Static Grid Layout Pieces*/
+.MasterGrid {
+  display: grid;
+  grid-template-columns: fit-content(276px) 1fr;
+  grid-template-rows: fit-content(34px) 1fr;
+  grid-auto-flow: row;
+  grid-gap: 3px;
+  outline: none;
+  justify-content: justify;
+}
+
+.CharacterGridcell {
+  grid-column-start: 1 ;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  justify-content: center;
+}
+
+.PageSelectorGridcell {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  justify-content: left;
+}
+
+.CharacterSheetGridcell {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  justify-content: left;
+}
+
+/*Character Info*/
+.CharacterFlexContainer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.CharacterIdentityFlexItem {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 271px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.CharacterNameFlexItem {
+  width: 100%;
+  max-width: 271px;
+  justify-content: center;
+}
+
+.CharacterPicFlexItem {
+  max-width: 271px;
+  justify-content: center;
+}
+
+.CharacterTokenFlexItem {
+  max-width: 116px;
+  max-height: 116px;
+  justify-content: center;
+}
+
+.CharacterDescriptionFlexItem {
+  max-width: 116px;
+  max-height: 116px;
+  justify-content: center;
+}
+
+.CharacterHPFlexItem {
+  width: 100%;
+  max-width: 271px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.CharacterHPLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.CharacterHPInput {
+  width: 64px;
+  margin: 0;
+}
+
+.CharacterEquippedFlexItem {
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterEquippedFlexItem fieldset.repeating_weapons,
+.CharacterEquippedFlexItem fieldset.repeating_items {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 0 0 8px;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.CharacterEquippedFlexItem fieldset.repeating_weapons::after,
+.CharacterEquippedFlexItem fieldset.repeating_items::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+}
+
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_weapons"] {
+  outline: none;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_weapons"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.CharacterEquippedFlexItem > .repcontrol[data-groupname="repeating_weapons"] {
+  display: none;
+}
+
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_items"] {
+  outline: none;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterEquippedFlexItem > .repcontainer[data-groupname="repeating_items"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.CharacterEquippedFlexItem > .repcontrol[data-groupname="repeating_items"] {
+  display: none;
+}
+
+/*Page Selector*/
+.PageSelectorFlexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.PageSelectorFlexItem {
+  justify-content: center;
+}
+
+/*Character Sheet*/
+.SheetPageFlexContainer {
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+}
+
+.CharacterSheetFlexObject {
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterQuirkSubgrid {
+  display: grid;
+  grid-template-columns: 34px 220px 180px minmax(0, 1fr);
+  grid-template-rows: auto;
+  column-gap: 8px;
+  row-gap: 4px;
+  align-items: center;
+  outline: none;
+}
+
+.CharacterQuirkSubgrid > .PrimaryEntry,
+.CharacterQuirkSubgrid > .PrimaryDropdown,
+.CharacterQuirkSubgrid > .PrimaryButton {
+  margin: 0;
+  min-height: 30px;
+  box-sizing: border-box;
+}
+
+.CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_quirklist"] {
+  display: grid;
+  gap: 6px;
+}
+
+.CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_quirklist"] .repitem {
+  margin: 0;
+}
+
+.CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_quirklist"] {
+  margin-top: 6px;
+}
+
+.CharacterQuirkSubgrid > .QuirkRollButton {
+  grid-column: 1;
+}
+
+.CharacterQuirkSubgrid > input[name="attr_quirk_name"] {
+  grid-column: 2;
+}
+
+.CharacterQuirkSubgrid > .QuirkStatDropdown {
+  grid-column: 3;
+}
+
+.CharacterQuirkSubgrid > input[name="attr_quirk_description"] {
+  grid-column: 4;
+  width: 100%;
+  min-width: 0;
+}
+
+.QuirkStatDropdown {
+  width: 100%;
+  min-width: 0;
+}
+
+.QuirkRollButton {
+  width: 34px;
+  min-width: 34px;
+  padding: 3px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.QuirkRollButton::before {
+  content: "t";
+  font-family: "dicefontd20";
+  font-size: 1rem;
+}
+
+.CombatSkillHeaderRow {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 0.95fr) 34px;
+  column-gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.CombatSkillHeaderRow .PrimaryLabel {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 115px minmax(0, 0.95fr);
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 0 !important;
+}
+
+.CombatSkillRollButton {
+  width: 34px;
+  min-width: 34px;
+  padding: 3px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-left: -4px;
+}
+
+.CombatSkillRollButton::before {
+  content: "t";
+  font-family: "dicefontd20";
+  font-size: 1rem;
+}
+
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel {
+  grid-template-columns: 115px minmax(0, 1fr) 34px;
+}
+
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel::after,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel::after {
+  content: "";
+}
+
+.AttackRiposteRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.AttackRiposteHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.AttackRiposteHeaderRow .PrimaryTitle {
+  margin: 0;
+  margin-right: auto;
+}
+
+.AttackRiposteRollButton {
+  min-width: 34px;
+  padding: 3px 6px;
+  transition: none;
+}
+
+.AttackRiposteRollButton:hover,
+.AttackRiposteRollButton:focus {
+  filter: none;
+}
+
+.TriangleRollButton {
+  min-width: 38px;
+  padding: 3px 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.TriangleRollButton:hover,
+.TriangleRollButton:focus {
+  color: #fff;
+}
+
+.TriangleRollButtonAdvantage {
+  background: #2e8b57;
+  border-color: #1f5f3c;
+}
+
+.TriangleRollButtonDisadvantage {
+  background: #b22222;
+  border-color: #7a1717;
+}
+
+.CharacterTempStatAdjustmentHeaderRow {
+  display: grid;
+  grid-template-columns: 74px minmax(120px, 1fr) 74px minmax(120px, 1fr);
+  gap: 6px;
+  margin: 0 0 4px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_tempstatlist"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_tempstatlist"] > .repitem {
+  border: 2px solid var(--fe-gold);
+  border-radius: 6px;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.32);
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
+}
+
+.CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_tempstatlist"] {
+  display: block;
+}
+
+.CharacterTempStatAdjustmentSubgrid {
+  display: grid;
+  grid-template-columns: 74px minmax(120px, 1fr) 74px minmax(120px, 1fr);
+  gap: 6px;
+  align-items: center;
+  outline: none;
+}
+
+.CharacterTempStatAdjustmentSubgrid > .PrimaryEntry,
+.CharacterTempStatAdjustmentSubgrid > .PrimaryDropdown {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.CharacterTempStatAdjustmentSubgrid > .PrimaryDropdown {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*Weapons*/
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] {
+  grid-row: span 3;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_weapons"] {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+
+/*Items*/
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] {
+  grid-row: span 3;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.SheetPageItem > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_items"] {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+/*Class*/
+.ClassStatGrid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, minmax(88px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  gap: 4px;
+  outline: none;
+  max-height: fit-content;
+}
+
+.ClassStatGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  padding: 4px 6px;
+  min-height: 34px;
+  max-height: fit-content;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.ClassStatGridItem:nth-child(6n + 1) {
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.ClassStatGridItem input {
+  width: 64px;
+  text-align: center;
+}
+
+.ClassStatGridItem .PrimaryLabel {
+  margin: 0;
+  width: 100%;
+}
+
+.SectionTitleWithToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.SectionTitleWithToggle .PrimaryTitle {
+  margin: 0;
+  flex: 1;
+}
+
+.charsheet .sheet-classskillslist-Check {
+  appearance: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.charsheet .sheet-classskillslist-ToggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  min-width: 34px;
+  height: 24px;
+  border: 1px solid #f2d79e;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  color: #fffdf5;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(244, 232, 203, 0.35);
+  margin: 0;
+  cursor: pointer;
+}
+
+.charsheet .sheet-classskillslist-ToggleButton::before {
+  content: '→';
+}
+
+.charsheet .sheet-classskillslist-Check:checked + .SectionTitleWithToggle .sheet-classskillslist-ToggleButton::before {
+  content: '↴';
+}
+
+.sheet-classskillslist-Short,
+.charsheet .sheet-classskillslist-Check:checked ~ .sheet-classskillslist-Long {
+  display: block;
+}
+
+.charsheet .sheet-classskillslist-Long,
+.charsheet .sheet-classskillslist-Check:checked ~ .sheet-classskillslist-Short {
+  display: none;
+}
+
+/*Skills*/
+.charsheet .sheet-combatskillslist-Check {
+  appearance: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.charsheet .sheet-combatskillslist-ToggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  min-width: 34px;
+  height: 24px;
+  border: 1px solid #f2d79e;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  color: #fffdf5;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(244, 232, 203, 0.35);
+  margin: 0;
+  cursor: pointer;
+}
+
+.charsheet .sheet-combatskillslist-ToggleButton::before {
+  content: '→';
+}
+
+.charsheet .sheet-combatskillslist-Check:checked + .SectionTitleWithToggle .sheet-combatskillslist-ToggleButton::before {
+  content: '↴';
+}
+
+.sheet-combatskillslist-Short,
+.charsheet .sheet-combatskillslist-Check:checked ~ .sheet-combatskillslist-Long {
+  display: block;
+}
+
+.charsheet .sheet-combatskillslist-Long,
+.charsheet .sheet-combatskillslist-Check:checked ~ .sheet-combatskillslist-Short {
+  display: none;
+}
+
+.charsheet .StatCombatSkillSelectorDisplay[value="0"] + .PrimaryLabel {
+  display: none;
+}
+
+.charsheet .WeaponCombatSkillSelectorDisplay[value="0"] + .PrimaryLabel {
+  display: none;
+}
+
+label.GreatSkillHeroic,
+label.GreatSkillEpic,
+label.GreatSkillLegendary { display: none; }
+
+.charsheet .GreatSkillSelector[value="0"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="1"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="2"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="3"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="4"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="5"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="6"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="7"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="8"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="9"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="10"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="11"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="12"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="13"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="14"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="15"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="16"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="17"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="18"] ~ label.GreatSkillHeroic,
+.charsheet .GreatSkillSelector[value="19"] ~ label.GreatSkillHeroic { display: block; }
+.charsheet .GreatSkillSelector[value="20"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="21"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="22"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="23"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="24"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="25"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="26"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="27"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="28"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="29"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="30"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="31"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="32"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="33"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="34"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="35"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="36"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="37"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="38"] ~ label.GreatSkillEpic,
+.charsheet .GreatSkillSelector[value="39"] ~ label.GreatSkillEpic { display: block; }
+.charsheet .GreatSkillSelector[value="40"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="41"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="42"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="43"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="44"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="45"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="46"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="47"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="48"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="49"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="50"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="51"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="52"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="53"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="54"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="55"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="56"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="57"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="58"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="59"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="60"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="61"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="62"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="63"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="64"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="65"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="66"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="67"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="68"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="69"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="70"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="71"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="72"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="73"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="74"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="75"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="76"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="77"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="78"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="79"] ~ label.GreatSkillLegendary,
+.charsheet .GreatSkillSelector[value="80"] ~ label.GreatSkillLegendary { display: block; }
+
+
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"],
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"],
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"],
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem {
+  border: 2px solid var(--fe-gold);
+  border-radius: 6px;
+  padding: 8px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+}
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 6px;
+}
+
+
+.sheet-classskillslist-Short > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel > span::after,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel > span::after {
+  content: "";
+}
+
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem textarea.PrimaryDescription,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem textarea.PrimaryDescription {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 110px;
+}
+
+.sheet-classskillslist-Long > .repcontainer[data-groupname="repeating_classskillslist"] > .repitem label.PrimaryLabel:nth-last-child(-n+2),
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel:nth-last-child(-n+2) {
+  display: block;
+}
+
+.repcontrol[data-groupname=repeating_classskillslist],
+.repcontrol[data-groupname=repeating_combatskillslist] {
+  display: block;
+  visibility: visible;
+  margin-top: 8px;
+}
+
+.repcontrol[data-groupname=repeating_classskillslist] .btn,
+.repcontrol[data-groupname=repeating_combatskillslist] .btn {
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  background: #d7d7d7;
+  color: #3f3f3f;
+  font-weight: 600;
+  padding: 4px 10px;
+  margin-right: 6px;
+}
+
+/*Growth*/
+.GrowthGrid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, minmax(88px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  gap: 4px;
+  outline: none;
+  max-height: fit-content;
+}
+
+.GrowthGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  padding: 4px 6px;
+  min-height: 34px;
+  max-height: fit-content;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.GrowthGridItem:nth-child(5n + 1) {
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.GrowthGridItem input {
+  width: 64px;
+  text-align: center;
+}
+
+.GrowthGridItem .PrimaryLabel {
+  margin: 0;
+  width: 100%;
+}
+
+.repcontainer[data-groupname=repeating_CharacterLevel] {
+  display: table;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+
+.RepeatingCharacterLevelSection {
+  display: table-row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.RepeatingCharacterLevelSectionHeader {
+  display: none;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterLevelGridItemHeader {
+  display: none;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.LevelupCharacterLevelGridItem {
+  display: table-cell;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader {
+  display: table-row;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader > .LevelupCharacterLevelGridItemHeader {
+  display: table-cell;
+}
+
+.repcontrol[data-groupname=repeating_characterlevel]  {
+  display: none;
+  visibility: hidden;
+}
+
+/*Notes*/
+
+/*Configuration*/
+
+/*Titles, Labels, and Input*/
+.charsheet {
+  --fe-red-dark: #66271f;
+  --fe-red-mid: #8a3a2e;
+  --fe-parchment: #efe7c7;
+  --fe-panel: #273a73;
+  --fe-panel-mid: #3f59a4;
+  --fe-panel-light: #5e76bf;
+  --fe-gold: #c8a05a;
+  --fe-gold-light: #e7cf8f;
+  --fe-ink: #1b1a21;
+  --fe-line: #1a2245;
+
+  color: var(--fe-ink);
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+.charsheet .MasterGrid {
+  background: linear-gradient(155deg, #6f2b23 0%, var(--fe-red-mid) 38%, #4c1a17 100%);
+  border: 2px solid var(--fe-gold);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px rgba(45, 16, 12, 0.45), 0 8px 22px rgba(15, 11, 20, 0.3);
+  padding: 8px;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.CharacterGridcell,
+.PageSelectorGridcell,
+.CharacterSheetGridcell,
+.CharacterIdentityFlexItem,
+.CharacterHPFlexItem,
+.CharacterEquippedFlexItem,
+.CharacterSheetFlexObject,
+.ClassStatGridItem,
+.GrowthGridItem,
+.LevelupcombatskillslistGridItem,
+.LevelupcombatskillslistGridItemHeader,
+.LevelupCharacterLevelGridItem,
+.LevelupCharacterLevelGridItemHeader,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"],
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] > .repitem,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_weapons"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] > .repitem,
+.SheetPageItem > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_items"] {
+  border: 2px solid var(--fe-gold);
+  border-radius: 6px;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.32);
+}
+
+.CharacterGridcell,
+.PageSelectorGridcell {
+  background: linear-gradient(145deg, #f8f2dc 0%, var(--fe-parchment) 100%);
+  color: var(--fe-ink);
+}
+
+.CharacterSheetGridcell {
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+}
+
+.CharacterIdentityFlexItem,
+.CharacterHPFlexItem,
+.CharacterEquippedFlexItem,
+.CharacterSheetFlexObject,
+.ClassStatGridItem,
+.GrowthGridItem,
+.LevelupcombatskillslistGridItem,
+.LevelupcombatskillslistGridItemHeader,
+.LevelupCharacterLevelGridItem,
+.LevelupCharacterLevelGridItemHeader,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"],
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_weapons"] > .repitem,
+.SheetPageWeapon > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_weapons"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"],
+.SheetPageItem > .CharacterSheetFlexObject > .repcontainer[data-groupname="repeating_items"] > .repitem,
+.SheetPageItem > .CharacterSheetFlexObject > .repcontrol[data-groupname="repeating_items"] {
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #2b2521;
+}
+
+.CharacterPicFlexItem img,
+.CharacterTokenFlexItem img {
+  width: 100%;
+}
+
+.CharacterIdentityFlexItem .CharacterPicFlexItem img,
+.CharacterIdentityFlexItem .CharacterTokenFlexItem img {
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.PrimaryTitle {
+  margin: 0 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #623313;
+}
+
+.CharacterNameHeader {
+  width: 100%;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #623313;
+  background: transparent;
+  border: 1px solid rgba(168, 140, 87, 0.75);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.CharacterNameHeader:focus {
+  background: #fff9ea;
+}
+
+.BuilderNameHeader {
+  display: block;
+  width: calc(100% - 14px);
+  margin: 0 0 10px;
+  padding: 2px 6px 3px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #623313;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.BuilderNameHeader:focus {
+  border-color: #a88c57;
+  background: #fff9ea;
+}
+
+.PrimaryLabel {
+  display: block;
+  width: fit-content;
+  margin-bottom: 2px;
+  font-size: 0.84rem;
+  letter-spacing: 0.02em;
+}
+
+.PrimaryEntry,
+.PrimaryDropdown,
+select,
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #a88c57;
+  border-radius: 4px;
+  background: #fff9ea;
+  color: #1d2130;
+  padding: 2px 6px;
+  min-height: 24px;
+}
+
+.PrimaryEntry:focus,
+.PrimaryDropdown:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 2px solid #89a7ff;
+  outline-offset: 1px;
+}
+
+.PrimaryNotesEntry,
+.PrimaryDescription,
+textarea {
+  border: 1px solid #9f8752;
+  border-radius: 4px;
+  width: 96%;
+  max-width: 96%;
+  min-width: 96%;
+  background: #fff9ea;
+  color: #1c2030;
+  resize: vertical;
+}
+
+.PrimaryNotesEntry {
+  height: 98%;
+  max-height: 98%;
+  min-height: 98%;
+}
+
+.PrimaryButton,
+button[type="roll"],
+button[type="action"] {
+  border: 1px solid #f2d79e;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  color: #fffdf5;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  padding: 3px 8px;
+  min-height: 24px;
+  box-shadow: inset 0 0 0 1px rgba(244, 232, 203, 0.35);
+}
+
+.PrimaryButton:hover,
+button[type="roll"]:hover,
+button[type="action"]:hover {
+  filter: brightness(1.08);
+}
+
+.OptionCategoryH1 {
+  background: #324a8d;
+  font-weight: bold;
+  color: #f5e9c5;
+}
+
+.OptionCategoryH2 {
+  font-weight: bold;
+  color: #d7c18d;
+}
+
+/*Page Selector Logic*/
+/*mark your sections invisible here*/
+.charsheet .SheetPageCharacter,
+.charsheet .SheetPageWeapon,
+.charsheet .SheetPageItem,
+.charsheet .SheetPageClass,
+.charsheet .SheetPageSkills,
+.charsheet .SheetPageGrowth,
+.charsheet .SheetPageNotes,
+.charsheet .SheetPageConfiguration { display: none; }
+
+/*Add your tabs for their given section here*/
+.charsheet .tabstoggle[value="Character"] ~ div.SheetPageCharacter,
+.charsheet .tabstoggle[value="Weapons"] ~ div.SheetPageWeapon,
+.charsheet .tabstoggle[value="Items"] ~ div.SheetPageItem,
+.charsheet .tabstoggle[value="Class"] ~ div.SheetPageClass,
+.charsheet .tabstoggle[value="Skills"] ~ div.SheetPageSkills,
+.charsheet .tabstoggle[value="Growth"] ~ div.SheetPageGrowth,
+.charsheet .tabstoggle[value="Notes"] ~ div.SheetPageNotes,
+.charsheet .tabstoggle[value="Configuration"] ~ div.SheetPageConfiguration { display: flex; flex-direction: column; }
+
+/* Roll template: adelphiaattack */
+.sheet-rolltemplate-adelphiaattack {
+  border: 2px solid #c8a05a;
+  background: linear-gradient(155deg, #6f2b23 0%, #8a3a2e 40%, #4c1a17 100%);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.25);
+  color: #2b2521;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-title {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-subtitle {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 3px 8px;
+  font-weight: 700;
+  font-size: 0.98em;
+  margin-bottom: 8px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-body {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-panel {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-section {
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #623313;
+  text-transform: uppercase;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 8px;
+  align-items: start;
+  font-size: 0.95em;
+  margin-bottom: 2px;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row > span:first-child {
+  font-weight: 700;
+  color: #623313;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-row > span:last-child {
+  color: #1f2435;
+}
+
+.sheet-rolltemplate-adelphiaattack .sheet-template-description {
+  color: #1f2435;
+  margin-bottom: 4px;
+}
+
+
+/* Roll template: adelphiacombatskill */
+.sheet-rolltemplate-adelphiacombatskill {
+  border: 2px solid #c8a05a;
+  background: linear-gradient(155deg, #6f2b23 0%, #8a3a2e 40%, #4c1a17 100%);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.25);
+  color: #2b2521;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-title {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-body {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-panel {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-section {
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #623313;
+  text-transform: uppercase;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  align-items: start;
+  margin-bottom: 2px;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-row > span:first-child {
+  font-weight: 700;
+  color: #623313;
+}
+
+.sheet-rolltemplate-adelphiacombatskill .sheet-template-description {
+  color: #1f2435;
+}
+
+/* Roll template: adelphiaquirk */
+.sheet-rolltemplate-adelphiaquirk {
+  border: 2px solid #c8a05a;
+  background: linear-gradient(155deg, #6f2b23 0%, #8a3a2e 40%, #4c1a17 100%);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(233, 221, 186, 0.25);
+  color: #2b2521;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-title {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  color: #623313;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-body {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #445ca4 0%, #354c8e 100%);
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-panel {
+  border: 2px solid #c8a05a;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f8f2dc 0%, #e7d9b3 100%);
+  padding: 6px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-section {
+  border-bottom: 1px solid rgba(98, 51, 19, 0.35);
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #623313;
+  text-transform: uppercase;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  align-items: start;
+  margin-bottom: 2px;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-row > span:first-child {
+  font-weight: 700;
+  color: #623313;
+}
+
+.sheet-rolltemplate-adelphiaquirk .sheet-template-description {
+  color: #1f2435;
+}

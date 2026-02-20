@@ -1,0 +1,571 @@
+.MasterGrid {
+  display: grid;
+  grid-template-columns: fit-content(276px) 1fr 1fr;
+  grid-template-rows: fit-content(34px) 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  column-gap: 5px;
+  row-gap: 5px;
+  outline: none;
+  justify-content: justify;
+}
+
+/*Static Layout Pieces*/
+.StaticCharacterInfo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  justify-content: center;
+}
+
+.StaticCharacterInfoSubGrid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  column-gap: 5px;
+  row-gap: 5px;
+  outline: none;
+  justify-content: left;
+}
+
+.StaticCharacterInfoSubGridName {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  outline: auto;
+  outline: none;
+  padding: 5px;
+  max-width: 271px;
+}
+
+.StaticCharacterInfoSubGridPicture {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  outline: auto;
+  outline: none;
+  padding: 5px;
+  max-width: 271px;
+}
+
+.StaticCharacterInfoSubGridToken {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  outline: auto;
+  outline: none;
+  padding: 5px;
+  max-width: 116px;
+  max-height: 116px;
+}
+
+.StaticCharacterInfoSubGridNotes {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  outline: auto;
+  outline: none;
+  padding: 5px;
+  max-width: 116px;
+  max-height: 116px;
+}
+
+.StaticHeaderRow {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+/*Character Tab Section*/
+.CharacterQuirkBox {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterWideItem {
+  grid-row: span 2;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.CharacterItem {
+  grid-area: auto;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] {
+  outline: none;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontainer[data-groupname="repeating_weapons"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.charsheet .CharacterWeaponSelection~.repcontrol[data-groupname="repeating_weapons"] {
+  display: none;
+}
+
+.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] {
+  outline: none;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.charsheet .CharacterItemSelection~.repcontainer[data-groupname="repeating_items"] .repitem {
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.charsheet .CharacterItemSelection~.repcontrol[data-groupname="repeating_items"] {
+  display: none;
+}
+
+.CharacterQuirkSubgrid {
+  display: grid;
+  grid-template-columns: fit-content 1fr fit-content;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  column-gap: 2%;
+  outline: none;
+}
+
+.CharacterTempStatAdjustmentSubgrid {
+  display: grid;
+  grid-template-columns: 11% 26% 11% 46%;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  column-gap: 2%;
+  outline: none;
+}
+
+.CharacterTempStatAdjustmentFill {
+  grid-area: auto;
+  outline: auto;
+  outline-width: thin;
+  outline-style: none;
+  width: fit-content;
+  align-items: left;
+}
+
+/*Weapon Tab Section*/
+.WeaponTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.WeaponWideItem {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] {
+  grid-row: span 3;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+.charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"] {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+/*Item Tab Section*/
+.ItemTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+.ItemWideItem {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] {
+  grid-row: span 3;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"] > .repitem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"] {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+}
+
+/*Level Up*/
+.LevelupItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.LevelupTallItem {
+  grid-row: span 2;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.LevelupWideItem {
+  grid-row: span 1;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+.LevelupCharacterStatGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterStatGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.LevelupCharacterGrowthGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterGrowthGridItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.charsheet .sheet-ClassSkillsList-Check {
+  appearance: none;
+}
+
+.charsheet .sheet-ClassSkillsList-Check:checked::before {
+  content: ' → ';
+}
+
+.charsheet .sheet-ClassSkillsList-Check:not(:checked)::before {
+  content: ' ↓ ';
+}
+
+.sheet-ClassSkillsList-Short,
+.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Long {
+  display: block;
+}
+
+.charsheet .sheet-ClassSkillsList-Long,
+.charsheet .sheet-ClassSkillsList-Check:checked ~ .sheet-ClassSkillsList-Short {
+  display: none;
+}
+
+.charsheet .sheet-CombatSkillsList-Check {
+  appearance: none;
+}
+
+.charsheet .sheet-CombatSkillsList-Check:checked::before {
+  content: ' → ';
+}
+
+.charsheet .sheet-CombatSkillsList-Check:not(:checked)::before {
+  content: ' ↓ ';
+}
+
+.sheet-CombatSkillsList-Short,
+.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Long {
+  display: block;
+}
+
+.charsheet .sheet-CombatSkillsList-Long,
+.charsheet .sheet-CombatSkillsList-Check:checked ~ .sheet-CombatSkillsList-Short {
+  display: none;
+}
+
+.repcontainer[data-groupname=repeating_CharacterLevel] {
+  display: table;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.RepeatingCharacterLevelSection {
+  display: table-row;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.RepeatingCharacterLevelSectionHeader {
+  display: none;
+  outline: none;
+  outline-width: 0;
+  outline-style: none;
+  max-height: fit-content;
+}
+
+.LevelupCharacterLevelGridItemHeader {
+  display: none;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.LevelupCharacterLevelGridItem {
+  display: table-cell;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+  text-align: center;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader {
+  display: table-row;
+}
+
+.repcontainer[data-groupname=repeating_characterlevel] > .repitem:first-child > .RepeatingCharacterLevelSectionHeader > .LevelupCharacterLevelGridItemHeader {
+  display: table-cell;
+}
+
+.repcontrol[data-groupname=repeating_characterlevel]  {
+  display: none;
+  visibility: hidden;
+}
+
+/*Notes*/
+.NotesItem {
+  grid-row: span 1;
+  grid-column: span 1;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+/*Configuration*/
+.ConfigurationBigItem {
+  grid-row: span 2;
+  grid-column: span 2;
+  outline: auto;
+  outline-width: thin;
+  outline-style: solid;
+  padding: 5px;
+  max-height: fit-content;
+}
+
+/*Titles, Labels, and Input*/
+.PrimaryTitle {
+  font: auto;
+}
+
+.PrimaryLabel {
+  font: auto;
+  width: fit-content;
+}
+
+.PrimaryEntry {
+  font: auto;
+  outline: none;
+  width: 96%;
+}
+
+.PrimaryNotesEntry {
+  outline: none;
+  width: 96%;
+  max-width: 96%;
+  min-width: 96%;
+  height: 98%;
+  max-height: 98%;
+  min-height: 98%;
+  background: none;
+  resize: none;
+}
+
+.PrimaryDropdown {
+  font: auto;
+  width: fit-content;
+}
+
+.PrimaryButton {
+  font: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+/*mark your sections invisible here*/
+.charsheet .CharacterQuirkBox,
+.charsheet .CharacterTallItem,
+.charsheet .CharacterWideItem,
+.charsheet .CharacterItem,
+.charsheet .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"],
+.charsheet .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"],
+.charsheet .WeaponWideItem,
+.charsheet .WeaponTallItem,
+.charsheet .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"],
+.charsheet .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
+.charsheet .ItemWideItem,
+.charsheet .ItemTallItem,
+.charsheet .LevelupWideItem,
+.charsheet .LevelupTallItem,
+.charsheet .LevelupItem,
+.charsheet .NotesItem,
+.charsheet .ConfigurationBigItem {
+    display: none;
+}
+
+/*Add your tabs for their given section here*/
+.charsheet .tabstoggle[value="character"] ~ div.CharacterQuirkBox,
+.charsheet .tabstoggle[value="character"] ~ div.CharacterTallItem,
+.charsheet .tabstoggle[value="character"] ~ div.CharacterWideItem,
+.charsheet .tabstoggle[value="character"] ~ div.CharacterItem,
+.charsheet .tabstoggle[value="weapons"] ~ .RepeatingWeaponSection~.repcontainer[data-groupname="repeating_weapons"],
+.charsheet .tabstoggle[value="weapons"] ~ .RepeatingWeaponSection~.repcontrol[data-groupname="repeating_weapons"],
+.charsheet .tabstoggle[value="weapons"] ~ div.WeaponWideItem,
+.charsheet .tabstoggle[value="weapons"] ~ div.WeaponTallItem,
+.charsheet .tabstoggle[value="items"] ~ .RepeatingItemSection~.repcontainer[data-groupname="repeating_items"],
+.charsheet .tabstoggle[value="items"] ~ .RepeatingItemSection~.repcontrol[data-groupname="repeating_items"],
+.charsheet .tabstoggle[value="items"] ~ div.ItemWideItem,
+.charsheet .tabstoggle[value="items"] ~ div.ItemTallItem,
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupWideItem,
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupTallItem,
+.charsheet .tabstoggle[value="levels"] ~ div.LevelupItem,
+.charsheet .tabstoggle[value="notes"] ~ div.NotesItem,
+.charsheet .tabstoggle[value="notes"] ~ div.journal,
+.charsheet .tabstoggle[value="configuration"] ~ div.ConfigurationBigItem {
+    display: grid;
+}

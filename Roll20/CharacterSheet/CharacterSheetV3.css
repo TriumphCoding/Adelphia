@@ -265,7 +265,7 @@
 
 .CombatSkillHeaderRow {
   display: grid;
-  grid-template-columns: 115px minmax(0, 1fr) 34px;
+  grid-template-columns: 115px minmax(0, 0.95fr) 34px;
   column-gap: 6px;
   align-items: center;
   margin-bottom: 6px;
@@ -274,7 +274,7 @@
 .CombatSkillHeaderRow .PrimaryLabel {
   grid-column: 1 / span 2;
   display: grid;
-  grid-template-columns: 115px minmax(0, 1fr);
+  grid-template-columns: 115px minmax(0, 0.95fr);
   align-items: center;
   column-gap: 8px;
   width: 100%;

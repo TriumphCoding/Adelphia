@@ -324,11 +324,18 @@
 
 .AttackRiposteHeaderRow .PrimaryTitle {
   margin: 0;
+  margin-right: auto;
 }
 
 .AttackRiposteRollButton {
   min-width: 34px;
   padding: 3px 6px;
+  transition: none;
+}
+
+.AttackRiposteRollButton:hover,
+.AttackRiposteRollButton:focus {
+  filter: none;
 }
 
 .TriangleRollButton {

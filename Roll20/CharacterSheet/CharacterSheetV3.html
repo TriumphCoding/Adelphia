@@ -713,6 +713,7 @@
                     <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span> <span name="attr_CombatSkillPointsAvailable"></span></label>
                     <div class="sheet-combatskillslist-Short">
                         <fieldset class="repeating_combatskillslist">
+                            <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
@@ -752,6 +753,7 @@
                     </div>
                     <div class="sheet-combatskillslist-Long">
                         <fieldset class="repeating_combatskillslist">
+                            <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
                             <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
@@ -1045,6 +1047,19 @@
         {{#avoid}}<div class="sheet-template-row"><span>Avoid</span><span>{{avoid}}</span></div>{{/avoid}}
         {{#defense}}<div class="sheet-template-row"><span>Defense</span><span>{{defense}}</span></div>{{/defense}}
         {{#resistance}}<div class="sheet-template-row"><span>Resistance</span><span>{{resistance}}</span></div>{{/resistance}}
+      </div>
+    </div>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-adelphiacombatskill">
+  <div class="sheet-template-container">
+    {{#name}}<div class="sheet-template-title">{{name}}</div>{{/name}}
+    <div class="sheet-template-body">
+      <div class="sheet-template-panel">
+        {{#stat_check}}<div class="sheet-template-row"><span>Stat Check</span><span>{{stat_check}}</span></div>{{/stat_check}}
+        {{#effect}}<div class="sheet-template-section">Effect</div><div class="sheet-template-description">{{effect}}</div>{{/effect}}
+        {{#description}}<div class="sheet-template-section">Description</div><div class="sheet-template-description">{{description}}</div>{{/description}}
       </div>
     </div>
   </div>
@@ -1477,14 +1492,14 @@
 
     const baseExpression = `[[@{${selected.base}}+@{${selected.weapon}}]]`;
     const multiplier = statData.multiplier;
-    let thresholdExpression = `floor(${baseExpression}) + 1`;
+    let thresholdExpression = `floor(${baseExpression})`;
     if (multiplier !== 1) {
       thresholdExpression = (multiplier === 0.5)
-        ? `floor(${baseExpression}/2) + 1`
-        : `floor(${baseExpression}*${multiplier}) + 1`;
+        ? `floor(${baseExpression}/2)`
+        : `floor(${baseExpression}*${multiplier})`;
     }
 
-    return `[[1d100<[[${thresholdExpression}]]]]`;
+    return `[[ (1d100-1) < [[${thresholdExpression}]] ]]`;
   }
 
   function updateGreatSkillDescription() {
@@ -2095,6 +2110,40 @@
 
   on("change:repeating_tempstatlist:adjustment-value change:repeating_tempstatlist:adjustment-stat change:repeating_tempstatlist:adjustment-turns", function() {
     RefreshTempAdjustments();
+  });
+
+  on("clicked:repeating_combatskillslist", function(eventInfo) {
+    if (!eventInfo || !eventInfo.sourceAttribute || !eventInfo.htmlAttributes || eventInfo.htmlAttributes.name !== "act_CombatSkillCheck") { return; }
+    const rowId = eventInfo.sourceAttribute.split("_")[2];
+    if (!rowId) { return; }
+
+    const statKey = `repeating_combatskillslist_${rowId}_StatCombatSkillSelector`;
+    const skillNameKey = `repeating_combatskillslist_${rowId}_CombatSkill`;
+    const effectKey = `repeating_combatskillslist_${rowId}_CombatSkillEffect`;
+    const descriptionKey = `repeating_combatskillslist_${rowId}_CombatSkillDescription`;
+
+    getAttrs(["character_name", statKey, skillNameKey, effectKey, descriptionKey], function(values) {
+      const characterName = values.character_name || "Character";
+      const skillName = values[skillNameKey] || "Unnamed Skill";
+      const effect = values[effectKey] || "-";
+      const description = values[descriptionKey] || "-";
+      const statCode = values[statKey] || "STR";
+      const statAttrName = QuirkStatAttributeMap[statCode];
+
+      if (!statAttrName) { return; }
+
+      getAttrs([statAttrName], function(statValues) {
+        const statValue = toNumber(statValues[statAttrName]);
+        const rollPenalty = Math.floor(Math.random() * 100);
+        const statCheck = statValue - rollPenalty;
+        const statCheckResult = statCheck >= 0 ? 1 : 0;
+
+        const rollTemplate = `&{template:adelphiacombatskill} {{name=${characterName} - ${skillName}}} {{stat_check=${statCheckResult}}} {{effect=${effect}}} {{description=${description}}}`;
+        startRoll(rollTemplate, function(results) {
+          finishRoll(results.rollId, {});
+        });
+      });
+    });
   });
 
   on("clicked:repeating_quirklist", function(eventInfo) {

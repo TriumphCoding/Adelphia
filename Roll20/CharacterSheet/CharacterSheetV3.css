@@ -265,13 +265,14 @@
 
 .CombatSkillHeaderRow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 34px;
+  grid-template-columns: 115px minmax(0, 1fr) 34px;
   column-gap: 6px;
   align-items: center;
   margin-bottom: 6px;
 }
 
 .CombatSkillHeaderRow .PrimaryLabel {
+  grid-column: 1 / span 2;
   display: grid;
   grid-template-columns: 115px minmax(0, 1fr);
   align-items: center;
@@ -290,12 +291,23 @@
   justify-content: center;
   line-height: 1;
   margin-bottom: 0;
+  margin-left: -4px;
 }
 
 .CombatSkillRollButton::before {
   content: "t";
   font-family: "dicefontd20";
   font-size: 1rem;
+}
+
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel {
+  grid-template-columns: 115px minmax(0, 1fr) 34px;
+}
+
+.sheet-combatskillslist-Short > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel::after,
+.sheet-combatskillslist-Long > .repcontainer[data-groupname="repeating_combatskillslist"] > .repitem label.PrimaryLabel::after {
+  content: "";
 }
 
 .AttackRiposteRow {

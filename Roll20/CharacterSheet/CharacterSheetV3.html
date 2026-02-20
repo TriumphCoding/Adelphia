@@ -713,8 +713,8 @@
                     <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Points-Available">Skill Points</span> <span name="attr_CombatSkillPointsAvailable"></span></label>
                     <div class="sheet-combatskillslist-Short">
                         <fieldset class="repeating_combatskillslist">
-                            <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
+                            <div class="CombatSkillHeaderRow">
+                                <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
                                 <option value="Buckler" selected="selected" data-i18n="Combat-Skill-Buckler">Buckler</option>
@@ -749,12 +749,15 @@
                                 <option value="Weapon Mastery 2" selected="selected" data-i18n="Combat-Skill-Weapon Mastery 2">Weapon Mastery 2</option>
                                 <option value="Weapon Mastery 3" selected="selected" data-i18n="Combat-Skill-Weapon Mastery 3">Weapon Mastery 3</option>
                                 </select>
+                                </label>
+                                <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
+                            </div>
                         </fieldset>
                     </div>
                     <div class="sheet-combatskillslist-Long">
                         <fieldset class="repeating_combatskillslist">
-                            <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
-                            <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
+                            <div class="CombatSkillHeaderRow">
+                                <label class="PrimaryLabel"><span data-i18n="Combat-Skill-Name">Skill</span> <select name="attr_CombatSkill">
                                 <option value="Advance" selected="selected" data-i18n="Combat-Skill-Advance">Advance</option>
                                 <option value="Bold" selected="selected" data-i18n="Combat-Skill-Bold">Bold</option>
                                 <option value="Buckler" selected="selected" data-i18n="Combat-Skill-Buckler">Buckler</option>
@@ -789,7 +792,9 @@
                                 <option value="Weapon Mastery 2" selected="selected" data-i18n="Combat-Skill-Weapon Mastery 2">Weapon Mastery 2</option>
                                 <option value="Weapon Mastery 3" selected="selected" data-i18n="Combat-Skill-Weapon Mastery 3">Weapon Mastery 3</option>
                                 </select>
-                            </label>
+                                </label>
+                                <button type="action" class="PrimaryButton CombatSkillRollButton" name="act_CombatSkillCheck"></button>
+                            </div>
                             <input type="hidden" class="StatCombatSkillSelectorDisplay" name="attr_StatCombatSkillSelectorDisplay" value="0" />
                             <label class="PrimaryLabel"><span data-i18n="stat-change-column-stat">Stat</span> <select name="attr_StatCombatSkillSelector">
                                 <option value="STR" selected="selected" data-i18n="STR-Full-Name">Strength</option>

@@ -2133,12 +2133,7 @@
       if (!statAttrName) { return; }
 
       getAttrs([statAttrName], function(statValues) {
-        const statValue = toNumber(statValues[statAttrName]);
-        const rollPenalty = Math.floor(Math.random() * 100);
-        const statCheck = statValue - rollPenalty;
-        const statCheckResult = statCheck >= 0 ? 1 : 0;
-
-        const rollTemplate = `&{template:adelphiacombatskill} {{name=${characterName} - ${skillName}}} {{stat_check=${statCheckResult}}} {{effect=${effect}}} {{description=${description}}}`;
+        const rollTemplate = `&{template:adelphiacombatskill} {{name=${characterName} - ${skillName}}} {{stat_check=[[1d100<${toNumber(statValues[statAttrName])+1}]]}} {{effect=${effect}}} {{description=${description}}}`;
         startRoll(rollTemplate, function(results) {
           finishRoll(results.rollId, {});
         });

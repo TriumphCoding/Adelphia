@@ -330,12 +330,6 @@
 .AttackRiposteRollButton {
   min-width: 34px;
   padding: 3px 6px;
-  transition: none;
-}
-
-.AttackRiposteRollButton:hover,
-.AttackRiposteRollButton:focus {
-  filter: none;
 }
 
 .TriangleRollButton {
@@ -1091,6 +1085,44 @@ button[type="action"] {
 button[type="roll"]:hover,
 button[type="action"]:hover {
   filter: brightness(1.08);
+}
+
+/* Roll20 applies extra .btn-like styling to roll buttons; override it explicitly
+   so roll/action hover behavior matches this sheet's button styling. */
+.ui-dialog .charsheet button[type="roll"],
+.ui-dialog .charsheet button[type="compendium"] {
+  color: #fffdf5;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  background-image: linear-gradient(180deg, #3f64bf 0%, #2d458a 100%);
+  background-position: 0 0;
+  transition: filter 0.12s ease;
+}
+
+.ui-dialog .charsheet button[type="roll"]::before,
+.ui-dialog .charsheet button[type="compendium"]::before {
+  color: inherit;
+}
+
+.ui-dialog .charsheet button[type="roll"]:hover,
+.ui-dialog .charsheet button[type="roll"]:focus,
+.ui-dialog .charsheet button[type="compendium"]:hover,
+.ui-dialog .charsheet button[type="compendium"]:focus {
+  color: #fffdf5;
+  background-position: 0 0;
+  filter: brightness(1.08);
+}
+
+.ui-dialog .charsheet button[type="roll"].TriangleRollButtonAdvantage {
+  background: #2e8b57;
+  background-image: none;
+  border-color: #1f5f3c;
+}
+
+.ui-dialog .charsheet button[type="roll"].TriangleRollButtonDisadvantage {
+  background: #b22222;
+  background-image: none;
+  border-color: #7a1717;
 }
 
 .OptionCategoryH1 {

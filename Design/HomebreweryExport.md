@@ -1689,26 +1689,4 @@ Combat traps are a little different. Combat traps are a type of terrain, And the
 :
 :
 :
-# Credits
-:
-:
-## Design
-Triumph Coding
-:
-## Illustration
-Alouette
-:
-Hollow Word Birds Artistry
-:
-## Floorplans
-![Floorplan Generator](https://www.illwinter.com/floorplan/illfloorbanner800x185.png) {width:350px,mix-blend-mode:multiply}
-:
-## Layouts
-{{homebreweryCredits
-Made With
 
-{{homebreweryIcon}}
-
-The Homebrewery  
-[Homebrewery.Naturalcrit.com](https://homebrewery.naturalcrit.com)
-}}

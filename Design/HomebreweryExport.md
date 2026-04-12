@@ -1,3 +1,6 @@
+# Adelphia
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:900px,mix-blend-mode:multiply}
+\page
 {{toc,wide
 # Contents
 
@@ -140,9 +143,11 @@
 }}
 \page
 # Chapter 1 - About the Game
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:750px,mix-blend-mode:multiply}
+#
 
 Who would you like to be; the personal bodyguard of a prince, setting out with him to find and rescue his long-lost father? Or maybe you want to be a sickly mage that, while traveling with a group of merchants, gets conscripted into the army and forced to fight for a cause you don’t believe in. Whatever you chose, your character will experience great adventure, epic battles, and even personal growth.
-
+\column
 ## Required Materials
 :
 + A copy of this guide
@@ -150,7 +155,7 @@ Who would you like to be; the personal bodyguard of a prince, setting out with h
 + Two Ten-Sided dice for each player (2d10)
 + A Grid Map to track battle positions
 + Pencils and Scrap Paper
-
+\page
 ## Basic Rules
 :
 Overall, the game play itself is very simple. All characters have a collection of stats that represent how well they can perform. Using these stats, you will roll dice and determine how effective you were at that given moment.
@@ -160,7 +165,7 @@ Overall, the game play itself is very simple. All characters have a collection o
 Adelphia is a **Roll Under** system. Each player should have access to two ten sided dice. Except in one instance, you will be rolling the two ten sided dice to generate a random number between 0% and 99%. This is done by designating one of the two dice as the tens digit, and the other as the ones digit. You roll both dice, and read the result as a percentile. For example, a roll of 4 on the tens die and a 7 on the ones die is a 47%. A roll of a double zero, 00%, is therefore the best roll available, being the lowest roll possible. In formulas given later in the book, this process is abbreviated to **d%**, meaning roll the two 10 sided dice and use the percentile reading.
 :
 The other Instance of dice rolling is used when leveling up your character. Instead of reading the two ten sided dice as a single percentage, you will add the numbers together and use the total. So in the previous example, the 4 and the 7 would be worth a total of 11. You are still rolling under, again making a roll of double zero, 0 + 0, the best roll available. This is often abbreviated as **2d10**.
-
+:
 {{note If you ever exactly roll the number you are trying to beat, that traditionally counts as a successful roll. If two rolls are opposing each other, a tie breaks in the direction of the character that is initiating action, and against the person defending against action. If two different people are "initiating", then break in the direction of the players over NPCs.}}
 
 ### Attack Tests
@@ -174,7 +179,7 @@ Your weapon will determine what type of damage you deal, but traditionally it wi
 ### Stat Tests
 :
 Usually, Stat Tests are used to activate "Combat Skills". To check against a Stat, you attempt a **d%** roll against your own **Base Stats**. In this case, your **Hit Chance** is the actual value of your Base Stat. Rolling under your stat means a successful test, and your Combat skill is performed. Some Tests will apply a x2 or a x1/2 modifier. Multiply your stat by this value (and round down) to get your Hit Chance. For game speed, you can use the **d%** roll for your Attack Test to pass a Stat Test. As long as your **d%** beats both, your attack works and your combat skill goes off. These may be abbreviated as **STR**%, **SPD**x2%, or **CON**x1/2%
-\page
+
 ### Quirk Tests
 :
 while the total number of **Quirks** may change depending on the type of campaign that is being run, traditionally your character will have four. Whenever you wish to perform an action outside of combat, you are going to choose one of these quirks to represent your familiarity with the task. Then, you will choose one of your **Base Stats** to represent how you are going about the task. Add your Stat, and the check's **Difficulty Bonus** to get your **Hit Chance** for that Skill Check. If your **d%** rolls under your Hit Chance, you successfully accomplish the task you set out to perform.
@@ -189,7 +194,10 @@ Every significant combat increases your character's level by one. All base stats
 :
 All of the rules listed here are for basic reference. Often times you might have abilities or weapons that override these basic rules, like a weapon that deals damage based on your **Dexterity**. In all cases, the more specific rule changes the more general rule.
 \page
+
 # Chapter 2 - Game Stats
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:600px,mix-blend-mode:multiply}
+#
 
 Before creating a character, it is important to understand each stat and their effect. This understanding will help to determine how you want your character’s personality reflected numerically.
 :
@@ -209,13 +217,13 @@ Strength determines how physically strong your character is. The more strength y
 ### Intelligence (INT)
 :
 Intelligence determines how book-smart your character is. The more Intelligence you have, the more damage each tome you use deals, and the effectiveness of some staffs increase. Traditionally, Intelligence is opposed by your opponent's **Wisdom**.
-:
+\page
 {{note When dealing with mental stat-based roll-play, you should never feel forced to perform in a particular way solely because of the value of your stats. Having a low intelligence might mean you have difficulty applying your raw intelligence to particular tasks, but it does not have to mean your character is stupid. }}
 
 ### Dexterity (DEX)
 :
 Dexterity determines the quality of your technique with your equipped weapon. More Dexterity increases both the **Accuracy** and **Critical** chance of your attacks. Traditionally, Dexterity is opposed you your opponent's **Speed**.
-\column
+
 ### Speed (SPD)
 :
 Speed determines how fast you are in direct combat. More speed increases both your **Dodge** chance, and your chance to **Follow Through Attack**.
@@ -239,7 +247,7 @@ Movement determines how many spaces your character can move on the battlefield. 
 ## Calculated Stats
 :
 **Calculated Stats** are the statistics used for combat. These represent how much damage you can deal, how accurate you are, and how well you avoid damage. These stats are combined with your weapon stats, so be sure to include your chosen weapon in their calculations.
-
+\column
 ### Might (MGT)
 :
 Might is the Damage your attacks will deal. The weapon you've equipped will tell you how to calculate this value. Might is opposed by your opponents **Defense** or **Resistance**, again based on the weapon's characteristics.
@@ -247,7 +255,7 @@ Might is the Damage your attacks will deal. The weapon you've equipped will tell
 ### Accuracy (ACC)
 :
 Accuracy dictates your chance to hit your opponent. It is calculated by adding twice your **Dexterity** and half your **Luck** to your weapon’s Accuracy. Accuracy is opposed by your opponent's **Dodge**. Remember in all cases to round down.
-\page
+
 ### Critical (CRIT)
 :
 Critical dictates the chance that you will strike a vital spot on your opponent, which inflicts Three times the **Damage** of a regular attack. It is calculated by adding half your **Dexterity** to your weapon’s Critical. Critical is opposed by your opponent's **Evade**. Remember in all cases to round down.
@@ -282,6 +290,8 @@ Resistance represents your ability to shrug off magical attacks. It is calculate
 
 \page
 # Chapter 3 - Character Creation
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:700px,mix-blend-mode:multiply}
+#
 
 In addition to these basic rules, your **Game Master** may have specific guidelines she would like you to follow, or she may have even overwritten parts of this book herself. As with all pen and paper RPGs, work with the people at your table to make sure that everyone is on the same page about the types of characters that your game will support.
 :
@@ -289,8 +299,6 @@ In addition to these basic rules, your **Game Master** may have specific guideli
 
 ## Overview
 :
-In order to create a character, you are going to be performing the following steps:
-
 1. Assign your **Growth Points**
 1. Assign your **Class Points**
 1. Choose your **Creature Type**
@@ -301,7 +309,7 @@ In order to create a character, you are going to be performing the following ste
 
 :
 Once everyone has finished making their character, you are ready to start playing.
-
+\page
 ## Growth Points
 :
 Your character's **Growth** determines how each of your character's stats will change over time. Every base stat (excluding **Movement**) starts at the minimum Growth rate of "5". Then, you can spend up to 35 points raising each of these growth rates (again, excluding **Movement**). As an Example:
@@ -320,7 +328,7 @@ Your character's **Growth** determines how each of your character's stats will c
 | WIS       | 5      | 2      | 7      |
 | MOV       | N/A    | N/A    | N/A    |
 | **Total** | **40** | **35** | **75** |
-\column
+
 ## Class Points
 :
 Your character's **Class** is what determines your character's stats right now. Your character's **Hit Points** start off at 10, and your character's **Movement** starts off at 5. All other stats start off at 2. In addition, not every stat is worth the same amount in combat. **HP** is purchased at a rate of 3 HP per point. **Luck** is purchased at 2 LUK per point. And MOV takes 2 points to increase once. Overall, you have 20 points to spend on your class. As an example:
@@ -341,7 +349,7 @@ Your character's **Class** is what determines your character's stats right now. 
 | **Total** |      |      | **20** |        |                   |
 :
 However, you may not want to follow our example character so closely, because in addition to spending points on your Starting Character stats, you can also purchase **Class Abilities**. But don't worry too much, as you'll get more Class points as you **level up**.
-
+\column
 ## Class Abilities
 :
 You can spend your **Class Points** on abilities that might be relevant to your character, and truly set them apart from everyone else. Each ability costs a certain number of Class Points. Simply spend the points to activate the Class Ability, and you can have as many as you can afford.
@@ -351,7 +359,7 @@ You can spend your **Class Points** on abilities that might be relevant to your 
 ### Nobility
 :
 *Cost: 4* - Your family line has a history, and you have the potential to grow into that history. Get +1 to all your Growth Rates.
-\page
+
 ### Ride
 :
 *Cost: 4* - You are trained in riding a horse, and can put your enhanced mobility to good use in the field. You can spend unspent movement after performing an action each turn.
@@ -371,7 +379,7 @@ You can spend your **Class Points** on abilities that might be relevant to your 
 ### Sing
 :
 *Cost: 3* - You can inspire your allies around you to action. You can spend your action performing for one of your allies that has already taken their action [**Range 1**]. They recover all spent movement and may take another turn, as though it was the start of their turn again. (They can take their second turn any time during this allied phase).
-
+\page
 ### Combat Skill
 :
 *Cost: 3* - You have trained in a specialized form of combat, and you gain 1 **Combat Skill Point**. See the section on combat skills for what you can spend this on. You can purchase this background as many times as you'd like.
@@ -379,7 +387,7 @@ You can spend your **Class Points** on abilities that might be relevant to your 
 ### Weapon Skill
 :
 *Cost: 2* - You have trained in more than a single form of self defense. Every character has access to one weapon type for free. However, if you would like to wield additional weapons categories, you will need to purchase this skill. You can purchase this background as many times as you'd like
-\column
+
 ## Creature Type
 :
 Creature Types add a little bit of fantasy flavor to your setting. Work with your GM to see if this list has been changed or customized for the setting you are using. If you prefer a lower fantasy, there should be no problem making every character human, there will be plenty of room for differentiation elsewhere. These replace the "base" values in the above creation examples.
@@ -410,7 +418,7 @@ Dwarves are stout and hearty. They tend to be direct with their problem solving,
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |  13|    2|    0|    2|    1|    2|    3|    3|    5|
 | Growth |   6|    5|    3|    5|    4|    5|    6|    6|  N/A|
-
+\column
 ### Orc
 :
 Orcs are more muscle than anything else. Even so, they tend to find themselves with the short end of the stick more than they rightly deserve.
@@ -428,7 +436,7 @@ Goblins are clever creatures, and when dedicated to a task can find themselves a
 |---     | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base   |   7|    2|    2|    3|    4|    2|    1|    1|    5|
 | Growth |   4|    5|    5|    6|    7|    5|    4|    4|  N/A|
-\page
+
 ### Cyborg
 :
 Some or all of your physical body has been replaced with machinery that runs on Magic, or something even more exotic like steam. How much of your old personality survived the process is up to you to decide.
@@ -457,7 +465,7 @@ One of your ancestors made a pact with the spirit of a herbivorous animal. the r
 |---      | ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|  ---|
 | Base    |  10|    2|    2|    2|    3|    2|    0|    1|    6|
 | Growth  |   5|    5|    5|    5|    7|    5|    4|    4|  N/A|
-
+\page
 ### Dragon
 :
 You have dragon blood, and it manifests itself in you in interesting ways.
@@ -480,14 +488,13 @@ All characters start the game with the following:
 1. A Rank D Weapon
 1. A Rank E Weapon
 1. A Pouch of healing herbs
-
+\column
 ## Leveling Up
 :
 Once you've made all of your decisions, and have assigned all of your points, it's time to roll to see your first level.
 :
 For each stat with a growth, roll 2d10 and add them together. Do remember that the 10 sided dice goes from 0-9, not 1-10, to keep reading them consistent across both the d% and the 2d10 rolls. As long as you roll under that stat's growth, increase your stat by 1 point. Ties work out in your favor.
 :
-For example:
 
 ### Monico Aaronway Levelup
 :
@@ -504,6 +511,9 @@ For example:
 | MOV       | N/A    | N/A  | +0     | 6    | 6     |
 | **Total** |        |      | **+6** |      |       |
 
+#
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:500px,mix-blend-mode:multiply}
+\page
 ### Optional Level Up Rules
 :
 Sometimes, the randomness of a level up system can feel oppressive. To help mitigate this, consider some of the following changes:
@@ -513,7 +523,7 @@ Sometimes, the randomness of a level up system can feel oppressive. To help miti
 **No Bad Stats**: Every time you finish a level up, if you didn't gain a particular stat, increase your growth in that stat by 1. Once you do gain that stat, reset your growth back to your base growth rate.
 :
 **Static Levels**: Instead of rolling your stats, you gain your growth as stat experience points. Once you get 18 points or more in a single stat, drop your exp by 18, and increase that stat by 1.
-\page
+
 {{note Often times, this can be useful to create a character over level 1, without rolling thousands of dice. Use {Growth} x {Starting Level} / 18 to determine how many stat growths you received over those levels, and then continue using the level up system of your choice. Always round down, regardless of how high the decimal portion is.}}
 
 ## Character Creation Example
@@ -534,7 +544,7 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 | WIS       | 5      | 2      | 7      |
 | MOV       | N/A    | N/A    | N/A    |
 | **Total** | **40** | **35** | **75** |
-
+\column
 ### Stats
 :
 | Stat      | Base | Rate | Spent  | Gained | Total             |
@@ -564,7 +574,7 @@ Monico Aaronway is a Human Vagabond, traveling the land in search of adventure a
 | WIS       | 7      |  0   | +1     | 2    | **3** |
 | MOV       | N/A    | N/A  | +0     | 6    | 6     |
 | **Total** |        |      | **+6** |      |       |
-\column
+
 ### Weapons
 :
 1. Iron Sword
@@ -585,7 +595,7 @@ With Iron Sword Equipped:
 | Avoid      | *LUK* + *W.AVO*                      | 7 + 0                  | 7     |
 | Defense    | *CON* + *W.DEF*                      | 4 + 0                  | 4     |
 | Resistance | *WIS* + *W.RES*                      | 3 + 0                  | 3     |
-
+\page
 ## Changes by Level
 :
 As your level increases, you may gain more than just stat points. You also gain skill points, and your equipment may improve. These growths happen at regular intervals, see the below table for an explanation.
@@ -614,7 +624,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 18   | Hero       | 35            | 20          | 3            | C            | C2            | 0            |
 | 19   | Hero       | 35            | 20          | 3            | C            | C2            | 0            |
 | 20   | Hero       | 35            | 20          | **4** +1     | C            | **C3** +1     | 0            |
-\page
+
 ### Epic Tier
 :
 |Level | Tier       | Growth Points | Stat Points | Skill Points | Weapon Level | Rune Strength | Great Skills |
@@ -639,7 +649,7 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 38   | Epic       | 35            | 30          | 7            | A            | A1            | 1            |
 | 39   | Epic       | 35            | 30          | 7            | A            | A1            | 1            |
 | 40   | Epic       | 35            | 30          | **8** +1     | A            | **A2** +1     | 1            |
-
+\column
 ### Legend Tier
 :
 |Level | Tier       | Growth Points | Stat Points | Skill Points | Weapon Level | Rune Strength | Great Skills |
@@ -664,9 +674,12 @@ As your level increases, you may gain more than just stat points. You also gain 
 | 58   | Legend     | 35            | 40          | 11           | S+           | S1            | 2            |
 | 59   | Legend     | 35            | 40          | 11           | S+           | S1            | 2            |
 | 60   | Legend     | 35            | 40          | **12** +1    | S+           | **S2** +1     | 2            |
+
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:450px,mix-blend-mode:multiply}
 \page
 # Chapter 4 - Character Definition
-
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:700px,mix-blend-mode:multiply}
+#
 Your characters are more than a bundle of numbers. They have personality, hobbies, and areas of interest that a simple stat line can't express. These character quirks influence how they interact with the world, and allow for a more general level of expression that many situations might call for.
 :
 When telling the game's story, many situations won't call for an application of direct force. Instead, one's experience and personality can be used to overcome those types of challenges. In these cases, you'll chose a quirk and one of your base stats, and together you will determine if you successfully overcome the challenge, or if the challenge overcomes you.
@@ -674,7 +687,7 @@ When telling the game's story, many situations won't call for an application of 
 ## Character Quirks
 :
 Character quirks are brief descriptions of who your character is, and what your character knows. In general, there are about 5 different types of quirks that you could name, but the specifics of those quirks are up to you.
-:
+\page
 {{note While it's OK to double-up, and give yourself two or more quirks of the same type, these are really here to help you get into your character's head, and assist in the "Roll Playing" part of the game. Making sure you have a couple of different types should encourage you to have a breadth to your character, and make them more interesting to bring to bear when the steel isn't swinging around.}}
 
 **Vocation**: This is a description of a job your character might have, or would have if they weren't currently tied up in whatever is going on in the game's story right now. Were you a baker, or an Alchemist? Maybe you would be a translator for a bunch of traveling merchants. Maybe a noble, in charge of managing a big estate.
@@ -690,7 +703,7 @@ Character quirks are brief descriptions of who your character is, and what your 
 **Other**: Sometimes, something character defining doesn't fit cleanly into the above categories. That's OK, as long as it's useful as a guide to who you are. Maybe you are an anxious perfectionist in everything you do? Maybe you've learned to get around in life without one of your limbs?
 :
 {{note Remember, you are going to be choosing more than one quirk. No one thing should be the sole definition of a character. In addition, even if these are the biggest areas of your character's life and personality, they might not be the only aspects. These are guidelines, not rails.}}
-
+\column
 ## Using Quirks
 :
 Quirks are used to determine how your character thinks about and overcomes unique challenges that they may face. "I don't know anything about alchemy, but I was a chef before the war broke out. Making one specific potion is just like following a recipe, right? I can do that!"
@@ -707,15 +720,15 @@ To be specific, once you determine that an obstacle in the narrative has present
 | Impossible      | -25 + *stat*     |
 :
 If you pass the quirk test, you accomplish or at least make progress toward, your desired outcome.
-\page
+
 ### Making Progress
 :
 Sometimes, it pays to break a task down into multiple parts, allowing multiple characters to chip in and accomplish a goal. In this case, you will assign a task HP, usually some number between 2 and 12. Then, you will choose a difficulty at which you would consider progress being made toward that goal, instead of simply accomplishing the task outright. If you match the tier of difficulty, deal 2 damage against the task. for every additional tier of difficulty your quirk test would have cleared, deal an additional 1 damage.
 :
 In addition, choose an HP value for the party. for every tier of difficulty a given roll fails by, deal 1 damage to the party. Once the party is "defeated", the outcome that they didn't want occurs.
-:
-{{note While more information is available in the sections about running the game, as a rule of thumb the task should have about twice the HP as the party. So the party might have 2 HP for a 4 HP task, or 3 HP for a 6 HP task.}}
 
+{{note While more information is available in the sections about running the game, as a rule of thumb the task should have about twice the HP as the party. So the party might have 2 HP for a 4 HP task, or 3 HP for a 6 HP task.}}
+\page
 ### Getting Close
 :
 Did someone fail a skill check by only one tier of difficulty? if they did, maybe someone else at the table can come up with a way that their character might be able to help. If so, they can make an attempt against the difficulty of the task (even if the way they are helping is surprisingly simple, like bringing snacks to a person doing a large amount of research). If they succeed, then the person counts as succeeding at exactly the level difficulty.
@@ -725,7 +738,7 @@ Did someone fail a skill check by only one tier of difficulty? if they did, mayb
 Alternatively, the Game Master may offer the character a penalty in exchange for succeeding on the roll anyway. Usually, this is a narrative penalty that might cost the character progress toward a personal goal, or momentary safety, in exchange for progress now.
 :
 {{note For example, if trying to escape a city, your character might take the penalty of dropping a personal item, that might be used to identify them later, as a cost for making progress toward escaping right now. Or, maybe the character scaling a wall cuts their hand as they catch themselves from falling, and is at -3 Dex for the upcoming combat after they get to the top.}}
-\column
+
 ### Critical Success
 :
 In addition to your hard work and dedication, sometimes you just get lucky. If the number you roll on your quirk test also rolls under your **LUK** stat, you are **Critically Successful** in the situation. Note, you must succeed in general in order to be critically successful, in the case of Legendary or Impossible tasks.
@@ -743,7 +756,7 @@ In general, though, the recommended number of quirks is 4. The GM will choose a 
 {{note The recommended starting quirks are a Vocation, a Hobby, and an Interest, but if you have something specific in mind don't feel tied down to those three exactly.}}
 
 Non Player Characters should have 2 quirks total, one to represent who they are in the story, and one to represent something interesting about their character to add background flavor and interest.
-\page
+
 ### Example Quirk Selection
 :
 **Monico Aaronway** is a sword-for-hire doing what she can to take care of her younger brother after their parents passed away. He inherited his father's knack for magic, and although she has no head for the stuff herself, she's been helping him study it as she bounces from place to place trying to get by. Her sword forms that she practices reminds her of the dancing lessons she was given, back in more stable times.
@@ -769,8 +782,12 @@ Non Player Characters should have 2 quirks total, one to represent who they are 
 1. *Hobby*: Farming. Or at least Scarecrows.
 1. *Relationship*: Time-honored Honor Guard.
 \page
+# Midroll Spread
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:700px,mix-blend-mode:multiply}
+\page
 # Chapter 5 - Character Growth, Skills, Weapons, and Runes
-
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:700px,mix-blend-mode:multiply}
+#
 Your characters are not static. Everything they do informs who they are, and what they can do. And as your character grows, they will find more than just increased stats. They will develop specialized skills, and acquire equipment worthy of their status.
 
 ## Gaining Levels
@@ -780,7 +797,7 @@ Every significant story beat grants a level up.
 ## Story Beats
 :
 The above is hard to explain in specific, but it should feel very natural at the table. Ultimately, these are determined by the GM, but as a rough rule of thumb, any time your characters would feel like they have accomplished something, they should level up. For example:
-:
+\page
 - Clearing out a cave filled with monsters.
 - Running around a town to successfully raise a defense.
 - Defending that town from the assault at the walls.
@@ -825,7 +842,7 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 1. Increase the **Accuracy** of the mastered weapon by your **Level**.
 1. Increase the **Might** of the master weapon by 10% of your **Level**.
 1. Increase the **Critical** of the master weapon by 50% of your **Level**.
-\page
+
 **Provoke**: Leaving Tiles within range 1/1/1-2 of your character cost enemies an additional 1/2/2 points of movement. Up to 3 total points can be invested into this skill.
 :
 **Pass**: You may move through locations occupied by enemies.
@@ -839,7 +856,7 @@ Every 5 levels, you get a skill point. Unlike your stats, which are always appli
 **Smite**: *Requires Push*. After Combat, you may push your opponent directly away 2 spaces. This skill can only be purchased once. In general, you can't smite through solid walls, but you can smite across small gaps, or past people.
 :
 **Advance**: *Requires Push*. When you push your opponent with either the push or smite skills, you may move into the square they left empty. This skill can only be purchased once.
-:
+\page
 **Swap**: *Requires either Push or Lunge*: After Combat, you and your opponent may swap the spaces the two of you occupy, at your discretion. this skill can only be purchased once.
 :
 **Practiced**: Whenever a Skill has a chance of activation, increase that chance by 5%
@@ -883,7 +900,7 @@ Roughly speaking, weapon levels follow the below schedule:
 | S+  | 7     |Orichalcum | 50                   | 65
 :
 Taking Steel weapons as an example, at level 10 you will gain access to your first steel weapon. As your level increases, you might be able to trade out that steel weapon for others that are level appropriate, but you won't be able to fill out an arsenal of steel weapons. At level 35, you will roughly have access to the resources to swap out any steel weapon basically at will, as long as the narrative supports your access to these weapons.
-\page
+
 ## Weapon Cycle
 :
 Some weapons are naturally more effective when brought to bear against someone using the wrong weapon type. This is represented by the following relationship:
@@ -898,15 +915,15 @@ If your weapon beats your opponent's, increase your **Accuracy** by 10 per weapo
 For example, if your accuracy is 87 while wielding an iron sword, and you are going to be striking a mage wielding a Bronze Thunder Spell, you would instead attack with 117 accuracy. If the mage had 91 accuracy, their riposte would instead by at 71 accuracy.
 :
 Outside of this cycle, weapons don't change. So Red weapons fighting Grey weapons don't change their **Accuracy** or **Might**. Same for a Blue weapon fighting a Blue weapon.
-
+\page
 ## Weapon Types
 :
 Weapon types are separated into two different types of categorization plans. **Physical Weapons** are weapons wielded by your **STR** and defended by your target's **CON**, and **Magic Weapons** are wielded by your **INT** and defended by your target's **WIS**. In addition, weapons are assigned a color: **Red** weapons are more effective against **Green** weapons, **Green** weapons are more effective against **Blue** weapons, and **Blue** weapons are more effective against **Red** weapons. **Grey** weapons are neutral in all combats. On character creation, everyone gets to choose one weapon type that they are familiar with. You can't wield a weapon type you are unfamiliar with.
 :
 Some weapons have multiple sub-categories, for example a **Katana** is a type of **Sword**. All subtypes are minor variations of the base type of weapon. When equipping a sub-type, use the stats of the main-type weapon, then apply the sub-type changes to it.
-\column
+
 ### Sword
-:
+
 Swords are the standard fantasy weapon. They are useful in most situations, and you'll never really go wrong with having one by your side.
 :
 A **Katana** is a type of sword that encourages quickness and speed over defense. Wielding a Katana increases your **SPD** by 1 and decreases your **CON** and **WIS** by 1 per weapon level.
@@ -922,8 +939,8 @@ A **Katana** is a type of sword that encourages quickness and speed over defense
 | S+  | 7     | Orichalcum | Physical | Red   | 16    | 65       | 1
 
 ### Axe
-:
-Axes hurt people. The preferred weapon of brigands and mercenaries, Axes pack a wallop that nothing else can quite compare to. Their power is somewhat dwarfed by their difficulty to wield accurately.
+
+Axes hurt people. The preferred weapon of brigands and mercenaries, Axes pack a wallop that nothing else can quite compare to.
 :
 A **Club** is wielded like a blunt Axe, bludgeoning instead of cutting your opponent. A club increases your **Critical** by 5 and decreases your **Might** by 1 per weapon level.
 :
@@ -938,7 +955,7 @@ A **Club** is wielded like a blunt Axe, bludgeoning instead of cutting your oppo
 | S+  | 7     | Orichalcum | Physical | Green | 28    | 5        | 1
 
 ### Lance
-:
+
 Lances are a soldier's weapon. They split the difference between the accuracy of the sword and the power of the axe.
 :
 A **Naginata** is a type of lance that encourages defense over offense. Wielding a Naginata increases your **CON** and **WIS** and decreases your **Might** by 1 per weapon level.
@@ -952,9 +969,9 @@ A **Naginata** is a type of lance that encourages defense over offense. Wielding
 | A   | 5     | Silvered   | Physical | Blue  | 16    | 55       | 1
 | S   | 6     | Gilded     | Physical | Blue  | 19    | 45       | 1
 | S+  | 7     | Orichalcum | Physical | Blue  | 22    | 35       | 1
-\page
+
 ### Gauntlet
-:
+
 Gauntlets are a protected hand covering, used when fighting with your fists. Gauntlets are a weapon for people who like to get up close.
 :
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
@@ -968,10 +985,12 @@ Gauntlets are a protected hand covering, used when fighting with your fists. Gau
 | S+  | 7     | Orichalcum | Physical | Grey  | 16    | 30       | 1
 
 ### Crossbow
+
+Crossbows are utilitarian weapons that are as deadly as they are efficient. Their range provides a safety that really can't be beat.
 :
-Easy to Hold and aim, crossbows are utilitarian weapons that are as deadly as they are efficient. Their range provides a safety that really can't be beat. All crossbows come with the **Slayer (Flight)** special.
+An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Increase **Might** and decrease your **SPD** by 1 per weapon level.
 :
-An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Increase **Might** and decrease your **SPD** by 1 per weapon level. They also come with the **Slayer (Flight)** special.
+**Crossbows** and **Arbalests** come with the **Slayer (Flight)** special.
 :
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range 
 |:--- | :---  | :---       | :---     | :---  |---:   | ---:     | :---  
@@ -982,9 +1001,9 @@ An **Arbalest** is a heavy type of crossbow that sacrifices speed for power. Inc
 | A   | 5     | Silvered   | Physical | Red   | 11    | 70       | 2     
 | S   | 6     | Gilded     | Physical | Red   | 13    | 65       | 2     
 | S+  | 7     | Orichalcum | Physical | Red   | 15    | 60       | 2     
-
+\page
 ### Knives
-:
+
 Knives are deadly weapons that can be easily wielded in close range, or thrown short distances. Their safety and power comes from the versatility of range.
 :
 **Shuriken** trade the power of a knife for accuracy. Increase **Accuracy** by 5 per level, but decrease **Might** by 1 per level.
@@ -998,12 +1017,14 @@ Knives are deadly weapons that can be easily wielded in close range, or thrown s
 | A   | 5     | Silvered   | Physical | Green | 19    | 30       | 1-2
 | S   | 6     | Gilded     | Physical | Green | 24    | 15       | 1-2
 | S+  | 7     | Orichalcum | Physical | Green | 27    | 0        | 1-2
-\column
+
 ### Bow
+
+Bows deal precision ranged destruction. Dealing with a well trained archer is a difficult affair.
 :
-Elements of Precision and damage come together in a Bow to deal precision ranged destruction. Dealing with a well trained archer is a difficult affair. All Bows come with the **Slayer (Flight)** Special
+A **Yumi** is a type of bow that exchanges accuracy for power. Increase **Might** by 1 per level, but decrease **Accuracy** by 5 per level.
 :
-A **Yumi** is a type of bow that exchanges accuracy for power. Increase **Might** by 1 per level, but decrease **Accuracy** by 5 per level. They also come with the **Slayer (Flight)** special.
+**Bows** and  and **Yumis** come with the **Slayer (Flight)** special.
 :
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range 
 |:--- | :---  | :---       | :---     | :---  | ---:  | ---:     | :---  
@@ -1016,7 +1037,7 @@ A **Yumi** is a type of bow that exchanges accuracy for power. Increase **Might*
 | S+  | 7     | Orichalcum | Physical | Blue  | 21    | 35       | 2     
 
 ### Flintlock
-:
+
 Flintlocks are a type of weapon powered by gunpowder and grit. They tend to be dangerous, both to an inexperienced wielder and the target downrange.
 :
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range
@@ -1028,9 +1049,9 @@ Flintlocks are a type of weapon powered by gunpowder and grit. They tend to be d
 | A   | 5     | Silvered   | Physical | Grey  | 10    | 45       | 2
 | S   | 6     | Gilded     | Physical | Grey  | 12    | 35       | 2
 | S+  | 7     | Orichalcum | Physical | Grey  | 15    | 25       | 2
-
+\column
 ### Wind
-:
+
 Wind magic is incredibly accurate. Mages who wield wind tend to be efficient and calculating. Wind Magic comes with the **Slayer (Flight)** Special
 :
 **Dark** magic is divine magic that selfishly protects the user, if it is somewhat more difficult to wield. when equipping dark magic increase your **CON** and **WIS** by 1 per weapon level, but decrease your **Accuracy** by 5 per weapon level. Dark magic also comes with the **Slayer (Flight)** special.
@@ -1044,11 +1065,11 @@ Wind magic is incredibly accurate. Mages who wield wind tend to be efficient and
 | A   | 5     | Silvered   | Magical  | Green | 10    | 75       | 1-2   
 | S   | 6     | Gilded     | Magical  | Green | 12    | 85       | 1-2   
 | S+  | 7     | Orichalcum | Magical  | Green | 14    | 65       | 1-2   
-\page
+
 {{note Magic Tomes are actually crafted books, carried around by mages. Magical Books are covered in runes that Mages push raw magic through, shaping the magic in the complex ways necessary to cast that particular spell. The inks used in these books actually contain the metals in their composition.}}
 
 ### Light
-:
+
 Light Magic is a divine powerful, but difficult to direct properly. Light requires a careful touch, but when directed well can be devastating to many an evil cause. Light Magic comes with the **Slayer (Dragon)** Special
 :
 **Lightning** is elemental magic that exchanges the power of light for the critical damage of several thousand volts and amps. Increases your **Critical** by 5 and decrease your **Might** by 1 per weapon level. Lightning magic also comes with the **Slayer (Dragon)** special.
@@ -1062,9 +1083,9 @@ Light Magic is a divine powerful, but difficult to direct properly. Light requir
 | A   | 5     | Silvered   | Magical  | Blue  | 18    | 35       | 1-2   
 | S   | 6     | Steel      | Magical  | Blue  | 22    | 20       | 1-2   
 | S+  | 7     | Orichalcum | Magical  | Blue  | 26    | 5        | 1-2   
-
+\page
 ### Fire
-:
+
 Fire is a form of magic that many mages find both reliable and devastating. A solution to many problems is to end it with fire. Fire Magic comes with the **Slayer (Beast)** Special
 :
 **Spirit** is a type of magic that encourages speed over direct accuracy. Increase your **SPD** by 1 per weapon level, but decrease your **Accuracy** by 5 per weapon level. Spirit magic also comes with the **Slayer (Beast)** special.
@@ -1078,9 +1099,9 @@ Fire is a form of magic that many mages find both reliable and devastating. A so
 | A   | 5     | Silvered   | Magical  | Red   | 14    | 55       | 1-2   
 | S   | 6     | Gilded     | Magical  | Red   | 17    | 45       | 1-2   
 | S+  | 7     | Orichalcum | Magical  | Red   | 20    | 35       | 1-2   
-\column
+
 ### Staff
-:
+
 Staffs are special weapons that can technically be used to send raw magical force at your enemies, however they are most often used to provide healing to your allies, and keep them fighting for you. Staffs come with the **Healing** special.
 :
 |Tier | Level | Metal      | Type     | Color | Might | Accuracy | Range 
@@ -1093,6 +1114,7 @@ Staffs are special weapons that can technically be used to send raw magical forc
 | S   | 6     | Gilded     | Magical  | Grey  | 4     | 70       | 1-2   
 | S+  | 7     | Orichalcum | Magical  | Grey  | 14    | 50       | 1-2   
 
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:350px,mix-blend-mode:multiply}
 ## Gaining Runes
 :
 In a world of fantasy and magic, Weapons can be more than simple metal tools. Placing a rune into a weapon fills it with magical properties. Like weapons, the runes that your character has access to are roughly determined by level.
@@ -1116,7 +1138,7 @@ In a world of fantasy and magic, Weapons can be more than simple metal tools. Pl
 | S   | 5     |Gilded     | 60
 :
 When choosing a weapon, you will traditionally choose a weapon metal and a rune for that metal that you meet the requirements for. Some runes get more powerful depending on the rune's level, and some runes have a minimum level requirement in order to place them. For example, if a rune requires "Level 2", you can't place one on an Iron weapon until level 12, and you can't place them on a steel weapon until level 20. You can never place that rune on a Bronze weapon. The Minimum Level requirement of the rune is listed after the rune name.
-\page
+
 ## Rune Types
 :
 **Heavy** *Lv 1*: Increase **Might** by 1 per Rune Level.
@@ -1136,7 +1158,7 @@ When choosing a weapon, you will traditionally choose a weapon metal and a rune 
 **Wicked** *Lv 1*: Increase **Critical** by 5 per Rune Level.
 :
 **Blessed** *Lv 1*: At the start of each Player Turn, Recover **HP** equal to 3 per Rune Level.
-:
+\page
 **Healing** *Lv 1*: Instead of engaging an enemy for your turn, you may instead recover HP for an ally, equal to **Might** + **INT**.
 :
 **Thrown** *Lv 2, Sword Ax Lance only*: Your weapon gains **Range 1-2**, but loses 2 **Might** and 10 **Accuracy**.
@@ -1184,9 +1206,9 @@ At level 40, you have access to 1 Gilded Weapon with 0 rune levels, 1 Silvered W
 At levels 21 and 41, your tier of heroism increases. As part of this, you have an opportunity to learn a Great Skill. Great Skills are incredibly powerful attacks that can really turn the edge of battle. Your Legendary Great Skill Replaces your Epic Great Skill, so be judicious in your choice.
 
 {{note Or don't. A great skill is a kind of defining super attack for your character. However, if you aren't feeling it, talk with your GM and see if you can change it out. Try not to be strategic with this, the skill should feel like a part of who your character is.}}
-\page
+
 ### Epic Great Skills
-:
+
 **Moon Strike**: Your **Strikes** have a **DEX**% to reduce enemy **defence** by 1/2.
 :
 **Sun Strike**: Your **Strikes** have a **DEX**% to recover **HP** equal to 1/2 damage dealt.
@@ -1200,9 +1222,9 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 **Charged Magic**: When you **Engage** with an opponent, you have an **INT**% chance to deal your **Might** - each enemy's **Defence** to all enemies adjacent to your target.
 :
 **Waiting Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive by 1/2.
-
+\page
 ### Legendary Great Skills
-:
+
 **Lunar Impact**: Your **Strikes** have a **DEX**% chance to ignore enemy defence.
 :
 **Lunar Strike**: Your **Strikes** have a **DEX**x2% chance to reduce enemy **Defense** by 1/2.
@@ -1234,7 +1256,7 @@ At levels 21 and 41, your tier of heroism increases. As part of this, you have a
 **Shielded Block**: When an enemy **Engages** with you, you have a **WIS**% chance to reduce the damage you actually receive to 0.
 :
 **Resistant Block**: When an enemy **Engages** with you, you have a **WIS**x2% chance to reduce the damage you actually receive by 1/2.
-
+\column
 ## Items
 :
 Items are a bit looser than the rest of the weapons and skills in this section. In general, by about level 5 in a tier, a character should have an item of that tier's level. Since you can only really have one item at a time, there's no real reason to have a gate on them, give them out as rewards as feels thematic or appropriate. As a rough guide, hand out an item on levels that end in 5, so 5 - 15 - 25 - 35 - 45 - 55 - 65 - 75.
@@ -1259,7 +1281,6 @@ Items are a bit looser than the rest of the weapons and skills in this section. 
 :
 **Angel Ring (Hero)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once.
 :
-\page
 **Angel Ring (Epic)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per combat
 :
 **Angel Ring (Legend)**: *Epic* - If you die from an attack and have more than 1 **HP**, you are left with 1 **HP**. Functions once per engagement.
@@ -1283,15 +1304,16 @@ Items are a bit looser than the rest of the weapons and skills in this section. 
 **Tynar Rouge**: *Legend* - +15 **Critical**, +15 **Defense**
 \page
 # Chapter 6 - Combat
-
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:800px,mix-blend-mode:multiply}
+#
 Sometimes, fights break out, and you need to be prepared to deal with this. Combat is exciting, dangerous, and deadly. Do try not to die.
 :
 Combat seems complicated, but as long as you can break it down into all of it's steps, you will find that there is nothing that is individually that difficult
-
+\column
 ## Strike a target
 :
 In order to actually perform a strike, find your **Accuracy** and your opponent's **Dodge**. Subtract them to get your **Hit Chance**. Also find your **Critical** and your opponents **Avoid** and take the difference to get your **Crit Chance**. Last, roll your **d%**,
-:
+\page
 If you roll below your **Hit Chance**, you successfully strike your opponent. Take your **Might**, and subtract off your opponent's **Defense**. This is how much damage you manage to inflict. This does mean that you might deal 0 damage against a sufficiently armored foe. If you also managed to roll under your **Crit Chance**, you critically strike and deal 3 times the damage you would inflict with your standard attack. Again, 3 times 0 is zero.
 :
 However, most opponent's aren't going to simply stand there and take it. they will try to **Riposte**
@@ -1333,13 +1355,13 @@ Some squares might be fortified terrain. These cost additional movement to enter
 For example, fighting on stairs might be considered fighting on light fortification, and getting into an arrow-slit might count as taking Medium Fortification. Characters with the **Flight** class ability only pay 1 point of movement for all terrain type movements.
 :
 Most walls block movement completely, along with most short objects and fortifications. Characters with **Flight** can end their movement on these, hovering in place, but do try to keep in mind the physics of the situation. A character with flight can't fly over indoor walls, for example.
-\page
+
 ## Actions in Combat
 :
 Traditionally, there are two actions you can take for each of your turns in combat: Move and Engage. Move lets you spend your movement points to move around the battlefield, and Engage lets you attack an enemy. Some objects might be able to be interacted with, this takes your Engagement action. Some skills allow you to interact with your allies, these also take your Engage Action.
 :
 Switching weapons that you are currently carrying is not an action. Neither are things like talking. However, some things like "catching someone up" on the situation at hand might be an action. In fact, if you need to explain a complicated plan under a time crunch, the DM might actually instigate an HP total for the explanation and make you roll skill checks. These skill checks require an engagement action.
-
+\page
 ## Combat Phases
 :
 Combat takes place in phases. Once combat has been decided upon, all participants divide into the combat sides. Under normal conditions, all players will be on one side of the combat, and all enemies will be on the other. During the **Hero Phase**, all players take turns in whatever order they feel is the most advantageous. Once everyone has spent their movement and taken their desired action, combat moves to the **Enemy Phase**.
@@ -1352,7 +1374,8 @@ Sometimes, stakes in a combat can't be cleanly sorted into Heroes and Enemies. r
 1. The Enemies, those directly opposing the heroes.
 1. The Allies, groups of people that may be outside the Players control, but otherwise working of the Player's benefit.
 1. The Independents, groups that are present in the battlefield but otherwise have goals independent to the Players or their Enemies.
-\column
+
+:
 The play phase actually continues like this: The Heroes take their turns. then any enemy teams present take theirs. More than one enemy team can exist, but often there isn't a reason to manage them separately, the DM will use their judgement here. Then, any allies of the Heroes will make their moves, again the DM making their choices. Once all allies have had their turn, any independents in the field will make their move. Last, play will pass back to the Heroes, and this continues until the reason for conflict is resolved.
 
 ## Starting a Combat
@@ -1372,7 +1395,8 @@ IN that situation, the players will fight their way through the couple of guards
 - Dropping all guards HP to zero.
 - Moving to the opposite side of the combat map and escaping the combat
 - Using their Quirks to intimidate the guards, scaring them away.
-\page
+
+:
 Regardless, once combat is no longer in the way of the players, the game becomes easier to run in an entirely narrative fashion.
 
 ## Quick Combats with Zones
@@ -1380,7 +1404,7 @@ Regardless, once combat is no longer in the way of the players, the game becomes
 This is a tool for the Game Master to choose to employ, because sometimes fights break out in places that they don't have a good map for. In these cases, you can create a simple map using zones. There is no limit to the number of characters that can be in the same zone, and characters can only engage with things in their current zone. Zones are loosely connected to each other, and moving to a new zone costs 3 Movement or an Engage action.
 :
 When engaging, it is assumed to be at the **Range** that gives the attacker the most advantage. In addition, players with the **provoke** skill must be engaged with before anyone else in the zone they are currently occupying.
-
+\page
 ## Death
 :
 Whenever any character, enemy or player, loses their last point of HP, that character is removed from the current combat. Death, however, is not necessarily inevitable.
@@ -1404,7 +1428,8 @@ Each player should have their own character that they are controlling. However, 
 *ToDo: A simple combat example, with pictures. Also figure out how to put pictures in Markdown.*
 \page
 # Chapter 7 - Monsters and Traps
-
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:700px,mix-blend-mode:multiply}
+#
 The world is a populous place. People, monsters, and other things exist that would hold the players from accomplishing their goals. As a Game Master, it is your job to bring these to bear against the players.
 :
 :
@@ -1413,7 +1438,7 @@ The world is a populous place. People, monsters, and other things exist that wou
 As a Game Master, your responsibility is to make sure that everyone at the gaming table is having a good time. Regardless of anything else in this section, you and your players should be having fun. The biggest effect that this has is on difficulty. The advice in this section will be tuned to a Medium difficulty, designed to allow players to feel powerful, but with just enough threat that making bad moves will still be possible.
 :
 The biggest advantage you have as the GM is that you can get feedback in real time if your players feel that the challenge is either too high, or not high enough. The easiest way of adjusting this is to increase or decrease the level of the enemies they are going to be fighting in the next combats by a few points each way, until it feels just right.
-:
+\page
 That said, variety is more important than perfect balance. Having a couple of harder fights, and a couple of easy fights, is actually looked at more fondly than the same number of "mathematically balanced" fights. As you play the game, you'll get better and better at dialing this in.
 {{note Remember that "Making sure everyone is having a good time" applies to the story that everyone is telling, too. Please make sure that the people at your table aren't getting excessively uncomfortable with the subject matter. Work with your players to find the point where everyone is having the most fun, and be respectful of your player's reactions. A full description of "Lines and Veils" and "X-Cards" are beyond the scope of this guide, but cleanly slot into any Roleplaying system if you need a place to get started.}}
 
@@ -1450,7 +1475,7 @@ For example a "Swordmaster (Red Melee), Fire Mage (Red Mixed), and Soldier (Blue
 {{note Remember, these are the rules for making balanced medium-difficulty encounters. Sometimes, a room filled with Red Swordmasters exists to give the Blue Lancer Player a powerful moment, and not a challenge. Be judicious in breaking this rule, but don't be afraid to break it.}}
 
 Roughly speaking, a Mini-Encounter covers anywhere from 12-15 squares on a map. If an area is about 24-30 squares big, Place two mini encounters in the area. They can be the same or different, they are completely independent for setup.
-\page
+
 Adding more enemies to a mini-encounter makes things harder, and expanding the area that a mini-encounter covers makes things easier. Use this to balance the game to yours and your players taste.
 
 ## Designing Enemies
@@ -1466,7 +1491,7 @@ That said, to tune the encounter difficulty, you don't invest all of your points
 | Dangerous | 35 (0)   | 20 (0)  |
 :
 At the lower levels of your adventure, say 1-10, the enemies should be made up of mostly weak combatants, with Average enemies carefully representing things like enemy commanders. After level 10, often average enemies can be used as common enemies, with "Dangerous" enemies representing enemy commanders. At Levels over 40, Dangerous enemies can be commonly interspersed into enemy ranks.
-
+\page
 ## Special Bosses
 :
 Sometimes, you want a big set-piece monster to deal with. This creature counts as an entire mini-encounter by itself. In order to make one, design a regular enemy like normal, and then do the following:
@@ -1479,7 +1504,7 @@ Sometimes, you want a big set-piece monster to deal with. This creature counts a
 :
 Enemies choose equipment, just like players. That said, some enemies don't make sense to be fighting with tools, like wild animals. In that case, consider the following "equipment" options instead.
 {{note These should be balanced for player use, should the situation arise. Consider giving a "Martial Artist" a "Claw" attack, or allowing a dragon creature type to get a Bite.}}
-
+\column
 ### Claw / Hoof
 :
 A Claw or Hoof is a strike with a creature's limb. These tend to have a mix of power and damage behind it. Hoves trade accuracy for critical chance, at 5 per weapon level.
@@ -1508,6 +1533,10 @@ A Bite or Gore attack is done with the creature's head. It's a risky maneuver, b
 | S   | 6     | Gilded     | Physical | Red   | 24    | 20       | 1     |
 | S+  | 7     | Orichalcum | Physical | Red   | 28    | 5        | 1     |
 
+#
+![cat warrior](https://s-media-cache-ak0.pinimg.com/736x/4a/81/79/4a8179462cfdf39054a418efd4cb743e.jpg) {width:500px,mix-blend-mode:multiply}
+#
+\page
 ### Sting / Punch
 :
 Stings are thin, piercing weapons used by creatures. They have a high amount of precision. If the thrusts has a blunt end, it's a punch and trades 1 damage per level for 5 Accuracy per level.
@@ -1521,7 +1550,7 @@ Stings are thin, piercing weapons used by creatures. They have a high amount of 
 | A   | 5     | Silvered   | Physical | Blue  | 12    | 75       | 1     |
 | S   | 6     | Gilded     | Physical | Blue  | 14    | 70       | 1     |
 | S+  | 7     | Orichalcum | Physical | Blue  | 16    | 65       | 1     |
-\page
+
 ### Slam
 :
 Slam attacks are performed with the creature's body, or sometimes with a heavy appendage like a tail.
@@ -1574,7 +1603,107 @@ If any of your creatures need to exist for more than a brief moment on screen, c
 There are two types of traps to consider, and when including a trap in a map you need to decide which one you want to use. Quirk traps are often used more as barriers that prevent progress, and they tend to have HP and are defeated through quirk tests. These would be things like Gas traps, or rooms filling with water, or large hallways covered in pit traps.
 :
 Combat traps are a little different. Combat traps are a type of terrain, And they engage against anyone who passes over the map square it occupies. Traps have a base **Accuracy** of the traps **level**, and have a base **Might** of half the traps level. Then, the trap equips any weapon to finish off it's setup. Anyone stepping on a trapped square gets **struck** by the trap, and the trap takes no **Ripostes** or **Follow Through Ripostes** in response. For example, a Level 16 pit trap would be equipped with an Iron Slam, Have 86% **Accuracy**,  14 **Might**. The trap could be runed with a Heavy Lv2 rune, in which case it would have 16 Damage. Alternatively, the pit trap could be spiked, in which case it would be based on an Iron Lance, with 91% **Accuracy** and 20 **Might** with that heavy Rune. This would be Blue colored, though, so the triangle still applies.
-::::::::
+\page
+# Appendix
+{{index,wide,columns:5;
+- Ankhesh-Bort
+  - city map, 7
+  - city watch, 12
+  - guilds, 19
+- Cheese
+  - types of cheese, 8
+  - cheese-related magic, 14
+  - cheese-related quests, 26-27
+- Death
+  - appearance, 10
+  - personality, 13
+  - hobbies, 23
+- Elves
+  - types of elves, 15
+  - elvish magic, 24
+  - elvish curses, 28
+- Footnotes
+  - types of footnotes, 16-17
+  - footnote rules, 20-21
+  - footnote humor, 29-30
+- Gods
+  - types of gods, 12
+  - godly interventions, 25
+  - godly conflicts, 31
+- Heroes
+  - class features, 11-12
+  - heroic deeds, 26-27
+- Inns
+  - types of inns, 9
+  - inn amenities, 18
+- Jokes
+  - types of jokes, 11-12 
+  - joke delivery, 25 
+- Knives 
+  - types of knives, 16-17 
+  - knife skills, 22-23 
+  - knife fights, 28-29 
+- Luggage 
+  - appearance, 10 
+  - personality, 13 
+  - abilities, 23 
+- Magic 
+  - types of magic, 15 
+  - magic rules, 24 
+  - magic mishaps, 28
+- Socks
+  - types of socks, 9
+  - sock-related magic (yes, really), 15
+  - sock-related quests (no, really), 26
+- Trolls
+  - appearance and biology, 11
+  - culture and language, 18
+  - troll rights and activism, 31
+- Unknown University
+  - history and architecture, 12
+  - faculty and staff, 20
+  - courses and exams, 33
+- Vampires
+  - types and origins, 13
+  - vampiric powers and weaknesses, 21
+  - vampiric etiquette and politics, 34
+- Witches
+  - types and traditions, 14
+  - witchcraft and headology, 22
+  - witch trials and tribulations, 35
+- Xylophones
+  - musical instruments or weapons?, 15
+  - xylophone-related magic and lore, 23
+  - xylophone-related quests and puzzles, 36
+- Yetis
+  - appearance and behavior, 16
+  - yeti philosophy and religion, 24
+  - yeti encounters and stories, 37
+- Zombies
+  - types and causes, 17
+  - zombie rights and duties, 25
+  - zombie survival and prevention, 38
+}}
+:
+:
+:
+:
+:
+# Credits
+:
+:
+## Design
+Triumph Coding
+:
+## Illustration
+Alouette
+:
+Hollow Word Birds Artistry
+:
+## Floorplans
+![Floorplan Generator](https://www.illwinter.com/floorplan/illfloorbanner800x185.png) {width:350px,mix-blend-mode:multiply}
+:
+## Layouts
 {{homebreweryCredits
 Made With
 
